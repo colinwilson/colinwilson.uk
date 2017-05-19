@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/colinwilson
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://colinwilson.uk
+  * I am colinwilson (https://keybase.io/colinwilson) on keybase.
+  * I have a public key with fingerprint F624 075F FE09 254B 5DC2  E158 6D34 5B49 8FAC E1A6
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101af393698e8bc00bd31e8504caf18208bc4f6d161c27b5a4d5a3d20d8393cd5a30a",
+            "fingerprint": "f624075ffe09254b5dc2e1586d345b498face1a6",
+            "host": "keybase.io",
+            "key_id": "6d345b498face1a6",
+            "kid": "0101af393698e8bc00bd31e8504caf18208bc4f6d161c27b5a4d5a3d20d8393cd5a30a",
+            "uid": "ef68ee4482d77d481a1a171286731419",
+            "username": "colinwilson"
+        },
+        "service": {
+            "hostname": "colinwilson.uk",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1495168835,
+    "expire_in": 157680000,
+    "prev": "fd5de8fc133e76cacf4dd1d35a80b489347fa6010b0c33de1af7fe13b30ca8ea",
+    "seqno": 27,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGtUn9QVFUUXpaFBhxAGYlgSOCloiPge/t+gzIlpMMMNjiMTSS0896798ET3F33
+7S7soqJt5lbasGCKUATBJAWaQzEgg2SAGumMTRM6NaEgtiMwMKBNBph0H1N/1Z/d
++8edc873fefc796qsECdPgD3PZrNPO5qDrg+Iery15TlVGCiBbiwtAqsBC4fsBRA
+1W4qUQCWhuEETggyyZMMz0FOlHBcBCQBORqnJEEmOCOOkpTMAIIhJCMr0gIFaIEE
+RhxwiCVpAS5gyZismIugzWpTzHYkKzNGCmdpWYY4b6QpkQaSERI0xwCSokWK52RB
+goTAIGKxRdUYaDhRUGGqYkE5FJiWx/sP/P88t2NZDsoMByFFcUbAsoDiCAFtljBy
+DEsSFMFrQBXazMI+iNCSpVQxlymlqsWMHUzGUMGpSFDzVrvMv0GpjhIkYLVZ7BaU
+RbViu92qpmlcu8uqgcugaPpbxiQqZoDMRAwntKkK6pFGIKRkVzRdguJpguE4kk7G
+YLlVsUGToiFoluFwtLQ+0Kk9AXiDBpCTJYIkIctIgiRTABCApAUOFymOJylWFhhk
+pIhLJAmQvTIrQ4IUSVwSOKiZo8L9ZguWZmTRoEIRElWVIrNgd9ggdjD0HX2cQReg
+1wUH6bV/pgsNWfnP59vdELHkzLqVNLRQMNsx0lQ13NuQdGfsaU+jP3l6YrXBkbD2
+8WD92O8rJ599cC029aRjfZ9+bsiacXUm6l37ZnV0d/cA272T/37dJUNAz8mjS9G3
+74U/15tK+oNDkj/w859lbmsMLTj2vut6sGemoykmkj40lt7yaUrb05DL7Sde87Sk
+nvP2uzpr99Sc7qt/Mu8J+c6w2TA+/iTmm5S4dODyhXXlrO2IWyhr9Q7Ehxd0htmi
+whvnV/t/iay4VVvjWExaHH3QH3/h7NSOG1uCUqozXr7q1IlVwTb9zNvltaassfTR
+1rOP847EqHEXj03bt+VOfl2Z5Xhhq/vKubzEyq6kPaHu+VPuTyI6aTmv2f7wxoCv
+/sesV+5E5a7vm34mYRP8MvfUr1t27DwQeXt21XBiw4vbj2c+Iieaw88vDu7aOvWx
+e/q3CxdX6ZsLY9zVc7E3t7/1ZvsBfKFrwWB0Bn171+frGKzuhns32oY/rGI6f9q0
+Iro8Mwc/7Oj1PB/xkrMtIHFEP3SpMPC8F685sWFvVXzG/VJXYotzEujJ1sXADWvq
+/Vj755nu/pmjrYcaKtrrVly5x98civ65u/p1X9t7lf6ebPywbrHj4Q/rBG42q/fP
+yyEp+/Pr5s5kLxw5U9zVWvjHrldjRzYuZZd4CkCK13u/wPTRXV0431Q35RmdO9Y2
+/sVXLdfyE05793n+Ag==
+=NdK6
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/colinwilson
+
+==================================================================
