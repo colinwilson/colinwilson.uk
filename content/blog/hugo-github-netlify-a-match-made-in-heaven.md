@@ -12,7 +12,7 @@ title = "Hugo + GitHub + Netlify; a match made in heaven"
   site = "@colinwiIson"
   title = "Hugo + GitHub + Netlify; a match made in heaven"
   description = "Hugo, GitHub & Netlify; a streamlined static content publishing workflow"
-  image = "https://colinwilson.uk/img/hugo-github-netlify.png"
+  image = "https://colinwilson.uk/img/hugo-github-netlify_tcard.png"
 
 +++
 
