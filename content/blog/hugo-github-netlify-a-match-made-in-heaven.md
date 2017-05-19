@@ -11,8 +11,8 @@ title = "Hugo + GitHub + Netlify; a match made in heaven"
   card = "summary"
   site = "@colinwiIson"
   title = "Hugo + GitHub + Netlify; a match made in heaven"
-  description = "Hugo, GitHub & Netlify a streamlined static content publishing workflow"
-  image = "/img/hugo-github-netlify.png"
+  description = "Hugo, GitHub & Netlify; a streamlined static content publishing workflow"
+  image = "https://colinwilson.uk/img/hugo-github-netlify.png"
 
 +++
 
