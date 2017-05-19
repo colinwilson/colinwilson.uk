@@ -1,0 +1,12 @@
+name = "Tachyon"
+license = "MIT"
+licenselink = "//github.com/infinitysgame/tachyon-theme/blob/master/LICENSE.md"
+description = "Minimalistic blog theme for Hugo"
+homepage = "//github.com/infinitysgame/tachyon-theme"
+tags = ["syntax highlighting", "rss", "google analytics", "responsive"]
+features = ["syntax highlighting", "rss", "google analytics", "responsive"]
+min_version = "0.20.7"
+
+[author]
+  name = "Colin Wilson"
+  homepage = "https://colinwilson.uk"

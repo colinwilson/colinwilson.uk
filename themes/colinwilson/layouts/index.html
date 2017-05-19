@@ -1,0 +1,38 @@
+  {{ partial "header" . }}
+  <body class="rubik black-60">
+    {{ partialCached "nav" . }}
+      <div class="flex flex-column w-80 mw9 pv4 pv0-ns center">
+
+        {{ partialCached "logo" . }}
+
+        <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
+            <h1 class="mt0 mb4 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-90">{{ .Site.Params.bio }}</h1>
+            <p class="mv0 f5 f4-ns lh-copy measure">
+                {{ .Site.Params.sub_bio }}
+            </p>
+        </div>
+        
+        {{ $totalpostscount := len (where .Data.Pages "Section" "blog") }}
+        {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
+        <div class="pv4 pv5-ns">
+        <h2 class="mv0 pb2 pb3-ns f5 f4-ns normal lh-copy bb b--black-20">Latest Articles</h2>
+            <ul class="flex flex-wrap justify-between mv0 pl0 list">
+                
+            {{- range first $latestpostscount .Data.Pages.ByPublishDate.Reverse }}
+                <li class="w-100 w-30-l mt4 mt5-ns">
+                <small class="gray db pv2"><time>{{ .PublishDate.Format "Mon, Jan 2, 2006" }}</time></small>
+                <a class="dib no-underline black-90 color-animate hover-gray" href="{{ .Permalink }}">
+                    <h3 class="mt0 mb1 mb2-ns f4 f3-ns normal lh-copy measure-narrow">{{ .Title }}</h3>                    
+                    <p class="mv0 lh-copy measure">{{ .Description }}</p>
+                </a>
+                </li>
+            {{- end }}            
+                
+            </ul>
+        </div>
+
+        {{ partial "footer" . }}
+
+      </div>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+baseURL = "https://colinwilson.uk/"
+languageCode = "en-GB"
+title = "Colin Wilson - Systems Engineer / IT Consultant"
+theme = "colinwilson"
+
+googleAnalytics     = "UA-98935524-1"
+disqusshortname     = "colinwilson" # Comment out to disable Disqus.
+
+[permalinks]
+    blog = "/:year/:month/:day/:slug"
+
+[params]
+    latestpostscount       = 3                             # how many posts to display on the home page
+    author                 = "Colin Wilson"
+    logo                   = "/img/logo.svg"
+    bio                    = "Hello, I'm Colin Wilson, Systems Engineer, Consultant, lifelong learner, athlete."
+    sub_bio                = "Messaging, DevOps, Networking, Security, Virtualization, Storage, Hosting."
+    description            = "Colin Wilson Systems Engineer / IT Consultant - personal website of IT consultant Colin Wilson."
+    email                  = "colin.wilson@protonmail.ch"
+    avatar                 = "/img/avatars-material-man-3.png" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
+    # gravatar             = ""                # do not use in the same time as avatar
+    bitcoin                = "1HNuwCnxVAsQzT3QH2MWyZFszBPHDXJu8U"
+
+    og_description         = "Systems Engineer, IT Consultant, lifelong learner, nuke it from orbit."
+    highlightjs            = true
+
+# Create custom menu entries by defining a label and a link for
+# them. Since you can also link posts, you've the option the
+# place the links before or after them.
+#
+# E.g.: "Home" appears before all linked posts in the menu
+# and "Tags" / "Categories" after them.
+
+[[params.menu]]
+    before = true
+    label  = "Home"
+    link   = "/"
+
+[[params.menu]]
+    before = false
+    label  = "Blog"
+    link   = "blog/"
+
+[[params.menu]]
+    before = false
+    label  = "About Me"
+    link   = "about/"
+
+[social]
+# Add your social network accounts to the footer section
+# by entering your username. The links to your account will be
+# created automatically.
+
+    github          = "colinwilson"
+    bitbucket       = ""
+    jsfiddle        = ""
+    codepen         = ""
+    foursquare      = ""
+    dribbble        = ""
+    deviantart      = ""
+    behance         = ""
+    flickr          = ""
+    instagram       = ""
+    youtube         = ""
+    vimeo           = ""
+    vine            = ""
+    medium          = ""
+    wordpress       = ""
+    tumblr          = ""
+    xing            = ""
+    linkedin        = ""
+    slideshare      = ""
+    stackoverflow   = ""
+    reddit          = ""
+    pinterest       = ""
+    googleplus      = ""
+    facebook        = ""
+    facebook_admin  = ""
+    twitter_domain  = ""
+    twitter         = "colinwiIson"

@@ -1,0 +1,64 @@
+<div class="dt dt--fixed w-100 pv4 pv5-ns" >
+    <div class="dn dtc-ns v-mid">
+    <a href="https://www.netlify.com">
+      <img src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
+    </a>
+    </div>
+    <div class="dn dtc-ns v-mid">
+      <p class="f7 black-70 dib pr3 mb3">
+        Copyright © {{ .Site.Params.author }} {{ .Now.Year }}
+      </p>
+    </div>
+    <div class="db dtc-ns black-70 tc tr-ns v-mid">
+      {{ if .Site.Social.twitter }}
+      <a href="https://twitter.com/{{ .Site.Social.twitter }}" target="_blank" class="link dim dib mr3 black-70">
+        <svg class="db w2 h2" data-icon="twitter" viewBox="0 0 32 32"
+          fill="currentColor" >
+          <title >twitter icon</title>
+          <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"
+          ></path>
+        </svg>
+      </a>
+      {{ end }}
+      {{ if .Site.Social.github }}
+      <a href="https://github.com/{{ .Site.Social.github }}" target="_blank" class="link dim dib mr3 black-70">
+        <svg class="db w2 h2" data-icon="github" viewBox="0 0 32 32" fill="currentColor">
+          <title>github icon</title>
+          <path d="M0 18 C0 12 3 10 3 9 C2.5 7 2.5 4 3 3 C6 3 9 5 10 6 C12 5 14 5 16 5 C18 5 20 5 22 6 C23 5 26 3 29 3 C29.5 4 29.5 7 29 9 C29 10 32 12 32 18 C32 25 30 30 16 30 C2 30 0 25 0 18 M3 20 C3 24 4 28 16 28 C28 28 29 24 29 20 C29 16 28 14 16 14 C4 14 3 16 3 20 M8 21 A1.5 2.5 0 0 0 13 21 A1.5 2.5 0 0 0 8 21 M24 21 A1.5 2.5 0 0 0 19 21 A1.5 2.5 0 0 0 24 21 z"></path>
+        </svg>
+      </a>
+      {{ end }}
+      {{ if .Site.Social.linkedin }}
+      <a href="https://www.linkedin.com/in/{{ .Site.Social.linkedin }}" target="_blank" class="link dim dib mr3 black-70">
+        <svg class="db w2 h2" x="0px" y="0px" viewBox="0 0 48 48" >
+          <linearGradient gradientUnits="userSpaceOnUse" x1="23.9995"
+            y1="0" x2="23.9995" y2="48.0005" >
+            <stop offset="0" ></stop>
+            <stop offset="1" ></stop>
+          </linearGradient>
+          <path fill="currentColor" d="M48,42c0,3.313-2.687,6-6,6H6c-3.313,0-6-2.687-6-6V6 c0-3.313,2.687-6,6-6h36c3.313,0,6,2.687,6,6V42z"
+          ></path>
+          <g >
+            <g >
+              <path fill="#FFFFFF" d="M15.731,11.633c-1.608,0-2.658,1.083-2.625,2.527c-0.033,1.378,1.018,2.494,2.593,2.494 c1.641,0,2.691-1.116,2.691-2.494C18.357,12.716,17.339,11.633,15.731,11.633z M13.237,35.557h4.988V18.508h-4.988V35.557z M31.712,18.748c-1.595,0-3.222-0.329-4.956,2.36h-0.099l-0.087-2.599h-4.417c0.065,1.411,0.074,3.518,0.074,5.52v11.529h4.988 v-9.854c0-0.46,0.065-0.919,0.196-1.248c0.328-0.919,1.149-1.871,2.527-1.871c1.805,0,2.527,1.411,2.527,3.479v9.494h4.988V25.439 C37.455,20.713,34.993,18.748,31.712,18.748z"
+              ></path>
+            </g>
+          </g>
+        </svg>        
+      </a>
+      {{ end }}
+      <a href="mailto:{{ .Site.Params.email }}" class="link dim dib mr3 black-70">
+        <svg class="db w2 h2" data-icon="email" viewBox="0 0 511.626 511.626"><path fill="currentColor" d="M94.2 195.5c5.1 3.6 20.3 14.2 45.8 31.8 25.4 17.6 44.9 31.2 58.5 40.7 1.5 1 4.6 3.3 9.5 6.8 4.8 3.5 8.9 6.3 12.1 8.5 3.2 2.2 7.1 4.6 11.6 7.3s8.8 4.7 12.8 6c4 1.3 7.7 2 11.2 2h.4c3.4 0 7.1-.7 11.2-2 4-1.3 8.3-3.3 12.8-6s8.4-5.1 11.6-7.3c3.2-2.2 7.2-5 12.1-8.5 4.8-3.5 8-5.8 9.5-6.8 13.7-9.5 48.5-33.7 104.5-72.5 10.9-7.6 19.9-16.7 27.2-27.5 7.3-10.7 10.9-21.9 10.9-33.7 0-9.8-3.5-18.2-10.6-25.2s-15.4-10.5-25.1-10.5h-328.7c-11.5 0-20.3 3.9-26.5 11.6-6.2 7.7-9.3 17.4-9.3 29 0 9.4 4.1 19.5 12.3 30.5 8.3 11 17 19.6 26.2 25.8zm339.3 23.9c-48.8 33-85.9 58.7-111.2 77-8.5 6.2-15.4 11.1-20.6 14.6-5.3 3.5-12.3 7.1-21.1 10.7-8.8 3.6-17 5.5-24.5 5.5h-.5c-7.6 0-15.8-1.8-24.6-5.5-8.8-3.6-15.8-7.2-21.1-10.7-5.3-3.5-12.2-8.4-20.6-14.6-20.1-14.7-57.1-40.4-110.9-77-8.5-5.7-16-12.1-22.5-19.4v177.2c0 9.8 3.5 18.2 10.5 25.2s15.4 10.5 25.2 10.5h328.6c9.8 0 18.2-3.5 25.2-10.5s10.5-15.4 10.5-25.2v-177.2c-6.5 7.1-13.9 13.6-22.4 19.4z"/></svg>
+      </a>
+    </div>
+  </div>
+  
+  {{ if .Site.Params.highlightjs }}
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  {{ range .Site.Params.highlightjslanguages }}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/{{.}}.min.js"></script>
+  {{ end }}
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+  {{ end }}

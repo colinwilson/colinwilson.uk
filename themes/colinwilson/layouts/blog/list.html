@@ -1,0 +1,24 @@
+  {{ partialCached "header" . }}
+
+  <body class="rubik black-60">
+
+    {{ partialCached "nav" . }}
+
+    <div class="flex flex-column w-80 mw9 pv4 pv0-ns center">
+
+        {{ partialCached "logo" . }}
+
+        <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
+          {{ range first 10 .Data.Pages }}        
+          <a class="dib no-underline black-70 color-animate hover-gray" href="{{ .Permalink }}">
+            <h2 class="f7 fw3 mt1 mb0 ttu tracked gray">{{ .PublishDate.Format "02 January 2006" }}</h2>
+            <h1 class="mt0 mb4 f3 fw1 f2-ns normal lh-copy lh-title-ns  measure-narrow">{{ .Title }}</h1>
+          </a>
+          {{ end }}
+        </div>
+
+        {{ partialCached "footer" . }}
+
+    </div>
+  </body>
+</html>

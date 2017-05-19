@@ -1,0 +1,23 @@
+  {{ partial "header" . }}
+
+  <body class="rubik black-60">
+
+    {{ partialCached "nav" . }}
+
+    <div class="flex flex-column w-80 mw9 pv4 pv0-ns center">
+
+        {{ partialCached "logo" . }}
+
+        <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
+            <h1 class="mt0 mb4 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-80">{{ .Title }}</h1>
+        </div>
+
+        <div class="f4 black-70 lh-copy measure-wide cap">
+        {{ .Content }}
+        </div>
+
+        {{ partial "footer" . }}
+
+    </div>
+  </body>
+</html>
