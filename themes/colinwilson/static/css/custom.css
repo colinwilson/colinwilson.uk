@@ -92,7 +92,8 @@
     list-style:none;
 }
 .tags li, .tags a{
-    float:left;            
+    float:left;
+    margin-bottom: 10px;     
     height:20px;
     line-height:20px;
     position:relative;
