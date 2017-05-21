@@ -9,6 +9,7 @@
             {{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}
         {{ end }}
     </title>
+    {{ partial "favicon" . }}
     <meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
     <meta property="og:title" content="{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}{{ if eq $url "/" }}{{ .Site.Params.author }}{{ else }}{{ .Title }}{{ end}}">
     <meta property="og:description" content="{{ .Site.Params.og_descriptioin }}">
