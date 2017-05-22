@@ -21,6 +21,9 @@ disqusshortname     = "colinwilson" # Comment out to disable Disqus.
     # gravatar             = ""                # do not use in the same time as avatar
     bitcoin                = "1HNuwCnxVAsQzT3QH2MWyZFszBPHDXJu8U"
 
+    piwikid                = "14"
+    piwikURL               = "analytics.qunux.com"
+
     og_description         = "Systems Engineer, IT Consultant, lifelong learner, nuke it from orbit."
     highlightjs            = true
 
