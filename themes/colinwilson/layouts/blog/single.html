@@ -36,7 +36,9 @@
                     {{ end }}
                 </ul>
             {{ end }}
-        {{ end }}       
+        {{ end }}
+
+        {{ template "_internal/disqus.html" . }}
 
         {{ if or .PrevInSection .NextInSection }}
         <div class="w-70 mw9">
