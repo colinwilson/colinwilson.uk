@@ -17,7 +17,7 @@ disqusshortname     = "colinwilsonuk" # Comment out to disable Disqus.
     sub_bio                = "Messaging, DevOps, Networking, Security, Virtualization, Storage, Hosting."
     description            = "Colin Wilson Systems Engineer / IT Consultant - personal website of IT consultant Colin Wilson."
     email                  = "colin.wilson@protonmail.ch"
-    avatar                 = "/img/saucer_small.png" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
+    avatar                 = "/img/angry_mug_.png" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
     # gravatar             = ""                # do not use in the same time as avatar
     bitcoin                = "1HNuwCnxVAsQzT3QH2MWyZFszBPHDXJu8U"
 
