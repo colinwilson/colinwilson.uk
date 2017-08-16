@@ -4,7 +4,7 @@ title = "Colin Wilson - Systems Engineer / IT Consultant"
 theme = "colinwilson"
 
 googleAnalytics     = "UA-98935524-1"
-disqusshortname     = "colinwilsonuk" # Comment out to disable Disqus.
+#disqusshortname     = "colinwilsonuk" # Comment out to disable Disqus.
 
 [permalinks]
     blog = "/:year/:month/:day/:slug"
