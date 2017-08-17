@@ -1,5 +1,5 @@
-.montserrat {
-            font-family: "Montserrat", sans-serif;
+.rubik {
+            font-family: "Rubik", sans-serif;
         }
 
 .markdown h1,
@@ -9,7 +9,7 @@
 .markdown h5,
 .markdown h6 {
   font-size: 18px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 700;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -71,7 +71,7 @@
 }
 
 .cap p:first-child::first-letter { 
-    font-family: "Montseratt", sans-serif;
+    font-family: "Rubik", sans-serif;
     font-size: 5.2em;
     color: #000;
     line-height: 0.7em;
