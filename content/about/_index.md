@@ -7,7 +7,7 @@ author = "Colin Wilson"
 
 +++
 
-I'm a Systems Engineer / IT Consultant focusing on Messagaing and Collaboration, Virtualization, Networking and Storage.
+I'm a Systems Engineer / IT Consultant focusing on Messagaing and Collaboration, Virtualization (VMware, Hyper-V), Networking and Storage.
 
 You can also find me on Twitter and Github.
 
