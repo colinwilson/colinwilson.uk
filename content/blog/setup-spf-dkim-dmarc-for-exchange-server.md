@@ -5,7 +5,7 @@ date = "2017-07-19T01:59:01+01:00"
 draft = false
 description = "Setup DKIM for Exchange Server"
 publishdate = "2017-07-19T22:11:21+01:00"
-tags = ["Exchange Server","EMAIL","SPF","DKIM","DMARC","DNS","MICROSOFT","DNSBL"]
+tags = ["Exchange Server","Exchange Server 2016","Exchange Server 2013","EMAIL","SPF","DKIM","DMARC","DNS","MICROSOFT","DNSBL"]
 title = "Setting up DKIM for Exchange Server"
 
 [twitter]
