@@ -16,12 +16,12 @@ section = [ "HTML", "RSS"]
 [params]
     latestpostscount       = 3                             # how many posts to display on the home page
     author                 = "Colin Wilson"
-    logo                   = "/img/angry_mug_.png" #"/img/logo.svg"
+    logo                   = "/img/logo_v2.svg" #"/img/logo.svg"
     bio                    = "Hello, I'm Colin Wilson, Systems Engineer, Consultant, lifelong learner, athlete."
     sub_bio                = "Messaging, DevOps, Networking, Security, Virtualization, Storage, Hosting."
     description            = "Colin Wilson Systems Engineer / IT Consultant - personal website of IT consultant Colin Wilson."
     email                  = "colin.wilson@protonmail.ch"
-    avatar                 = "/img/angry_mug_.png" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
+    avatar                 = "/img/logo_v2.svg" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
     # gravatar             = ""                # do not use in the same time as avatar
     bitcoin                = "1HNuwCnxVAsQzT3QH2MWyZFszBPHDXJu8U"
 
