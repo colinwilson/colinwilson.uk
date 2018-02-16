@@ -1,6 +1,6 @@
 baseURL = "https://colinwilson.uk/"
 languageCode = "en-GB"
-title = "Colin Wilson - Systems Engineer / IT Consultant"
+title = "Colin Wilson - Systems Engineer / Consultant"
 theme = "colinwilson"
 
 googleAnalytics     = "UA-98935524-1"
