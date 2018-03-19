@@ -13,7 +13,7 @@ You can also find me on Twitter and Github.
 
 Cheers,
 
-<img src="/img/my_sig.png" alt="my signature" style="width: 300px; opacity: 0.8"/>
+<img src="/img/my_sig_v2.svg" alt="my signature" style="width: 300px; opacity: 0.8"/>
 
 <a href="mailto:colin.wilson@protonmail.ch" target="_blank" class="f6 dib black-60 no-underline hover-gray"><span class="fw7 black-80">EMAIL:</span> colin.wilson@protonmail.ch</a><br />
 <a href="https://keybase.io/colinwilson/pgp_keys.asc" target="_blank" class="f6 dib black-60 no-underline hover-gray"><span class="fw7 black-80">PGP KEY:</span> 6D34 5B49 8FAC E1A6</a><br />
