@@ -7,7 +7,7 @@ author = "Colin Wilson"
 
 +++
 
-I'm a Systems Engineer / IT Consultant focusing on Messagaing and Collaboration, Virtualization (VMware, Hyper-V), Networking and Storage.
+I'm a Systems Engineer / Consultant focusing on Messagaing and Collaboration, Virtualization/Cloud (VMware, AWS, Hyper-V), Networking and Storage.
 
 You can also find me on Twitter and Github.
 
@@ -16,5 +16,5 @@ Cheers,
 <img src="/img/my_sig_v2.svg" alt="my signature" style="width: 300px; opacity: 0.8"/>
 
 <a href="mailto:colin.wilson@protonmail.ch" target="_blank" class="f6 dib black-60 no-underline hover-gray"><span class="fw7 black-80">EMAIL:</span> colin.wilson@protonmail.ch</a><br />
-<a href="https://keybase.io/colinwilson/pgp_keys.asc" target="_blank" class="f6 dib black-60 no-underline hover-gray"><span class="fw7 black-80">PGP KEY:</span> 6D34 5B49 8FAC E1A6</a><br />
+<a href="https://keybase.io/colinwilson/pgp_keys.asc" target="_blank" class="f6 dib black-60 no-underline hover-gray"><span class="fw7 black-80">PGP KEY:</span> F624 075F FE09 254B 5DC2 E158 6D34 5B49 8FAC E1A6</a><br />
 <!-- <a href="https://blockchain.info/payment_request?address=1HNuwCnxVAsQzT3QH2MWyZFszBPHDXJu8U" target="_blank" class="f6 dib black-60 no-underline hover-gray"><span class="fw7 black-80">BITCOIN:</span> 1HNuwCnxVAsQzT3QH2MWyZFszBPHDXJu8U</a> -->
