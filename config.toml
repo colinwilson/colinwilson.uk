@@ -1,4 +1,4 @@
-baseURL = "https://colinwilson.uk/"
+baseURL = "/"
 languageCode = "en-GB"
 title = "Colin Wilson - Systems Engineer / Consultant"
 theme = "colinwilson"
