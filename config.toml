@@ -7,8 +7,20 @@ googleAnalytics     = "UA-98935524-1"
 #disqusshortname     = "colinwilsonuk" # Comment out to disable Disqus.
 
 [outputs]
-home = [ "HTML", "RSS" ]
+home = [ "HTML", "RSS", "REDIRECTS" ]
 section = [ "HTML", "RSS"]
+
+[mediaTypes]
+[mediaTypes."text/netlify"]
+    suffix = ""
+    delimiter = ""
+
+[outputFormats]
+[outputFormats.REDIRECTS]
+    mediatype = "text/netlify"
+    baseName = "_redirects"
+    isPlainText = true
+    notAlternative = true
 
 [permalinks]
     blog = "/:year/:month/:day/:slug"

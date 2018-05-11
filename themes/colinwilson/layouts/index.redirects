@@ -1,0 +1,6 @@
+# Redirect domain aliases to primary domain
+https://colinwilson.co.uk/* https://colinwilson.uk/:splat 301!
+https://www.colinwilson.co.uk/* https://colinwilson.uk/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://colinwilson.netlify.com/* https://colinwilson.uk/:splat 301!
