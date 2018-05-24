@@ -11,23 +11,23 @@
                 {{ .Site.Params.sub_bio }}
             </p>
         </div>
-        
-        {{ $totalpostscount := len (where .Data.Pages "Section" "blog") }}
+
+        {{ $totalpostscount := len (where .Data.Pages "Section" "articles") }}
         {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
         <div class="pv4 pv5-ns">
         <h2 class="mv0 pb2 pb3-ns f5 f4-ns normal lh-copy bb b--black-20">Latest Articles</h2>
             <ul class="flex flex-wrap justify-between mv0 pl0 list">
-                
+
             {{- range first $latestpostscount .Data.Pages.ByPublishDate.Reverse }}
                 <li class="w-100 w-30-l mt4 mt5-ns">
                 <small class="gray db pv2"><time>{{ .PublishDate.Format "Mon, Jan 2, 2006" }}</time></small>
                 <a class="dib no-underline black-90 color-animate hover-gray" href="{{ .Permalink }}">
-                    <h3 class="mt0 mb1 mb2-ns f4 f3-ns normal lh-copy measure-narrow">{{ .Title }}</h3>                    
+                    <h3 class="mt0 mb1 mb2-ns f4 f3-ns normal lh-copy measure-narrow">{{ .Title }}</h3>
                     <p class="gray mv0 lh-copy measure">{{ .Description }}</p>
                 </a>
                 </li>
-            {{- end }}            
-                
+            {{- end }}
+
             </ul>
         </div>
 

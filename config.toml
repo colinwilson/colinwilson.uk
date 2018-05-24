@@ -23,7 +23,7 @@ section = [ "HTML", "RSS"]
     notAlternative = true
 
 [permalinks]
-    blog = "/:year/:month/:day/:slug"
+    articles = "/:year/:month/:day/:slug"
 
 [params]
     latestpostscount       = 3                             # how many posts to display on the home page
@@ -57,8 +57,8 @@ section = [ "HTML", "RSS"]
 
 [[params.menu]]
     before = false
-    label  = "Blog"
-    link   = "blog/"
+    label  = "Articles"
+    link   = "articles/"
 
 [[params.menu]]
     before = false
