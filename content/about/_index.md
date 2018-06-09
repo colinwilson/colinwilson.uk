@@ -9,7 +9,7 @@ author = "Colin Wilson"
 
 I'm a Systems Engineer / Consultant focusing on Messagaing and Collaboration, Virtualization/Cloud (VMware, AWS, Hyper-V), Networking and Storage.
 
-You can also find me on Twitter and Github.
+You can find me on [Twitter](https://twitter.com/colinwiIson) and [GitHub](https://github.com/colinwilson)/[GitLab](https://gitlab.com/colinwilson).
 
 Cheers,
 
