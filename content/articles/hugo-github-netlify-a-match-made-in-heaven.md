@@ -18,7 +18,7 @@ title = "Hugo + GitHub + Netlify; a match made in heaven"
 
 <p class="tc"><img src="/img/hugo-github-netlify.png"></p>
 
-This blog is powered by [Hugo](https://gohugo.io/) and deployed & hosted via [Netlify](https://www.netlify.com). Having tried a number of blogging paltforms over the years I was looking for a new process that offered a more streamlined and efficient workflow so I could focus on creating content not management.
+This blog is powered by [Hugo](https://gohugo.io/) and deployed & hosted via [Netlify](https://www.netlify.com). Having tried a number of blogging platforms over the years I was looking for a new process that offered a more streamlined and efficient workflow so I could focus on creating content not management.
 
 ## Why Hugo?
 
@@ -36,7 +36,7 @@ And this is no exaggeration. With a modest spec laptop (4GB RAM, 1.2GHz Dual Cor
 
 Available as a single, cross-platform compatible binary file. [Installation](https://gohugo.io/overview/installing/) is as simple as downloading and running the binary.
 
-Once installed getting to grips with [using Hugo](https://gohugo.io/overview/usage/) is not too hard.
+Once installed getting to grips with [using Hugo](https://gohugo.io/overview/usage/) isn't too hard.
 
 ```bash
 $ hugo new site .
