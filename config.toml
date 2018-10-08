@@ -71,6 +71,7 @@ section = [ "HTML", "RSS"]
 # created automatically.
 
     github          = "colinwilson"
+    gitlab          = "colinwilson"
     bitbucket       = ""
     jsfiddle        = ""
     codepen         = ""
@@ -96,4 +97,4 @@ section = [ "HTML", "RSS"]
     facebook        = ""
     facebook_admin  = ""
     twitter_domain  = ""
-    twitter         = "colinwiIson"
+    twitter         = ""

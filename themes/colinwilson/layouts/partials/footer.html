@@ -20,6 +20,14 @@
         </svg>
       </a>
       {{ end }}
+      {{ if .Site.Social.gitlab }}
+      <a href="https://gitlab.com/{{ .Site.Social.gitlab }}" target="_blank" class="link dim dib mr3 black-70">
+        <svg class="db w2 h2" data-icon="gitlab" viewBox="0 0 24 24" fill="currentColor" >
+          <title >gitlab icon</title>
+          <path d="M23.955 13.587l-1.342-4.135-2.664-8.189c-.135-.423-.73-.423-.867 0L16.418 9.45H7.582L4.919 1.263C4.783.84 4.185.84 4.05 1.26L1.386 9.449.044 13.587c-.121.375.014.789.331 1.023L12 23.054l11.625-8.443c.318-.235.453-.647.33-1.024"/>
+        </svg>
+      </a>
+      {{ end }}
       {{ if .Site.Social.github }}
       <a href="https://github.com/{{ .Site.Social.github }}" target="_blank" class="link dim dib mr3 black-70">
         <svg class="db w2 h2" data-icon="github" viewBox="0 0 32 32" fill="currentColor">
