@@ -3,7 +3,7 @@ title: "Creating Custom Login Forms for KEMP's Edge Security Pack (ESP)"
 description: "How to create custom authentication/login forms for KEMP's Edge Security Pack (ESP)"
 author: "Colin Wilson"
 date: 2018-10-30T12:21:45Z
-publishdate: = 2018-10-30T12:21:45Z
+publishdate: 2018-10-30T12:21:45Z
 draft: false
 categories: [""]
 tags: ["KEMP Technologies","KEMP","ESP","Security","HTML5","Load Balancing","Exchange Server","OWA","Exchange 2016"]
