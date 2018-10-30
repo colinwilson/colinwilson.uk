@@ -98,7 +98,7 @@ The image set contains a .tar file structured as follows:
 
 <code data-gist-id="06fa8c5048fc5729b197249f59a56063" data-gist-hide-footer="true" data-gist-hide-line-numbers="true"></code>
 
-The easiest route to creating a custom image set is to make a duplicate of the existing **`<IMAGESETNAME>`** directory, rename it appropiatley (e.g. 'Colin Wilson v1.0') and then amend the necessary files.
+The easiest route to creating a custom image set is to make a duplicate of the existing **`<IMAGESETNAME>`** directory, rename it appropriately (e.g. 'Colin Wilson v1.0') and then amend the necessary files.
 
 Each custom image set requires a minimum of 3 files to function:
 
@@ -189,7 +189,7 @@ Using bootstrap, custom `CSS` and my own images, I modified the **`lm_initial.ht
 
 A few key guidelines when creating an *'advanced'*  image set:
 
-+ You have two options when including links. You can include links to external assets (e.g. a CDN) or sites as normal. Alternatively you can include links to assets contained inside your image set. If doing so you'll need to include the load balancers `'lm_auth_proxy'` script URL in the hyperlink. e.g.
++ You have two options when including links. You can include links to external assets (e.g. a CDN) or sites as normal. Alternatively you can include links to assets contained inside your image set. If doing so you'll need to include the load balancers `'lm_auth_proxy'` script URL in the hyper-link. e.g.
 
     '**`/lm_auth_proxy?LMimage=`**`custom-image.png`'
 
