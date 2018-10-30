@@ -24,4 +24,6 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
     {{ end }}
     {{ template "_internal/google_analytics_async.html" . }}{{ if .Site.Params.PiwikID }}{{ partial "piwik" . }}{{ end }}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.7.1/gist-embed.min.js"></script>
 </head>

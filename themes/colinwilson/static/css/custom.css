@@ -135,3 +135,8 @@
 
 .tags a:hover{background:#555;}
 .tags a:hover:before{border-color:#555 #555 #555 transparent;}
+
+/* set embedded gists to wrap - https://github.com/blairvanderhoof/gist-embed/issues/42 */
+.wrap-gist .gist .blob-code-inner {
+    white-space: normal;
+}
