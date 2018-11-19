@@ -33,7 +33,7 @@ section = [ "HTML", "RSS"]
     sub_bio                = "Messaging, DevOps, Networking, Security, Virtualization/Cloud, Storage, Hosting."
     description            = "Colin Wilson Systems Architect / Consultant / Technologist - personal website of Colin Wilson."
     email                  = "colin.wilson@protonmail.ch"
-    avatar                 = "/img/logo_v2.svg" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
+    avatar                 = "/img/logo_v2.1.svg" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
     # gravatar             = ""                # do not use at the same time as avatar
     bitcoin                = "1HNuwCnxVAsQzT3QH2MWyZFszBPHDXJu8U"
 
