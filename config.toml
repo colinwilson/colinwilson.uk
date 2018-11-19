@@ -28,7 +28,7 @@ section = [ "HTML", "RSS"]
 [params]
     latestpostscount       = 3                             # how many posts to display on the home page
     author                 = "Colin Wilson"
-    logo                   = "/img/logo_v2.svg" #"/img/logo.svg"
+    logo                   = "/img/logo_v2.1.svg" #"/img/logo.svg"
     bio                    = "Hello, I'm Colin Wilson, Systems Architect, Consultant, Technologist, lifelong learner."
     sub_bio                = "Messaging, DevOps, Networking, Security, Virtualization/Cloud, Storage, Hosting."
     description            = "Colin Wilson Systems Architect / Consultant / Technologist - personal website of Colin Wilson."
