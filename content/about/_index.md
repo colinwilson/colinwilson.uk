@@ -7,7 +7,7 @@ author = "Colin Wilson"
 
 +++
 
-I'm a Systems Architect / Consultant / Technologist focusing on Messagaing and Collaboration, Virtualization/Cloud (VMware, AWS, Hyper-V, Docker/Kubernetes), Networking and Storage.
+I'm a Systems Architect & DevOps Consultant focusing on Virtualization/Cloud (Kubernetes, Docker, AWS, vSphere, Hyper-V) Solutions, Networking, Security and Storage.
 
 You can find me on [Twitter](https://twitter.com/colinwiIson) and [GitHub](https://github.com/colinwilson)/[GitLab](https://gitlab.com/colinwilson).
 
