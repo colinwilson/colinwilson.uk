@@ -49,9 +49,9 @@
 
 .markdown p {
     /* Invoked by line break */
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     line-height: 1.5;
-    max-width: 36em;
+    max-width: 42em;
     color: rgba(0,0,0,.7);
 }
 
