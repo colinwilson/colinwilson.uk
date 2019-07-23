@@ -62,9 +62,9 @@
   </div>
 
   {{ if .Site.Params.highlightjs }}
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   {{ range .Site.Params.highlightjslanguages }}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/{{.}}.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/languages/{{.}}.min.js"></script>
   {{ end }}
   <script type="text/javascript">
     hljs.initHighlightingOnLoad();
