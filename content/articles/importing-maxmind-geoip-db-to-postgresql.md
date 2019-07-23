@@ -109,6 +109,44 @@ Result:
 
 ### Example 2
 
-So you have a database (PostgreSQL) table containing a column of IPs which needs to be resolved to Geo Locations.
+So you have a database (PostgreSQL) table containing a column of IPs, `ip_address`, each of which requires the corrosponding geolocation resolved and stored in the `ip_country` column.
 
-These IPs could be client access IPs, email message origin IPs etc. Doesn't matter really.
+These IPs could be client access IPs, email message origin IPs etc. Doesn't really matter.
+
+<pre><code class="sql">+---------------+------------+
+|  ip_address   | ip_country |
++---------------+------------+
+| 90.207.238.97 | null       |
+| 194.168.4.100 | null       |
+|   62.24.134.1 | null       |
+|  212.23.3.100 | null       |
+|   62.6.40.178 | null       |
++---------------+------------+
+</code></pre>
+
+Run:
+
+<pre><code class="sql">UPDATE
+    table_with_ips
+SET
+    ip_country = country_iso_code
+FROM
+    geoip_blocks
+    INNER JOIN geoip_locations ON geoip_blocks.geoname_id = geoip_locations.geoname_id
+WHERE
+    network >>= table_with_ips.ip_address::inet
+    AND ip_country IS null;
+</code></pre>
+
+Result:
+
+<pre><code class="sql">+---------------+------------+
+|  ip_address   | ip_country |
++---------------+------------+
+| 90.207.238.97 | GB         |
+| 194.168.4.100 | GB         |
+|   62.24.134.1 | GB         |
+|  212.23.3.100 | GB         |
+|       8.8.4.4 | US         |
++---------------+------------+
+</code></pre>
