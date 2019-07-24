@@ -11,8 +11,8 @@ title = "How to import MaxMind's GeoLite2 Database to PostgreSQL"
 [twitter]
   card = "summary"
   site = "@colinwiIson"
-  title = "Importing MaxMind GeoLite2 to PostgreSQL (≥9.5)"
-  description = "Importing MaxMind GeoLite2 to PostgreSQL (≥9.5)"
+  title = "How to import MaxMind's GeoLite2 Database to PostgreSQL (≥9.6)"
+  description = "How to import MaxMind's GeoLite2 Database to PostgreSQL (≥9.6)"
   image = "https://colinwilson.uk/img/import_geoip_sql/import_geoip_to_sql_opt.png"
 
 +++
