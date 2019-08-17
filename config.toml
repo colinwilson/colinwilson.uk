@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-GB"
-title = "Colin Wilson - Systems Architect / Consultant / Technologist"
+title = "Colin Wilson - Systems Architect / DevOps / Consultant / Technologist"
 theme = "colinwilson"
 
 googleAnalytics     = "UA-98935524-1"
@@ -28,12 +28,12 @@ section = [ "HTML", "RSS"]
 [params]
     latestpostscount       = 3                             # how many posts to display on the home page
     author                 = "Colin Wilson"
-    logo                   = "/img/logo_v2.1.svg" #"/img/logo.svg"
-    bio                    = "Hello, I'm Colin Wilson, Systems Architect & DevOps Consultant, Technologist, lifelong learner."
-    sub_bio                = "DevOps, Networking, Security, Virtualization/Cloud, Storage, Hosting, Messaging."
+    logo                   = "/img/logo_v2.2.svg" #"/img/logo.svg"
+    bio                    = "Hi, I'm Colin, and I build stuff..."
+    sub_bio                = "Cloud Computing/Orchestration, DevOps, Virtualization, Networking, Security, Storage, Hosting, Messaging."
     description            = "Colin Wilson Systems Architect / Consultant / Technologist - personal website of Colin Wilson."
     email                  = "colin.wilson@protonmail.ch"
-    avatar                 = "/img/logo_v2.1.svg" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
+    avatar                 = "/img/logo_v2.2.svg" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
     # gravatar             = ""                # do not use at the same time as avatar
     bitcoin                = "1HNuwCnxVAsQzT3QH2MWyZFszBPHDXJu8U"
 
