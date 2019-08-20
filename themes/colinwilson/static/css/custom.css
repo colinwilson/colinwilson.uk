@@ -14,7 +14,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  color: #333;
+  color: rgba(51, 51, 51, 0.87);
   text-transform: none;
   margin-top: 1.75rem;
 }
@@ -150,4 +150,46 @@
 /* set embedded gists to wrap - https://github.com/blairvanderhoof/gist-embed/issues/42 */
 .wrap-gist .gist .blob-code-inner {
     white-space: normal;
+}
+
+/* Table Styles */
+.tg {
+    border-collapse:collapse;
+    border-spacing:0;
+    border:none;
+    border-color:#ccc;
+}
+
+.tg td {
+    padding:10px 5px;
+    border-style:solid;
+    border-width:0px;
+    overflow:hidden;
+    word-break:normal;
+    border-color:#ccc;
+    color:#333;
+    background-color:#fff;
+}
+
+.tg th {
+    font-weight:normal;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:0px;
+    overflow:hidden;
+    word-break:normal;
+    border-color:#ccc;
+    color:#333;
+    background-color:#f0f0f0;
+}
+
+.tg .tg-buh4 {
+    background-color:#f9f9f9;
+    text-align:left;
+    vertical-align:top
+}
+
+.tg .tg-0lax {
+    text-align:left;
+    vertical-align:top
 }
