@@ -106,13 +106,13 @@ First use the `ssh-keyscan` cmd to retrieve the `known_hosts` and store them in 
 
 We can now use `kubectl` to create a secret to store your private SSH key:
 
-    kubectl create secret generic git-creds \
+    > kubectl create secret generic git-creds \
     --from-file=ssh=$HOME/.ssh/id_ed25519 \
     --from-file=known_hosts=/tmp/known_hosts
 
 ### Step 6 - Configure git-sync init container with sample app (nginx)
 
-Create a configMap with the necessary git-sync options:
+Create a configMap file with the necessary git-sync options:
 
 **git-sync-configMap.yaml**
 ```
@@ -132,9 +132,9 @@ data:
   GIT_SYNC_MAX_SYNC_FAILURES: "-1" # number of consecutive failures allowed before aborting
   GIT_SYNC_SSH: "true" # use SSH for git operations
 ```
-<button id="btn" style="cursor: pointer">show additional git-sync options</button>
+<a id="btn" style="cursor: pointer">show additional git-sync options</a>
 
-<div id="wizard" style="display:none;">
+<div id="git-sync-options" style="display:none;">
 <table class="tg">
   <tr>
     <th class="tg-0lax">Opions</th>
@@ -277,7 +277,14 @@ data:
     <td class="tg-buh4">enable the pprof debug endpoints on git-sync's HTTP endpoint</td>
   </tr>
 </table>
+<span class="f7">Source: <a target="_blank" href="https://github.com/kubernetes/git-sync/blob/master/cmd/git-sync/main.go#L46-L108">https://github.com/kubernetes/git-sync/blob/master/cmd/git-sync/main.go#L46-L108</a></span>
 </div>
+
+Add the configMap to your cluster:
+
+    > kubectl create -f $HOME/git-sync-configMap.yaml
+
+Create a deployment manifest file featuring nginx and the git-sync init container:
 
 **git-sync-demo.yaml**
 ```
@@ -343,11 +350,13 @@ spec:
     port: 80
     targetPort: 80
 ```
+Create the deployment on your cluster:
 
+    > kubectl apply -f $HOME/git-sync-demo.yaml
 
 <script>
   $('#btn').click(function(e) {
     e.preventDefault();
-    $('#wizard').toggle();
+    $('#git-sync-options').toggle();
 });
 </script>
