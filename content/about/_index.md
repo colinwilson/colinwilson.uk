@@ -9,7 +9,7 @@ author = "Colin Wilson"
 
 I'm a Systems Architect & DevOps Consultant focusing on Virtualization/Cloud/Orchestration (Kubernetes, Docker, AWS, GCP, Azure, vSphere) Solutions, Networking, Security and Storage.
 
-You can find me on [Twitter](https://twitter.com/colinwiIson) and [GitHub](https://github.com/colinwilson)/[GitLab](https://gitlab.com/colinwilson).
+You can find me on [GitHub](https://github.com/colinwilson)/[GitLab](https://gitlab.com/colinwilson).
 
 Cheers,
 
