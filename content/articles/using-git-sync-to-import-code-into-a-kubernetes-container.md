@@ -6,12 +6,12 @@ description = "Git Clone a repository into a Kubernetes Container / Volume"
 draft = true
 publishdate = "2019-08-19T00:03:22+01:00"
 tags = ["Git","Docker","Kubernetes","Kubectl", "Sidecar", "SSH", "git-sync", "Code","Codebase","K8s", "Tutorial"]
-title = "Using Git-sync to Import Code into a Kubernetes Container / Volume"
+title = "Import Code into a Kubernetes Container / Volume using Git-sync"
 
 [twitter]
   card = "summary"
-  site = "@colinwiIson"
-  title = "Using Git-sync to Import Code into a Kubernetes Container / Volume"
+  site = "@ColinWilson_"
+  title = "Import Code into a Kubernetes Container / Volume using Git-sync"
   description = "Using Git-sync to Import Code into a Kubernetes Container / Volume"
   image = "https://colinwilson.uk/img/git-sync-k8s/git-sync-k8s-illustration.png"
 
