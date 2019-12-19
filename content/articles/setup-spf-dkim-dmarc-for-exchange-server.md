@@ -72,7 +72,7 @@ You can save the generated keys to an alternative location if you wish. However 
 
 <img src="/img/DKIM_Exch_Srv/dkim_ex_09b_c_opt.png">
 
-**IMPORTANT:** Make sure the DKIM Signer user has permission to access whichever path you choose to store your `keys`. Otherwise you'll encounter access denied errors: `"Couldn't load private key for domain mydomain.net: Access to the path 'C:\Program Files\Exchange DkimSigner\keys\mydomain.net.pem' is denied."`. And DKIM signing of outgoing mail will fail.
+**IMPORTANT:** Make sure the user you're signed into your exchange server as has permission to access whichever path you choose to store your `keys`. Otherwise you'll encounter access denied errors: `"Couldn't load private key for domain mydomain.net: Access to the path 'C:\Program Files\Exchange DkimSigner\keys\mydomain.net.pem' is denied."`. And DKIM signing of outgoing mail will fail.
 
 <img src="/img/DKIM_Exch_Srv/dkim_ex_18a_c_opt.png">
 
