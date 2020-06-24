@@ -2,17 +2,17 @@
 author = "Colin Wilson"
 categories = [""]
 date = "2019-12-28T17:11:22+01:00"
-description = "Setup a Kubernetes Cluster on Hetzner Cloud"
+description = "Deploy a Kubernetes Cluster on Hetzner Cloud"
 draft = true
 publishdate = "2019-12-28T17:11:22+01:00"
 tags = ["Terraform", "Terraform Cloud", "Hetzner", "Kubernetes", "Rancher", "HCloud", "Git","K8s", "Tutorial", "IaC"]
-title = "Setup a Kubernetes Cluster on Hetzner Cloud using Terraform"
+title = "Deploy a Kubernetes Cluster on Hetzner Cloud using Terraform"
 
 [twitter]
   card = "summary"
   site = "@ColinWilson_"
-  title = "Setup a Kubernetes Cluster on Hetzner Cloud"
-  description = "Setup a Kubernetes Cluster on Hetzner Cloud"
+  title = "Deploy a Kubernetes Cluster on Hetzner Cloud"
+  description = "Deploy a Kubernetes Cluster on Hetzner Cloud"
   image = "https://colinwilson.uk/img/k8s_hetzner/terraform_hcloud_manifest_illustration.png"
 
 +++
