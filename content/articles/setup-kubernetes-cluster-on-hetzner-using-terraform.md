@@ -5,7 +5,7 @@ date = "2019-12-28T17:11:22+01:00"
 description = "Setup a Kubernetes Cluster on Hetzner Cloud"
 draft = true
 publishdate = "2019-12-28T17:11:22+01:00"
-tags = ["Git","Docker","Kubernetes","Kubectl", "Cloud", "Cluster", "Code","K8s", "Tutorial", "Iac", "Terraform"]
+tags = ["Terraform", "Terraform Cloud", "Hetzner", "Kubernetes", "Rancher", "HCloud", "Git","K8s", "Tutorial", "IaC"]
 title = "Setup a Kubernetes Cluster on Hetzner Cloud using Terraform"
 
 [twitter]
@@ -13,20 +13,20 @@ title = "Setup a Kubernetes Cluster on Hetzner Cloud using Terraform"
   site = "@ColinWilson_"
   title = "Setup a Kubernetes Cluster on Hetzner Cloud"
   description = "Setup a Kubernetes Cluster on Hetzner Cloud"
-  image = "https://colinwilson.uk/img/k8s_hetzner/k8s_hetzner.png"
+  image = "https://colinwilson.uk/img/k8s_hetzner/terraform_hcloud_manifest_illustration.png"
 
 +++
 
-<p class="tc"><img src="/img/k8s_hetzner/k8s_hetzner.png"></p>
+<p class="tc"><img src="/img/k8s_hetzner/terraform_hcloud_manifest_illustration_h500px.png"></p>
 
 ## Introduction
 
-Using managed kubernetes services such as GCP and EKS for small projects and development can be an expensive option. Hetzner (Europe) offers a cost effective solution with Hetzner Cloud.
-This tutorial will cover setting up a low cost Kubernetes Cluster on Hetzner Cloud with LoadBalancer, Persistent Volumes & Private Network objects.
+Using managed Kubernetes services such as GCP and EKS for small projects and development can be an expensive option. Hetzner (Europe) offers a cost effective solution with Hetzner Cloud.
+This tutorial covers setting up a low cost Kubernetes cluster on Hetzner Cloud with LoadBalancer, Persistent Volumes & Private Network objects.
 
 ## Prerequisites
 
-* Hetzner Cloud Account
+* Hetzner Cloud Account (Hetzner Cloud API Token)
 * Knowledge of Kubernetes
 * Linux Knowledge
 * Command Line tools installed
