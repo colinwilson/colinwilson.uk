@@ -5,8 +5,8 @@ date = "2019-12-28T17:11:22+01:00"
 description = "Setup a Kubernetes Cluster on Hetzner Cloud"
 draft = true
 publishdate = "2019-12-28T17:11:22+01:00"
-tags = ["Git","Docker","Kubernetes","Kubectl", "Cloud", "Cluster", "Code","K8s", "Tutorial"]
-title = "Setup a Kubernetes Cluster on Hetzner Cloud"
+tags = ["Git","Docker","Kubernetes","Kubectl", "Cloud", "Cluster", "Code","K8s", "Tutorial", "Iac", "Terraform"]
+title = "Setup a Kubernetes Cluster on Hetzner Cloud using Terraform"
 
 [twitter]
   card = "summary"
@@ -21,7 +21,7 @@ title = "Setup a Kubernetes Cluster on Hetzner Cloud"
 
 ## Introduction
 
-For small projects or testing, managed kubernetes services such as GCP and EKS can be an unnecessary expensive.
+Using managed kubernetes services such as GCP and EKS for small projects and development can be an expensive option. Hetzner (Europe) offers a cost effective solution with Hetzner Cloud.
 This tutorial will cover setting up a low cost Kubernetes Cluster on Hetzner Cloud with LoadBalancer, Persistent Volumes & Private Network objects.
 
 ## Prerequisites
