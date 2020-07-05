@@ -1,0 +1,3 @@
+[submodule "colinwilson.uk-content"]
+	path = colinwilson.uk-content
+	url = https://github.com/colinwilson/colinwilson.uk-content
