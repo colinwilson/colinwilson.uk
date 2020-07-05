@@ -18,7 +18,8 @@
         <h2 class="mv0 pb2 pb3-ns f5 f4-ns normal lh-copy bb b--black-20">Latest Articles</h2>
             <ul class="flex flex-wrap justify-between mv0 pl0 list">
 
-            {{- range first $latestpostscount .Data.Pages.ByPublishDate.Reverse }}
+
+            {{- range ( where site.RegularPages "Section" "articles" | first $latestpostscount ) }}
                 <li class="w-100 w-30-l mt4 mt5-ns">
                 <small class="gray db pv2"><time>{{ .PublishDate.Format "02 January 2006" }}</time></small>
                 <a class="dib no-underline black-90 color-animate hover-gray" href="{{ .Permalink }}">
