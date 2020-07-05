@@ -43,7 +43,7 @@ section = [ "HTML", "RSS"]
     piwikURL               = "analytics.qunux.com"
 
     og_description         = "Systems Architect, Consultant, Technologist, lifelong learner, nuke it from orbit."
-    highlightjs            = true
+    prismjs            = true
 
 [markup]
   defaultMarkdownHandler = "goldmark"

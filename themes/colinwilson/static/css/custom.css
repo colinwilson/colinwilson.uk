@@ -65,16 +65,6 @@
     transition: color .15s ease-in;
 }
 
-.markdown pre code {
-    /* enclosed by 3 backticks (```) */
-    font-size: 18px;
-    line-height: 24px;
-    padding: 20px;
-    border-radius: 5px;
-    width: max-content;
-    max-width: 950px;
-}
-
 .cap p:first-child::first-letter {
     font-family: "Rubik", sans-serif;
     font-size: 5.2em;
@@ -85,12 +75,6 @@
     margin-top:0.12em;
     margin-right:0.12em;
     margin-left:0.05em;
-}
-
-.code, code {
-    padding: 2px 5px;
-    /*border: 1px solid rgba(46,60,67,0.1);*/
-    border-radius: 4px;
 }
 
 .color-animate, .color-animate:hover, .color-animate:focus {

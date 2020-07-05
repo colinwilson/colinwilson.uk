@@ -19,11 +19,13 @@
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-    <link rel="stylesheet" href="/css/custom.css">
-    {{ if .Site.Params.highlightjs }}
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-dark.min.css">
+    {{ if .Site.Params.prismjs }}
+    <link rel="stylesheet" href="/css/new-moon.css">
+    <link rel="stylesheet" href="//unpkg.com/prismjs@1.20.0/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="//unpkg.com/prismjs@1.20.0/plugins/line-numbers/prism-line-numbers.css">
     {{ end }}
+    <link rel="stylesheet" href="/css/custom.css">
     {{ template "_internal/google_analytics_async.html" . }}{{ if .Site.Params.PiwikID }}{{ partial "piwik" . }}{{ end }}
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gist-embed/2.7.1/gist-embed.min.js"></script>
+    <script type="text/javascript" src="//unpkg.com/gist-embed@1.0.4/dist/gist-embed.min.js"></script>
 </head>
