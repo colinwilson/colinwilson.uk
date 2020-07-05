@@ -18,7 +18,7 @@
 
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
     {{ if .Site.Params.prismjs }}
     <link rel="stylesheet" href="/css/new-moon.css">
     <link rel="stylesheet" href="//unpkg.com/prismjs@1.20.0/plugins/command-line/prism-command-line.css">
@@ -26,6 +26,6 @@
     {{ end }}
     <link rel="stylesheet" href="/css/custom.css">
     {{ template "_internal/google_analytics_async.html" . }}{{ if .Site.Params.PiwikID }}{{ partial "piwik" . }}{{ end }}
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="//unpkg.com/gist-embed@1.0.4/dist/gist-embed.min.js"></script>
 </head>
