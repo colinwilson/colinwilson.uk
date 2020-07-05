@@ -126,7 +126,7 @@
     line-height: 0;
     padding: 18px 0 16px;
     text-indent: 6px;
-    letter-spacing: -18px;
+    /*letter-spacing: -18px;*/
   }
 
   .gatsby-highlight-code-line {
