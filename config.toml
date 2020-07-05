@@ -2,6 +2,7 @@ baseURL = "/"
 languageCode = "en-GB"
 title = "Colin Wilson - Systems Architect / DevOps / Consultant / Technologist"
 theme = "colinwilson"
+contentDir = "content/articles"
 
 googleAnalytics     = "UA-98935524-1"
 #disqusshortname     = "colinwilsonuk" # Comment out to disable Disqus.
@@ -23,6 +24,7 @@ section = [ "HTML", "RSS"]
     notAlternative = true
 
 [permalinks]
+    "/" = "/:year/:month/:day/:slug"
     articles = "/:year/:month/:day/:slug"
 
 [params]
@@ -42,6 +44,12 @@ section = [ "HTML", "RSS"]
 
     og_description         = "Systems Architect, Consultant, Technologist, lifelong learner, nuke it from orbit."
     highlightjs            = true
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # https://jdhao.github.io/2019/12/29/hugo_html_not_shown/
 
 # Create custom menu entries by defining a label and a link for
 # them. Since you can also link posts, you've the option the
