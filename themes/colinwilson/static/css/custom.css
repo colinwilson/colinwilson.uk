@@ -177,3 +177,13 @@
     text-align:left;
     vertical-align:top
 }
+
+.custom-width {
+    width: 70%;
+}
+
+@media screen and (max-width:640px) {
+    .custom-width {
+    width: 90%;
+    }
+}
