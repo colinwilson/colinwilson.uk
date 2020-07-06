@@ -182,7 +182,7 @@
     width: 70%;
 }
 
-@media screen and (max-width:640px) {
+@media screen and (max-width:1200px) {
     .custom-width {
     width: 90%;
     }
