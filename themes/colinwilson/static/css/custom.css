@@ -19,7 +19,7 @@ html {
 .markdown h6 {
   font-size: 18px;
   font-family: "Rubik", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -65,13 +65,14 @@ html {
 }
 
 .markdown a {
-    text-decoration: none;
-    transition: color .15s ease-in;
-    color: #0095FF;
+    outline: 2px solid transparent;
+    transition: 0.3s;
+    color: inherit;
+    font-weight: 500;
 }
 .markdown a:hover {
     opacity: .5;
-    transition: color .15s ease-in;
+    transition: 0.3s;
 }
 
 .cap p:first-child::first-letter {
