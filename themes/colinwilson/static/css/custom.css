@@ -49,11 +49,14 @@ html {
 }
 
 .markdown blockquote {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    padding-left: 15px;
-    border-left: 3px solid #ccc;
+    width: max-content;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #e8e7e7;
+    border-radius: .3rem;
+    border: 1px solid #807d72;
+    border-left-width: 1px;
+    border-left-width: 8px;
 }
 
 .markdown p {
