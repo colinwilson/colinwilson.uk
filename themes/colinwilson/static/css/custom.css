@@ -94,6 +94,9 @@ html {
 .color-animate, .color-animate:hover, .color-animate:focus {
     transition: color .15s;
 }
+
+/* Tags */
+
 .tags{
     margin:0 0 0 -10px;
     padding:10px 0 10px 0;
@@ -151,6 +154,84 @@ html {
 .tags a:hover{background:#555;}
 .tags a:hover:before{border-color:#555 #555 #555 transparent;}
 .tags a:hover:after{border-color: transparent transparent transparent #555;}
+
+/* Kubernetes */
+a.tag-kubernetes {
+  background: #f99d9d;
+  color: white;
+}
+
+a.tag-kubernetes:after {
+  border-color: transparent transparent transparent #f99d9d;
+}
+
+a.tag-kubernetes:before {
+    border-color: #f99d9d #f99d9d #f99d9d transparent;
+}
+
+a.tag-kubernetes:hover {
+    background: #ff7b7b;
+}
+
+a.tag-kubernetes:hover:before {
+    border-color: #ff7b7b #ff7b7b #ff7b7b transparent;
+}
+
+a.tag-kubernetes:hover:after {
+    border-color: transparent transparent transparent #ff7b7b;
+}
+
+/* Docker */
+a.tag-docker {
+  background: #a6dcef;
+  color: white;
+}
+
+a.tag-docker:after {
+  border-color: transparent transparent transparent #a6dcef;
+}
+
+a.tag-docker:before {
+    border-color: #a6dcef #a6dcef #a6dcef transparent;
+}
+
+a.tag-docker:hover {
+    background: #74bdd8;
+}
+
+a.tag-docker:hover:before {
+    border-color: #74bdd8 #74bdd8 #74bdd8 transparent;
+}
+
+a.tag-docker:hover:after {
+    border-color: transparent transparent transparent #74bdd8;
+}
+
+/* GCP */
+a.tag-gcp {
+background: #a9e2a9;
+color: white;
+}
+
+a.tag-gcp:after {
+border-color: transparent transparent transparent #a9e2a9;
+}
+
+a.tag-gcp:before {
+    border-color: #a9e2a9 #a9e2a9 #a9e2a9 transparent;
+}
+
+a.tag-gcp:hover {
+    background: #94c494;
+}
+
+a.tag-gcp:hover:before {
+    border-color: #94c494 #94c494 #94c494 transparent;
+}
+
+a.tag-gcp:hover:after {
+    border-color: transparent transparent transparent #94c494;
+}
 
 /* set embedded gists to wrap - https://github.com/blairvanderhoof/gist-embed/issues/42 */
 .wrap-gist .gist .blob-code-inner {

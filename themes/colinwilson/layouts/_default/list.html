@@ -10,8 +10,8 @@
 
         <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
 
-    <ul class="tags">        
-        <li><a class="article-category-link">{{ .Title }}</a></li>
+    <ul class="tags">
+        <li><a class="article-category-link tag-{{ .Title | lower }}">{{ .Title }}</a></li>
     </ul>
     {{ range .Data.Pages }}
         <a class="dib no-underline black-70 color-animate hover-gray" href="{{ .Permalink }}">
