@@ -1,291 +1,367 @@
 :root {
-    --light-background: #f1f3f5;
-    --read-background: #f2f0f4;
+	--light-background: #f1f3f5;
+	--read-background: #f2f0f4;
 }
 
 html {
-    background-color: var(--read-background);
+	background-color: var(--read-background);
 }
 
 .rubik {
-            font-family: "Rubik", sans-serif;
-        }
+	font-family: "Rubik", sans-serif;
+}
 
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
-  font-size: 18px;
-  font-family: "Rubik", sans-serif;
-  font-weight: 500;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  color: rgba(51, 51, 51, 0.87);
-  text-transform: none;
-  margin-top: 1.75rem;
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+	font-size: 18px;
+	font-family: "Rubik", sans-serif;
+	font-weight: 500;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	color: rgba(51, 51, 51, 0.87);
+	text-transform: none;
+	margin-top: 1.75rem;
 }
 
 .markdown h1 {
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
+	font-size: 1.75rem;
+	margin-bottom: 2rem;
 }
+
 .markdown h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+	font-size: 1.5rem;
+	margin-bottom: 1.5rem;
 }
+
 .markdown h3 {
-  font-size: 1em;
-  margin-bottom: 1rem;
+	font-size: 1em;
+	margin-bottom: 1rem;
 }
-.markdown h4,
-.markdown h5,
-.markdown h6 {
-  font-size: 0.75rem;
-  margin-bottom: 1rem;
-  letter-spacing: none;
+
+.markdown h4, .markdown h5, .markdown h6 {
+	font-size: 0.75rem;
+	margin-bottom: 1rem;
+	letter-spacing: none;
 }
 
 .markdown blockquote {
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 1.5rem 0;
-    padding: 1rem;
-    background: #e8e7e7;
-    border-radius: .3rem;
-    border: 1px solid #807d72;
-    border-left-width: 1px;
-    border-left-width: 8px;
+	width: -moz-fit-content;
+	width: fit-content;
+	margin: 1.5rem 0;
+	padding: 1rem;
+	background: #e8e7e7;
+	border-radius: .3rem;
+	border: 1px solid #807d72;
+	border-left-width: 1px;
+	border-left-width: 8px;
 }
 
 .markdown p {
-    /* Invoked by line break */
+/* Invoked by line break */
     font-size: 1.0rem;
-    line-height: 1.5;
-    max-width: 42em;
-    color: rgba(0,0,0,.7);
+	line-height: 1.5;
+	max-width: 42em;
+	color: rgba(0,0,0,.7);
 }
 
 .markdown a {
-    outline: 2px solid transparent;
-    transition: 0.3s;
-    color: inherit;
-    font-weight: 500;
+	outline: 2px solid transparent;
+	transition: 0.3s;
+	color: inherit;
+	font-weight: 500;
 }
+
 .markdown a:hover {
-    opacity: .5;
-    transition: 0.3s;
+	opacity: .5;
+	transition: 0.3s;
 }
 
 .cap p:first-child::first-letter {
-    font-family: "Rubik", sans-serif;
-    font-size: 5.2em;
-    color: #000;
-    line-height: 0.7em;
-    float: left;
-    text-transform: uppercase;
-    margin-top:0.12em;
-    margin-right:0.12em;
-    margin-left:0.05em;
+	font-family: "Rubik", sans-serif;
+	font-size: 5.2em;
+	color: #000;
+	line-height: 0.7em;
+	float: left;
+	text-transform: uppercase;
+	margin-top: 0.12em;
+	margin-right: 0.12em;
+	margin-left: 0.05em;
 }
 
 .color-animate, .color-animate:hover, .color-animate:focus {
-    transition: color .15s;
+	transition: color .15s;
 }
+
 
 /* Tags */
 
-.tags{
-    margin:0 0 0 -10px;
-    padding:10px 0 10px 0;
-    position:relative;
-    list-style:none;
-}
-.tags li, .tags a{
-    float:left;
-    margin-bottom: 10px;
-    height:20px;
-    line-height:20px;
-    position:relative;
-    font-size:12px;
-    text-transform: uppercase;
-}
-.tags a{
-    margin-left:20px;
-    padding:0 10px 0 12px;
-    background: gray;
-    color:#fff;
-    text-decoration:none;
+.tags {
+	margin: 0 0 0 -10px;
+	padding: 10px 0 10px 0;
+	position: relative;
+	list-style: none;
 }
 
-.tags a:before{
-    content:"";
-    float:left;
-    position:absolute;
-    top:0;
-    left:-10px;
-    width:0;
-    height:0;
-    border-color:gray gray gray transparent;
-    border-style:solid;
-    border-width:10px 10px 10px 8px;
-    -moz-border-radius-bottomleft:2px;
-    -webkit-border-bottom-left-radius:2px;
-    border-bottom-left-radius:2px;
-    -moz-border-radius-topleft:2px;
-    -webkit-border-top-left-radius:2px;
-    border-top-left-radius:2px;
+.tags li, .tags a {
+	float: left;
+	margin-bottom: 10px;
+	height: 20px;
+	line-height: 20px;
+	position: relative;
+	font-size: 12px;
+	text-transform: uppercase;
 }
 
-.tags a:after{
-    content:"";
-    float: right;;
-    position:absolute;
-    top:0;
-    right: -20px;
-    width:0;
-    height:0;
-    border-color: transparent transparent transparent gray;
-    border-style:solid;
-    border-width:10px 10px 10px 10px;
+.tags a {
+	margin-left: 20px;
+	padding: 0 10px 0 12px;
+	background: gray;
+	color: #fff;
+	text-decoration: none;
 }
-.tags a:hover{background:#555;}
-.tags a:hover:before{border-color:#555 #555 #555 transparent;}
-.tags a:hover:after{border-color: transparent transparent transparent #555;}
+
+.tags a:before {
+	content: "";
+	float: left;
+	position: absolute;
+	top: 0;
+	left: -10px;
+	width: 0;
+	height: 0;
+	border-color: gray gray gray transparent;
+	border-style: solid;
+	border-width: 10px 10px 10px 8px;
+	-moz-border-radius-bottomleft: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	-moz-border-radius-topleft: 2px;
+	-webkit-border-top-left-radius: 2px;
+	border-top-left-radius: 2px;
+}
+
+.tags a:after {
+	content: "";
+	float: right;
+	;
+     position: absolute;
+	top: 0;
+	right: -20px;
+	width: 0;
+	height: 0;
+	border-color: transparent transparent transparent gray;
+	border-style: solid;
+	border-width: 10px 10px 10px 10px;
+}
+
+.tags a:hover {
+	background: #555;
+}
+
+.tags a:hover:before {
+	border-color: #555 #555 #555 transparent;
+}
+
+.tags a:hover:after {
+	border-color: transparent transparent transparent #555;
+}
+
 
 /* Kubernetes */
+
 a.tag-kubernetes {
-  background: #f99d9d;
-  color: white;
+	background: #f99d9d;
+	color: white;
 }
 
 a.tag-kubernetes:after {
-  border-color: transparent transparent transparent #f99d9d;
+	border-color: transparent transparent transparent #f99d9d;
 }
 
 a.tag-kubernetes:before {
-    border-color: #f99d9d #f99d9d #f99d9d transparent;
+	border-color: #f99d9d #f99d9d #f99d9d transparent;
 }
 
 a.tag-kubernetes:hover {
-    background: #ff7b7b;
+	background: #ff7b7b;
 }
 
 a.tag-kubernetes:hover:before {
-    border-color: #ff7b7b #ff7b7b #ff7b7b transparent;
+	border-color: #ff7b7b #ff7b7b #ff7b7b transparent;
 }
 
 a.tag-kubernetes:hover:after {
-    border-color: transparent transparent transparent #ff7b7b;
+	border-color: transparent transparent transparent #ff7b7b;
 }
 
+
+/* Terraform */
+
+a.tag-terraform {
+	background: #d291bc;
+	color: white;
+}
+
+a.tag-terraform:after {
+	border-color: transparent transparent transparent #d291bc;
+}
+
+a.tag-terraform:before {
+	border-color: #d291bc #d291bc #d291bc transparent;
+}
+
+a.tag-terraform:hover {
+	background: #b6719f;
+}
+
+a.tag-terraform:hover:before {
+	border-color: #b6719f #b6719f #b6719f transparent;
+}
+
+a.tag-terraform:hover:after {
+	border-color: transparent transparent transparent #b6719f;
+}
+
+
+/* Git */
+
+a.tag-git {
+	background: #726a95;
+	color: white;
+}
+
+a.tag-git:after {
+	border-color: transparent transparent transparent #726a95;
+}
+
+a.tag-git:before {
+	border-color: #726a95 #726a95 #726a95 transparent;
+}
+
+a.tag-git:hover {
+	background: #635d80;
+}
+
+a.tag-git:hover:before {
+	border-color: #635d80 #635d80 #635d80 transparent;
+}
+
+a.tag-git:hover:after {
+	border-color: transparent transparent transparent #635d80;
+}
+
+
 /* Docker */
+
 a.tag-docker {
-  background: #a6dcef;
-  color: white;
+	background: #a6dcef;
+	color: white;
 }
 
 a.tag-docker:after {
-  border-color: transparent transparent transparent #a6dcef;
+	border-color: transparent transparent transparent #a6dcef;
 }
 
 a.tag-docker:before {
-    border-color: #a6dcef #a6dcef #a6dcef transparent;
+	border-color: #a6dcef #a6dcef #a6dcef transparent;
 }
 
 a.tag-docker:hover {
-    background: #74bdd8;
+	background: #74bdd8;
 }
 
 a.tag-docker:hover:before {
-    border-color: #74bdd8 #74bdd8 #74bdd8 transparent;
+	border-color: #74bdd8 #74bdd8 #74bdd8 transparent;
 }
 
 a.tag-docker:hover:after {
-    border-color: transparent transparent transparent #74bdd8;
+	border-color: transparent transparent transparent #74bdd8;
 }
 
+
 /* GCP */
+
 a.tag-gcp {
-background: #a9e2a9;
-color: white;
+	background: #a9e2a9;
+	color: white;
 }
 
 a.tag-gcp:after {
-border-color: transparent transparent transparent #a9e2a9;
+	border-color: transparent transparent transparent #a9e2a9;
 }
 
 a.tag-gcp:before {
-    border-color: #a9e2a9 #a9e2a9 #a9e2a9 transparent;
+	border-color: #a9e2a9 #a9e2a9 #a9e2a9 transparent;
 }
 
 a.tag-gcp:hover {
-    background: #94c494;
+	background: #94c494;
 }
 
 a.tag-gcp:hover:before {
-    border-color: #94c494 #94c494 #94c494 transparent;
+	border-color: #94c494 #94c494 #94c494 transparent;
 }
 
 a.tag-gcp:hover:after {
-    border-color: transparent transparent transparent #94c494;
+	border-color: transparent transparent transparent #94c494;
 }
+
 
 /* set embedded gists to wrap - https://github.com/blairvanderhoof/gist-embed/issues/42 */
+
 .wrap-gist .gist .blob-code-inner {
-    white-space: normal;
+	white-space: normal;
 }
 
+
 /* Table Styles */
+
 .tg {
-    border-collapse:collapse;
-    border-spacing:0;
-    border:none;
-    border-color:#ccc;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: none;
+	border-color: #ccc;
 }
 
 .tg td {
-    padding:10px 5px;
-    border-style:solid;
-    border-width:0px;
-    overflow:hidden;
-    word-break:normal;
-    border-color:#ccc;
-    color:#333;
-    background-color:#fff;
+	padding: 10px 5px;
+	border-style: solid;
+	border-width: 0px;
+	overflow: hidden;
+	word-break: normal;
+	border-color: #ccc;
+	color: #333;
+	background-color: #fff;
 }
 
 .tg th {
-    font-weight:normal;
-    padding:10px 5px;
-    border-style:solid;
-    border-width:0px;
-    overflow:hidden;
-    word-break:normal;
-    border-color:#ccc;
-    color:#333;
-    background-color:#f0f0f0;
+	font-weight: normal;
+	padding: 10px 5px;
+	border-style: solid;
+	border-width: 0px;
+	overflow: hidden;
+	word-break: normal;
+	border-color: #ccc;
+	color: #333;
+	background-color: #f0f0f0;
 }
 
 .tg .tg-buh4 {
-    background-color:#f9f9f9;
-    text-align:left;
-    vertical-align:top
+	background-color: #f9f9f9;
+	text-align: left;
+	vertical-align: top
 }
 
 .tg .tg-0lax {
-    text-align:left;
-    vertical-align:top
+	text-align: left;
+	vertical-align: top
 }
 
 .custom-width {
-    width: 70%;
+	width: 70%;
 }
 
 @media screen and (max-width:1200px) {
-    .custom-width {
-    width: 90%;
-    }
+	.custom-width {
+		width: 90%;
+	}
 }
