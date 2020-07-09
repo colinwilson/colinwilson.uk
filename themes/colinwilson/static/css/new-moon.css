@@ -68,9 +68,11 @@ pre[class*='language-'] {
 
   pre[class*='language-'] {
     padding: 1.5rem;
-    margin-left: auto;
+    margin-left: inherit;
     margin-right: auto;
     border-radius: 0.3rem;
+    width: fit-content;
+    width: -moz-fit-content;
   }
 }
 
