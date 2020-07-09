@@ -12,7 +12,7 @@
           {{ range first 10 .Data.Pages }}
           <a class="dib no-underline black-70 color-animate hover-gray" href="{{ .Permalink }}">
             <h2 class="f7 fw3 mt1 mb0 ttu tracked gray">{{ .PublishDate.Format "02 January 2006" }}</h2>
-            <h1 class="mt0 mb4 f3 fw1 f2-ns normal lh-copy lh-title-ns  measure-narrow">{{ .Title }}</h1>
+            <h1 class="mt0 mb4 f4 fw1 f4-ns normal lh-copy lh-title-ns">{{ .Title }}</h1>
           </a>
           {{ end }}
         </div>

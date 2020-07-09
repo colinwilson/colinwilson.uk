@@ -1,3 +1,12 @@
+:root {
+    --light-background: #f1f3f5;
+    --read-background: #f2f0f4;
+}
+
+html {
+    background-color: var(--read-background);
+}
+
 .rubik {
             font-family: "Rubik", sans-serif;
         }
