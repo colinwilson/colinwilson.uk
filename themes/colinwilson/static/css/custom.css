@@ -48,7 +48,7 @@ html {
 	width: -moz-fit-content;
 	width: fit-content;
 	margin: 1.5rem 0;
-	padding: 1rem;
+	padding: 0.5rem 1rem 0.5rem 1rem;
 	background: #e8e7e7;
 	border-radius: .3rem;
 	border: 1px solid #807d72;
