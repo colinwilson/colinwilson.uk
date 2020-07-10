@@ -76,6 +76,16 @@ html {
 	transition: 0.3s;
 }
 
+hr {
+	width: 80%;
+	height: 1rem;
+	background: url(../img/hr.svg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	margin: 4rem auto;
+	border: none;
+}
+
 .cap p:first-child::first-letter {
 	font-family: "Rubik", sans-serif;
 	font-size: 5.2em;
