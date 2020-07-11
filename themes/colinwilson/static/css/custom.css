@@ -176,59 +176,143 @@ hr {
 }
 
 
+/* Rancher */
+
+a.tag-rancher {
+	background: #9da6f9;
+	color: white;
+}
+
+a.tag-rancher:after {
+	border-color: transparent transparent transparent #9da6f9;
+}
+
+a.tag-rancher:before {
+	border-color: #9da6f9 #9da6f9 #9da6f9 transparent;
+}
+
+a.tag-rancher:hover {
+	background: #6d76cc;
+}
+
+a.tag-rancher:hover:before {
+	border-color: #6d76cc #6d76cc #6d76cc transparent;
+}
+
+a.tag-rancher:hover:after {
+	border-color: transparent transparent transparent #6d76cc;
+}
+
+
+/* Hetzner */
+
+a.tag-hetzner {
+	background: #e44a63;
+	color: white;
+}
+
+a.tag-hetzner:after {
+	border-color: transparent transparent transparent #e44a63;
+}
+
+a.tag-hetzner:before {
+	border-color: #e44a63 #e44a63 #e44a63 transparent;
+}
+
+a.tag-hetzner:hover {
+	background: #bb3a4f;
+}
+
+a.tag-hetzner:hover:before {
+	border-color: #bb3a4f #bb3a4f #bb3a4f transparent;
+}
+
+a.tag-hetzner:hover:after {
+	border-color: transparent transparent transparent #bb3a4f;
+}
+
+
 /* Kubernetes */
 
 a.tag-kubernetes {
-	background: #f99d9d;
+	background: #6c5bfb;
 	color: white;
 }
 
 a.tag-kubernetes:after {
-	border-color: transparent transparent transparent #f99d9d;
+	border-color: transparent transparent transparent #6c5bfb;
 }
 
 a.tag-kubernetes:before {
-	border-color: #f99d9d #f99d9d #f99d9d transparent;
+	border-color: #6c5bfb #6c5bfb #6c5bfb transparent;
 }
 
 a.tag-kubernetes:hover {
-	background: #ff7b7b;
+	background: #5649c7;
 }
 
 a.tag-kubernetes:hover:before {
-	border-color: #ff7b7b #ff7b7b #ff7b7b transparent;
+	border-color: #5649c7 #5649c7 #5649c7 transparent;
 }
 
 a.tag-kubernetes:hover:after {
-	border-color: transparent transparent transparent #ff7b7b;
+	border-color: transparent transparent transparent #5649c7;
 }
 
 
 /* Terraform */
 
 a.tag-terraform {
-	background: #d291bc;
+	background: #3b25f5;
 	color: white;
 }
 
 a.tag-terraform:after {
-	border-color: transparent transparent transparent #d291bc;
+	border-color: transparent transparent transparent #3b25f5;
 }
 
 a.tag-terraform:before {
-	border-color: #d291bc #d291bc #d291bc transparent;
+	border-color: #3b25f5 #3b25f5 #3b25f5 transparent;
 }
 
 a.tag-terraform:hover {
-	background: #b6719f;
+	background: #2f1ec9;
 }
 
 a.tag-terraform:hover:before {
-	border-color: #b6719f #b6719f #b6719f transparent;
+	border-color: #2f1ec9 #2f1ec9 #2f1ec9 transparent;
 }
 
 a.tag-terraform:hover:after {
-	border-color: transparent transparent transparent #b6719f;
+	border-color: transparent transparent transparent #2f1ec9;
+}
+
+
+/* CI/CD */
+
+a.tag-ci-cd {
+	background: #f3aa80;
+	color: white;
+}
+
+a.tag-ci-cd:after {
+	border-color: transparent transparent transparent #f3aa80;
+}
+
+a.tag-ci-cd:before {
+	border-color: #f3aa80 #f3aa80 #f3aa80 transparent;
+}
+
+a.tag-ci-cd:hover {
+	background: #c48a69;
+}
+
+a.tag-ci-cd:hover:before {
+	border-color: #c48a69 #c48a69 #c48a69 transparent;
+}
+
+a.tag-ci-cd:hover:after {
+	border-color: transparent transparent transparent #c48a69;
 }
 
 
