@@ -291,16 +291,16 @@ a.tag-terraform:hover:after {
 /* CI/CD */
 
 a.tag-ci-cd {
-	background: #f3aa80;
+	background: #dfcdab;
 	color: white;
 }
 
 a.tag-ci-cd:after {
-	border-color: transparent transparent transparent #f3aa80;
+	border-color: transparent transparent transparent #dfcdab;
 }
 
 a.tag-ci-cd:before {
-	border-color: #f3aa80 #f3aa80 #f3aa80 transparent;
+	border-color: #dfcdab #dfcdab #dfcdab transparent;
 }
 
 a.tag-ci-cd:hover {
