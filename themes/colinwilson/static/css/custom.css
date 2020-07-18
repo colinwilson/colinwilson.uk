@@ -291,28 +291,28 @@ a.tag-terraform:hover:after {
 /* CI/CD */
 
 a.tag-ci-cd {
-	background: #dfcdab;
+	background: #5493a2;
 	color: white;
 }
 
 a.tag-ci-cd:after {
-	border-color: transparent transparent transparent #dfcdab;
+	border-color: transparent transparent transparent #5493a2;
 }
 
 a.tag-ci-cd:before {
-	border-color: #dfcdab #dfcdab #dfcdab transparent;
+	border-color: #5493a2 #5493a2 #5493a2 transparent;
 }
 
 a.tag-ci-cd:hover {
-	background: #c48a69;
+	background: #3e6a75;
 }
 
 a.tag-ci-cd:hover:before {
-	border-color: #c48a69 #c48a69 #c48a69 transparent;
+	border-color: #3e6a75 #3e6a75 #3e6a75 transparent;
 }
 
 a.tag-ci-cd:hover:after {
-	border-color: transparent transparent transparent #c48a69;
+	border-color: transparent transparent transparent #3e6a75;
 }
 
 
