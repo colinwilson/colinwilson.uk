@@ -41,7 +41,7 @@
         {{ if or .PrevInSection .NextInSection }}
         <div class="w-100 flex article-nav">
             {{ if .PrevInSection }}
-                <a href="{{ .PrevInSection.Permalink }}" id="article-nav-older" class="db black-80 link hover-light-gray prev">
+                <a rel="prev" href="{{ .PrevInSection.Permalink }}" id="article-nav-older" class="db black-80 link hover-light-gray">
                     <span>
                         <svg class="w1" data-icon="chevronLeft" viewBox="0 -18 50 50" style="fill:currentcolor">
                             <title>chevronLeft icon</title>
@@ -54,7 +54,7 @@
                 </a>
             {{ end }}
             {{ if .NextInSection }}
-                <a href="{{ .NextInSection.Permalink }}" id="article-nav-newer" class="db black-80 link hover-light-gray next">
+                <a rel="next" href="{{ .NextInSection.Permalink }}" id="article-nav-newer" class="db black-80 link hover-light-gray">
                     <span>Next
                         <svg class="w1" data-icon="chevronRight" viewBox="0 -18 50 50" style="fill:currentcolor">
                         <title>chevronRight icon</title>
