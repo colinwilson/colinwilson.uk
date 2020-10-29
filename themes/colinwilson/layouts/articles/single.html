@@ -39,31 +39,33 @@
         {{ template "_internal/disqus.html" . }}
 
         {{ if or .PrevInSection .NextInSection }}
-        <div class="w-70 mw9">
+        <div class="w-100 flex article-nav">
             {{ if .PrevInSection }}
-            <div class="fl w-100 w-50-ns">
-                <a href="{{ .PrevInSection.Permalink }}" id="article-nav-older" class="db black-80 link hover-gray">
-                    <h4><svg class="w1" data-icon="chevronLeft" viewBox="0 -18 50 50" style="fill:currentcolor">
+                <a href="{{ .PrevInSection.Permalink }}" id="article-nav-older" class="db black-80 link hover-light-gray prev">
+                    <span>
+                        <svg class="w1" data-icon="chevronLeft" viewBox="0 -18 50 50" style="fill:currentcolor">
                             <title>chevronLeft icon</title>
                             <path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z"></path>
-                        </svg>
+                        </svg>Previous
+                    </span>
+                    <h4>
                         {{ .PrevInSection.Title }}
                     </h4>
                 </a>
-            </div>
             {{ end }}
             {{ if .NextInSection }}
-            <div class="fl w-100 w-50-ns tc">
-                <a href="{{ .NextInSection.Permalink }}" id="article-nav-newer" class="db black-80 link hover-gray">
-                    <h4>
-                        {{ .NextInSection.Title }}
+                <a href="{{ .NextInSection.Permalink }}" id="article-nav-newer" class="db black-80 link hover-light-gray next">
+                    <span>Next
                         <svg class="w1" data-icon="chevronRight" viewBox="0 -18 50 50" style="fill:currentcolor">
                         <title>chevronRight icon</title>
                         <path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"></path>
                         </svg>
+                    </span>
+                    <h4>
+                        {{ .NextInSection.Title }}
+
                     </h4>
                 </a>
-            </div>
             {{ end }}
         </div>
         {{ end }}
