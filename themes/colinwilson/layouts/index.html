@@ -19,7 +19,7 @@
             <ul class="flex flex-wrap justify-between mv0 pl0 list">
 
 
-            {{- range ( where site.RegularPages "Section" "articles" | first $latestpostscount ) }}
+            {{- range ( where site.RegularPages.ByPublishDate.Reverse "Section" "articles" | first $latestpostscount ) }}
                 <li class="w-100 w-30-l mt4 mt5-ns">
                 <small class="gray db pv2"><time>{{ .PublishDate.Format "02 January 2006" }}</time></small>
                 <a class="dib no-underline black-90 color-animate hover-gray" href="{{ .Permalink }}">
