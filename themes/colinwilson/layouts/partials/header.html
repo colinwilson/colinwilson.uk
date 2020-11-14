@@ -10,9 +10,9 @@
         {{ end }}
     </title>
     {{ partial "favicon" . }}
-    <meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
+    <meta name="description" content="{{ .Description }}">
     <meta property="og:title" content="{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}{{ if eq $url "/" }}{{ .Site.Params.author }}{{ else }}{{ .Title }}{{ end}}">
-    <meta property="og:description" content="{{ .Site.Params.og_descriptioin }}">
+    <meta property="og:description" content="{{ .Description }}">
         {{ partial "twitter-card" . }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

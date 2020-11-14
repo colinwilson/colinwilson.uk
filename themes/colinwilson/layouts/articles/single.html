@@ -38,6 +38,8 @@
 
         {{ template "_internal/disqus.html" . }}
 
+        {{ partial "comments" . }}
+
         {{ if or .PrevInSection .NextInSection }}
         <div class="w-100 flex article-nav">
             {{ if .PrevInSection }}

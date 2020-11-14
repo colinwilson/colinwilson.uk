@@ -528,3 +528,14 @@ a.tag-traefik:hover:after {
 		flex-basis: calc(50% - 1rem);
 	}
 }
+
+/* Utteranc.es Custom CSS */
+
+.utterances {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 760px;
+    margin-left: 0px;
+    margin-right: auto;
+}
