@@ -10,10 +10,6 @@
     <div class="dn dtc-ns tc v-mid">
       <p class="f7 black-70 dib pr3 mb3">
         Copyright © {{ .Site.Params.author }} {{ now.Format "2006" }}
-        {{ if $.GitInfo }}
-          <strong>Last modified:</strong> {{ .Lastmod.Format "02/01/2006" }} <strong>Build:</strong> {{ .GitInfo.AbbreviatedHash }}
-        {{ end }}
-       <strong>Words: </strong> ~{{ .FuzzyWordCount }} <strong>Reading time: </strong> {{ .ReadingTime }} min</p>
       </p>
     </div>
     <div class="db dtc-ns black-70 tc tr-ns v-mid">
