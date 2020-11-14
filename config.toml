@@ -3,6 +3,7 @@ languageCode = "en-GB"
 title = "Colin Wilson"
 theme = "colinwilson"
 contentDir = "content"
+enableGitInfo = true
 
 googleAnalytics     = "UA-98935524-1"
 #disqusshortname     = "colinwilsonuk" # Comment out to disable Disqus.
