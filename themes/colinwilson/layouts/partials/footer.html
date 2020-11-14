@@ -9,7 +9,7 @@
     </div>
     <div class="dn dtc-ns tc v-mid">
       <p class="f7 black-70 dib pr3 mb3">
-        Copyright © {{ .Site.Params.author }} {{ now.Format "2006" }} {{ getenv "COMMIT_REF" }}
+        Copyright © {{ .Site.Params.author }} {{ now.Format "2006" }} ({{ getenv "COMMIT_REF" | truncate 7 }})
       </p>
     </div>
     <div class="db dtc-ns black-70 tc tr-ns v-mid">
