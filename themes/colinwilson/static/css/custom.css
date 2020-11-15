@@ -7,6 +7,11 @@ html {
 	background-color: var(--read-background);
 }
 
+a[href^="mailto:"] {
+    color: rgba(0,0,0,.6);
+    text-decoration: none;
+}
+
 .rubik {
 	font-family: "Rubik", sans-serif;
 }
