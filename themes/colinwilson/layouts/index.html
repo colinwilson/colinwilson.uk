@@ -1,5 +1,6 @@
   {{ partial "header" . }}
   <body class="rubik black-60">
+    {{ partial "version" . }}
     {{ partialCached "nav" . }}
       <div class="flex flex-column w-80 mw9 pv4 pv0-ns center">
 
@@ -33,7 +34,6 @@
         </div>
 
         {{ partial "footer" . }}
-
       </div>
   </body>
 </html>

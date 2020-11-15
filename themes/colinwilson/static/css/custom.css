@@ -539,3 +539,14 @@ a.tag-traefik:hover:after {
     margin-left: 0px;
     margin-right: auto;
 }
+
+/* Version */
+.version {
+    position: absolute;
+    line-height: 0;
+    font-size: 0.63rem;
+    font-weight: 300;
+    padding: 0 0 0 5px;
+	margin-top: 10px;
+	color: lightgray;
+}
