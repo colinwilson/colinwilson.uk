@@ -548,5 +548,9 @@ a.tag-traefik:hover:after {
     font-weight: 300;
     padding: 0 0 0 5px;
 	margin-top: 10px;
-	color: lightgray;
+	color: #f2f0f4;
+}
+
+.version:hover {
+	color: rgba(0,0,0,.6);
 }
