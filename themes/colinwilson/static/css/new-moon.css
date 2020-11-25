@@ -37,7 +37,7 @@ code[class*='language-'],
   text-align: left;
   white-space: pre-wrap;
   word-spacing: normal;
-  word-break: normal;
+  word-break: break-word;
   word-wrap: normal;
   font-weight: 400;
   line-height: 1.7;

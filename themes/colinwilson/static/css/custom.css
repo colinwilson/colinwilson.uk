@@ -595,6 +595,7 @@ code.language-treeview {
 @media screen and (min-width: 800px) {
 	div.code-toolbar {
 		width: -moz-fit-content;
+		width: fit-content;
 	}
 }
 
@@ -617,7 +618,8 @@ div.code-toolbar > .toolbar a, div.code-toolbar > .toolbar button, div.code-tool
     padding: 0.15em .4em;
     background: rgba(224, 224, 224, 0.2);
     box-shadow: none;
-    border-radius: 0 0 0 0.3em;
+	border-radius: 0 0 0 0.3em;
+	outline: none;
 }
 
 div.code-toolbar > .toolbar a:hover,
