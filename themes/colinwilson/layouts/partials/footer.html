@@ -67,8 +67,13 @@
   </div>
 
   {{ if .Site.Params.prismjs }}
-  <script src="//unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
-  <script src="//unpkg.com/prismjs@1.20.0/plugins/command-line/prism-command-line.min.js"></script>
-  <script src="//unpkg.com/prismjs@1.20.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-  <script src="//unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="//unpkg.com/prismjs@1.22.0/components/prism-core.min.js"></script>
+  <script src="//unpkg.com/prismjs@1.22.0/plugins/command-line/prism-command-line.min.js"></script>
+  <script src="//unpkg.com/prismjs@1.22.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="//unpkg.com/prismjs@1.22.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
+  <script src="//unpkg.com/prismjs@1.22.0/plugins/treeview/prism-treeview.min.js"></script>
+  <script src="//unpkg.com/prismjs@1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="//unpkg.com/prismjs@1.22.0/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script src="//unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+  <script src="/js/prism-cp.js"></script>
   {{ end }}

@@ -574,3 +574,68 @@ a.tag-traefik:hover:after {
 .version:hover {
 	color: rgba(0,0,0,.6);
 }
+
+/* PrismJS Treeview */
+pre.language-treeview {
+	position: relative;
+	background: none;
+	color: #595c62;
+	box-shadow: none;
+	padding-top: 1rem;
+	margin: 1rem 0;
+	border-radius: 0.3rem;
+}
+
+code.language-treeview {
+	color: #595c62;
+}
+
+/* PrismJs Toolbar */
+
+@media screen and (min-width: 800px) {
+	div.code-toolbar {
+		width: -moz-fit-content;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	div.code-toolbar > .toolbar {
+		margin-right: -1.5em;
+	}
+}
+
+div.code-toolbar > .toolbar {
+    top: 0em;
+    right: 0em;
+    transition: opacity 0.3s ease-in-out;
+	opacity: 1;
+}
+
+div.code-toolbar > .toolbar a, div.code-toolbar > .toolbar button, div.code-toolbar > .toolbar span {
+    color: #bdbec2;
+    font-size: 1em;
+    padding: 0.15em .4em;
+    background: rgba(224, 224, 224, 0.2);
+    box-shadow: none;
+    border-radius: 0 0 0 0.3em;
+}
+
+div.code-toolbar > .toolbar a:hover,
+div.code-toolbar > .toolbar a:focus,
+div.code-toolbar > .toolbar button:hover,
+div.code-toolbar > .toolbar button:focus,
+div.code-toolbar > .toolbar span:hover,
+div.code-toolbar > .toolbar span:focus {
+	cursor: pointer;
+	color: white;
+}
+
+/* Custom <code> for Gists */
+[data-gist-id] {
+	background: none;
+}
+
+/* Custom PrismJS line highlight */
+pre[data-line] {
+    padding: 1em 1.5rem 1em 3em;
+}

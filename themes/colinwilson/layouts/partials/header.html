@@ -11,6 +11,7 @@
     </title>
     {{ partial "favicon" . }}
     <meta name="description" content="{{ .Description }}">
+    {{ hugo.Generator }}
     <meta property="og:title" content="{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}{{ if eq $url "/" }}{{ .Site.Params.author }}{{ else }}{{ .Title }}{{ end}}">
     <meta property="og:description" content="{{ .Description }}">
         {{ partial "twitter-card" . }}
@@ -21,8 +22,12 @@
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
     {{ if .Site.Params.prismjs }}
     <link rel="stylesheet" href="/css/new-moon.css">
-    <link rel="stylesheet" href="//unpkg.com/prismjs@1.20.0/plugins/command-line/prism-command-line.css">
-    <link rel="stylesheet" href="//unpkg.com/prismjs@1.20.0/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="//unpkg.com/prismjs@1.22.0/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="//unpkg.com/prismjs@1.22.0/plugins/treeview/prism-treeview.css">
+    <link rel="stylesheet" href="/css/prism-treeview-gs.css">
+    <link rel="stylesheet" href="//unpkg.com/prismjs@1.22.0/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="//unpkg.com/prismjs@1.22.0/plugins/line-highlight/prism-line-highlight.css">
+    <link rel="stylesheet" href="//unpkg.com/prismjs@1.22.0/plugins/toolbar/prism-toolbar.css">
     {{ end }}
     <link rel="stylesheet" href="/css/custom.css">
     {{ template "_internal/google_analytics_async.html" . }}{{ if .Site.Params.PiwikID }}{{ partial "piwik" . }}{{ end }}
