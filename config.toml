@@ -28,7 +28,7 @@ section = [ "HTML", "RSS"]
     articles = "/:year/:month/:day/:slug"
 
 [params]
-    latestpostscount       = 3                             # how many posts to display on the home page
+    latestpostscount       = 3 # number of posts to display on the home page
     author                 = "Colin Wilson"
     logo                   = "/img/logo_v2.7.svg" #"/img/logo.svg"
     bio                    = "Hey! I'm Colin, and I build stuff..."
