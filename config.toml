@@ -45,6 +45,8 @@ section = [ "HTML", "RSS"]
     og_description         = "Systems Architect, Consultant, Technologist, lifelong learner, nuke it from orbit."
     prismjs                = true
 
+    sponsorship_url        = "https://github.com/sponsors/colinwilson"
+
 [markup]
   defaultMarkdownHandler = "goldmark"
   [markup.goldmark]
