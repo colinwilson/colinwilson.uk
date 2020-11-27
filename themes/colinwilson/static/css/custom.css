@@ -122,7 +122,8 @@ hr {
 }
 
 summary {
-    cursor: pointer;
+	cursor: pointer;
+	outline: none;
 }
 
 /* Tags */
