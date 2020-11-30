@@ -6,9 +6,15 @@
 
     <div class="flex flex-column w-80 mw9 pv4 pv0-ns center">
 
+      {{ if .Site.Params.Logo }}
         {{ partialCached "logo" . }}
+      {{ end }}
 
         <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
+          <h1 class="mt0 mb4 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-80">{{ .Title }}</h1>
+        </div>
+
+        <div class="flex-auto flex flex-column justify-center pv4 pv3-ns">
           {{ range first 20 .Data.Pages.ByPublishDate.Reverse }}
           <a class="dib no-underline black-70 color-animate hover-gray" href="{{ .Permalink }}">
             <h2 class="f7 fw3 mt1 mb0 ttu tracked gray">{{ .PublishDate.Format "02 January 2006" }}</h2>

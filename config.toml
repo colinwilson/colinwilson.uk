@@ -30,9 +30,9 @@ section = [ "HTML", "RSS"]
 [params]
     latestpostscount       = 3 # number of posts to display on the home page
     author                 = "Colin Wilson"
-    logo                   = "/img/logo_v2.7.svg" #"/img/logo.svg"
-    bio                    = "Hey! I'm Colin, and I build stuff..."
-    sub_bio                = "Cloud Computing/Orchestration, DevOps, Virtualization, Networking, Security, Storage, Hosting, Secure Messaging."
+    #logo                   = "/img/logo_v2.7.svg" #"/img/logo.svg"
+    bio                    = "//colinwilson.uk"
+    sub_bio                = "Open Source | Cloud Computing | DevOps | Virtualization"
     description            = "Colin Wilson | Cloud Computing / DevOps / Technologist"
     email                  = "colin.wilson@protonmail.ch"
     avatar                 = "/img/logo_v2.7.svg" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
