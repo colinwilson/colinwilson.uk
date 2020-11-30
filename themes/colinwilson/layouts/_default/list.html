@@ -6,7 +6,9 @@
 
     <div class="flex flex-column w-80 mw9 pv4 pv0-ns center">
 
-        {{ partial "logo" . }}
+        {{ if .Site.Params.Logo }}
+          {{ partialCached "logo" . }}
+        {{ end }}
 
         <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
 

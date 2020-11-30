@@ -198,6 +198,33 @@ summary {
 	border-color: transparent transparent transparent #555;
 }
 
+/* Kemp */
+
+a.tag-kemp {
+	background: #ffd54f;
+	color: black;
+}
+
+a.tag-kemp:after {
+	border-color: transparent transparent transparent #ffd54f;
+}
+
+a.tag-kemp:before {
+	border-color: #ffd54f #ffd54f #ffd54f transparent;
+}
+
+a.tag-kemp:hover {
+	background: #ffb300;
+}
+
+a.tag-kemp:hover:before {
+	border-color: #ffb300 #ffb300 #ffb300 transparent;
+}
+
+a.tag-kemp:hover:after {
+	border-color: transparent transparent transparent #ffb300;
+}
+
 
 /* Rancher */
 
