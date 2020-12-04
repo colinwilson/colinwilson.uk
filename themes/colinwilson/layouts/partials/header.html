@@ -30,5 +30,5 @@
     <link rel="stylesheet" href="//unpkg.com/prismjs@1.22.0/plugins/toolbar/prism-toolbar.css">
     {{ end }}
     <link rel="stylesheet" href="/css/custom.css">
-    {{ template "_internal/google_analytics_async.html" . }}{{ if .Site.Params.PiwikID }}{{ partial "piwik" . }}{{ end }}
+    {{ template "_internal/google_analytics_async.html" . }}{{ if .Site.Params.MatomoID }}{{ partial "matomo" . }}{{ end }}
 </head>

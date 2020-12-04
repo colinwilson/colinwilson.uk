@@ -39,10 +39,10 @@ section = [ "HTML", "RSS"]
     # gravatar             = ""                # do not use at the same time as avatar
     bitcoin                = "1HNuwCnxVAsQzT3QH2MWyZFszBPHDXJu8U"
 
-    piwikid                = "14"
-    piwikURL               = "analytics.qunux.com"
+    matomoID               = "14"
+    matomoURL              = "analytics.qunux.com"
 
-    og_description         = "Systems Architect, Consultant, Technologist, lifelong learner, nuke it from orbit."
+    og_description         = "Systems Architect, Consultant, Technologist, lifelong learner."
     prismjs                = true
 
     sponsorship_url        = "https://github.com/sponsors/colinwilson"
