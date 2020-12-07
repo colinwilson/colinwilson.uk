@@ -1,12 +1,15 @@
 # Workflow to build and deploy site to Vercel using Hugo
 
 # Name of Workflow
-name: vercel
+name: deploy-to-vercel
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the vercel branch
 on:
   push:
+    branches: [ vercel ]
+  pull_request:
+    types: [assigned]
     branches: [ vercel ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -38,13 +41,14 @@ jobs:
 
     # Step 4 - Builds the site using Hugo
     - name: Build
-      run: hugo -v
+      run: hugo -v --minify
 
     # Step 5 - Push our generated site to vercel
     - uses: amondnet/vercel-action@v20
       with:
         vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
         #github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
-        #vercel-args: '--prod' #Optional
         vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
+        working-directory: public
+        #vercel-args: '--prod' #Optional
