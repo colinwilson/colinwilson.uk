@@ -21,6 +21,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    - name: start deployment
+      uses: bobheadxi/deployments@v0.4.3
+      id: deployment
+      with:
+        step: start
+        token: ${{ secrets.GITHUB_TOKEN }}
+        env: preview
 
     # Step 1 - Checks-out your repository under $GITHUB_WORKSPACE
     - name: Checkout
@@ -47,3 +54,12 @@ jobs:
         vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
         #vercel-args: '--prod' #Optional
+
+    - name: update deployment status
+      uses: bobheadxi/deployments@v0.4.3
+      if: always()
+      with:
+        step: finish
+        token: ${{ secrets.GITHUB_TOKEN }}
+        status: ${{ job.status }}
+        deployment_id: ${{ steps.deployment.outputs.deployment_id }}
