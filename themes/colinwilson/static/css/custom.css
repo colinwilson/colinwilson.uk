@@ -671,3 +671,17 @@ div.code-toolbar > .toolbar span:focus {
 pre[data-line] {
     padding: 1em 1.5rem 1em 3em;
 }
+
+.background-hover {
+	background-color: transparent;
+	transition: 0.3s;
+	box-shadow: 0 0 0 7px transparent;
+	border-radius: 5px;
+}
+
+.background-hover:hover {
+	background-color: rgb(231, 231, 231);
+	transition: 0.5s;
+	box-shadow: 0 0 0 7px rgb(231, 231, 231);
+	border-radius: 5px;
+}
