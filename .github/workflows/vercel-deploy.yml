@@ -8,9 +8,6 @@ name: deploy-to-vercel
 on:
   push:
     branches: [ vercel ]
-  pull_request:
-    types: [assigned]
-    branches: [ vercel ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
