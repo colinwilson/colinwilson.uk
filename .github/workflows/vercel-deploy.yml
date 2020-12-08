@@ -6,10 +6,8 @@ name: deploy-to-vercel
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the vercel branch
 on:
-  push:
-    branches: [ vercel ]
   pull_request:
-    types: [assigned]
+    types: [closed]
     branches: [ vercel ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -27,7 +25,7 @@ jobs:
       with:
         step: start
         token: ${{ secrets.GITHUB_TOKEN }}
-        env: Preview
+        env: Production
 
     # Step 1 - Checks-out your repository under $GITHUB_WORKSPACE
     - name: Checkout
@@ -54,7 +52,7 @@ jobs:
         #github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
         vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
-        #vercel-args: '--prod' #Optional
+        vercel-args: '--prod' #Optional
 
     - name: Update Deployment Status
       uses: bobheadxi/deployments@v0.4.3
