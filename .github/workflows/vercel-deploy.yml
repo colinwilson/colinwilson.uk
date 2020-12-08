@@ -21,13 +21,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: start deployment
+    - name: Start Deployment
       uses: bobheadxi/deployments@v0.4.3
       id: deployment
       with:
         step: start
         token: ${{ secrets.GITHUB_TOKEN }}
-        env: preview
+        env: Preview
 
     # Step 1 - Checks-out your repository under $GITHUB_WORKSPACE
     - name: Checkout
@@ -48,6 +48,7 @@ jobs:
 
     # Step 4 - Push our generated site to vercel
     - uses: amondnet/vercel-action@v20
+      id: vercel-action
       with:
         vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
         #github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
@@ -55,7 +56,7 @@ jobs:
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
         #vercel-args: '--prod' #Optional
 
-    - name: update deployment status
+    - name: Update Deployment Status
       uses: bobheadxi/deployments@v0.4.3
       if: always()
       with:
@@ -63,3 +64,4 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         status: ${{ job.status }}
         deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+        env_url: ${{ steps.vercel-action.outputs.preview-url }}
