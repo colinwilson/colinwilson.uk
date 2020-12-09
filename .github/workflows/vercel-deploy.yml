@@ -14,7 +14,7 @@ jobs:
   # This workflow contains a single job called "deploy"
   deploy:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -44,6 +44,7 @@ jobs:
       run: hugo -v --minify
 
     # Step 4 - Push our generated site to vercel
+    - name: Deploy to Vercel
     - uses: amondnet/vercel-action@v20
       id: vercel-action
       with:
@@ -51,6 +52,7 @@ jobs:
         #github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
         vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
+        github-comment: false
         #vercel-args: '--prod' #Optional
 
     - name: Update Deployment Status
