@@ -476,6 +476,87 @@ a.tag-traefik:hover:after {
 	border-color: transparent transparent transparent #1f86a0;
 }
 
+/* GitHub & Vercel */
+
+a.tag-github,a.tag-vercel {
+	background: #24292e;
+	color: white;
+}
+
+a.tag-github:after,a.tag-vercel:after {
+	border-color: transparent transparent transparent #24292e;
+}
+
+a.tag-github:before,a.tag-vercel:before {
+	border-color: #24292e #24292e #24292e transparent;
+}
+
+a.tag-github:hover,a.tag-vercel:hover {
+	background: #535353;
+}
+
+a.tag-github:hover:before,a.tag-vercel:hover:before {
+	border-color: #535353 #535353 #535353 transparent;
+}
+
+a.tag-github:hover:after.article-nav,a.tag-vercel:hover:after {
+	border-color: transparent transparent transparent #535353;
+}
+
+/* Hugo */
+
+a.tag-hugo {
+	background: #ff2db4;
+	color: white;
+}
+
+a.tag-hugo:after {
+	border-color: transparent transparent transparent #ff2db4;
+}
+
+a.tag-hugo:before {
+	border-color: #ff2db4 #ff2db4 #ff2db4 transparent;
+}
+
+a.tag-hugo:hover {
+	background: #cd007b;
+}
+
+a.tag-hugo:hover:before {
+	border-color: #cd007b #cd007b #cd007b transparent;
+}
+
+a.tag-hugo:hover:after {
+	border-color: transparent transparent transparent #cd007b;
+}
+
+/* DevOps */
+
+a.tag-devops {
+	background: #aac09a;
+	color: white;
+}
+
+a.tag-devops:after {
+	border-color: transparent transparent transparent #aac09a;
+}
+
+a.tag-devops:before {
+	border-color: #aac09a #aac09a #aac09a transparent;
+}
+
+a.tag-devops:hover {
+	background: #90a482;
+}
+
+a.tag-devops:hover:before {
+	border-color: #90a482 #90a482 #90a482 transparent;
+}
+
+a.tag-devops:hover:after {
+	border-color: transparent transparent transparent #90a482;
+}
+
 /* set embedded gists to wrap - https://github.com/blairvanderhoof/gist-embed/issues/42 */
 
 .wrap-gist .gist .blob-code-inner {
