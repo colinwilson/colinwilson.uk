@@ -25,7 +25,7 @@
             {{- range ( where site.RegularPages.ByPublishDate.Reverse "Section" "articles" | first $latestpostscount ) }}
                 <li class="w-100 w-30-l mt4 mt5-ns">
                 <small class="gray db pv2"><time>{{ .PublishDate.Format "02 January 2006" }}</time></small>
-                <a class="dib background-hover no-underline black-90 color-animate" href="{{ .Permalink }}">
+                <a class="dib background-hover no-underline black-90" href="{{ .Permalink }}">
                     <h3 class="mt0 mb1 mb2-ns f4 f3-ns normal lh-copy measure-narrow">{{ .Title }}</h3>
                     <p class="gray mv0 lh-copy measure">{{ .Description }}</p>
                 </a>
