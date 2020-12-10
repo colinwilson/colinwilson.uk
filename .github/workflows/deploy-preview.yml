@@ -45,7 +45,7 @@ jobs:
 
     # Test current directory
     - name: current directory
-      run: pwd
+      run: pwd; ls -alh
 
     # Step 4 - Push our generated site to vercel
     - name: Deploy to Vercel
