@@ -58,7 +58,7 @@ jobs:
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
         github-comment: false
         #vercel-args: '--prod' #Optional
-        working-directory: /home/runner/work/colinwilson.uk/colinwilson.uk/public
+        working-directory: public
 
     - name: Update Deployment Status
       uses: bobheadxi/deployments@v0.4.3
