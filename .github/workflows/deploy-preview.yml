@@ -43,10 +43,6 @@ jobs:
     - name: Build
       run: hugo -v -D --minify
 
-    # Test current directory
-    - name: current directory
-      run: pwd; ls -alh
-
     # Step 4 - Push our generated site to vercel
     - name: Deploy to Vercel
       uses: amondnet/vercel-action@v20
@@ -57,7 +53,7 @@ jobs:
         vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
         github-comment: false
-        #vercel-args: '--prod' #Optional
+        vercel-args: '>/dev/null' #Optional
         working-directory: public
 
     - name: Update Deployment Status
