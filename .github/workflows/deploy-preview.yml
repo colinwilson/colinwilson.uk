@@ -53,7 +53,7 @@ jobs:
         vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
         github-comment: false
-        vercel-args: '>/dev/null' #Optional
+        #vercel-args: '--prod' #Optional
         working-directory: public
 
     - name: Update Deployment Status
