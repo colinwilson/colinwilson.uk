@@ -47,8 +47,7 @@ jobs:
     - name: Deploy to Vercel
       uses: amondnet/vercel-action@v20
       id: vercel-action
-      run: |
-          echo "::add-mask::$preview-url"
+      run: echo "::add-mask::$preview-url"
       with:
         vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
         #github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
