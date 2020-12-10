@@ -54,11 +54,7 @@ jobs:
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
         github-comment: false
         #vercel-args: '--prod' #Optional
-
-    # Step 4a - Test: Mask 'Deploy to Vercel' preview-url
-    - name: Mask vercel-action Output
-      id: mask
-      run: echo "::add-mask::${{ steps.vercel-action.outputs.preview-url }}"
+        working-directory: /home/runner/work/colinwilson.uk/colinwilson.uk/public
 
     - name: Update Deployment Status
       uses: bobheadxi/deployments@v0.4.3
