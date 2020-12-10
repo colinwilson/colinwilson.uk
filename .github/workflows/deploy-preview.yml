@@ -1,0 +1,66 @@
+# Workflow to build and deploy site to Vercel using Hugo
+
+# Name of Workflow
+name: deploy-preview
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the vercel-dev branch
+on:
+  push:
+    branches: [ vercel-dev ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "deploy"
+  deploy:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-20.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - name: Start Deployment
+      uses: bobheadxi/deployments@v0.4.3
+      id: deployment
+      with:
+        step: start
+        token: ${{ secrets.GITHUB_TOKEN }}
+        env: Preview
+
+    # Step 1 - Checks-out your repository under $GITHUB_WORKSPACE
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+          ssh-key: ${{ secrets.SUBMODULE_CONTENT_DEPLOY_KEY }}
+          submodules: recursive  # Fetch private content
+
+    # Step 2 - Sets up the version of Hugo
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+          hugo-version: '0.79.0'
+
+    # Step 3 - Builds the site using Hugo
+    - name: Build
+      run: hugo -v -D --minify
+
+    # Step 4 - Push our generated site to vercel
+    - name: Deploy to Vercel
+      uses: amondnet/vercel-action@v20
+      id: vercel-action
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
+        #github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
+        vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
+        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
+        github-comment: false
+        #vercel-args: '--prod' #Optional
+
+    - name: Update Deployment Status
+      uses: bobheadxi/deployments@v0.4.3
+      if: always()
+      with:
+        step: finish
+        token: ${{ secrets.GITHUB_TOKEN }}
+        status: ${{ job.status }}
+        deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+        env_url: ${{ steps.vercel-action.outputs.preview-url }}

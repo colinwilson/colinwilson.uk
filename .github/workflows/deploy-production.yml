@@ -1,13 +1,14 @@
 # Workflow to build and deploy site to Vercel using Hugo
 
 # Name of Workflow
-name: deploy-to-vercel
+name: deploy-production
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the vercel branch
 on:
-  push:
-    branches: [ vercel-dev ]
+  pull_request:
+    types: [closed]
+    branches: [ vercel ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,7 +25,7 @@ jobs:
       with:
         step: start
         token: ${{ secrets.GITHUB_TOKEN }}
-        env: Preview
+        env: Production
 
     # Step 1 - Checks-out your repository under $GITHUB_WORKSPACE
     - name: Checkout
@@ -53,7 +54,7 @@ jobs:
         vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
         github-comment: false
-        #vercel-args: '--prod' #Optional
+        vercel-args: '--prod' #Optional
 
     - name: Update Deployment Status
       uses: bobheadxi/deployments@v0.4.3
