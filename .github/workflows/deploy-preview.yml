@@ -43,6 +43,10 @@ jobs:
     - name: Build
       run: hugo -v -D --minify
 
+    # Test current directory
+    - name: current directory
+    - run: pwd
+
     # Step 4 - Push our generated site to vercel
     - name: Deploy to Vercel
       uses: amondnet/vercel-action@v20
