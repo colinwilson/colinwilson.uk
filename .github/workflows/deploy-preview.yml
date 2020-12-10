@@ -41,7 +41,7 @@ jobs:
 
     # Step 3 - Builds the site using Hugo
     - name: Build
-      run: hugo -v -D --minify
+      run: hugo -v --minify
 
     # Step 4 - Push our generated site to vercel
     - name: Deploy to Vercel
