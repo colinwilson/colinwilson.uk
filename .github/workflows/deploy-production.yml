@@ -7,7 +7,7 @@ name: deploy-production
 # events but only for the vercel branch
 on:
   push:
-    branches: [ vercel-dev ]
+    branches: [ vercel ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
