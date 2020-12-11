@@ -41,7 +41,7 @@ jobs:
 
     # Step 3 - Builds the site using Hugo
     - name: Build
-      run: hugo -v -D --minify
+      run: hugo -v --minify
 
     # Step 4 - Push our generated site to vercel
     - name: Deploy to Vercel
@@ -54,6 +54,7 @@ jobs:
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
         github-comment: false
         #vercel-args: '--prod' #Optional
+        working-directory: public
 
     - name: Update Deployment Status
       uses: bobheadxi/deployments@v0.4.3
