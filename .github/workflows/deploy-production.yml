@@ -18,13 +18,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Start Deployment
-      uses: bobheadxi/deployments@v0.4.3
-      id: deployment
-      with:
-        step: start
-        token: ${{ secrets.GITHUB_TOKEN }}
-        env: Production
 
     # Step 1 - Checks-out your repository under $GITHUB_WORKSPACE
     - name: Checkout
@@ -32,6 +25,15 @@ jobs:
       with:
           ssh-key: ${{ secrets.SUBMODULE_CONTENT_DEPLOY_KEY }}
           submodules: recursive  # Fetch private content
+
+    # Initiate deployment status
+    - name: Start Deployment
+      uses: bobheadxi/deployments@v0.4.3
+      id: deployment
+      with:
+        step: start
+        token: ${{ secrets.GITHUB_TOKEN }}
+        env: Production
 
     # Step 2 - Sets up the version of Hugo
     - name: Setup Hugo
@@ -56,6 +58,7 @@ jobs:
         vercel-args: '--prod' #Optional
         working-directory: public
 
+    # Update deployment status
     - name: Update Deployment Status
       uses: bobheadxi/deployments@v0.4.3
       if: always()
