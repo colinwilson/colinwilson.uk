@@ -766,3 +766,10 @@ pre[data-line] {
 	box-shadow: 0 0 0 7px rgb(231, 231, 231);
 	border-radius: 5px;
 }
+
+.center-me {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}

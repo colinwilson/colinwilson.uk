@@ -1,0 +1,35 @@
+<div id="cd-nav">
+    <a href="#0" class="cd-nav-trigger">Menu</a>
+    <nav id="cd-main-nav">
+        <mobilenav>
+            <div class="h-75 mt2 mb5 flex justify-center">
+                <div class="flex flex-wrap w-100">
+                    {{ range .Site.Params.menu }}
+                    {{ if .before }}
+                    <div class="w-50 pa3">
+                        <a class="no-underline" href="{{ .link | absURL }}">
+                            <div class="center-me br3 shadow-hover pointer flex flex-column ttu fw5 black-70" style="background-color:rgb(231, 231, 231);">
+                                <img class="mb1" height="20px" src="https://res.cloudinary.com/qunux/image/upload/v1607732432/home_dfucge.svg">
+                                {{ .label }}
+                            </div>
+                        </a>
+                    </div>
+                    {{ end }}
+                    {{ end }}
+                    {{ range .Site.Params.menu }}
+                    {{ if not .before }}
+                    <div class="w-50 pa3">
+                        <a class="no-underline" href="{{ .link | absURL }}">
+                            <div class="center-me br3 shadow-hover pointer flex flex-column ttu fw5 black-70" style="background-color:rgb(231, 231, 231);">
+                                <img class="mb1" height="20px" src="https://res.cloudinary.com/qunux/image/upload/v1607732432/home_dfucge.svg">
+                                {{ .label }}
+                            </div>
+                        </a>
+                    </div>
+                    {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        </mobilenav>
+    </nav>
+</div>
