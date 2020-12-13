@@ -4,6 +4,20 @@
 
   -------------------------------- */
 
+  /* Light Theme Mobile Menu */
+  /* :root {
+    --background: #f2f0f4;
+    --menu-btn-background: #e7e7e7;
+    --menu-text-color: rgba(0,0,0,.7);
+  } */
+
+  /* Dark Theme Mobile Menu */
+  :root {
+    --background:#121212;
+    --menu-btn-background: #1e1e1e;
+    --menu-text-color: #e1e1e1;
+  }
+
   #cd-nav mobilenav  {
     /* mobile first */
     position: fixed;
@@ -12,7 +26,7 @@
     max-width: 100%;
     right: 0;
     bottom: 0;
-    background: #f2f0f4;
+    background: var(--background);
     visibility: hidden;
     /* remove overflow:hidden if you want to create a drop-down menu - but then remember to fix/eliminate the list items animation */
     overflow: hidden;
@@ -58,7 +72,7 @@
       max-width: 100%;
       bottom: 0;
       top: auto;
-      background: #f2f0f4;
+      background: var(--background);
       visibility: hidden;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
       -webkit-transform: scale(0);
@@ -69,11 +83,6 @@
     }
     #cd-nav.is-fixed mobilenav {
       display: block;
-    }
-    #cd-nav.is-fixed mobilenav a {
-      padding: 1.6em;
-      margin-left: 0;
-      border-bottom: 1px solid #eff2f6;
     }
     #cd-nav mobilenav.has-transitions {
       /* this class is used to bring back transitions when the navigation moves at the bottom right */
@@ -106,6 +115,11 @@
     }
   }
 
+  .menu-btn {
+    color: var(--menu-text-color);
+    background-color: var(--menu-btn-background);
+  }
+
   .cd-nav-trigger {
     position: fixed;
     bottom: 20px;
@@ -130,7 +144,7 @@
 
   .cd-nav-trigger.menu-is-open {
     box-shadow: none;
-    border: solid 8px rgba(0,0,0,0.8);
+    border: solid 8px var(--menu-text-color);
   }
 
   @media only screen and (min-width: 1170px) {
@@ -247,4 +261,29 @@
       -o-transform: scale(1);
       transform: scale(1);
     }
+  }
+
+  .icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
+
+  /* ==========================================
+  Single-colored icons can be modified like so:
+  .icon-name {
+    font-size: 32px;
+    color: red;
+  }
+  ========================================== */
+
+  .icon-cube {
+    width: 0.9033203125em;
+  }
+
+  .icon-article {
+    width: 0.75em;
   }

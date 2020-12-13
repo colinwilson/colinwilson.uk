@@ -1,3 +1,4 @@
+{{ partialCached "icons" . }}
 <div id="cd-nav">
     <a href="#0" class="cd-nav-trigger">Menu</a>
     <nav id="cd-main-nav">
@@ -8,9 +9,9 @@
                     {{ if .before }}
                     <div class="w-50 pa3">
                         <a class="no-underline" href="{{ .link | absURL }}">
-                            <div class="center-me br3 shadow-hover pointer flex flex-column ttu fw5 black-70" style="background-color:rgb(231, 231, 231);">
-                                <img class="mb1" height="20px" src="https://res.cloudinary.com/qunux/image/upload/v1607732432/home_dfucge.svg">
-                                {{ .label }}
+                            <div class="center-me br3 shadow-hover dim pointer flex flex-column ttu fw5 f3 menu-btn">
+                                <svg class="icon icon-{{ .icon }} mb2"><use xlink:href="#icon-{{ .icon }}"></use></svg>
+                                <span class="f4">{{ .label }}</span>
                             </div>
                         </a>
                     </div>
@@ -20,9 +21,9 @@
                     {{ if not .before }}
                     <div class="w-50 pa3">
                         <a class="no-underline" href="{{ .link | absURL }}">
-                            <div class="center-me br3 shadow-hover pointer flex flex-column ttu fw5 black-70" style="background-color:rgb(231, 231, 231);">
-                                <img class="mb1" height="20px" src="https://res.cloudinary.com/qunux/image/upload/v1607732432/home_dfucge.svg">
-                                {{ .label }}
+                            <div class="center-me br3 shadow-hover dim pointer flex flex-column ttu fw5 f3 menu-btn">
+                                <svg class="icon icon-{{ .icon }} mb2"><use xlink:href="#icon-{{ .icon }}"></use></svg>
+                                <span class="f4">{{ .label }}</span>
                             </div>
                         </a>
                     </div>
