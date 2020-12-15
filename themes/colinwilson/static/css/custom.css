@@ -1,5 +1,6 @@
 :root {
 	--light-background: #f1f3f5;
+	--dark-background: #1e1e1e;
 	--read-background: #f2f0f4;
 }
 
@@ -785,7 +786,7 @@ pre[data-line] {
 
 .nav-main > div a:hover,
 .nav-main > div a[aria-current='page'] {
-  background: #1e1e1e;
+  background: var(--dark-background);
   color: var(--light-background);
 }
 
