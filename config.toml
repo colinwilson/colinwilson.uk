@@ -64,16 +64,19 @@ section = [ "HTML", "RSS"]
     before = true
     label  = "Home"
     link   = "/"
+    icon   = "home"
 
 [[params.menu]]
     before = false
     label  = "Articles"
     link   = "articles/"
+    icon   = "article"
 
 [[params.menu]]
     before = false
     label  = "About Me"
     link   = "about/"
+    icon   = "user"
 
 [social]
 # Add your social network accounts to the footer section
