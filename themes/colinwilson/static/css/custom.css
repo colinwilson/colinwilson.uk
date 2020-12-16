@@ -1,5 +1,6 @@
 :root {
 	--light-background: #f1f3f5;
+	--dark-background: #1e1e1e;
 	--read-background: #f2f0f4;
 }
 
@@ -499,7 +500,7 @@ a.tag-github:hover:before,a.tag-vercel:hover:before {
 	border-color: #535353 #535353 #535353 transparent;
 }
 
-a.tag-github:hover:after.article-nav,a.tag-vercel:hover:after {
+a.tag-github:hover:after,a.tag-vercel:hover:after {
 	border-color: transparent transparent transparent #535353;
 }
 
@@ -765,4 +766,32 @@ pre[data-line] {
 	transition: 0.5s;
 	box-shadow: 0 0 0 7px rgb(231, 231, 231);
 	border-radius: 5px;
+}
+
+.center-me {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.nav-main {
+	display: table;
+}
+
+.nav-main > div a {
+    padding: 0.75rem 1.25rem;
+	border-radius: 0.35rem;
+}
+
+.nav-main > div a:hover,
+.nav-main > div a[aria-current='page'] {
+  background: var(--dark-background);
+  color: var(--light-background);
+}
+
+@media only screen and (max-width: 1170px) {
+	.nav-main {
+		display: none;
+	}
 }
