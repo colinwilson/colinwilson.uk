@@ -1,737 +1,737 @@
-:root {
-	--light-background: #f1f3f5;
-	--dark-background: #1e1e1e;
-	--read-background: #f2f0f4;
+﻿:root {
+  --light-background: #f1f3f5;
+  --dark-background: #1e1e1e;
+  --read-background: #f2f0f4;
 }
 
 html {
-	background-color: var(--read-background);
+  background-color: var(--read-background);
 }
 
 a[href^="mailto:"] {
-    color: rgba(0,0,0,.6);
-    text-decoration: none;
+  color: rgba(0,0,0,.6);
+  text-decoration: none;
 }
 
 ul {
-	line-height: 1.6;
+  line-height: 1.6;
 }
 
 .rubik {
-	font-family: "Rubik", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
-	font-size: 18px;
-	font-family: "Rubik", sans-serif;
-	font-weight: 500;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	color: rgba(51, 51, 51, 0.87);
-	text-transform: none;
-	margin-top: 1.75rem;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: rgba(51, 51, 51, 0.87);
+  text-transform: none;
+  margin-top: 1.75rem;
 }
 
 .markdown h1 {
-	font-size: 1.75rem;
-	margin-bottom: 2rem;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
 }
 
 .markdown h2 {
-	font-size: 1.5rem;
-	margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .markdown h3 {
-	font-size: 1em;
-	margin-bottom: 1rem;
+  font-size: 1em;
+  margin-bottom: 1rem;
 }
 
 .markdown h4, .markdown h5, .markdown h6 {
-	font-size: 0.75rem;
-	margin-bottom: 1rem;
-	letter-spacing: none;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+  letter-spacing: none;
 }
 
 .markdown blockquote {
-	width: -moz-fit-content;
-	width: fit-content;
-	margin: 1.5rem 0;
-	padding: 0.5rem 1rem 0.5rem 1rem;
-	background: #e8e7e7;
-	border-radius: .3rem;
-	border: 1px solid #807d72;
-	border-left-width: 1px;
-	border-left-width: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1.5rem 0;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background: #e8e7e7;
+  border-radius: .3rem;
+  border: 1px solid #807d72;
+  border-left-width: 1px;
+  border-left-width: 8px;
 }
 
 .markdown p {
 /* Invoked by line break */
-    font-size: 1.0rem;
-	line-height: 1.6;
-	max-width: 42em;
-	color: rgba(0,0,0,.7);
+  font-size: 1.0rem;
+  line-height: 1.6;
+  max-width: 42em;
+  color: rgba(0,0,0,.7);
 }
 
 .markdown a {
-	outline: 2px solid transparent;
-	transition: 0.3s;
-	color: inherit;
-	font-weight: 500;
+  outline: 2px solid transparent;
+  transition: 0.3s;
+  color: inherit;
+  font-weight: 500;
 }
 
 .markdown a:hover {
-	opacity: .5;
-	transition: 0.3s;
+  opacity: .5;
+  transition: 0.3s;
 }
 
 hr {
-	width: 80%;
-	height: 1rem;
-	background: url(../img/hr.svg);
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-	margin: 4rem auto;
-	border: none;
+  width: 80%;
+  height: 1rem;
+  background: url(../img/hr.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  margin: 4rem auto;
+  border: none;
 }
 
 .cap p:first-child::first-letter {
-	font-family: "Rubik", sans-serif;
-	font-size: 5.2em;
-	color: #000;
-	line-height: 0.7em;
-	float: left;
-	text-transform: uppercase;
-	margin-top: 0.12em;
-	margin-right: 0.12em;
-	margin-left: 0.05em;
+  font-family: "Rubik", sans-serif;
+  font-size: 5.2em;
+  color: #000;
+  line-height: 0.7em;
+  float: left;
+  text-transform: uppercase;
+  margin-top: 0.12em;
+  margin-right: 0.12em;
+  margin-left: 0.05em;
 }
 
 .color-animate, .color-animate:hover, .color-animate:focus {
-	transition: color .15s;
+  transition: color .15s;
 }
 
 /* Inline Code */
 
 :not(pre) > code {
-    background-color: #e1e1e1;
-    text-shadow: none;
-    color: inherit;
-    padding: 2px 3px 2px 3px;
-    border-radius: 0.25rem;
-    margin: 2px;
+  background-color: #e1e1e1;
+  text-shadow: none;
+  color: inherit;
+  padding: 2px 3px 2px 3px;
+  border-radius: 0.25rem;
+  margin: 2px;
 }
 
 summary {
-	cursor: pointer;
-	outline: none;
+  cursor: pointer;
+  outline: none;
 }
 
 /* Tags */
 
 .tags {
-	margin: 0 0 0 -10px;
-	padding: 10px 0 10px 0;
-	position: relative;
-	list-style: none;
+  margin: 0 0 0 -10px;
+  padding: 10px 0 10px 0;
+  position: relative;
+  list-style: none;
 }
 
 .tags li, .tags a {
-	float: left;
-	margin-bottom: 10px;
-	height: 20px;
-	line-height: 20px;
-	position: relative;
-	font-size: 12px;
-	text-transform: uppercase;
+  float: left;
+  margin-bottom: 10px;
+  height: 20px;
+  line-height: 20px;
+  position: relative;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .tags a {
-	margin-left: 20px;
-	padding: 0 10px 0 12px;
-	background: gray;
-	color: #fff;
-	text-decoration: none;
+  margin-left: 20px;
+  padding: 0 10px 0 12px;
+  background: gray;
+  color: #fff;
+  text-decoration: none;
 }
 
 .tags a:before {
-	content: "";
-	float: left;
-	position: absolute;
-	top: 0;
-	left: -10px;
-	width: 0;
-	height: 0;
-	border-color: gray gray gray transparent;
-	border-style: solid;
-	border-width: 10px 10px 10px 8px;
-	-moz-border-radius-bottomleft: 2px;
-	-webkit-border-bottom-left-radius: 2px;
-	border-bottom-left-radius: 2px;
-	-moz-border-radius-topleft: 2px;
-	-webkit-border-top-left-radius: 2px;
-	border-top-left-radius: 2px;
+  content: "";
+  float: left;
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-color: gray gray gray transparent;
+  border-style: solid;
+  border-width: 10px 10px 10px 8px;
+  -moz-border-radius-bottomleft: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  -webkit-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
 }
 
 .tags a:after {
-	content: "";
-	float: right;
-	;
+  content: "";
+  float: right;
+  ;
      position: absolute;
-	top: 0;
-	right: -20px;
-	width: 0;
-	height: 0;
-	border-color: transparent transparent transparent gray;
-	border-style: solid;
-	border-width: 10px 10px 10px 10px;
+  top: 0;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border-color: transparent transparent transparent gray;
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
 }
 
 .tags a:hover {
-	background: #555;
+  background: #555;
 }
 
 .tags a:hover:before {
-	border-color: #555 #555 #555 transparent;
+  border-color: #555 #555 #555 transparent;
 }
 
 .tags a:hover:after {
-	border-color: transparent transparent transparent #555;
+  border-color: transparent transparent transparent #555;
 }
 
 /* Kemp */
 
 a.tag-kemp {
-	background: #ffd54f;
-	color: black;
+  background: #ffd54f;
+  color: black;
 }
 
 a.tag-kemp:after {
-	border-color: transparent transparent transparent #ffd54f;
+  border-color: transparent transparent transparent #ffd54f;
 }
 
 a.tag-kemp:before {
-	border-color: #ffd54f #ffd54f #ffd54f transparent;
+  border-color: #ffd54f #ffd54f #ffd54f transparent;
 }
 
 a.tag-kemp:hover {
-	background: #ffb300;
+  background: #ffb300;
 }
 
 a.tag-kemp:hover:before {
-	border-color: #ffb300 #ffb300 #ffb300 transparent;
+  border-color: #ffb300 #ffb300 #ffb300 transparent;
 }
 
 a.tag-kemp:hover:after {
-	border-color: transparent transparent transparent #ffb300;
+  border-color: transparent transparent transparent #ffb300;
 }
 
 
 /* Rancher */
 
 a.tag-rancher {
-	background: #9da6f9;
-	color: white;
+  background: #9da6f9;
+  color: white;
 }
 
 a.tag-rancher:after {
-	border-color: transparent transparent transparent #9da6f9;
+  border-color: transparent transparent transparent #9da6f9;
 }
 
 a.tag-rancher:before {
-	border-color: #9da6f9 #9da6f9 #9da6f9 transparent;
+  border-color: #9da6f9 #9da6f9 #9da6f9 transparent;
 }
 
 a.tag-rancher:hover {
-	background: #6d76cc;
+  background: #6d76cc;
 }
 
 a.tag-rancher:hover:before {
-	border-color: #6d76cc #6d76cc #6d76cc transparent;
+  border-color: #6d76cc #6d76cc #6d76cc transparent;
 }
 
 a.tag-rancher:hover:after {
-	border-color: transparent transparent transparent #6d76cc;
+  border-color: transparent transparent transparent #6d76cc;
 }
 
 
 /* Hetzner */
 
 a.tag-hetzner {
-	background: #e44a63;
-	color: white;
+  background: #e44a63;
+  color: white;
 }
 
 a.tag-hetzner:after {
-	border-color: transparent transparent transparent #e44a63;
+  border-color: transparent transparent transparent #e44a63;
 }
 
 a.tag-hetzner:before {
-	border-color: #e44a63 #e44a63 #e44a63 transparent;
+  border-color: #e44a63 #e44a63 #e44a63 transparent;
 }
 
 a.tag-hetzner:hover {
-	background: #bb3a4f;
+  background: #bb3a4f;
 }
 
 a.tag-hetzner:hover:before {
-	border-color: #bb3a4f #bb3a4f #bb3a4f transparent;
+  border-color: #bb3a4f #bb3a4f #bb3a4f transparent;
 }
 
 a.tag-hetzner:hover:after {
-	border-color: transparent transparent transparent #bb3a4f;
+  border-color: transparent transparent transparent #bb3a4f;
 }
 
 
 /* Kubernetes */
 
 a.tag-kubernetes {
-	background: #6c5bfb;
-	color: white;
+  background: #6c5bfb;
+  color: white;
 }
 
 a.tag-kubernetes:after {
-	border-color: transparent transparent transparent #6c5bfb;
+  border-color: transparent transparent transparent #6c5bfb;
 }
 
 a.tag-kubernetes:before {
-	border-color: #6c5bfb #6c5bfb #6c5bfb transparent;
+  border-color: #6c5bfb #6c5bfb #6c5bfb transparent;
 }
 
 a.tag-kubernetes:hover {
-	background: #5649c7;
+  background: #5649c7;
 }
 
 a.tag-kubernetes:hover:before {
-	border-color: #5649c7 #5649c7 #5649c7 transparent;
+  border-color: #5649c7 #5649c7 #5649c7 transparent;
 }
 
 a.tag-kubernetes:hover:after {
-	border-color: transparent transparent transparent #5649c7;
+  border-color: transparent transparent transparent #5649c7;
 }
 
 
 /* Terraform */
 
 a.tag-terraform {
-	background: #3b25f5;
-	color: white;
+  background: #3b25f5;
+  color: white;
 }
 
 a.tag-terraform:after {
-	border-color: transparent transparent transparent #3b25f5;
+  border-color: transparent transparent transparent #3b25f5;
 }
 
 a.tag-terraform:before {
-	border-color: #3b25f5 #3b25f5 #3b25f5 transparent;
+  border-color: #3b25f5 #3b25f5 #3b25f5 transparent;
 }
 
 a.tag-terraform:hover {
-	background: #2f1ec9;
+  background: #2f1ec9;
 }
 
 a.tag-terraform:hover:before {
-	border-color: #2f1ec9 #2f1ec9 #2f1ec9 transparent;
+  border-color: #2f1ec9 #2f1ec9 #2f1ec9 transparent;
 }
 
 a.tag-terraform:hover:after {
-	border-color: transparent transparent transparent #2f1ec9;
+  border-color: transparent transparent transparent #2f1ec9;
 }
 
 
 /* CI/CD */
 
 a.tag-ci-cd {
-	background: #5493a2;
-	color: white;
+  background: #5493a2;
+  color: white;
 }
 
 a.tag-ci-cd:after {
-	border-color: transparent transparent transparent #5493a2;
+  border-color: transparent transparent transparent #5493a2;
 }
 
 a.tag-ci-cd:before {
-	border-color: #5493a2 #5493a2 #5493a2 transparent;
+  border-color: #5493a2 #5493a2 #5493a2 transparent;
 }
 
 a.tag-ci-cd:hover {
-	background: #3e6a75;
+  background: #3e6a75;
 }
 
 a.tag-ci-cd:hover:before {
-	border-color: #3e6a75 #3e6a75 #3e6a75 transparent;
+  border-color: #3e6a75 #3e6a75 #3e6a75 transparent;
 }
 
 a.tag-ci-cd:hover:after {
-	border-color: transparent transparent transparent #3e6a75;
+  border-color: transparent transparent transparent #3e6a75;
 }
 
 
 /* Git */
 
 a.tag-git {
-	background: #726a95;
-	color: white;
+  background: #726a95;
+  color: white;
 }
 
 a.tag-git:after {
-	border-color: transparent transparent transparent #726a95;
+  border-color: transparent transparent transparent #726a95;
 }
 
 a.tag-git:before {
-	border-color: #726a95 #726a95 #726a95 transparent;
+  border-color: #726a95 #726a95 #726a95 transparent;
 }
 
 a.tag-git:hover {
-	background: #635d80;
+  background: #635d80;
 }
 
 a.tag-git:hover:before {
-	border-color: #635d80 #635d80 #635d80 transparent;
+  border-color: #635d80 #635d80 #635d80 transparent;
 }
 
 a.tag-git:hover:after {
-	border-color: transparent transparent transparent #635d80;
+  border-color: transparent transparent transparent #635d80;
 }
 
 
 /* Docker */
 
 a.tag-docker {
-	background: #a6dcef;
-	color: white;
+  background: #a6dcef;
+  color: white;
 }
 
 a.tag-docker:after {
-	border-color: transparent transparent transparent #a6dcef;
+  border-color: transparent transparent transparent #a6dcef;
 }
 
 a.tag-docker:before {
-	border-color: #a6dcef #a6dcef #a6dcef transparent;
+  border-color: #a6dcef #a6dcef #a6dcef transparent;
 }
 
 a.tag-docker:hover {
-	background: #74bdd8;
+  background: #74bdd8;
 }
 
 a.tag-docker:hover:before {
-	border-color: #74bdd8 #74bdd8 #74bdd8 transparent;
+  border-color: #74bdd8 #74bdd8 #74bdd8 transparent;
 }
 
 a.tag-docker:hover:after {
-	border-color: transparent transparent transparent #74bdd8;
+  border-color: transparent transparent transparent #74bdd8;
 }
 
 
 /* GCP */
 
 a.tag-gcp {
-	background: #a9e2a9;
-	color: white;
+  background: #a9e2a9;
+  color: white;
 }
 
 a.tag-gcp:after {
-	border-color: transparent transparent transparent #a9e2a9;
+  border-color: transparent transparent transparent #a9e2a9;
 }
 
 a.tag-gcp:before {
-	border-color: #a9e2a9 #a9e2a9 #a9e2a9 transparent;
+  border-color: #a9e2a9 #a9e2a9 #a9e2a9 transparent;
 }
 
 a.tag-gcp:hover {
-	background: #94c494;
+  background: #94c494;
 }
 
 a.tag-gcp:hover:before {
-	border-color: #94c494 #94c494 #94c494 transparent;
+  border-color: #94c494 #94c494 #94c494 transparent;
 }
 
 a.tag-gcp:hover:after {
-	border-color: transparent transparent transparent #94c494;
+  border-color: transparent transparent transparent #94c494;
 }
 
 /* Traefik */
 
 a.tag-traefik {
-	background: #24a1c1;
-	color: white;
+  background: #24a1c1;
+  color: white;
 }
 
 a.tag-traefik:after {
-	border-color: transparent transparent transparent #24a1c1;
+  border-color: transparent transparent transparent #24a1c1;
 }
 
 a.tag-traefik:before {
-	border-color: #24a1c1 #24a1c1 #24a1c1 transparent;
+  border-color: #24a1c1 #24a1c1 #24a1c1 transparent;
 }
 
 a.tag-traefik:hover {
-	background: #1f86a0;
+  background: #1f86a0;
 }
 
 a.tag-traefik:hover:before {
-	border-color: #1f86a0 #1f86a0 #1f86a0 transparent;
+  border-color: #1f86a0 #1f86a0 #1f86a0 transparent;
 }
 
 a.tag-traefik:hover:after {
-	border-color: transparent transparent transparent #1f86a0;
+  border-color: transparent transparent transparent #1f86a0;
 }
 
 /* GitHub & Vercel */
 
 a.tag-github,a.tag-vercel {
-	background: #24292e;
-	color: white;
+  background: #24292e;
+  color: white;
 }
 
 a.tag-github:after,a.tag-vercel:after {
-	border-color: transparent transparent transparent #24292e;
+  border-color: transparent transparent transparent #24292e;
 }
 
 a.tag-github:before,a.tag-vercel:before {
-	border-color: #24292e #24292e #24292e transparent;
+  border-color: #24292e #24292e #24292e transparent;
 }
 
 a.tag-github:hover,a.tag-vercel:hover {
-	background: #535353;
+  background: #535353;
 }
 
 a.tag-github:hover:before,a.tag-vercel:hover:before {
-	border-color: #535353 #535353 #535353 transparent;
+  border-color: #535353 #535353 #535353 transparent;
 }
 
 a.tag-github:hover:after,a.tag-vercel:hover:after {
-	border-color: transparent transparent transparent #535353;
+  border-color: transparent transparent transparent #535353;
 }
 
 /* Hugo */
 
 a.tag-hugo {
-	background: #ff2db4;
-	color: white;
+  background: #ff2db4;
+  color: white;
 }
 
 a.tag-hugo:after {
-	border-color: transparent transparent transparent #ff2db4;
+  border-color: transparent transparent transparent #ff2db4;
 }
 
 a.tag-hugo:before {
-	border-color: #ff2db4 #ff2db4 #ff2db4 transparent;
+  border-color: #ff2db4 #ff2db4 #ff2db4 transparent;
 }
 
 a.tag-hugo:hover {
-	background: #cd007b;
+  background: #cd007b;
 }
 
 a.tag-hugo:hover:before {
-	border-color: #cd007b #cd007b #cd007b transparent;
+  border-color: #cd007b #cd007b #cd007b transparent;
 }
 
 a.tag-hugo:hover:after {
-	border-color: transparent transparent transparent #cd007b;
+  border-color: transparent transparent transparent #cd007b;
 }
 
 /* DevOps */
 
 a.tag-devops {
-	background: #aac09a;
-	color: white;
+  background: #aac09a;
+  color: white;
 }
 
 a.tag-devops:after {
-	border-color: transparent transparent transparent #aac09a;
+  border-color: transparent transparent transparent #aac09a;
 }
 
 a.tag-devops:before {
-	border-color: #aac09a #aac09a #aac09a transparent;
+  border-color: #aac09a #aac09a #aac09a transparent;
 }
 
 a.tag-devops:hover {
-	background: #90a482;
+  background: #90a482;
 }
 
 a.tag-devops:hover:before {
-	border-color: #90a482 #90a482 #90a482 transparent;
+  border-color: #90a482 #90a482 #90a482 transparent;
 }
 
 a.tag-devops:hover:after {
-	border-color: transparent transparent transparent #90a482;
+  border-color: transparent transparent transparent #90a482;
 }
 
 /* set embedded gists to wrap - https://github.com/blairvanderhoof/gist-embed/issues/42 */
 
 .wrap-gist .gist .blob-code-inner {
-	white-space: normal;
+  white-space: normal;
 }
 
 
 /* Table Styles */
 
 .tg {
-	border-collapse: collapse;
-	border-spacing: 0;
-	border: none;
-	border-color: #ccc;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+  border-color: #ccc;
 }
 
 .tg td {
-	padding: 10px 5px;
-	border-style: solid;
-	border-width: 0px;
-	overflow: hidden;
-	word-break: normal;
-	border-color: #ccc;
-	color: #333;
-	background-color: #fff;
+  padding: 10px 5px;
+  border-style: solid;
+  border-width: 0px;
+  overflow: hidden;
+  word-break: normal;
+  border-color: #ccc;
+  color: #333;
+  background-color: #fff;
 }
 
 .tg th {
-	font-weight: normal;
-	padding: 10px 5px;
-	border-style: solid;
-	border-width: 0px;
-	overflow: hidden;
-	word-break: normal;
-	border-color: #ccc;
-	color: #333;
-	background-color: #f0f0f0;
+  font-weight: normal;
+  padding: 10px 5px;
+  border-style: solid;
+  border-width: 0px;
+  overflow: hidden;
+  word-break: normal;
+  border-color: #ccc;
+  color: #333;
+  background-color: #f0f0f0;
 }
 
 .tg .tg-buh4 {
-	background-color: #f9f9f9;
-	text-align: left;
-	vertical-align: top
+  background-color: #f9f9f9;
+  text-align: left;
+  vertical-align: top;
 }
 
 .tg .tg-0lax {
-	text-align: left;
-	vertical-align: top
+  text-align: left;
+  vertical-align: top;
 }
 
 .custom-width {
-	width: 70%;
+  width: 70%;
 }
 
 @media screen and (max-width:1200px) {
-	.custom-width {
-		width: 90%;
-	}
+  .custom-width {
+    width: 90%;
+  }
 }
 
 /* Article Nav Links */
 
 .article-nav {
-	flex-direction: column;
-	align-items: stretch;
-	margin-left: -1rem;
-	margin-right: -1rem;
-	padding: 0;
+  flex-direction: column;
+  align-items: stretch;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding: 0;
 }
 
 @media screen and (min-width:800px) {
-	.article-nav {
-		flex-direction: row;
-	}
+  .article-nav {
+    flex-direction: row;
+  }
 }
 
 .article-nav a:first-of-type {
-	text-align: right;
+  text-align: right;
 }
 
 .article-nav a:hover {
 	/*transform: translate3D(0,-1px,0);*/
-	background: #585555;
+  background: #585555;
 }
 
 .article-nav a {
-	margin: .5rem 1rem;
-	border-bottom: none;
-	transition: all .2s ease !important;
+  margin: .5rem 1rem;
+  border-bottom: none;
+  transition: all .2s ease !important;
 	/*padding: 1.5rem;*/
-	padding: 1.5rem 1.5rem 0.5rem;
-	border-radius: .35rem;
-	background: #e8e7e7;
+  padding: 1.5rem 1.5rem 0.5rem;
+  border-radius: .35rem;
+  background: #e8e7e7;
 }
 
 @media screen and (min-width:800px) {
-	.article-nav a {
-		flex-grow: 0;
-		flex-shrink: 0;
-		flex-basis: calc(50% - 1rem);
-	}
+  .article-nav a {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(50% - 1rem);
+  }
 }
 
 /* Utteranc.es Custom CSS */
 
 .utterances {
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 760px;
-    margin-left: 0px;
-    margin-right: auto;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 760px;
+  margin-left: 0px;
+  margin-right: auto;
 }
 
 /* Version */
 .version {
-    position: absolute;
-    line-height: 0;
-    font-size: 0.63rem;
-    font-weight: 300;
-    padding: 0 0 0 5px;
-	margin-top: 10px;
-	color: #f2f0f4;
+  position: absolute;
+  line-height: 0;
+  font-size: 0.63rem;
+  font-weight: 300;
+  padding: 0 0 0 5px;
+  margin-top: 10px;
+  color: #f2f0f4;
 }
 
 .version:hover {
-	color: rgba(0,0,0,.6);
+  color: rgba(0,0,0,.6);
 }
 
 /* PrismJS Treeview */
 pre.language-treeview {
-	position: relative;
-	background: none;
-	color: #595c62;
-	box-shadow: none;
-	padding-top: 1rem;
-	margin: 1rem 0;
-	border-radius: 0.3rem;
+  position: relative;
+  background: none;
+  color: #595c62;
+  box-shadow: none;
+  padding-top: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.3rem;
 }
 
 code.language-treeview {
-	color: #595c62;
+  color: #595c62;
 }
 
 /* PrismJs Toolbar */
 
 @media screen and (min-width: 800px) {
-	div.code-toolbar {
-		width: -moz-fit-content;
-		width: fit-content;
-	}
+  div.code-toolbar {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
 @media screen and (max-width: 800px) {
-	div.code-toolbar > .toolbar {
-		margin-right: -1.5em;
-	}
+  div.code-toolbar > .toolbar {
+    margin-right: -1.5em;
+  }
 }
 
 div.code-toolbar > .toolbar {
-    top: 0em;
-    right: 0em;
-    transition: opacity 0.3s ease-in-out;
-	opacity: 1;
+  top: 0em;
+  right: 0em;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
 }
 
 div.code-toolbar > .toolbar a, div.code-toolbar > .toolbar button, div.code-toolbar > .toolbar span {
-    color: #bdbec2;
-    font-size: 1em;
-    padding: 0.15em .4em;
-    background: rgba(224, 224, 224, 0.2);
-    box-shadow: none;
-	border-radius: 0 0 0 0.3em;
-	outline: none;
+  color: #bdbec2;
+  font-size: 1em;
+  padding: 0.15em .4em;
+  background: rgba(224, 224, 224, 0.2);
+  box-shadow: none;
+  border-radius: 0 0 0 0.3em;
+  outline: none;
 }
 
 div.code-toolbar > .toolbar a:hover,
@@ -740,48 +740,48 @@ div.code-toolbar > .toolbar button:hover,
 div.code-toolbar > .toolbar button:focus,
 div.code-toolbar > .toolbar span:hover,
 div.code-toolbar > .toolbar span:focus {
-	cursor: pointer;
-	color: white;
+  cursor: pointer;
+  color: white;
 }
 
 /* Custom <code> for Gists */
 [data-gist-id] {
-	background: none;
+  background: none;
 }
 
 /* Custom PrismJS line highlight */
 pre[data-line] {
-    padding: 1em 1.5rem 1em 3em;
+  padding: 1em 1.5rem 1em 3em;
 }
 
 .background-hover {
-	background-color: transparent;
-	transition: 0.3s;
-	box-shadow: 0 0 0 7px transparent;
-	border-radius: 5px;
+  background-color: transparent;
+  transition: 0.3s;
+  box-shadow: 0 0 0 7px transparent;
+  border-radius: 5px;
 }
 
 .background-hover:hover {
-	background-color: rgb(231, 231, 231);
-	transition: 0.5s;
-	box-shadow: 0 0 0 7px rgb(231, 231, 231);
-	border-radius: 5px;
+  background-color: rgb(231, 231, 231);
+  transition: 0.5s;
+  box-shadow: 0 0 0 7px rgb(231, 231, 231);
+  border-radius: 5px;
 }
 
 .center-me {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .nav-main {
-	display: table;
+  display: table;
 }
 
 .nav-main > div a {
-    padding: 0.75rem 1.25rem;
-	border-radius: 0.35rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.35rem;
 }
 
 .nav-main > div a:hover,
@@ -791,7 +791,7 @@ pre[data-line] {
 }
 
 @media only screen and (max-width: 1170px) {
-	.nav-main {
-		display: none;
-	}
+  .nav-main {
+    display: none;
+  }
 }
