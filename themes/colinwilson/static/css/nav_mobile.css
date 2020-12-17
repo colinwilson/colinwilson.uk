@@ -18,6 +18,13 @@
     --menu-text-color: #e1e1e1;
   }
 
+@media print {
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
   #cd-nav mobilenav  {
     /* mobile first */
     position: fixed;
