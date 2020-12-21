@@ -226,6 +226,33 @@ a.tag-kemp:hover:after {
   border-color: transparent transparent transparent #ffb300;
 }
 
+/* AWS */
+
+a.tag-aws {
+  background: #ec912d;
+  color: black;
+}
+
+a.tag-aws:after {
+  border-color: transparent transparent transparent #ec912d;
+}
+
+a.tag-aws:before {
+  border-color: #ec912d #ec912d #ec912d transparent;
+}
+
+a.tag-aws:hover {
+  background: #ffb300;
+}
+
+a.tag-aws:hover:before {
+  border-color: #ffb300 #ffb300 #ffb300 transparent;
+}
+
+a.tag-aws:hover:after {
+  border-color: transparent transparent transparent #ffb300;
+}
+
 
 /* Rancher */
 
@@ -477,30 +504,30 @@ a.tag-traefik:hover:after {
   border-color: transparent transparent transparent #1f86a0;
 }
 
-/* GitHub & Vercel */
+/* GitHub,Vercel,Vault (black tags) */
 
-a.tag-github,a.tag-vercel {
+a.tag-github,a.tag-vercel,a.tag-vault {
   background: #24292e;
   color: white;
 }
 
-a.tag-github:after,a.tag-vercel:after {
+a.tag-github:after,a.tag-vercel:after,a.tag-vault:after {
   border-color: transparent transparent transparent #24292e;
 }
 
-a.tag-github:before,a.tag-vercel:before {
+a.tag-github:before,a.tag-vercel:before,a.tag-vault:before {
   border-color: #24292e #24292e #24292e transparent;
 }
 
-a.tag-github:hover,a.tag-vercel:hover {
+a.tag-github:hover,a.tag-vercel:hover,a.tag-vault:hover {
   background: #535353;
 }
 
-a.tag-github:hover:before,a.tag-vercel:hover:before {
+a.tag-github:hover:before,a.tag-vercel:hover:before,a.tag-vault:hover:before {
   border-color: #535353 #535353 #535353 transparent;
 }
 
-a.tag-github:hover:after,a.tag-vercel:hover:after {
+a.tag-github:hover:after,a.tag-vercel:hover:after,a.tag-vault:hover:after {
   border-color: transparent transparent transparent #535353;
 }
 
