@@ -17,6 +17,10 @@ ul {
   line-height: 1.6;
 }
 
+ol {
+  line-height: 1.6;
+}
+
 .rubik {
   font-family: "Rubik", sans-serif;
 }

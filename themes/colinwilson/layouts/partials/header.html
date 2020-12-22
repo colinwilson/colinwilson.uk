@@ -10,10 +10,14 @@
         {{ end }}
     </title>
     {{ partial "favicon" . }}
-    <meta name="description" content="{{ .Description }}">
+    {{ with .Description | default ($.Param "description") }}
+    <meta name="description" content="{{ . }}">
+    {{ end }}
     {{ hugo.Generator }}
     <meta property="og:title" content="{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}{{ if eq $url "/" }}{{ .Site.Params.author }}{{ else }}{{ .Title }}{{ end}}">
-    <meta property="og:description" content="{{ .Description }}">
+    {{ with .Description | default ($.Param "description") }}
+    <meta property="og:description" content="{{ . }}">
+    {{ end }}
         {{ partial "twitter-card" . }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -31,5 +35,7 @@
     <link rel="stylesheet" href="//unpkg.com/prismjs@1.22.0/plugins/toolbar/prism-toolbar.css">
     {{ end }}
     <link rel="stylesheet" href="/css/custom.css">
+    {{ if not .Site.IsServer }}
     {{ template "_internal/google_analytics_async.html" . }}{{ if .Site.Params.MatomoID }}{{ partial "matomo" . }}{{ end }}
+    {{ end }}
 </head>
