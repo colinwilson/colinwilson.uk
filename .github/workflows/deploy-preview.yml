@@ -52,8 +52,8 @@ jobs:
       with:
         vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
         #github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
-        vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
-        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
+        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}  #Required
+        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }} #Required
         github-comment: false
         #vercel-args: '--prod' #Optional
         working-directory: public
