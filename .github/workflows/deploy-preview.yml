@@ -11,8 +11,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "deploy"
-  deploy:
+  # This workflow contains a single job called "deploy-preview"
+  deploy-preview:
     # The type of runner that the job will run on
     runs-on: ubuntu-20.04
 
@@ -43,7 +43,7 @@ jobs:
 
     # Step 3 - Builds the site using Hugo
     - name: Build
-      run: hugo -v --minify
+      run: hugo -v
 
     # Step 4 - Push our generated site to vercel
     - name: Deploy to Vercel
@@ -52,8 +52,8 @@ jobs:
       with:
         vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
         #github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
-        vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
-        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
+        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}  #Required
+        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }} #Required
         github-comment: false
         #vercel-args: '--prod' #Optional
         working-directory: public
