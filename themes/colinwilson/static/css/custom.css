@@ -234,6 +234,33 @@ a.tag-kemp:hover:after {
   border-color: transparent transparent transparent #ffb300;
 }
 
+/* Netlify */
+
+a.tag-netlify {
+  background: #40acb8;
+  color: black;
+}
+
+a.tag-netlify:after {
+  border-color: transparent transparent transparent #40acb8;
+}
+
+a.tag-netlify:before {
+  border-color: #40acb8 #40acb8 #40acb8 transparent;
+}
+
+a.tag-netlify:hover {
+  background: #277b84;
+}
+
+a.tag-netlify:hover:before {
+  border-color: #277b84 #277b84 #277b84 transparent;
+}
+
+a.tag-netlify:hover:after {
+  border-color: transparent transparent transparent #277b84;
+}
+
 /* AWS */
 
 a.tag-aws {
