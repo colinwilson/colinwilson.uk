@@ -25,6 +25,8 @@
 
         <!-- <div class="f4 black-70 lh-copy measure-wide cap"> -->
         <div class="markdown">
+        {{ partial "featured_image" . }}
+        {{ partial "toc" . }}
         {{ .Content }}
         </div>
 
