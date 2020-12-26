@@ -1,81 +1,83 @@
-  {{ partial "header" . }}
+{{ partial "header" . }}
 
-  <!-- data-toolbar-order="" disables PrismJS copy-to-clipboard toolbar button by default-->
-  <body data-toolbar-order="" class="rubik black-60">
+<!-- data-toolbar-order="" disables PrismJS copy-to-clipboard toolbar button by default-->
+<body data-toolbar-order="" class="rubik black-60">
 
-    {{ partialCached "nav_mobile" . }}
-    {{ partialCached "nav" . }}
+  {{ partialCached "nav_mobile" . }}
+  {{ partialCached "nav" . }}
 
-    <div class="flex flex-column custom-width mw9 pv4 pv0-ns center">
+  <div class="flex flex-column custom-width mw9 pv4 pv0-ns center">
 
-        <div class="flex-auto flex flex-column justify-center pv4 pv1-ns">
-            <!--<author class="dt w-100 pb2 mt2" href="#0">
-            <div class="dtc w2 w3-ns v-mid">
-                <img src="{{ .Site.Params.avatar }}" class="db w2 w3-ns h2 h3-ns"/>
-            </div>
-            <div class="dtc v-top pl0">
-                <h1 class="f6 f5-ns fw4 ttu tracked lh-title black-70 mv0">{{ $.Param "author" }}</h1>
-                <h2 class="f7 fw4 mt1 mb0 ttu tracked gray">{{ .PublishDate.Format "02 January 2006, 3:04 PM" }}</h2>
-            </div>
-            </author>-->
-            <h1 class="mt0 mb3 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-70">{{ .Title }}</h1>
-            <div><p class="f6 mt0">By<span class="ttu fw5"> {{ $.Param "author" }}</span> on <span class="tl">{{ .PublishDate.Format "02 January, 2006" }}</span></p></div>
-            <!--<div class="tl f6 flex items-center"><img style="margin-bottom: 1px;" height="22px" src="/img/wait.svg"/> &nbsp; {{ .ReadingTime }} min read</div>-->
-        </div>
+      <div class="flex-auto flex flex-column justify-center pv4 pv1-ns">
+          <!--<author class="dt w-100 pb2 mt2" href="#0">
+          <div class="dtc w2 w3-ns v-mid">
+              <img src="{{ .Site.Params.avatar }}" class="db w2 w3-ns h2 h3-ns"/>
+          </div>
+          <div class="dtc v-top pl0">
+              <h1 class="f6 f5-ns fw4 ttu tracked lh-title black-70 mv0">{{ $.Param "author" }}</h1>
+              <h2 class="f7 fw4 mt1 mb0 ttu tracked gray">{{ .PublishDate.Format "02 January 2006, 3:04 PM" }}</h2>
+          </div>
+          </author>-->
+          <h1 class="mt0 mb3 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-70">{{ .Title }}</h1>
+          <div><p class="f6 mt0">By<span class="ttu fw5"> {{ $.Param "author" }}</span> on <span class="tl">{{ .PublishDate.Format "02 January, 2006" }}</span></p></div>
+          <!--<div class="tl f6 flex items-center"><img style="margin-bottom: 1px;" height="22px" src="/img/wait.svg"/> &nbsp; {{ .ReadingTime }} min read</div>-->
+      </div>
 
-        <!-- <div class="f4 black-70 lh-copy measure-wide cap"> -->
-        <div class="markdown">
-        {{ .Content }}
-        </div>
+      <!-- <div class="f4 black-70 lh-copy measure-wide cap"> -->
+      <div class="markdown">
+      {{ partial "featured_image" . }}
+      {{ partial "toc" . }}
+      {{ .Content }}
+      </div>
 
-        {{ if isset .Params "tags" }}
-            {{ $tagsLen := len .Params.tags }}
-            {{ if gt $tagsLen 0 }}
-                <ul class="tags tracked w-80">
-                    {{ range $k, $v := .Params.tags }}
-                    <li><a class="article-category-link tag-{{ . | lower }}" href="{{ $.Site.BaseURL }}tags/{{ . | urlize | lower }}">{{ . }}</a></li>
-                    {{ end }}
-                </ul>
-            {{ end }}
-        {{ end }}
+      {{ if isset .Params "tags" }}
+          {{ $tagsLen := len .Params.tags }}
+          {{ if gt $tagsLen 0 }}
+              <ul class="tags tracked w-80">
+                  {{ range $k, $v := .Params.tags }}
+                  <li><a class="article-category-link tag-{{ . | lower }}" href="{{ $.Site.BaseURL }}tags/{{ . | urlize | lower }}">{{ . }}</a></li>
+                  {{ end }}
+              </ul>
+          {{ end }}
+      {{ end }}
 
-        {{ template "_internal/disqus.html" . }}
+      {{ template "_internal/disqus.html" . }}
 
-        {{ partial "comments" . }}
+      {{ partial "comments" . }}
 
-        {{ if or .PrevInSection .NextInSection }}
-        <div class="w-100 flex article-nav">
-            {{ if .PrevInSection }}
-                <a rel="prev" href="{{ .PrevInSection.Permalink }}" id="article-nav-older" class="db black-80 link hover-light-gray">
-                    <span>
-                        <svg class="w1" data-icon="chevronLeft" viewBox="0 -18 50 50" style="fill:currentcolor">
-                            <title>chevronLeft icon</title>
-                            <path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z"></path>
-                        </svg>Previous
-                    </span>
-                    <p><strong>
-                        {{ .PrevInSection.Title }}
-                    </strong></p>
-                </a>
-            {{ end }}
-            {{ if .NextInSection }}
-                <a rel="next" href="{{ .NextInSection.Permalink }}" id="article-nav-newer" class="db black-80 link hover-light-gray">
-                    <span>Next
-                        <svg class="w1" data-icon="chevronRight" viewBox="0 -18 50 50" style="fill:currentcolor">
-                        <title>chevronRight icon</title>
-                        <path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"></path>
-                        </svg>
-                    </span>
-                    <p><strong>
-                        {{ .NextInSection.Title }}
-                    </strong></p>
-                </a>
-            {{ end }}
-        </div>
-        {{ end }}
+      {{ if or .PrevInSection .NextInSection }}
+      <div class="w-100 flex article-nav">
+          {{ if .PrevInSection }}
+              <a rel="prev" href="{{ .PrevInSection.Permalink }}" id="article-nav-older" class="db black-80 link hover-light-gray">
+                  <span>
+                      <svg class="w1" data-icon="chevronLeft" viewBox="0 -18 50 50" style="fill:currentcolor">
+                          <title>chevronLeft icon</title>
+                          <path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z"></path>
+                      </svg>Previous
+                  </span>
+                  <p><strong>
+                      {{ .PrevInSection.Title }}
+                  </strong></p>
+              </a>
+          {{ end }}
+          {{ if .NextInSection }}
+              <a rel="next" href="{{ .NextInSection.Permalink }}" id="article-nav-newer" class="db black-80 link hover-light-gray">
+                  <span>Next
+                      <svg class="w1" data-icon="chevronRight" viewBox="0 -18 50 50" style="fill:currentcolor">
+                      <title>chevronRight icon</title>
+                      <path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"></path>
+                      </svg>
+                  </span>
+                  <p><strong>
+                      {{ .NextInSection.Title }}
+                  </strong></p>
+              </a>
+          {{ end }}
+      </div>
+      {{ end }}
 
-        {{ partial "footer" . }}
+      {{ partial "footer" . }}
 
-    </div>
-  </body>
+  </div>
+</body>
 </html>
