@@ -35,8 +35,8 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         env: Production
 
-    # Step 2 - Sets up the version of Hugo
-    - name: Setup Hugo
+    # Step 2 - Install Hugo (specific version)
+    - name: Install Hugo
       uses: peaceiris/actions-hugo@v2
       with:
           hugo-version: '0.79.1'
@@ -45,7 +45,7 @@ jobs:
     - name: Build
       run: hugo -v --minify
 
-    # Step 4 - Push our generated site to vercel
+    # Step 4 - Push our generated site to Vercel
     - name: Deploy to Vercel
       uses: amondnet/vercel-action@v20
       id: vercel-action
