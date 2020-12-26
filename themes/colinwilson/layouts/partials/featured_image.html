@@ -1,0 +1,5 @@
+{{ if .Params.featured_image }}
+    <p class="tc">
+        <img {{ with .Params.featured_image }} src="{{ . }}"{{ end }} alt="{{ .Title }}">
+    </p>
+{{ end }}
