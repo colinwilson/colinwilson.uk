@@ -15,6 +15,46 @@
         <h1 class="mt0 mb4 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-80">{{ .Title }}</h1>
       </div>
 
+      <div>
+        <input type="text" id="search-input" placeholder="Search...">
+      </div>
+
+      <script src="//unpkg.com/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch.umd.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+      <script>
+        var client = algoliasearch('G57I212SWT', '6cc1bdb3a37b06a3aa782b5a4b25303b');
+        var index = client.initIndex('colinwilson.uk');
+
+        function newHitsSource(index, params) {
+          return function doSearch(query, cb) {
+            index
+              .search(query, params)
+              .then(function(res) {
+                cb(res.hits, res);
+              })
+              .catch(function(err) {
+                console.error(err);
+                cb([]);
+              });
+          };
+        }
+
+        autocomplete('#search-input', { hint: false }, [
+          {
+            source: newHitsSource(index, { hitsPerPage: 5 }),
+            displayKey: 'title',
+            templates: {
+              suggestion: function(suggestion) {
+                return suggestion._highlightResult.title.value;
+              }
+            }
+          }
+        ]).on('autocomplete:selected', function(event, suggestion, dataset, context) {
+          console.log(event, suggestion, dataset, context);
+        });
+      </script>
+
       {{ range .Data.Pages.GroupByDate "2006" }}
       <h2 class="">{{ .Key }}</h2>
         <div class="flex-auto flex flex-column justify-center pv4 pv3-ns">
