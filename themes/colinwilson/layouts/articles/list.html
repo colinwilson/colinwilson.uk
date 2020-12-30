@@ -15,44 +15,17 @@
         <h1 class="mt0 mb4 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-80">{{ .Title }}</h1>
       </div>
 
-      <div>
-        <input type="text" id="search-input" placeholder="Search...">
+      <div class="mb4" id="search-box"><!-- SearchBox widget will appear here --></div>
+      <!-- include algolia logo -->
+      <!-- <img src="https://www.algolia.com/static_assets/images/pricing/pricing_new/algolia-powered-by-14773f38.svg"></img> -->
+
+      <div id="hits" class="mt0 mb4 f4 fw1 f4-ns normal lh-copy lh-title-ns">
+        <!-- Hits widget will appear here -->
       </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch.umd.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
-      <script>
-        var client = algoliasearch('G57I212SWT', '6cc1bdb3a37b06a3aa782b5a4b25303b');
-        var index = client.initIndex('colinwilson.uk');
-
-        function newHitsSource(index, params) {
-          return function doSearch(query, cb) {
-            index
-              .search(query, params)
-              .then(function(res) {
-                cb(res.hits, res);
-              })
-              .catch(function(err) {
-                console.error(err);
-                cb([]);
-              });
-          };
-        }
-
-        autocomplete('#search-input', { hint: false }, [
-          {
-            source: newHitsSource(index, { hitsPerPage: 5 }),
-            displayKey: 'title',
-            templates: {
-              suggestion: function(suggestion) {
-                return suggestion._highlightResult.title.value;
-              }
-            }
-          }
-        ]).on('autocomplete:selected', function(event, suggestion, dataset, context) {
-          console.log(event, suggestion, dataset, context);
-        });
-      </script>
+      <div id="pagination">
+        <!-- Pagination widget will appear here -->
+      </div>
 
       {{ range .Data.Pages.GroupByDate "2006" }}
       <h2 class="">{{ .Key }}</h2>
@@ -69,5 +42,41 @@
       {{ partialCached "footer" . }}
 
   </div>
+  <script>
+
+    // initialize instantsearch
+    const searchClient = algoliasearch('G57I212SWT', '6cc1bdb3a37b06a3aa782b5a4b25303b');
+
+    const search = instantsearch({
+      indexName: 'colinwilson.uk',
+      searchClient,
+    });
+
+    search.addWidget(
+      instantsearch.widgets.searchBox({
+        container: '#search-box',
+        placeholder: 'Search'
+      })
+    );
+
+    search.addWidget(
+      instantsearch.widgets.hits({
+        container: '#hits',
+        transformItems: function (items) {
+            return items.map(item => ({
+                ...item,
+                humandate: moment(item.publishdate).format('D MMMM'),
+                //humandate: new Date(item.publishdate).toDateString(),
+            }));
+        },
+        templates: {
+          empty: 'No results',
+          item: '<a class="dib no-underline black-70 color-animate hover-gray" href="{{ "{{{permalink}}}" }}"><h2 class="f7 fw3 mt1 mb0 ttu tracked gray">{{ "{{{humandate}}}" | safeHTML }}</h2><h1 class="mt0 mb4 f4 fw1 f4-ns normal lh-copy lh-title-ns">{{ "{{{title}}}" }}</h1></a>'
+        }
+      })
+    );
+
+    search.start();
+    </script>
 </body>
 </html>
