@@ -119,8 +119,8 @@
         transformItems: function (items) {
             return items.map(item => ({
                 ...item,
-                humandate: moment(item.publishdate).format('D MMMM YYYY'),
                 //humandate: new Date(item.publishdate).toDateString(),
+                humandate: dayjs(item.publishdate).format('D MMMM YYYY')
             }));
         },
         templates: {
