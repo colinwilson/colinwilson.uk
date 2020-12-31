@@ -31,6 +31,20 @@
         <!-- Pagination widget will appear here -->
       </div>
 
+      <div id="articles-init">
+      {{ range .Data.Pages.GroupByDate "2006" }}
+        <h2 class="">{{ .Key }}</h2>
+          <div class="flex-auto flex flex-column justify-center pv4 pv3-ns">
+            {{ range .Pages.ByPublishDate.Reverse }}
+            <a class="dib no-underline black-70 color-animate hover-gray" href="{{ .Permalink }}">
+              <h2 class="f7 fw3 mt1 mb0 ttu tracked gray">{{ .PublishDate.Format "02 January" }}</h2>
+              <h1 class="mt0 mb4 f4 fw1 f4-ns normal lh-copy lh-title-ns">{{ .Title }}</h1>
+            </a>
+            {{ end }}
+          </div>
+      {{ end }}
+      </div>
+
       <!-- {{ range .Data.Pages.GroupByDate "2006" }}
       <h2 class="">{{ .Key }}</h2>
         <div class="flex-auto flex flex-column justify-center pv4 pv3-ns">
@@ -54,6 +68,19 @@
     const search = instantsearch({
       indexName: 'colinwilson.uk',
       searchClient,
+      // https://community.algolia.com/instantsearch.js/v1/documentation/#hide-results-on-init
+      searchFunction: function(helper) {
+        var searchResults = $('#hits');
+        var articlesInit = $('#articles-init');
+        if (helper.state.query === '') {
+          searchResults.hide();
+          articlesInit.show();
+          return;
+        }
+        helper.search();
+        articlesInit.hide();
+        searchResults.show();
+      }
     });
 
     let timerId;
@@ -78,7 +105,7 @@
         container: '#search-box',
         autofocus: false,
         showSubmit: false,
-        placeholder: '⌕',
+        placeholder: 'Search...',
         queryHook(query, refine) {
           clearTimeout(timerId);
           timerId = setTimeout(() => refine(query), 500);
