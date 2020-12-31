@@ -43,6 +43,7 @@ section = [ "HTML", "RSS"]
     matomoURL              = "analytics.qunux.com"
 
     og_description         = "Systems Architect, Consultant, Technologist, lifelong learner."
+    og_image               = "android-chrome-384x384.png"
     prismjs                = true
 
     sponsorship_url        = "https://github.com/sponsors/colinwilson"

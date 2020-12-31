@@ -2,29 +2,33 @@
 <html lang="{{ .Site.LanguageCode }}">
 <head>
     <title>
-        {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
-        {{ if eq $url "/" }}
-            {{ .Site.Title }}
-        {{ else }}
-            {{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}
-        {{ end }}
+        {{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
+        {{- if eq $url "/" -}}
+            {{- .Site.Title -}}
+        {{- else -}}
+            {{- if .Params.heading -}} {{- .Params.heading -}} {{- else -}} {{- .Title -}} {{- end -}}
+        {{- end -}}
     </title>
-    {{ partial "favicon" . }}
+    {{- partial "favicon" . -}}
     {{ with .Description | default ($.Param "description") }}
     <meta name="description" content="{{ . }}">
     {{ end }}
-    {{ hugo.Generator }}
-    <meta property="og:title" content="{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}{{ if eq $url "/" }}{{ .Site.Params.author }}{{ else }}{{ .Title }}{{ end}}">
-    {{ with .Description | default ($.Param "description") }}
+    {{- hugo.Generator }}
+    <meta property="og:title" content="{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}{{ if eq $url "/" }}{{ .Site.Params.author }}{{ else }}{{ .Title }}{{ end }}">
+    {{- with .Description | default ($.Param "description") }}
     <meta property="og:description" content="{{ . }}">
-    {{ end }}
-        {{ partial "twitter-card" . }}
+    {{- end }}
+    {{- if .Params.featured_image }}
+    <meta property="og:image" content="{{ .Params.twitter.image | absURL }}"/>
+    {{- else }}
+    <meta property="og:image" content="{{ .Site.Params.og_image | absURL }}"/>
+    {{- end }}
+    {{- partial "twitter-card" . }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
     <link rel="stylesheet" href="//unpkg.com/tachyons@4.12.0/css/tachyons.min.css">
     <link rel="stylesheet" href="/css/nav_mobile.css">
-    {{ if .Site.Params.prismjs }}
+    {{- if .Site.Params.prismjs }}
     <link rel="stylesheet" href="/css/new-moon.css">
     <link rel="stylesheet" href="//unpkg.com/prismjs@1.22.0/plugins/command-line/prism-command-line.css">
     <link rel="stylesheet" href="//unpkg.com/prismjs@1.22.0/plugins/treeview/prism-treeview.css">
@@ -32,9 +36,9 @@
     <link rel="stylesheet" href="//unpkg.com/prismjs@1.22.0/plugins/line-numbers/prism-line-numbers.css">
     <link rel="stylesheet" href="//unpkg.com/prismjs@1.22.0/plugins/line-highlight/prism-line-highlight.css">
     <link rel="stylesheet" href="//unpkg.com/prismjs@1.22.0/plugins/toolbar/prism-toolbar.css">
-    {{ end }}
+    {{- end }}
     <link rel="stylesheet" href="/css/custom.css">
-    {{ if not .Site.IsServer }}
-    {{ template "_internal/google_analytics_async.html" . }}{{ if .Site.Params.MatomoID }}{{ partial "matomo" . }}{{ end }}
-    {{ end }}
+    {{- if not .Site.IsServer }}
+    {{- template "_internal/google_analytics_async.html" . }}{{- if .Site.Params.MatomoID }}{{- partial "matomo" . }}{{- end }}
+    {{- end }}
 </head>
