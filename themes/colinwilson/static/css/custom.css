@@ -872,3 +872,39 @@ pre[data-line] {
     display: none;
   }
 }
+
+/* mark {
+  background-color: #8cffc8;
+} */
+
+mark {
+  background-color: rgba(0,0,0,.6);
+  color: #fff;
+  border-radius: 0.2rem;
+  padding: 0.1rem;
+}
+
+[type="search"] {
+  background: none;
+  color: rgba(0,0,0,.6);
+	border-bottom: 2px solid rgba(0,0,0,.6);
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	width: 70%;
+  padding-bottom: 5px;
+  outline: none;
+}
+
+.ais-SearchBox-submit {
+  display: none;
+}
+
+.ais-SearchBox-reset {
+  margin-left: -10px;
+  outline: none;
+}
+
+.ais-SearchBox-loadingIndicator {
+  margin-left: -13px;
+}

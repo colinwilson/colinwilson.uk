@@ -15,7 +15,7 @@
         <h1 class="mt0 mb4 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-80">{{ .Title }}</h1>
       </div>
 
-      <div class="mb4" id="search-box"><!-- SearchBox widget will appear here --></div>
+      <div class="mb4 f3 black-60" id="search-box"><!-- SearchBox widget will appear here --></div>
       <!-- include algolia logo -->
       <!-- <img src="https://www.algolia.com/static_assets/images/pricing/pricing_new/algolia-powered-by-14773f38.svg"></img> -->
 
@@ -54,9 +54,16 @@
 
     search.addWidget(
       instantsearch.widgets.configure({
-        //hitsPerPage: 3,
-        attributesToHighlight: "title",
-        attributesToRetrieve: ["title", "publishdate", "permalink"]
+        //hitsPerPage: 10,
+        attributesToHighlight: [
+          "title",
+          "permalink"
+        ],
+        attributesToRetrieve: [
+          "title",
+          "publishdate",
+          "permalink"
+        ]
       })
     );
 
@@ -79,10 +86,16 @@
         },
         templates: {
           empty: 'No results',
-          item: '<a class="dib no-underline black-70 color-animate hover-gray" href="{{ "{{{permalink}}}" }}"><h2 class="f7 fw3 mt1 mb0 ttu tracked gray">{{ "{{{humandate}}}" | safeHTML }}</h2><h1 class="mt0 mb4 f4 fw1 f4-ns normal lh-copy lh-title-ns">{{ "{{{ _highlightResult.title.value }}}" }}</h1></a>'
+          item: '<a class="dib no-underline black-70 color-animate hover-gray" href="{{ "{{{permalink}}}" }}"><h2 class="f7 fw3 mt1 mb0 ttu tracked gray">{{ "{{{humandate}}}" | safeHTML }}</h2><h1 class="mt0 mb4 f4 fw1 f4-ns normal lh-copy lh-title-ns">{{ "{{{_highlightResult.title.value}}}" }}</h1></a>'
         }
       })
     );
+
+    // search.addWidget(
+    //   instantsearch.widgets.pagination({
+    //     container: '#pagination',
+    //   }),
+    // )
 
     search.start();
     </script>
