@@ -896,6 +896,16 @@ mark {
   outline: none;
 }
 
+@media only screen and (max-width: 800px) {
+  [type="search"] {
+    width: 100%;
+  }
+
+  #algolia_logo {
+    display: none;
+  }
+}
+
 /* .ais-SearchBox-submit {
   display: none;
 } */
