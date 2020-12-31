@@ -53,6 +53,14 @@
     });
 
     search.addWidget(
+      instantsearch.widgets.configure({
+        //hitsPerPage: 3,
+        attributesToHighlight: "title",
+        attributesToRetrieve: ["title", "publishdate", "permalink"]
+      })
+    );
+
+    search.addWidget(
       instantsearch.widgets.searchBox({
         container: '#search-box',
         placeholder: 'Search'
@@ -71,7 +79,7 @@
         },
         templates: {
           empty: 'No results',
-          item: '<a class="dib no-underline black-70 color-animate hover-gray" href="{{ "{{{permalink}}}" }}"><h2 class="f7 fw3 mt1 mb0 ttu tracked gray">{{ "{{{humandate}}}" | safeHTML }}</h2><h1 class="mt0 mb4 f4 fw1 f4-ns normal lh-copy lh-title-ns">{{ "{{{title}}}" }}</h1></a>'
+          item: '<a class="dib no-underline black-70 color-animate hover-gray" href="{{ "{{{permalink}}}" }}"><h2 class="f7 fw3 mt1 mb0 ttu tracked gray">{{ "{{{humandate}}}" | safeHTML }}</h2><h1 class="mt0 mb4 f4 fw1 f4-ns normal lh-copy lh-title-ns">{{ "{{{ _highlightResult.title.value }}}" }}</h1></a>'
         }
       })
     );
