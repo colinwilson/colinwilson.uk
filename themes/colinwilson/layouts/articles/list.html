@@ -56,6 +56,8 @@
       searchClient,
     });
 
+    let timerId;
+
     search.addWidget(
       instantsearch.widgets.configure({
         //hitsPerPage: 10,
@@ -76,7 +78,11 @@
         container: '#search-box',
         autofocus: false,
         showSubmit: false,
-        placeholder: '⌕'
+        placeholder: '⌕',
+        queryHook(query, refine) {
+          clearTimeout(timerId);
+          timerId = setTimeout(() => refine(query), 500);
+        }
       })
     );
 
