@@ -896,9 +896,9 @@ mark {
   outline: none;
 }
 
-.ais-SearchBox-submit {
+/* .ais-SearchBox-submit {
   display: none;
-}
+} */
 
 .ais-SearchBox-reset {
   margin-left: -10px;
@@ -906,5 +906,5 @@ mark {
 }
 
 .ais-SearchBox-loadingIndicator {
-  margin-left: -13px;
+  margin-left: -16px;
 }

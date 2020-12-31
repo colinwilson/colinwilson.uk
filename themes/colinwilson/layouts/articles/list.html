@@ -15,9 +15,13 @@
         <h1 class="mt0 mb4 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-80">{{ .Title }}</h1>
       </div>
 
-      <div class="mb4 f3 black-60" id="search-box"><!-- SearchBox widget will appear here --></div>
-      <!-- include algolia logo -->
-      <!-- <img src="https://www.algolia.com/static_assets/images/pricing/pricing_new/algolia-powered-by-14773f38.svg"></img> -->
+      <div class="mb4 f3 black-60" id="search-box">
+        <!-- SearchBox widget will appear here -->
+        <!--<span class="fr f7" style="margin-right: 30%;">Search powered by Algolia</span>-->
+        <a href="https://algolia.com" target="_blank">
+          <img style="margin-right: 30%;" height="18px" class="fr pt1" src="/img/search-by-algolia-grayscale.svg">
+        </a>
+      </div>
 
       <div id="hits" class="mt0 mb4 f4 fw1 f4-ns normal lh-copy lh-title-ns">
         <!-- Hits widget will appear here -->
@@ -27,7 +31,7 @@
         <!-- Pagination widget will appear here -->
       </div>
 
-      {{ range .Data.Pages.GroupByDate "2006" }}
+      <!-- {{ range .Data.Pages.GroupByDate "2006" }}
       <h2 class="">{{ .Key }}</h2>
         <div class="flex-auto flex flex-column justify-center pv4 pv3-ns">
           {{ range .Pages.ByPublishDate.Reverse }}
@@ -37,7 +41,7 @@
           </a>
           {{ end }}
         </div>
-      {{ end }}
+      {{ end }} -->
 
       {{ partialCached "footer" . }}
 
@@ -70,7 +74,9 @@
     search.addWidget(
       instantsearch.widgets.searchBox({
         container: '#search-box',
-        placeholder: 'Search'
+        autofocus: false,
+        showSubmit: false,
+        placeholder: '⌕'
       })
     );
 
