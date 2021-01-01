@@ -1156,3 +1156,11 @@ fieldset[disabled] .pagination-ellipsis {
     order: 3;
   }
 }
+
+li.index-item {
+  margin-right: 5%;
+}
+
+li.index-item:nth-child(3n) {
+  margin-right: 0;
+}

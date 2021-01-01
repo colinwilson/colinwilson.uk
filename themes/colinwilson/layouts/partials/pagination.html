@@ -1,5 +1,5 @@
 {{ $HugoPaginator := $.Paginator }}
-{{ $Pages := sub $HugoPaginator.TotalNumberOfElements 1 }}
+{{ $Pages := $HugoPaginator.TotalNumberOfElements }}
 {{ $totalpostscount := len (where .Site.RegularPages "Section" "==" "articles") }}
 {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
 {{ $MyPaginator := math.Ceil (div (float $Pages) $latestpostscount) }}
