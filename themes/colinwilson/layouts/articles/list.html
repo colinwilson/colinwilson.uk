@@ -15,7 +15,37 @@
         <h1 class="mt0 mb4 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-80">{{ .Title }}</h1>
       </div>
 
+      <div class="mb4 f3 black-60" id="search-box">
+        <!-- SearchBox widget will appear here -->
+        <!--<span class="fr f7" style="margin-right: 30%;">Search powered by Algolia</span>-->
+        <a id="algolia_logo" href="https://algolia.com" target="_blank" rel="noopener">
+          <img alt="Algolia Search Brand Logo" style="margin-right: 30%;" height="19px" class="fr pt1" src="/img/search-by-algolia-grayscale.svg">
+        </a>
+      </div>
+
+      <div id="hits" class="mt0 mb4 f4 fw1 f4-ns normal lh-copy lh-title-ns">
+        <!-- Hits widget will appear here -->
+      </div>
+
+      <div id="pagination">
+        <!-- Pagination widget will appear here -->
+      </div>
+
+      <div id="articles-init">
       {{ range .Data.Pages.GroupByDate "2006" }}
+        <h2 class="">{{ .Key }}</h2>
+          <div class="flex-auto flex flex-column justify-center pv4 pv3-ns">
+            {{ range .Pages.ByPublishDate.Reverse }}
+            <a class="dib no-underline color-animate hover-gray" href="{{ .Permalink }}">
+              <h2 class="f7 fw3 mt1 mb0 ttu tracked black-60">{{ .PublishDate.Format "02 January" }}</h2>
+              <h1 class="mt0 mb4 f4 fw1 f4-ns normal lh-copy black-70 lh-title-ns">{{ .Title }}</h1>
+            </a>
+            {{ end }}
+          </div>
+      {{ end }}
+      </div>
+
+      <!-- {{ range .Data.Pages.GroupByDate "2006" }}
       <h2 class="">{{ .Key }}</h2>
         <div class="flex-auto flex flex-column justify-center pv4 pv3-ns">
           {{ range .Pages.ByPublishDate.Reverse }}
@@ -25,10 +55,88 @@
           </a>
           {{ end }}
         </div>
-      {{ end }}
+      {{ end }} -->
 
       {{ partialCached "footer" . }}
 
   </div>
+  <script>
+
+    // initialize instantsearch
+    const searchClient = algoliasearch('G57I212SWT', '6cc1bdb3a37b06a3aa782b5a4b25303b');
+
+    const search = instantsearch({
+      indexName: 'colinwilson.uk',
+      searchClient,
+      // https://community.algolia.com/instantsearch.js/v1/documentation/#hide-results-on-init
+      searchFunction: function(helper) {
+        var searchResults = $('#hits');
+        var articlesInit = $('#articles-init');
+        if (helper.state.query === '') {
+          searchResults.hide();
+          articlesInit.show();
+          return;
+        }
+        helper.search();
+        articlesInit.hide();
+        searchResults.show();
+      }
+    });
+
+    let timerId;
+
+    search.addWidget(
+      instantsearch.widgets.configure({
+        //hitsPerPage: 10,
+        attributesToHighlight: [
+          "title",
+          "permalink"
+        ],
+        attributesToRetrieve: [
+          "title",
+          "publishdate",
+          "permalink"
+        ]
+      })
+    );
+
+    search.addWidget(
+      instantsearch.widgets.searchBox({
+        container: '#search-box',
+        autofocus: false,
+        showSubmit: false,
+        placeholder: 'Search...',
+        queryHook(query, refine) {
+          clearTimeout(timerId);
+          timerId = setTimeout(() => refine(query), 500);
+        }
+      })
+    );
+
+    search.addWidget(
+      instantsearch.widgets.hits({
+        container: '#hits',
+        transformItems: function (items) {
+            return items.map(item => ({
+                ...item,
+                //humandate: new Date(item.publishdate).toDateString(),
+                humandate: dayjs(item.publishdate).format('D MMMM YYYY')
+            }));
+        },
+        templates: {
+          empty: 'No results',
+          item: '<a class="dib no-underline color-animate hover-gray" href="{{ "{{{permalink}}}" }}"><h2 class="f7 fw3 mt1 mb0 ttu tracked black-60">{{ "{{{humandate}}}" | safeHTML }}</h2><h1 class="mt0 mb4 f4 fw1 f4-ns normal lh-copy black-70 lh-title-ns">{{ "{{{_highlightResult.title.value}}}" }}</h1></a>'
+        }
+      })
+    );
+
+    // search.addWidget(
+    //   instantsearch.widgets.pagination({
+    //     container: '#pagination',
+    //   }),
+    // )
+
+    search.start();
+    </script>
 </body>
 </html>

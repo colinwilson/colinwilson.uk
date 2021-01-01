@@ -1,0 +1,4 @@
+[context."netlify-dev"]
+  command = "hugo -v && npm run algolia"
+  publish = "public"
+  environment = { NODE_VERSION = "12" }
