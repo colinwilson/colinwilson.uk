@@ -108,7 +108,7 @@
         placeholder: 'Search...',
         queryHook(query, refine) {
           clearTimeout(timerId);
-          timerId = setTimeout(() => refine(query), 500);
+          timerId = setTimeout(() => refine(query), 400);
         }
       })
     );
