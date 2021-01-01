@@ -1,4 +1,4 @@
-[context."netlify-dev"]
+[context."patch/update-algolia-search"]
   command = "hugo -v && npm run algolia"
   publish = "public"
   environment = { NODE_VERSION = "12" }
