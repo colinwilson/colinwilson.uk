@@ -1,0 +1,57 @@
+{{ $HugoPaginator := $.Paginator }}
+{{ $Pages := sub $HugoPaginator.TotalNumberOfElements 1 }}
+{{ $totalpostscount := len (where .Site.RegularPages "Section" "==" "articles") }}
+{{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
+{{ $MyPaginator := math.Ceil (div (float $Pages) $latestpostscount) }}
+
+{{ if gt $HugoPaginator.TotalPages 1 }}
+
+<nav class="pagination" aria-label="pagination">
+
+  <a {{ if $HugoPaginator.HasPrev }} href="{{ $HugoPaginator.Prev.URL }}" {{ end }}
+      class="pagination-previous {{ if not $HugoPaginator.HasPrev }}disabled{{ end }}"
+			aria-label="Previous page" {{ if not $HugoPaginator.HasPrev }}aria-hidden="true"{{ end }}>
+      Previous
+  </a>
+
+	<a {{ if not (le (int $MyPaginator) $HugoPaginator.PageNumber) }}{{ if $HugoPaginator.HasNext }} href="{{ $HugoPaginator.Next.URL }}" {{ end }}{{ end }}
+    class="pagination-next {{ if le (int $MyPaginator) $HugoPaginator.PageNumber }}disabled{{ end }}"
+			aria-label="Next page" {{ if le (int $MyPaginator) $HugoPaginator.PageNumber }}aria-hidden="true"{{ end }}>
+      Next
+  </a>
+
+	<ul class="pagination-list">
+
+  {{ $.Scratch.Set "__paginator.ellipsed" false }}
+  {{ range (first $MyPaginator $HugoPaginator.Pagers) }}
+  {{ $right := sub .TotalPages .PageNumber }}
+  {{ $showNumber := or (le .PageNumber 3) (eq $right 0) }}
+  {{ $showNumber := or $showNumber (and (gt .PageNumber (sub $HugoPaginator.PageNumber 2)) (lt .PageNumber (add $HugoPaginator.PageNumber 2))) }}
+
+      {{ if $showNumber }}
+        {{ $.Scratch.Set "__paginator.ellipsed" false }}
+        {{ $.Scratch.Set "__paginator.shouldEllipse" false }}
+      {{ else }}
+        {{ $.Scratch.Set "__paginator.shouldEllipse" (not ($.Scratch.Get "__paginator.ellipsed") ) }}
+        {{ $.Scratch.Set "__paginator.ellipsed" true }}
+      {{ end }}
+
+      {{ if $showNumber }}
+
+        <li>
+          <a href="{{ .URL }}" aria-label="Go to page {{ .PageNumber }}"
+            class="pagination-link {{ if eq . $HugoPaginator }}is-current{{ end }}">
+            {{ .PageNumber }}
+          </a>
+        </li>
+
+      {{ else if ($.Scratch.Get "__paginator.shouldEllipse") }}
+
+        <li><span class="pagination-ellipsis" aria-hidden="true">&hellip;</span></li>
+
+      {{ end }}
+
+  {{ end }}
+	</ul>
+</nav>
+{{ end }}
