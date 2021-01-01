@@ -1,0 +1,4 @@
+[context."feature/add-algolia-search"]
+  command = "hugo -v --minify && npm run algolia"
+  publish = "public"
+  environment = { NODE_VERSION = "12" }
