@@ -1,4 +1,4 @@
 [context."netlify-dev"]
-  command = "hugo -v --minify && npm run algolia"
+  command = "hugo -v && npm run algolia"
   publish = "public"
   environment = { NODE_VERSION = "12" }
