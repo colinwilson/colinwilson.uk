@@ -6,6 +6,7 @@
 
 html {
   background-color: var(--read-background);
+  scroll-behavior: smooth;
 }
 
 a[href^="mailto:"] {

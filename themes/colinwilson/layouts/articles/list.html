@@ -63,21 +63,70 @@
   </div>
   <script type="module">
 
-    import searchRouting from '/js/search-routing.js';
-
     // initialize instantsearch
-    const searchClient = algoliasearch('G57I212SWT', '6cc1bdb3a37b06a3aa782b5a4b25303b');
+    const searchClient = algoliasearch('{{ getenv "ALGOLIA_APP_ID" }}', '{{ getenv "ALGOLIA_SEARCH_KEY" }}');
 
     const insightsMiddleware = instantsearch.middlewares.createInsightsMiddleware({
       insightsClient: window.aa,
     });
 
     const search = instantsearch({
-      indexName: 'colinwilson.uk',
+      indexName: '{{ getenv "ALGOLIA_INDEX_NAME" }}',
       searchClient,
-      routing: searchRouting,
-      // https://community.algolia.com/instantsearch.js/v1/documentation/#hide-results-on-init
-      searchFunction: function (helper) {
+      routing: {
+        router: instantsearch.routers.history({
+          windowTitle({ query }) {
+            const queryTitle = query ? `Search Results for "${query}"` : 'Search';
+            return queryTitle;
+          },
+
+          createURL({ qsModule, routeState, location }) {
+            const urlParts = location.href.match(/^(.*?)\/articles/);
+            const baseUrl = `${urlParts ? urlParts[1] : ''}/`;
+            const queryParameters = {};
+            if (routeState.query) {
+              queryParameters.search = encodeURIComponent(routeState.query);
+            }
+
+            const queryString = qsModule.stringify(queryParameters, {
+              addQueryPrefix: true,
+              arrayFormat: 'repeat'
+            });
+
+            console.log(routeState);
+            console.log(baseUrl + 'articles/' + queryString);
+            return `${baseUrl}articles/${queryString}`;
+          },
+
+          parseURL({ qsModule, location }) {
+            const { search = '' } = qsModule.parse(
+              location.search.slice(1)
+            );
+            return {
+              query: decodeURIComponent(search),
+            };
+          },
+        }),
+
+        stateMapping: {
+          stateToRoute(uiState) {
+            const indexUiState = uiState['{{ getenv "ALGOLIA_INDEX_NAME" | safeJS }}'];
+            return {
+              query: indexUiState.query
+            };
+          },
+
+          routeToState(routeState) {
+            return {
+              ['{{ getenv "ALGOLIA_INDEX_NAME" | safeJS }}']: {
+                query: routeState.query
+              },
+            };
+          },
+        },
+
+      },
+      searchFunction: function (helper) { // https://community.algolia.com/instantsearch.js/v1/documentation/#hide-results-on-init
         var searchResults = $('#hits');
         var articlesInit = $('#articles-init');
         if (helper.state.query === '') {
