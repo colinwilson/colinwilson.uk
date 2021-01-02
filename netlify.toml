@@ -1,0 +1,2 @@
+[context."netlify-dev"]
+  environment = { ALGOLIA_INDEX_NAME = "staging_colinwilson.uk", ALGOLIA_ADMIN_KEY = "59d0b3d86b1f28e601c8c7338be2e5bf" }
