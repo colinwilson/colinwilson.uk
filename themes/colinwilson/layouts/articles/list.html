@@ -125,13 +125,21 @@
         transformItems: function (items) {
             return items.map(item => ({
                 ...item,
-                //humandate: new Date(item.publishdate).toDateString(),
                 humandate: dayjs(item.publishdate).format('D MMMM YYYY')
             }));
         },
         templates: {
           empty: 'No results',
-          item: '<a class="dib no-underline color-animate hover-gray" href="{{ "{{{permalink}}}" }}"><h2 class="f7 fw3 mt1 mb0 ttu tracked black-60">{{ "{{{humandate}}}" | safeHTML }}</h2><h1 class="mt0 mb4 f4 fw1 f4-ns normal lh-copy black-70 lh-title-ns">{{ "{{{_highlightResult.title.value}}}" }}</h1></a>'
+          item: (hit, bindEvent) => `
+            <a ${bindEvent("click", hit, "Article Link")} class="dib no-underline color-animate hover-gray" href="${hit.permalink}">
+              <h2 class="f7 fw3 mt1 mb0 ttu tracked black-60">
+                ${hit.humandate}
+              </h2>
+              <h1 class="mt0 mb4 f4 fw1 f4-ns normal lh-copy black-70 lh-title-ns">
+                ${instantsearch.highlight({ attribute: 'title', hit })}
+              </h1>
+            </a>
+          `
         }
       })
     );
