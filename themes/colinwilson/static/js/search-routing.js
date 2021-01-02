@@ -2,7 +2,7 @@
 
 const router = instantsearch.routers.history({
     windowTitle({ query }) {
-        const queryTitle = query ? `Results for "${query}"` : 'Search';
+        const queryTitle = query ? `Search Results for "${query}"` : 'Search';
         return queryTitle;
     },
 
