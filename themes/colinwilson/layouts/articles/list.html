@@ -94,6 +94,9 @@
     search.addWidget(
       instantsearch.widgets.configure({
         //hitsPerPage: 10,
+        attributesToHighlight: [
+          "title"
+        ],
         attributesToRetrieve: [
           "title",
           "publishdate",
