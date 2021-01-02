@@ -43,4 +43,5 @@
     {{- if not .Site.IsServer }}
     {{- template "_internal/google_analytics_async.html" . }}{{- if .Site.Params.MatomoID }}{{- partial "matomo" . }}{{- end }}
     {{- end }}
+    {{ partial "algolia-search-insights" . }}
 </head>
