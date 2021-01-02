@@ -8,7 +8,7 @@ const router = instantsearch.routers.history({
 
     createURL({ qsModule, routeState, location }) {
         const urlParts = location.href.match(/^(.*?)\/articles/);
-        const baseUrl = `${urlParts ? urlParts[1] : ''}/articles`;
+        const baseUrl = `${urlParts ? urlParts[1] : ''}/`;
         const queryParameters = {};
         if (routeState.query) {
             queryParameters.search = encodeURIComponent(routeState.query);
@@ -20,7 +20,7 @@ const router = instantsearch.routers.history({
         });
 
         console.log(routeState);
-        console.log(baseUrl + queryString);
+        console.log(baseUrl + 'articles/' + queryString);
         return `${baseUrl}articles/${queryString}`;
     },
 
