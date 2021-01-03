@@ -1,42 +1,41 @@
-  {{ partial "header" . }}
-  <body class="rubik black-60">
-    {{ partial "version" . }}
-    {{ partialCached "nav_mobile" . }}
-    {{ partialCached "nav" . }}
-      <div class="flex flex-column w-80 mw9 pv4 pv0-ns center">
+{{ partial "header" . }}
+<body class="rubik black-60">
+  {{ partial "version" . }}
+  {{ partialCached "nav_mobile" . }}
+  {{ partialCached "nav" . }}
+    <div class="flex flex-column w-80 mw9 pv4 pv0-ns center">
 
-        {{ if .Site.Params.Logo }}
-        {{ partialCached "logo" . }}
-        {{ end }}
+      {{ if .Site.Params.Logo }}
+      {{ partialCached "logo" . }}
+      {{ end }}
 
-        <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
-            <h1 class="mt0 mb4 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-90">{{ .Site.Params.bio }}</h1>
-            <p class="mv0 f5 f4-ns lh-copy measure">
-                {{ .Site.Params.sub_bio }}
-            </p>
-        </div>
-
-        {{ $totalpostscount := len (where .Data.Pages "Section" "articles") }}
-        {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
-        <div class="pv4 pv5-ns">
-        <h2 class="mv0 pb2 pb3-ns f5 f4-ns normal lh-copy bb b--black-20">Latest Articles</h2>
-            <ul class="flex flex-wrap justify-between mv0 pl0 list">
-
-
-            {{- range ( where site.RegularPages.ByPublishDate.Reverse "Section" "articles" | first $latestpostscount ) }}
-                <li class="w-100 w-30-l mt4 mt5-ns">
-                <small class="black-60 db pv2"><time>{{ .PublishDate.Format "02 January 2006" }}</time></small>
-                <a class="dib background-hover no-underline black-90" href="{{ .Permalink }}">
-                    <h3 class="mt0 mb1 mb2-ns f4 f3-ns normal lh-copy measure-narrow">{{ .Title }}</h3>
-                    <p class="black-60 mv0 lh-copy measure">{{ .Description }}</p>
-                </a>
-                </li>
-            {{- end }}
-
-            </ul>
-        </div>
-
-        {{ partial "footer" . }}
+      <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
+          <h1 class="mt0 mb4 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-90">{{ .Site.Params.bio }}</h1>
+          <p class="mv0 f5 f4-ns lh-copy measure">
+              {{ .Site.Params.sub_bio }}
+          </p>
       </div>
-  </body>
+
+      {{ $totalpostscount := len (where .Site.RegularPages "Section" "==" "articles") }}
+      {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
+      {{ $paginator := .Paginate (where .Site.RegularPages.ByPublishDate.Reverse "Section" "articles") $latestpostscount }}
+      <div class="pv4 pv5-ns">
+      <h2 class="mv0 pb2 pb3-ns f5 f4-ns normal lh-copy bb b--black-20">Latest Articles</h2>
+          <ul class="flex bb b--black-20 pb5 flex-wrap justify-start mv0 pl0 list">
+          {{- range $paginator.Pages }}
+          <li class="w-100 w-30-l mt4 mt5-ns index-item">
+            <small class="black-60 db pv2"><time>{{ .PublishDate.Format "02 January 2006" }}</time></small>
+            <a class="dib background-hover no-underline black-80" href="{{ .Permalink }}">
+                <h3 class="mt0 mb1 mb2-ns f4 f3-ns normal lh-copy measure-narrow">{{ .Title }}</h3>
+                <p class="black-60 mv0 lh-copy measure">{{ .Description }}</p>
+            </a>
+          </li>
+          {{- end }}
+          </ul>
+          <div class="mt3">{{ partial "pagination.html" . }}</div>
+      </div>
+
+      {{ partial "footer" . }}
+    </div>
+</body>
 </html>

@@ -43,7 +43,7 @@ jobs:
 
     # Step 3 - Builds the site using Hugo
     - name: Build
-      run: hugo -v
+      run: hugo -v && npm run algolia
 
     # Step 4 - Push our generated site to Vercel
     - name: Deploy to Vercel
