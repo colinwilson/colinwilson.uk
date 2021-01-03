@@ -25,9 +25,12 @@
 
       <!-- <div class="f4 black-70 lh-copy measure-wide cap"> -->
       <div class="markdown">
-      {{ partial "featured_image" . }}
-      {{ partial "toc" . }}
-      {{ .Content }}
+        <span class="custom-width">
+            {{ partialCached "noscript_warning" "Enable JavaScript to properly view any codeblocks." . }}
+        </span>
+        {{ partial "featured_image" . }}
+        {{ partial "toc" . }}
+        {{ .Content }}
       </div>
 
       {{ if isset .Params "tags" }}
