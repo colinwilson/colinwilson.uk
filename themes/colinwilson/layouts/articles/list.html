@@ -15,7 +15,7 @@
       <h1 class="mt0 mb4 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-80">{{ .Title }}</h1>
     </div>
 
-    <noscript><span class="f5 ba b--dotted br2 pa2" style="font-family: consolas; color: #ef5350;">&#x26a0; To use the search function, please enable JavaScript.</span></noscript>
+    {{ partialCached "noscript_warning" "To use the search function, please enable JavaScript." . }}
     <div class="mb4 f3 black-60" id="search-box">
       <!-- SearchBox widget will appear here -->
       <a id="algolia_logo" href="https://algolia.com" target="_blank" rel="noopener">
