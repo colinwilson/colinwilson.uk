@@ -41,11 +41,21 @@ jobs:
       with:
           hugo-version: '0.79.1'
 
-    # Step 3 - Builds the site using Hugo
-    - name: Build
-      run: hugo -v --minify
+    # Step 3 - Install Package Dependencies
+    - name: Install Dependencies
+      run: npm install
 
-    # Step 4 - Push our generated site to Vercel
+    # Step 4 - Builds the site using Hugo
+    - name: Build
+      run: hugo -v && npm run algolia
+      env:
+        ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME_PROD }}
+        ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+        ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
+        ALGOLIA_INDEX_FILE: ${{ secrets.ALGOLIA_INDEX_FILE }}
+        ALGOLIA_SEARCH_KEY: ${{ secrets.ALGOLIA_SEARCH_KEY }}
+
+    # Step 5 - Push our generated site to Vercel
     - name: Deploy to Vercel
       uses: amondnet/vercel-action@v20
       id: vercel-action

@@ -8,7 +8,7 @@ googleAnalytics     = "UA-98935524-1"
 #disqusshortname     = "colinwilsonuk" # Comment out to disable Disqus.
 
 [outputs]
-home = [ "HTML", "RSS", "REDIRECTS" ]
+home = [ "HTML", "RSS", "REDIRECTS", "Algolia" ]
 section = [ "HTML", "RSS"]
 
 [mediaTypes]
@@ -22,6 +22,16 @@ section = [ "HTML", "RSS"]
     baseName = "_redirects"
     isPlainText = true
     notAlternative = true
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+params = ["categories", "tags"]
 
 [permalinks]
     "/" = "/:year/:month/:day/:slug"
@@ -43,6 +53,7 @@ section = [ "HTML", "RSS"]
     matomoURL              = "analytics.qunux.com"
 
     og_description         = "Systems Architect, Consultant, Technologist, lifelong learner."
+    og_image               = "android-chrome-384x384.png"
     prismjs                = true
 
     sponsorship_url        = "https://github.com/sponsors/colinwilson"
