@@ -11,6 +11,7 @@
     </title>
     {{ partial "favicon" . -}}
     {{ $vercel := getenv "VERCEL" }}
+    <meta name="test" content="{{ $vercel }}">
     {{- if eq $vercel "1" }}
     <meta name="robots" content="noindex">
     {{- end -}}
