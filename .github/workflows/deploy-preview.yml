@@ -99,10 +99,10 @@ jobs:
           deployment_id: ${{ github.event.deployment.id }}
           state: success
 
-      - name: Report deployment failure
-        if: failure()
-        uses: maxkomarychev/oction-create-deployment-status@v0.7.1
-        with:
-          token: ${{ github.token }}
-          deployment_id: ${{ github.event.deployment.id }}
-          state: failure
+    - name: Report deployment failure
+      if: failure()
+      uses: maxkomarychev/oction-create-deployment-status@v0.7.1
+      with:
+        token: ${{ github.token }}
+        deployment_id: ${{ github.event.deployment.id }}
+        state: failure
