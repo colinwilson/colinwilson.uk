@@ -834,13 +834,13 @@ pre[data-line] {
 
 .background-hover {
   background-color: transparent;
-  transition: 0.3s;
+  transition: 0.1s;
   border-radius: 1px;
 }
 
 .background-hover:hover {
   background-color: rgb(231, 231, 231);
-  transition: 0.4s;
+  transition: 0.1s;
   box-shadow: 0 0 0 7px rgb(231, 231, 231);
   border-radius: 1px;
 }
