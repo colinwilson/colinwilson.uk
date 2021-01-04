@@ -10,6 +10,9 @@
         {{- end -}}
     </title>
     {{ partial "favicon" . -}}
+    {{ if  eq hugo.Environment "staging" }}
+    <meta name="robots" content="noindex">
+    {{- end -}}
     {{ with .Description | default ($.Param "description") }}
     <meta name="description" content="{{ . }}">
     {{ end }}

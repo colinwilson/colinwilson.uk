@@ -44,7 +44,7 @@ jobs:
 
     # Step 4 - Builds the site using Hugo
     - name: Build
-      run: hugo -v && npm run algolia
+      run: hugo -v -e staging && npm run algolia
       env:
         ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
         ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
