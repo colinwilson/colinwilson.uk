@@ -14,10 +14,6 @@ jobs:
   # This workflow contains a single job called "deploy-preview"
   deploy-preview:
 
-    # The environment this job references
-    environment:
-      name: Preview
-
     # The type of runner that the job will run on
     runs-on: ubuntu-20.04
 
@@ -39,7 +35,6 @@ jobs:
         step: start
         token: ${{ secrets.GITHUB_TOKEN }}
         env: Preview
-        auto_inactive: false
 
     # Step 2 - Install Hugo (specific version)
     - name: Install Hugo
@@ -55,7 +50,7 @@ jobs:
     - name: Build
       run: hugo -v && npm run algolia
       env:
-        ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
+        ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME_STAGING }}
         ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
         ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
         ALGOLIA_INDEX_FILE: ${{ secrets.ALGOLIA_INDEX_FILE }}
