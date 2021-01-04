@@ -10,7 +10,8 @@
         {{- end -}}
     </title>
     {{ partial "favicon" . -}}
-    {{- if getenv "VERCEL" }}
+    {{ $vercel := getenv "VERCEL" }}
+    {{- if eq $vercel "1" }}
     <meta name="robots" content="noindex">
     {{- end -}}
     {{ with .Description | default ($.Param "description") }}
