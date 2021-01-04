@@ -14,6 +14,10 @@ jobs:
   # This workflow contains a single job called "deploy-preview"
   deploy-preview:
 
+    # The environment this job references
+    environment:
+      name: Preview
+
     # The type of runner that the job will run on
     runs-on: ubuntu-20.04
 
@@ -34,6 +38,7 @@ jobs:
       with:
         step: start
         token: ${{ secrets.GITHUB_TOKEN }}
+        deployment_id: ${{ github.event.deployment.id }}
         env: Preview
 
     # Step 2 - Install Hugo (specific version)
@@ -45,10 +50,6 @@ jobs:
     # Step 3 - Install Package Dependencies
     - name: Install Dependencies
       run: npm install
-
-    # The environment this job references
-    environment:
-      name: Preview
 
     # Step 4 - Builds the site using Hugo
     - name: Build
