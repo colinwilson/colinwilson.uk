@@ -34,13 +34,15 @@
 
     <div id="articles-init">
       {{ range .Data.Pages.GroupByDate "2006" }}
-      <h2 class="">{{ .Key }}</h2>
+      <h2 class="mb1">{{ .Key }}</h2>
       <div class="flex-auto flex flex-column justify-center pv4 pv3-ns">
         {{ range .Pages.ByPublishDate.Reverse }}
-        <a class="dib no-underline color-animate hover-gray" href="{{ .Permalink }}">
-          <h2 class="f7 fw3 mt1 mb0 ttu tracked black-60">{{ .PublishDate.Format "02 January" }}</h2>
-          <h1 class="mt0 mb4 f4 fw1 f4-ns normal lh-copy black-70 lh-title-ns">{{ .Title }}</h1>
-        </a>
+        <div class="mb4 w-70-l">
+          <a class="dib no-underline w-100 background-hover" href="{{ .Permalink }}">
+            <h2 class="f7 fw3 mt1 mb0 ttu tracked black-60">{{ .PublishDate.Format "02 January" }}</h2>
+            <h1 class="mt0 f4 fw1 f4-ns normal lh-copy black-70 lh-title-ns">{{ .Title }}</h1>
+          </a>
+        </div>
         {{ end }}
       </div>
       {{ end }}
@@ -183,14 +185,16 @@
         templates: {
           empty: 'No results',
           item: (hit, bindEvent) => `
-            <a ${bindEvent("click", hit, "Article Search Result Clicked")} class="dib no-underline color-animate hover-gray" href="${hit.permalink}">
+          <div class="mb4 w-70-l">
+            <a ${bindEvent("click", hit, "Article Search Result Clicked")} class="dib no-underline w-100 background-hover" href="${hit.permalink}">
               <h2 class="f7 fw3 mt1 mb0 ttu tracked black-60">
                 ${hit.humandate}
               </h2>
-              <h1 class="mt0 mb4 f4 fw1 f4-ns normal lh-copy black-70 lh-title-ns">
+              <h1 class="mt0 f4 fw1 f4-ns normal lh-copy black-70 lh-title-ns">
                 ${instantsearch.highlight({ attribute: 'title', hit })}
               </h1>
             </a>
+          </div>
           `
         }
       })
