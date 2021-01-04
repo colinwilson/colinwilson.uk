@@ -39,7 +39,7 @@ jobs:
         step: start
         token: ${{ secrets.GITHUB_TOKEN }}
         env: Preview
-        no_override: false
+        auto_inactive: false
 
     # Step 2 - Install Hugo (specific version)
     - name: Install Hugo
