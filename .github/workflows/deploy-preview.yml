@@ -31,15 +31,21 @@ jobs:
           ssh-key: ${{ secrets.SUBMODULE_CONTENT_DEPLOY_KEY }}
           submodules: recursive  # Fetch private content
 
-    # Initiate deployment status
-    - name: Start Deployment
-      uses: bobheadxi/deployments@v0.4.3
-      id: deployment
-      with:
-        step: start
-        token: ${{ secrets.GITHUB_TOKEN }}
-        deployment_id: ${{ github.event.deployment.id }}
-        env: Preview
+    # # Initiate deployment status
+    # - name: Start Deployment
+    #   uses: bobheadxi/deployments@v0.4.3
+    #   id: deployment
+    #   with:
+    #     step: start
+    #     token: ${{ secrets.GITHUB_TOKEN }}
+    #     env: Preview
+
+    - name: Report deployment status in progress
+        uses: maxkomarychev/oction-create-deployment-status@v0.7.1
+        with:
+          token: ${{ github.token }}
+          deployment_id: ${{ github.event.deployment.id }}
+          state: in_progress
 
     # Step 2 - Install Hugo (specific version)
     - name: Install Hugo
@@ -74,13 +80,29 @@ jobs:
         #vercel-args: '--prod' #Optional
         working-directory: public
 
-    # Update deployment status
-    - name: Update Deployment Status
-      uses: bobheadxi/deployments@v0.4.3
-      if: always()
-      with:
-        step: finish
-        token: ${{ secrets.GITHUB_TOKEN }}
-        status: ${{ job.status }}
-        deployment_id: ${{ steps.deployment.outputs.deployment_id }}
-        env_url: ${{ steps.vercel-action.outputs.preview-url }}
+    # # Update deployment status
+    # - name: Update Deployment Status
+    #   uses: bobheadxi/deployments@v0.4.3
+    #   if: always()
+    #   with:
+    #     step: finish
+    #     token: ${{ secrets.GITHUB_TOKEN }}
+    #     status: ${{ job.status }}
+    #     deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+    #     env_url: ${{ steps.vercel-action.outputs.preview-url }}
+
+    - name: Report deployment success
+        if: success()
+        uses: maxkomarychev/oction-create-deployment-status@v0.7.1
+        with:
+          token: ${{ github.token }}
+          deployment_id: ${{ github.event.deployment.id }}
+          state: success
+
+      - name: Report deployment failure
+        if: failure()
+        uses: maxkomarychev/oction-create-deployment-status@v0.7.1
+        with:
+          token: ${{ github.token }}
+          deployment_id: ${{ github.event.deployment.id }}
+          state: failure
