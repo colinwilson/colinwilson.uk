@@ -41,11 +41,11 @@ jobs:
     #     env: Preview
 
     - name: Report deployment status in progress
-        uses: maxkomarychev/oction-create-deployment-status@v0.7.1
-        with:
-          token: ${{ github.token }}
-          deployment_id: ${{ github.event.deployment.id }}
-          state: in_progress
+      uses: maxkomarychev/oction-create-deployment-status@v0.7.1
+      with:
+        token: ${{ github.token }}
+        deployment_id: ${{ github.event.deployment.id }}
+        state: in_progress
 
     # Step 2 - Install Hugo (specific version)
     - name: Install Hugo
@@ -92,12 +92,12 @@ jobs:
     #     env_url: ${{ steps.vercel-action.outputs.preview-url }}
 
     - name: Report deployment success
-        if: success()
-        uses: maxkomarychev/oction-create-deployment-status@v0.7.1
-        with:
-          token: ${{ github.token }}
-          deployment_id: ${{ github.event.deployment.id }}
-          state: success
+      if: success()
+      uses: maxkomarychev/oction-create-deployment-status@v0.7.1
+      with:
+        token: ${{ github.token }}
+        deployment_id: ${{ github.event.deployment.id }}
+        state: success
 
     - name: Report deployment failure
       if: failure()
