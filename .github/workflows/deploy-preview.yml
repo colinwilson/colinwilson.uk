@@ -14,6 +14,10 @@ jobs:
   # This workflow contains a single job called "deploy-preview"
   deploy-preview:
 
+    # The environment this job references
+    environment:
+      name: Preview
+
     # The type of runner that the job will run on
     runs-on: ubuntu-20.04
 
@@ -27,14 +31,14 @@ jobs:
           ssh-key: ${{ secrets.SUBMODULE_CONTENT_DEPLOY_KEY }}
           submodules: recursive  # Fetch private content
 
-    # Initiate deployment status
-    - name: Start Deployment
-      uses: bobheadxi/deployments@v0.4.3
-      id: deployment
-      with:
-        step: start
-        token: ${{ secrets.GITHUB_TOKEN }}
-        env: Preview
+    # # Initiate deployment status
+    # - name: Start Deployment
+    #   uses: bobheadxi/deployments@v0.4.3
+    #   id: deployment
+    #   with:
+    #     step: start
+    #     token: ${{ secrets.GITHUB_TOKEN }}
+    #     env: Preview
 
     # Step 2 - Install Hugo (specific version)
     - name: Install Hugo
@@ -50,7 +54,7 @@ jobs:
     - name: Build
       run: hugo -v && npm run algolia
       env:
-        ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME_STAGING }}
+        ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
         ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
         ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
         ALGOLIA_INDEX_FILE: ${{ secrets.ALGOLIA_INDEX_FILE }}
@@ -69,13 +73,13 @@ jobs:
         #vercel-args: '--prod' #Optional
         working-directory: public
 
-    # Update deployment status
-    - name: Update Deployment Status
-      uses: bobheadxi/deployments@v0.4.3
-      if: always()
-      with:
-        step: finish
-        token: ${{ secrets.GITHUB_TOKEN }}
-        status: ${{ job.status }}
-        deployment_id: ${{ steps.deployment.outputs.deployment_id }}
-        env_url: ${{ steps.vercel-action.outputs.preview-url }}
+    # # Update deployment status
+    # - name: Update Deployment Status
+    #   uses: bobheadxi/deployments@v0.4.3
+    #   if: always()
+    #   with:
+    #     step: finish
+    #     token: ${{ secrets.GITHUB_TOKEN }}
+    #     status: ${{ job.status }}
+    #     deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+    #     env_url: ${{ steps.vercel-action.outputs.preview-url }}
