@@ -47,6 +47,9 @@
       {{ template "_internal/disqus.html" . }}
 
       {{ partial "comments" . }}
+      <span class="mb2 custom-width">
+        {{ partialCached "noscript_warning" "Comment section requires JavaScript." . . }}
+      </span>
 
       {{ if or .PrevInSection .NextInSection }}
       <div class="w-100 flex article-nav">
