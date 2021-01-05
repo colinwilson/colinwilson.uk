@@ -26,7 +26,7 @@
       <!-- <div class="f4 black-70 lh-copy measure-wide cap"> -->
       <div class="markdown">
         <span class="custom-width">
-            {{ partialCached "noscript_warning" "JavaScript is required to display code blocks properly." }}
+            {{ partialCached "noscript_warning" "JavaScript is required to display code blocks properly." . }}
         </span>
         {{ partial "featured_image" . }}
         {{ partial "toc" . }}
@@ -48,7 +48,7 @@
 
       {{ partial "comments" . }}
       <span class="mb2 custom-width">
-        {{ partialCached "noscript_warning" "Comment section requires JavaScript." . }}
+        {{ partialCached "noscript_warning" "Comment section requires JavaScript." . . }}
       </span>
 
       {{ if or .PrevInSection .NextInSection }}
