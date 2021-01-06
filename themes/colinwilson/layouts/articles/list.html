@@ -1,6 +1,8 @@
 {{ partialCached "header" . }}
 
-<body class="rubik black-60">
+<body>
+  <input type="checkbox" class="theme-switch" id="theme-switch" />
+  <div id="page" class="rubik">
 
   {{ partialCached "nav_mobile" . }}
   {{ partialCached "nav" . }}
@@ -34,7 +36,7 @@
 
     <div id="articles-init">
       {{ range .Data.Pages.GroupByDate "2006" }}
-      <h2 class="mb1">{{ .Key }}</h2>
+      <h2 class="mb1 black-60">{{ .Key }}</h2>
       <div class="flex-auto flex flex-column justify-center pv4 pv3-ns">
         {{ range .Pages.ByPublishDate.Reverse }}
         <div class="mb4 w-70-l">
@@ -63,6 +65,7 @@
     {{ partialCached "footer" . }}
 
   </div>
+</div>
   <script type="module">
 
     // initialize instantsearch
@@ -183,7 +186,7 @@
           }));
         },
         templates: {
-          empty: 'No results',
+          empty: `<div class="black-70">No results</div>`,
           item: (hit, bindEvent) => `
           <div class="mb4 w-70-l">
             <a ${bindEvent("click", hit, "Article Search Result Clicked")} class="dib no-underline w-100 background-hover" href="${hit.permalink}">
@@ -210,6 +213,7 @@
 
     // add aria-label to input (accessibility)
     document.querySelector('.ais-SearchBox-input').setAttribute('aria-label', 'Search');
+    //document.querySelector('.ais-SearchBox-resetIcon').setAttribute('class', 'black-60');
   </script>
 </body>
 

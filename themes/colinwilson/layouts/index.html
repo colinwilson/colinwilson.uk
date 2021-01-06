@@ -1,5 +1,7 @@
 {{ partial "header" . }}
-<body class="rubik black-60">
+<body class="rubik">
+  <input type="checkbox" class="theme-switch" id="theme-switch" />
+  <div id="page">
   {{ partial "version" . }}
   {{ partialCached "nav_mobile" . }}
   {{ partialCached "nav" . }}
@@ -11,7 +13,7 @@
 
       <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
           <h1 class="mt0 mb4 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-90">{{ .Site.Params.bio }}</h1>
-          <p class="mv0 f5 f4-ns lh-copy measure">
+          <p class="mv0 f5 f4-ns lh-copy measure black-60">
               {{ .Site.Params.sub_bio }}
           </p>
       </div>
@@ -20,7 +22,7 @@
       {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
       {{ $paginator := .Paginate (where .Site.RegularPages.ByPublishDate.Reverse "Section" "articles") $latestpostscount }}
       <div class="pv4 pv5-ns">
-      <h2 class="mv0 pb2 pb3-ns f5 f4-ns normal lh-copy bb b--black-20">Latest Articles</h2>
+      <h2 class="mv0 pb2 pb3-ns f5 f4-ns normal black-60 lh-copy bb b--black-20">Latest Articles</h2>
           <ul class="flex bb b--black-20 pb5 flex-wrap justify-start mv0 pl0 list">
           {{- range $paginator.Pages }}
           <li class="w-100 w-30-l mt4 mt5-ns index-item">
@@ -37,5 +39,6 @@
 
       {{ partial "footer" . }}
     </div>
+  </div>
 </body>
 </html>

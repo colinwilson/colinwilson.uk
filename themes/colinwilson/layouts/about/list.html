@@ -1,6 +1,8 @@
   {{ partial "header" . }}
 
-  <body class="rubik black-60">
+  <body class="rubik">
+    <input type="checkbox" class="theme-switch" id="theme-switch" />
+    <div id="page" class="rubik">
 
     {{ partialCached "nav_mobile" . }}
     {{ partialCached "nav" . }}
@@ -21,6 +23,7 @@
 
         {{ partial "footer" . }}
 
+    </div>
     </div>
   </body>
 </html>
