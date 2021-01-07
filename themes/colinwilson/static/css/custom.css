@@ -7,6 +7,7 @@
   --light-text-main-header: rgba(0,0,0,0.9);
   --light-text-header: rgba(0,0,0,0.8);
   --light-text-title: rgba(0,0,0,0.7);
+  --light-text-color: rgba(0,0,0,0.7);
   --light-text-sub-header: rgba(0,0,0,0.6);
   --light-bg-hover: #2d2d31;
   --light-post-hover: rgb(231, 231, 231);
@@ -22,6 +23,7 @@
 
   --light-inline-code-bg-color: #e1e1e1;
   --light-blockquote-bg-color: #e8e7e7;
+  --light-blockquote-border-color: #807d72;
   --light-terminal-lang-bg-color: #ffffff;
   --light-terminal-lang-color: #b3b9c5;
   --light-terminal-lang-before-bg-color: #e0e3e7;
@@ -33,6 +35,7 @@
   --dark-text-main-header: #f7f7f7;
   --dark-text-header: #dee2e6;
   --dark-text-title: #dee2e6;
+  --dark-text-color: #b3b9c5;
   --dark-text-sub-header: #aaaaaa;
   --dark-bg-hover: #aaaaaa;
   --dark-post-hover: #535364;
@@ -48,6 +51,7 @@
 
   --dark-inline-code-bg-color: #4d4d4d;
   --dark-blockquote-bg-color: #3c3c3c;
+  --dark-blockquote-border-color: #545454;
   --dark-terminal-lang-bg-color: #3c3c3c;
   --dark-terminal-lang-color: #515151;
   --dark-terminal-lang-before-bg-color: #262626;
@@ -61,6 +65,7 @@ html, html[data-theme="light"] {
     --text-color-main-header: var(--light-text-main-header);
     --text-color-header: var(--light-text-header);
     --text-color-title: var(--light-text-title);
+    --text-color: var(--light-text-color);
     --text-color-sub-header: var(--light-text-sub-header);
     --bg-color: var(--light-bg);
     --btn-bg-disabled:var(--light-btn-bg-disabled);
@@ -78,6 +83,7 @@ html, html[data-theme="light"] {
 
     --inline-code-bg-color: var(--light-inline-code-bg-color);
     --blockquote-bg-color: var(--light-blockquote-bg-color);
+    --blockquote-border-color: var(--light-blockquote-border-color);
     --terminal-lang-bg-color: var(--light-terminal-lang-bg-color);
     --terminal-lang-color: var(--light-terminal-lang-color);
     --terminal-lang-before-bg-color: var(--light-terminal-lang-before-bg-color);
@@ -90,6 +96,7 @@ html[data-theme="dark"] {
   --text-color-main-header: var(--dark-text-main-header);
   --text-color-header: var(--dark-text-header);
   --text-color-title: var(--dark-text-title);
+  --text-color: var(--dark-text-color);
   --text-color-sub-header: var(--dark-text-sub-header);
   --text-color-header: var(--dark-text-header);
   --switch-shadow-color: var(--dark-switch-shadow);
@@ -108,6 +115,7 @@ html[data-theme="dark"] {
 
   --inline-code-bg-color: var(--dark-inline-code-bg-color);
   --blockquote-bg-color: var(--dark-blockquote-bg-color);
+  --blockquote-border-color: var(--dark-blockquote-border-color);
   --terminal-lang-bg-color: var(--dark-terminal-lang-bg-color);
   --terminal-lang-color: var(--dark-terminal-lang-color);
   --terminal-lang-before-bg-color: var(--dark-terminal-lang-before-bg-color);
@@ -121,6 +129,7 @@ html[data-theme="dark"] {
     --text-color-main-header: var(--dark-text-main-header);
     --text-color-header: var(--dark-text-header);
     --text-color-title: var(--dark-text-title);
+    --text-color: var(--dark-text-color);
     --text-color-sub-header: var(--dark-text-sub-header);
     --text-color-header: var(--dark-text-header);
     --switch-shadow-color: var(--dark-switch-shadow);
@@ -139,6 +148,7 @@ html[data-theme="dark"] {
 
     --inline-code-bg-color: var(--dark-inline-code-bg-color);
     --blockquote-bg-color: var(--dark-blockquote-bg-color);
+    --blockquote-border-color: var(--dark-blockquote-border-color);
     --terminal-lang-bg-color: var(--dark-terminal-lang-bg-color);
     --terminal-lang-color: var(--dark-terminal-lang-color);
     --terminal-lang-before-bg-color: var(--dark-terminal-lang-before-bg-color);
@@ -150,6 +160,7 @@ html[data-theme="dark"] {
     --text-color-main-header: var(--light-text-main-header);
     --text-color-header: var(--light-text-header);
     --text-color-title: var(--light-text-title);
+    --text-color: var(--light-text-color);
     --text-color-sub-header: var(--light-text-sub-header);
     --bg-color: var(--light-bg);
     --btn-bg-disabled:var(--light-btn-bg-disabled);
@@ -167,6 +178,7 @@ html[data-theme="dark"] {
 
     --inline-code-bg-color: var(--light-inline-code-bg-color);
     --blockquote-bg-color: var(--light-blockquote-bg-color);
+    --blockquote-border-color: var(--light-blockquote-border-color);
     --terminal-lang-bg-color: var(--light-terminal-lang-bg-color);
     --terminal-lang-color: var(--light-terminal-lang-color);
     --terminal-lang-before-bg-color: var(--light-terminal-lang-before-bg-color);
@@ -236,7 +248,7 @@ details {
 nav#TableOfContents li {
   display: inherit;
   line-height: 30px;
-  color: var(--text-color-sub-header);
+  color: var(--text-color);
 }
 nav#TableOfContents li a {
   height: 22px;
@@ -292,7 +304,7 @@ nav#TableOfContents li a:hover {
   padding: 0.5rem 1rem 0.5rem 1rem;
   background: var(--blockquote-bg-color);
   border-radius: .3rem;
-  border: 1px solid #807d72;
+  border: 1px solid var(--blockquote-border-color);
   border-left-width: 1px;
   border-left-width: 8px;
 }
@@ -302,7 +314,7 @@ nav#TableOfContents li a:hover {
   font-size: 1.0rem;
   line-height: 1.6;
   max-width: 42em;
-  color: var(--text-color-title);
+  color: var(--text-color);
 }
 
 .markdown a {
