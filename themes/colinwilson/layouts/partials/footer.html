@@ -82,8 +82,6 @@
   <script>
   // Theme Test & Switcher
     let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)");
-    //let theme = localStorage.getItem('theme'); // defined in header.html
-    //let html = document.querySelector('html'); // defined in header.html
 
     function prefersColorTest(systemInitiatedDark) {
       if (systemInitiatedDark.matches) {
@@ -112,14 +110,6 @@
         localStorage.setItem('theme', 'dark');
       }
     }
-
-    // if (theme === "dark") {
-    //   html.setAttribute('data-theme', 'dark');
-    //   localStorage.setItem('theme', 'dark');
-    // } else if (theme === "light") {
-    //   html.setAttribute('data-theme', 'light');
-    //   localStorage.setItem('theme', 'light');
-    // }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.slim.min.js"></script>
