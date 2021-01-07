@@ -30,7 +30,7 @@ mediaType = "application/json"
 notAlternative = true
 
 [params.algolia]
-vars = ["title", "summary", "date", "description", "publishdate", "permalink", "section"]
+vars = ["title", "summary", "date", "description", "publishdate", "permalink", "year"]
 params = ["categories", "tags"]
 
 [permalinks]

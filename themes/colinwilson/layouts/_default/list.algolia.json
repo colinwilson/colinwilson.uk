@@ -13,6 +13,7 @@
     {{/* Store built-in page variables in iterable object */}}
     {{- .Scratch.SetInMap "temp" "content" $hit.Plain -}}
     {{- .Scratch.SetInMap "temp" "date" $hit.Date.UTC.Unix -}}
+    {{- .Scratch.SetInMap "temp" "year" $hit.Date.Format "2006" -}}
     {{- .Scratch.SetInMap "temp" "description" $hit.Description -}}
     {{- .Scratch.SetInMap "temp" "dir" $hit.File.Dir -}}
     {{- .Scratch.SetInMap "temp" "path" "temp" -}}
