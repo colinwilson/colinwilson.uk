@@ -1,11 +1,9 @@
 {{ partialCached "header" . }}
 
-<body>
-  <input type="checkbox" class="theme-switch" id="theme-switch" />
-  <div id="page" class="rubik">
-
+<body class="rubik">
   {{ partialCached "nav_mobile" . }}
   {{ partialCached "nav" . }}
+  {{ partialCached "nav_noscript" . }}
 
   <div class="flex flex-column w-80 mw9 pv4 pv0-ns center">
 
@@ -63,8 +61,6 @@
       {{ end }} -->
 
     {{ partialCached "footer" . }}
-
-  </div>
 </div>
   <script type="module">
 

@@ -80,21 +80,47 @@
   </div>
 
   <script>
-    // This code is only used to remember theme selection between page loads
-    const themeSwitch = document.querySelector('.theme-switch');
-    themeSwitch.checked = localStorage.getItem('switchedTheme') === 'true';
+  // Theme Test & Switcher
+    let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)");
+    //let theme = localStorage.getItem('theme'); // defined in header.html
+    //let html = document.querySelector('html'); // defined in header.html
 
-    themeSwitch.addEventListener('change', function(e) {
-      if (e.currentTarget.checked === true) {
-        // Add item to localstorage
-        localStorage.setItem('switchedTheme', 'true');
+    function prefersColorTest(systemInitiatedDark) {
+      if (systemInitiatedDark.matches) {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', '');
       } else {
-        // Remove item if theme is switched back to normal
-        localStorage.removeItem('switchedTheme');
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', '');
       }
-    });
-  </script>
+    }
+    systemInitiatedDark.addListener(prefersColorTest);
 
+    function modeSwitcher() {
+      let theme = localStorage.getItem('theme');
+      if (theme === "dark") {
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      } else if (theme === "light") {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      } else if (systemInitiatedDark.matches) {
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    // if (theme === "dark") {
+    //   html.setAttribute('data-theme', 'dark');
+    //   localStorage.setItem('theme', 'dark');
+    // } else if (theme === "light") {
+    //   html.setAttribute('data-theme', 'light');
+    //   localStorage.setItem('theme', 'light');
+    // }
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.slim.min.js"></script>
   <script src="/js/algoliasearch-lite.umd.js"></script>

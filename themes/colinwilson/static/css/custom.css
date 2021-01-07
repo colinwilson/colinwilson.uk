@@ -27,15 +27,17 @@
   --light-terminal-lang-before-bg-color: #e0e3e7;
   --light-lang-box-shadow-color: rgba(100, 120, 130, 0.35);
 
+  --light-mark-bg-color: rgba(0,0,0,.6);
+
   /* Dark mode */
   --dark-text-main-header: #f7f7f7;
   --dark-text-header: #dee2e6;
   --dark-text-title: #dee2e6;
   --dark-text-sub-header: #aaaaaa;
   --dark-bg-hover: #aaaaaa;
-  --dark-post-hover: #202022;
+  --dark-post-hover: #535364;
   --dark-bg: #222430;
-  --dark-btn-bg-disabled: #7b7b7b;
+  --dark-btn-bg-disabled: #535364;
   --dark-btn-text-disabled: #222430;
   --dark-border-color: #aaaaaa;
   --dark-light-border-color: #7a7a7a;
@@ -51,35 +53,40 @@
   --dark-terminal-lang-before-bg-color: #262626;
   --dark-lang-box-shadow-color: rgba(0, 0, 0, 0.55);
 
-  /* Default mode */
-  --text-color-main-header: var(--light-text-main-header);
-  --text-color-header: var(--light-text-header);
-  --text-color-title: var(--light-text-title);
-  --text-color-sub-header: var(--light-text-sub-header);
-  --bg-color: var(--light-bg);
-  --btn-bg-disabled:var(--light-btn-bg-disabled);
-  --btn-text-disabled:var(--light-btn-text-disabled);
-  --border-color: var(--light-border-color);
-  --border-color-light: var(--light-light-border-color);
-  --bg-hover: var(--light-bg-hover);
-  --post-hover: var(--light-post-hover);
-  --theme-color: var(--light-theme);
-  --switch-shadow-color: var(--light-switch-shadow);
-  --switch-icon: var(--light-switch-icon);
-  --switch-color: var(--light-switch-color);
-  --switch-icon-hover: var(--dark-switch-color);
-  --switch-hover-color: var(--dark-bg);
-
-  --inline-code-bg-color: var(--light-inline-code-bg-color);
-  --blockquote-bg-color: var(--light-blockquote-bg-color);
-  --terminal-lang-bg-color: var(--light-terminal-lang-bg-color);
-  --terminal-lang-color: var(--light-terminal-lang-color);
-  --terminal-lang-before-bg-color: var(--light-terminal-lang-before-bg-color);
-  --lang-box-shadow-color: var(--light-lang-box-shadow-color);
+  --dark-mark-bg-color: rgba(255,255,255,.3);
 }
 
-/* Switched mode */
-.theme-switch:checked ~ #page {
+/* Light Theme */
+html, html[data-theme="light"] {
+    --text-color-main-header: var(--light-text-main-header);
+    --text-color-header: var(--light-text-header);
+    --text-color-title: var(--light-text-title);
+    --text-color-sub-header: var(--light-text-sub-header);
+    --bg-color: var(--light-bg);
+    --btn-bg-disabled:var(--light-btn-bg-disabled);
+    --btn-text-disabled:var(--light-btn-text-disabled);
+    --border-color: var(--light-border-color);
+    --border-color-light: var(--light-light-border-color);
+    --bg-hover: var(--light-bg-hover);
+    --post-hover: var(--light-post-hover);
+    --theme-color: var(--light-theme);
+    --switch-shadow-color: var(--light-switch-shadow);
+    --switch-icon: var(--light-switch-icon);
+    --switch-color: var(--light-switch-color);
+    --switch-icon-hover: var(--dark-switch-color);
+    --switch-hover-color: var(--dark-bg);
+
+    --inline-code-bg-color: var(--light-inline-code-bg-color);
+    --blockquote-bg-color: var(--light-blockquote-bg-color);
+    --terminal-lang-bg-color: var(--light-terminal-lang-bg-color);
+    --terminal-lang-color: var(--light-terminal-lang-color);
+    --terminal-lang-before-bg-color: var(--light-terminal-lang-before-bg-color);
+    --lang-box-shadow-color: var(--light-lang-box-shadow-color);
+
+    --mark-bg-color: var(--light-mark-bg-color);
+}
+
+html[data-theme="dark"] {
   --text-color-main-header: var(--dark-text-main-header);
   --text-color-header: var(--dark-text-header);
   --text-color-title: var(--dark-text-title);
@@ -105,18 +112,82 @@
   --terminal-lang-color: var(--dark-terminal-lang-color);
   --terminal-lang-before-bg-color: var(--dark-terminal-lang-before-bg-color);
   --lang-box-shadow-color: var(--dark-lang-box-shadow-color);
+
+  --mark-bg-color: var(--dark-mark-bg-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  html, html[data-theme="dark"] {
+    --text-color-main-header: var(--dark-text-main-header);
+    --text-color-header: var(--dark-text-header);
+    --text-color-title: var(--dark-text-title);
+    --text-color-sub-header: var(--dark-text-sub-header);
+    --text-color-header: var(--dark-text-header);
+    --switch-shadow-color: var(--dark-switch-shadow);
+    --switch-icon: var(--dark-switch-icon);
+    --switch-icon-hover: var(--light-switch-color);
+    --switch-color: var(--dark-switch-color);
+    --switch-hover-color: var(--light-bg);
+    --bg-color: var(--dark-bg);
+    --btn-bg-disabled:var(--dark-btn-bg-disabled);
+    --btn-text-disabled:var(--dark-btn-text-disabled);
+    --border-color: var(--dark-border-color);
+    --border-color-light: var(--dark-light-border-color);
+    --bg-hover: var(--dark-bg-hover);
+    --post-hover: var(--dark-post-hover);
+    --theme-color: var(--dark-theme);
+
+    --inline-code-bg-color: var(--dark-inline-code-bg-color);
+    --blockquote-bg-color: var(--dark-blockquote-bg-color);
+    --terminal-lang-bg-color: var(--dark-terminal-lang-bg-color);
+    --terminal-lang-color: var(--dark-terminal-lang-color);
+    --terminal-lang-before-bg-color: var(--dark-terminal-lang-before-bg-color);
+    --lang-box-shadow-color: var(--dark-lang-box-shadow-color);
+
+    --mark-bg-color: var(--dark-mark-bg-color);
+  }
+  html[data-theme="light"] {
+    --text-color-main-header: var(--light-text-main-header);
+    --text-color-header: var(--light-text-header);
+    --text-color-title: var(--light-text-title);
+    --text-color-sub-header: var(--light-text-sub-header);
+    --bg-color: var(--light-bg);
+    --btn-bg-disabled:var(--light-btn-bg-disabled);
+    --btn-text-disabled:var(--light-btn-text-disabled);
+    --border-color: var(--light-border-color);
+    --border-color-light: var(--light-light-border-color);
+    --bg-hover: var(--light-bg-hover);
+    --post-hover: var(--light-post-hover);
+    --theme-color: var(--light-theme);
+    --switch-shadow-color: var(--light-switch-shadow);
+    --switch-icon: var(--light-switch-icon);
+    --switch-color: var(--light-switch-color);
+    --switch-icon-hover: var(--dark-switch-color);
+    --switch-hover-color: var(--dark-bg);
+
+    --inline-code-bg-color: var(--light-inline-code-bg-color);
+    --blockquote-bg-color: var(--light-blockquote-bg-color);
+    --terminal-lang-bg-color: var(--light-terminal-lang-bg-color);
+    --terminal-lang-color: var(--light-terminal-lang-color);
+    --terminal-lang-before-bg-color: var(--light-terminal-lang-before-bg-color);
+    --lang-box-shadow-color: var(--light-lang-box-shadow-color);
+
+    --mark-bg-color: var(--light-mark-bg-color);
+}
 }
 
 html {
-  /* background-color: var(--light-bg); */
   height: 100%;
   scroll-behavior: smooth;
+
 }
 
 body {
+  background: var(--bg-color);
   margin: 0;
   padding: 0;
   height: 100%;
+  transition: color .2s, background-color .2s;
 }
 
 .black-90 {
@@ -137,12 +208,6 @@ body {
 
 .b--black-20 {
   border-color: var(--border-color);
-}
-
-#page {
-  background: var(--bg-color);
-  min-height: 100%;
-  transition: color .2s, background-color .2s;
 }
 
 a[href^="mailto:"] {
@@ -995,7 +1060,6 @@ pre[data-line] {
 
 .nav-main {
   display: table;
-  position: relative;
 }
 
 .nav-main > div a {
@@ -1015,12 +1079,18 @@ pre[data-line] {
   }
 }
 
+@media only screen and (min-width: 1170px) {
+  .nav-noscript {
+    display: none;
+  }
+}
+
 /* mark {
   background-color: #8cffc8;
 } */
 
 mark {
-  background-color: rgba(0,0,0,.6);
+  background-color: var(--mark-bg-color);
   color: #fff;
   border-radius: 0.2rem;
   padding: 0.1rem;
@@ -1322,57 +1392,25 @@ li.index-item:nth-child(3n) {
   margin-right: 0;
 }
 
-/* Theme switcher */
-.theme-switch { /* Hides the checkbox */
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+/* Theme toggle */
+
+.theme-toggle, .theme-toggle:active, .theme-toggle:focus {
+  outline: none;
 }
 
-.switch-label {
+.theme-toggle {
+  /*background-color: #4CAF50; /* Green */
+  background: var(--switch-icon) no-repeat;
+  background-size: 25px;
+  background-position: center;
   cursor: pointer;
-  -webkit-mask-image: var(--switch-icon);
-  mask-image: var(--switch-icon);
-  background-color: var(--switch-color);
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  padding: 8.7px;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: 25px;
-  -webkit-mask-position: 50% 50%;
-  mask-repeat: no-repeat;
-  mask-size: 25px;
-  mask-position: 50% 50%;
+  border: none;
+  padding: 21.2px;
+  transition: 0.2s;
 }
 
-.switch-label:hover {
-  background-color: var(--switch-icon-hover);
-}
-
-/* .switch-label-hover {
-  padding: 42.4px 0 0 8.7px;
-  background-color: transparent;
+.theme-toggle:hover {
+  background-size: 32.4px;
   border-radius: 42.4px;
-  width: 42.4px;
-  margin-left: -8.7px;
-} */
-
-.switch-label-bg-hover:hover {
-  background-color: var(--switch-hover-color);
-  border-radius: 42.4px;
-  width: 42.4px;
-  height: 42.4px;
+  transition: 0.2s;
 }
-
-/* .theme-switch:focus ~ #page .switch-label,
-.switch-label:hover {
-  text-shadow: 0 0 15px var(--switch-shadow-color);
-}
-
-.theme-switch:focus ~ #page .switch-label,
-.switch-label:hover {
-  opacity: 1;
-} */
