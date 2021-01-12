@@ -24,7 +24,7 @@
       </a>
     </div>
 
-    <div id="hits" class="mt0 mb4 f4 fw1 f4-ns normal lh-copy lh-title-ns">
+    <div id="hits">
       <!-- Hits widget will appear here -->
     </div>
 
@@ -62,7 +62,7 @@
 
     {{ partialCached "footer" . }}
 </div>
-  <script type="module">
+  <script>
 
     // initialize instantsearch
     const searchClient = algoliasearch('{{ getenv "ALGOLIA_APP_ID" }}', '{{ getenv "ALGOLIA_SEARCH_KEY" }}');
@@ -71,9 +71,84 @@
       insightsClient: window.aa,
     });
 
+    // Group results by distinct attribute (year) function
+    function distinctResults(results, attributeForDistinct) {
+      let d = {};
+      for (const e of results)
+        d[e[attributeForDistinct]] = [...d[e[attributeForDistinct]] || [], e];
+      return Object.entries(d).map(([k, v]) => ({hits: v, year: k}))
+    }
+
+    // Create the render function
+    const renderHits = (renderOptions, isFirstRender) => {
+
+      const { hits, widgetParams, insights } = renderOptions;
+
+      // If no results
+      if (renderOptions.results == undefined) {
+          return;
+      }
+
+      //console.log(hits);
+
+      const groupedByYearHits = distinctResults(hits, 'year');
+
+      //console.log(groupedByYearHits);
+
+      widgetParams.container.innerHTML = `
+      ${groupedByYearHits.length > 0 ? `
+      <div>
+      ${groupedByYearHits.reverse().map(item => `
+          <h2 class="mb1 black-60">${item.year}</h2>
+          <div class="flex-auto flex flex-column justify-center pv4 pv3-ns">
+            ${item.hits
+            .map(hit => `
+              <div class="mb4 w-70-l">
+                <a class="ais-Hits-item dib no-underline w-100 background-hover" data-rel-path="${hit.permalink}" data-object-id="${hit.objectID}" href="${hit.permalink}">
+                  <h2 class="f7 fw3 mt1 mb0 ttu tracked black-60">
+                    ${hit.humandate}
+                  </h2>
+                  <h1 class="mt0 mb1 f4 fw1 f4-ns normal lh-copy black-70 lh-title-ns">
+                    ${instantsearch.highlight({ attribute: 'title', hit: hit })}
+                  </h1>
+                </a>
+              </div>
+            `).join('')
+            }
+          </div>
+      `
+      ).join('')}
+      </div>
+      `
+      :
+      `
+      <div id="no-results-message" class="black-60 f4 ais-Hits ais-Hits--empty">
+        Sorry, couldn't find any results matching <em>"${renderOptions.results.query}"</em>.
+      </div>
+      `}
+      `;
+
+      // Send click event to insights - https://www.algolia.com/doc/api-reference/widgets/hits/js/?client=js+%28with+custom+hits%29
+      const anchors = widgetParams.container.querySelectorAll('.ais-Hits-item');
+
+      anchors.forEach(anchor => {
+          anchor.addEventListener('click', event => {
+              const objectID = anchor.getAttribute('data-object-id');
+              const relpath = anchor.getAttribute('data-rel-path');
+              insights('clickedObjectIDsAfterSearch', {eventName: relpath, objectIDs: [objectID]});
+              //alert(objectID);
+          })
+      })
+
+    };
+
+    // Create the custom widget
+    const customHits = instantsearch.connectors.connectHitsWithInsights(renderHits);
+
     const search = instantsearch({
       indexName: '{{ getenv "ALGOLIA_INDEX_NAME" }}',
       searchClient,
+      insightsClient: window.aa,
       routing: {
         router: instantsearch.routers.history({
           windowTitle({ query }) {
@@ -94,8 +169,8 @@
               arrayFormat: 'repeat'
             });
 
-            console.log(routeState);
-            console.log(baseUrl + 'articles/' + queryString);
+            //console.log(routeState);
+            //console.log(baseUrl + 'articles/' + queryString);
             return `${baseUrl}articles/${queryString}`;
           },
 
@@ -154,7 +229,8 @@
         attributesToRetrieve: [
           "title",
           "publishdate",
-          "permalink"
+          "permalink",
+          "year"
         ]
       })
     );
@@ -162,6 +238,12 @@
     search.addWidget(
       instantsearch.widgets.searchBox({
         container: '#search-box',
+        cssClasses: {
+
+        },
+        templates: {
+          reset: '<svg class="ais-SearchBox-resetIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.995 511.995" width="20" height="20" enable-background="new 0 0 511.995 511.995"><path fill="currentColor" d="M437.126 74.939c-99.826-99.826-262.307-99.826-362.133 0-48.356 48.375-74.993 112.678-74.993 181.066s26.637 132.691 74.993 181.047c49.923 49.923 115.495 74.874 181.066 74.874s131.144-24.951 181.066-74.874c99.826-99.826 99.826-262.268.001-362.113zm-28.046 334.067c-84.375 84.375-221.667 84.375-306.042 0-40.858-40.858-63.37-95.204-63.37-153.001s22.512-112.143 63.37-153.021c84.375-84.375 221.667-84.355 306.042 0 84.355 84.375 84.355 221.667 0 306.022zM341.525 310.827l-56.151-56.071 56.151-56.071c7.735-7.735 7.735-20.29.02-28.046-7.755-7.775-20.31-7.755-28.065-.02l-56.19 56.111-56.19-56.111c-7.755-7.735-20.31-7.755-28.065.02-7.735 7.755-7.735 20.31.02 28.046l56.151 56.071-56.151 56.071c-7.755 7.735-7.755 20.29-.02 28.046 3.868 3.887 8.965 5.811 14.043 5.811s10.155-1.944 14.023-5.792l56.19-56.111 56.19 56.111c3.868 3.868 8.945 5.792 14.023 5.792 5.078 0 10.175-1.944 14.043-5.811 7.733-7.756 7.733-20.311-.022-28.046z"/></svg>'
+        },
         autofocus: false,
         showSubmit: false,
         placeholder: 'Search...',
@@ -172,32 +254,44 @@
       })
     );
 
-    search.addWidget(
-      instantsearch.widgets.hits({
-        container: '#hits',
+    search.addWidgets([
+      customHits({
+        container: document.querySelector('#hits'),
         transformItems: function (items) {
           return items.map(item => ({
             ...item,
-            humandate: dayjs(item.publishdate).format('D MMMM YYYY')
+            humandate: dayjs(item.publishdate).format('DD MMMM')
           }));
         },
-        templates: {
-          empty: `<div class="black-70">No results</div>`,
-          item: (hit, bindEvent) => `
-          <div class="mb4 w-70-l">
-            <a ${bindEvent("click", hit, "Article Search Result Clicked")} class="dib no-underline w-100 background-hover" href="${hit.permalink}">
-              <h2 class="f7 fw3 mt1 mb0 ttu tracked black-60">
-                ${hit.humandate}
-              </h2>
-              <h1 class="mt0 mb1 f4 fw1 f4-ns normal lh-copy black-70 lh-title-ns">
-                ${instantsearch.highlight({ attribute: 'title', hit })}
-              </h1>
-            </a>
-          </div>
-          `
-        }
       })
-    );
+    ])
+
+    // search.addWidget(
+    //   instantsearch.widgets.hits({
+    //     container: '#hits',
+    //     transformItems: function (items) {
+    //       return items.map(item => ({
+    //         ...item,
+    //         humandate: dayjs(item.publishdate).format('D MMMM YYYY')
+    //       }));
+    //     },
+    //     templates: {
+    //       empty: `<div class="black-70">No results</div>`,
+    //       item: (hit, bindEvent) => `
+    //       <div class="mb4 w-70-l">
+    //         <a ${bindEvent("click", hit, "Article Search Result Clicked")} class="dib no-underline w-100 background-hover" href="${hit.permalink}">
+    //           <h2 class="f7 fw3 mt1 mb0 ttu tracked black-60">
+    //             ${hit.humandate}
+    //           </h2>
+    //           <h1 class="mt0 mb1 f4 fw1 f4-ns normal lh-copy black-70 lh-title-ns">
+    //             ${instantsearch.highlight({ attribute: 'title', hit })}
+    //           </h1>
+    //         </a>
+    //       </div>
+    //       `
+    //     }
+    //   })
+    // );
 
     // search.addWidget(
     //   instantsearch.widgets.pagination({
