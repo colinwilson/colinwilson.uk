@@ -81,7 +81,7 @@ Main components
     max-width: 100%;
     bottom: 0;
     top: auto;
-    background: var(--background);
+    background: var(--bg-color);
     visibility: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     -webkit-transform: scale(0);
@@ -141,7 +141,7 @@ Main components
   width: 44px;
   height: 44px;
   background: none;
-  border: solid 16px rgba(0, 0, 0, 0.7);
+  border: solid 16px var(--text-color);
     /*border-radius: 0.25em;*/
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);

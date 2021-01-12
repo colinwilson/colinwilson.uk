@@ -2,33 +2,253 @@
   --light-background: #f1f3f5;
   --dark-background: #1e1e1e;
   --read-background: #f2f0f4;
+
+  /* Light mode */
+  --light-text-main-header: rgba(0,0,0,0.9);
+  --light-text-header: rgba(0,0,0,0.8);
+  --light-text-title: rgba(0,0,0,0.7);
+  --light-text-color: rgba(0,0,0,0.7);
+  --light-text-sub-header: rgba(0,0,0,0.6);
+  --light-bg-hover: #2d2d31;
+  --light-post-hover: rgb(231, 231, 231);
+  --light-bg: #f2f0f4;
+  --light-btn-bg-disabled: #dbdbdb;
+  --light-btn-text-disabled: #7a7a7a;
+  --light-border-color: rgba(0,0,0,0.2);
+  --light-light-border-color: #dbdbdb;
+  --light-theme: #d34a97;
+  --light-switch-shadow: #373d4e;
+  --light-switch-color: #777777;
+  --light-switch-icon: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzEyLjk5OSAzMTIuOTk5IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMTIuOTk5IDMxMi45OTk7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiM3Nzc3Nzc7fQ0KPC9zdHlsZT4JIA0KPGc+DQoJPGc+DQoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zMDUuNiwxNzguMDUzYy0zLjItMC44LTYuNCwwLTkuMiwyYy0xMC40LDguOC0yMi40LDE2LTM1LjYsMjAuOGMtMTIuNCw0LjgtMjYsNy4yLTQwLjQsNy4yYy0zMi40LDAtNjItMTMuMi04My4yLTM0LjQNCgkJCWMtMjEuMi0yMS4yLTM0LjQtNTAuOC0zNC40LTgzLjJjMC0xMy42LDIuNC0yNi44LDYuNC0zOC44YzQuNC0xMi44LDEwLjgtMjQuNCwxOS4yLTM0LjRjMy42LTQuNCwyLjgtMTAuOC0xLjYtMTQuNA0KCQkJYy0yLjgtMi02LTIuOC05LjItMmMtMzQsOS4yLTYzLjYsMjkuNi04NC44LDU2LjhjLTIwLjQsMjYuOC0zMi44LDYwLTMyLjgsOTYuNGMwLDQzLjYsMTcuNiw4My4yLDQ2LjQsMTEyczY4LjQsNDYuNCwxMTIsNDYuNA0KCQkJYzM2LjgsMCw3MC44LTEyLjgsOTgtMzRjMjcuNi0yMS42LDQ3LjYtNTIuNCw1Ni04Ny42QzMxNC40LDE4NC44NTMsMzExLjIsMTc5LjI1MywzMDUuNiwxNzguMDUzeiBNMjQ0LjQsMjYxLjY1Mw0KCQkJYy0yMy4yLDE4LjQtNTIuOCwyOS42LTg1LjIsMjkuNmMtMzgsMC03Mi40LTE1LjYtOTcuMi00MC40Yy0yNC44LTI0LjgtNDAuNC01OS4yLTQwLjQtOTcuMmMwLTMxLjYsMTAuNC02MC40LDI4LjQtODMuNg0KCQkJYzEyLjQtMTYsMjgtMjkuMiw0Ni0zOC40Yy0yLDQuNC00LDguOC01LjYsMTMuNmMtNS4yLDE0LjQtNy42LDI5LjYtNy42LDQ1LjZjMCwzOCwxNS42LDcyLjgsNDAuNCw5Ny42czU5LjYsNDAuNCw5Ny42LDQwLjQNCgkJCWMxNi44LDAsMzIuOC0yLjgsNDcuNi04LjRjNS4yLTIsMTAuNC00LDE1LjItNi40QzI3NCwyMzIuNDUzLDI2MC44LDI0OC44NTMsMjQ0LjQsMjYxLjY1M3oiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==");
+
+  --light-inline-code-bg-color: #e1e1e1;
+  --light-blockquote-bg-color: #e8e7e7;
+  --light-blockquote-border-color: #807d72;
+  --light-terminal-lang-bg-color: #ffffff;
+  --light-terminal-lang-color: #b3b9c5;
+  --light-terminal-lang-before-bg-color: #e0e3e7;
+  --light-lang-box-shadow-color: rgba(100, 120, 130, 0.35);
+
+  --light-mark-bg-color: rgba(0,0,0,.6);
+
+  /* Dark mode */
+  --dark-text-main-header: #f7f7f7;
+  --dark-text-header: #dee2e6;
+  --dark-text-title: #dee2e6;
+  --dark-text-color: #b3b9c5;
+  --dark-text-sub-header: #aaaaaa;
+  --dark-bg-hover: #aaaaaa;
+  --dark-post-hover: #535364;
+  --dark-bg: #222430;
+  --dark-btn-bg-disabled: #535364;
+  --dark-btn-text-disabled: #222430;
+  --dark-border-color: #aaaaaa;
+  --dark-light-border-color: #7a7a7a;
+  --dark-theme: #bd93f9;
+  --dark-switch-shadow: #fce477;
+  --dark-switch-color: #f1f3f5;
+  --dark-switch-icon: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDMwMi40IDMwMi40IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDIuNCAzMDIuNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6I2YyZjBmNDt9DQo8L3N0eWxlPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMDQuOCw5Ny42QzE5MS4yLDg0LDE3Miw3NS4yLDE1MS4yLDc1LjJzLTQwLDguNC01My42LDIyLjRjLTEzLjYsMTMuNi0yMi40LDMyLjgtMjIuNCw1My42DQoJCQlzOC44LDQwLDIyLjQsNTMuNmMxMy42LDEzLjYsMzIuOCwyMi40LDUzLjYsMjIuNHM0MC04LjQsNTMuNi0yMi40YzEzLjYtMTMuNiwyMi40LTMyLjgsMjIuNC01My42UzIxOC44LDExMS4yLDIwNC44LDk3LjZ6DQoJCQkgTTE5MC40LDE5MC40Yy0xMCwxMC0yNCwxNi0zOS4yLDE2cy0yOS4yLTYtMzkuMi0xNnMtMTYtMjQtMTYtMzkuMnM2LTI5LjIsMTYtMzkuMnMyNC0xNiwzOS4yLTE2czI5LjIsNiwzOS4yLDE2czE2LDI0LDE2LDM5LjINCgkJCVMyMDAuNCwxODAuNCwxOTAuNCwxOTAuNHoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTI5MiwxNDAuOGgtMzAuOGMtNS42LDAtMTAuNCw0LjgtMTAuNCwxMC40YzAsNS42LDQuOCwxMC40LDEwLjQsMTAuNEgyOTJjNS42LDAsMTAuNC00LjgsMTAuNC0xMC40DQoJCQlTMjk3LjYsMTQwLjgsMjkyLDE0MC44eiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTUxLjIsMjUwLjhjLTUuNiwwLTEwLjQsNC44LTEwLjQsMTAuNFYyOTJjMCw1LjYsNC44LDEwLjQsMTAuNCwxMC40YzUuNiwwLDEwLjQtNC44LDEwLjQtMTAuNHYtMzAuOA0KCQkJQzE2MS42LDI1NS42LDE1Ni44LDI1MC44LDE1MS4yLDI1MC44eiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjU4LDI0My42bC0yMi0yMmMtMy42LTQtMTAuNC00LTE0LjQsMHMtNCwxMC40LDAsMTQuNGwyMiwyMmM0LDQsMTAuNCw0LDE0LjQsMFMyNjIsMjQ3LjYsMjU4LDI0My42eiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTUxLjIsMGMtNS42LDAtMTAuNCw0LjgtMTAuNCwxMC40djMwLjhjMCw1LjYsNC44LDEwLjQsMTAuNCwxMC40YzUuNiwwLDEwLjQtNC44LDEwLjQtMTAuNFYxMC40DQoJCQlDMTYxLjYsNC44LDE1Ni44LDAsMTUxLjIsMHoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTI1OC40LDQ0LjRjLTQtNC0xMC40LTQtMTQuNCwwbC0yMiwyMmMtNCw0LTQsMTAuNCwwLDE0LjRjMy42LDQsMTAuNCw0LDE0LjQsMGwyMi0yMg0KCQkJQzI2Mi40LDU0LjgsMjYyLjQsNDguNCwyNTguNCw0NC40eiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDEuMiwxNDAuOEgxMC40Yy01LjYsMC0xMC40LDQuOC0xMC40LDEwLjRzNC40LDEwLjQsMTAuNCwxMC40aDMwLjhjNS42LDAsMTAuNC00LjgsMTAuNC0xMC40DQoJCQlTNDYuOCwxNDAuOCw0MS4yLDE0MC44eiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNODAuNCwyMjEuNmMtMy42LTQtMTAuNC00LTE0LjQsMGwtMjIsMjJjLTQsNC00LDEwLjQsMCwxNC40czEwLjQsNCwxNC40LDBsMjItMjINCgkJCUM4NC40LDIzMiw4NC40LDIyNS42LDgwLjQsMjIxLjZ6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04MC40LDY2LjRsLTIyLTIyYy00LTQtMTAuNC00LTE0LjQsMHMtNCwxMC40LDAsMTQuNGwyMiwyMmM0LDQsMTAuNCw0LDE0LjQsMFM4NC40LDcwLjQsODAuNCw2Ni40eiIvPg0KCTwvZz4NCjwvZz4NCjwvc3ZnPg0K");
+
+  --dark-inline-code-bg-color: #4d4d4d;
+  --dark-blockquote-bg-color: #3c3c3c;
+  --dark-blockquote-border-color: #545454;
+  --dark-terminal-lang-bg-color: #3c3c3c;
+  --dark-terminal-lang-color: #515151;
+  --dark-terminal-lang-before-bg-color: #262626;
+  --dark-lang-box-shadow-color: rgba(0, 0, 0, 0.55);
+
+  --dark-mark-bg-color: rgba(255,255,255,.3);
+}
+
+/* Light Theme */
+html, html[data-theme="light"] {
+    --text-color-main-header: var(--light-text-main-header);
+    --text-color-header: var(--light-text-header);
+    --text-color-title: var(--light-text-title);
+    --text-color: var(--light-text-color);
+    --text-color-sub-header: var(--light-text-sub-header);
+    --bg-color: var(--light-bg);
+    --btn-bg-disabled:var(--light-btn-bg-disabled);
+    --btn-text-disabled:var(--light-btn-text-disabled);
+    --border-color: var(--light-border-color);
+    --border-color-light: var(--light-light-border-color);
+    --bg-hover: var(--light-bg-hover);
+    --post-hover: var(--light-post-hover);
+    --theme-color: var(--light-theme);
+    --switch-shadow-color: var(--light-switch-shadow);
+    --switch-icon: var(--light-switch-icon);
+    --switch-color: var(--light-switch-color);
+    --switch-icon-hover: var(--dark-switch-color);
+    --switch-hover-color: var(--dark-bg);
+
+    --inline-code-bg-color: var(--light-inline-code-bg-color);
+    --blockquote-bg-color: var(--light-blockquote-bg-color);
+    --blockquote-border-color: var(--light-blockquote-border-color);
+    --terminal-lang-bg-color: var(--light-terminal-lang-bg-color);
+    --terminal-lang-color: var(--light-terminal-lang-color);
+    --terminal-lang-before-bg-color: var(--light-terminal-lang-before-bg-color);
+    --lang-box-shadow-color: var(--light-lang-box-shadow-color);
+
+    --mark-bg-color: var(--light-mark-bg-color);
+}
+
+html[data-theme="dark"] {
+  --text-color-main-header: var(--dark-text-main-header);
+  --text-color-header: var(--dark-text-header);
+  --text-color-title: var(--dark-text-title);
+  --text-color: var(--dark-text-color);
+  --text-color-sub-header: var(--dark-text-sub-header);
+  --text-color-header: var(--dark-text-header);
+  --switch-shadow-color: var(--dark-switch-shadow);
+  --switch-icon: var(--dark-switch-icon);
+  --switch-icon-hover: var(--light-switch-color);
+  --switch-color: var(--dark-switch-color);
+  --switch-hover-color: var(--light-bg);
+  --bg-color: var(--dark-bg);
+  --btn-bg-disabled:var(--dark-btn-bg-disabled);
+  --btn-text-disabled:var(--dark-btn-text-disabled);
+  --border-color: var(--dark-border-color);
+  --border-color-light: var(--dark-light-border-color);
+  --bg-hover: var(--dark-bg-hover);
+  --post-hover: var(--dark-post-hover);
+  --theme-color: var(--dark-theme);
+
+  --inline-code-bg-color: var(--dark-inline-code-bg-color);
+  --blockquote-bg-color: var(--dark-blockquote-bg-color);
+  --blockquote-border-color: var(--dark-blockquote-border-color);
+  --terminal-lang-bg-color: var(--dark-terminal-lang-bg-color);
+  --terminal-lang-color: var(--dark-terminal-lang-color);
+  --terminal-lang-before-bg-color: var(--dark-terminal-lang-before-bg-color);
+  --lang-box-shadow-color: var(--dark-lang-box-shadow-color);
+
+  --mark-bg-color: var(--dark-mark-bg-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  html, html[data-theme="dark"] {
+    --text-color-main-header: var(--dark-text-main-header);
+    --text-color-header: var(--dark-text-header);
+    --text-color-title: var(--dark-text-title);
+    --text-color: var(--dark-text-color);
+    --text-color-sub-header: var(--dark-text-sub-header);
+    --text-color-header: var(--dark-text-header);
+    --switch-shadow-color: var(--dark-switch-shadow);
+    --switch-icon: var(--dark-switch-icon);
+    --switch-icon-hover: var(--light-switch-color);
+    --switch-color: var(--dark-switch-color);
+    --switch-hover-color: var(--light-bg);
+    --bg-color: var(--dark-bg);
+    --btn-bg-disabled:var(--dark-btn-bg-disabled);
+    --btn-text-disabled:var(--dark-btn-text-disabled);
+    --border-color: var(--dark-border-color);
+    --border-color-light: var(--dark-light-border-color);
+    --bg-hover: var(--dark-bg-hover);
+    --post-hover: var(--dark-post-hover);
+    --theme-color: var(--dark-theme);
+
+    --inline-code-bg-color: var(--dark-inline-code-bg-color);
+    --blockquote-bg-color: var(--dark-blockquote-bg-color);
+    --blockquote-border-color: var(--dark-blockquote-border-color);
+    --terminal-lang-bg-color: var(--dark-terminal-lang-bg-color);
+    --terminal-lang-color: var(--dark-terminal-lang-color);
+    --terminal-lang-before-bg-color: var(--dark-terminal-lang-before-bg-color);
+    --lang-box-shadow-color: var(--dark-lang-box-shadow-color);
+
+    --mark-bg-color: var(--dark-mark-bg-color);
+  }
+  html[data-theme="light"] {
+    --text-color-main-header: var(--light-text-main-header);
+    --text-color-header: var(--light-text-header);
+    --text-color-title: var(--light-text-title);
+    --text-color: var(--light-text-color);
+    --text-color-sub-header: var(--light-text-sub-header);
+    --bg-color: var(--light-bg);
+    --btn-bg-disabled:var(--light-btn-bg-disabled);
+    --btn-text-disabled:var(--light-btn-text-disabled);
+    --border-color: var(--light-border-color);
+    --border-color-light: var(--light-light-border-color);
+    --bg-hover: var(--light-bg-hover);
+    --post-hover: var(--light-post-hover);
+    --theme-color: var(--light-theme);
+    --switch-shadow-color: var(--light-switch-shadow);
+    --switch-icon: var(--light-switch-icon);
+    --switch-color: var(--light-switch-color);
+    --switch-icon-hover: var(--dark-switch-color);
+    --switch-hover-color: var(--dark-bg);
+
+    --inline-code-bg-color: var(--light-inline-code-bg-color);
+    --blockquote-bg-color: var(--light-blockquote-bg-color);
+    --blockquote-border-color: var(--light-blockquote-border-color);
+    --terminal-lang-bg-color: var(--light-terminal-lang-bg-color);
+    --terminal-lang-color: var(--light-terminal-lang-color);
+    --terminal-lang-before-bg-color: var(--light-terminal-lang-before-bg-color);
+    --lang-box-shadow-color: var(--light-lang-box-shadow-color);
+
+    --mark-bg-color: var(--light-mark-bg-color);
+}
 }
 
 html {
-  background-color: var(--read-background);
+  height: 100%;
   scroll-behavior: smooth;
+
+}
+
+body {
+  background: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  transition: color .2s, background-color .2s;
+}
+
+.black-90 {
+  color: var(--text-color-main-header)
+}
+
+.black-80 {
+  color: var(--text-color-header);
+}
+
+.black-70 {
+  color: var(--text-color-title);
+}
+
+.black-60 {
+  color: var(--text-color-sub-header);
+}
+
+.b--black-20 {
+  border-color: var(--border-color);
 }
 
 a[href^="mailto:"] {
-  color: rgba(0,0,0,.6);
+  color: var(--text-color-sub-header);
   text-decoration: none;
 }
 
 ul {
   line-height: 1.6;
+  color: var(--text-color-sub-header);
 }
 
 ol {
   line-height: 1.6;
+  color: var(--text-color-sub-header);
 }
 
 ol > li::marker {
   font-weight: bold;
 }
 
+details {
+  color: var(--text-color-sub-header);
+}
+
 nav#TableOfContents li {
   display: inherit;
   line-height: 30px;
+  color: var(--text-color);
 }
 nav#TableOfContents li a {
   height: 22px;
@@ -51,7 +271,7 @@ nav#TableOfContents li a:hover {
   font-weight: 500;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: rgba(51, 51, 51, 0.87);
+  color: var(--text-color-title);
   text-transform: none;
   margin-top: 1.75rem;
 }
@@ -82,9 +302,9 @@ nav#TableOfContents li a:hover {
   width: fit-content;
   margin: 1.5rem 0;
   padding: 0.5rem 1rem 0.5rem 1rem;
-  background: #e8e7e7;
+  background: var(--blockquote-bg-color);
   border-radius: .3rem;
-  border: 1px solid #807d72;
+  border: 1px solid var(--blockquote-border-color);
   border-left-width: 1px;
   border-left-width: 8px;
 }
@@ -94,7 +314,7 @@ nav#TableOfContents li a:hover {
   font-size: 1.0rem;
   line-height: 1.6;
   max-width: 42em;
-  color: rgba(0,0,0,.7);
+  color: var(--text-color);
 }
 
 .markdown a {
@@ -122,7 +342,7 @@ hr {
 .cap p:first-child::first-letter {
   font-family: "Rubik", sans-serif;
   font-size: 5.2em;
-  color: #000;
+  color: var(--text-color-main-header);
   line-height: 0.7em;
   float: left;
   text-transform: uppercase;
@@ -138,7 +358,7 @@ hr {
 /* Inline Code */
 
 :not(pre) > code {
-  background-color: #e1e1e1;
+  background-color: var(--inline-code-bg-color);
   text-shadow: none;
   color: inherit;
   padding: 2px 3px 2px 3px;
@@ -728,7 +948,7 @@ a.tag-devops:hover:after {
 	/*padding: 1.5rem;*/
   padding: 1.5rem 1.5rem 0.5rem;
   border-radius: .35rem;
-  background: #e8e7e7;
+  background: var(--blockquote-bg-color);
 }
 
 @media screen and (min-width:800px) {
@@ -758,11 +978,11 @@ a.tag-devops:hover:after {
   font-weight: 300;
   padding: 0 0 0 5px;
   margin-top: 10px;
-  color: #f2f0f4;
+  color: var(--bg-color);
 }
 
 .version:hover {
-  color: rgba(0,0,0,.6);
+  color: var(--switch-hover-color);
 }
 
 /* PrismJS Treeview */
@@ -833,16 +1053,14 @@ pre[data-line] {
 }
 
 .background-hover {
-  background-color: transparent;
   transition: 0.1s;
-  border-radius: 1px;
 }
 
 .background-hover:hover {
-  background-color: rgb(231, 231, 231);
+  background-color: var(--post-hover);
   transition: 0.1s;
-  box-shadow: 0 0 0 7px rgb(231, 231, 231);
-  border-radius: 1px;
+  box-shadow: 0 0 0 7px var(--post-hover);
+  border-radius: 0.1px;
 }
 
 .center-me {
@@ -863,7 +1081,7 @@ pre[data-line] {
 
 .nav-main > div a:hover,
 .nav-main > div a[aria-current='page'] {
-  background: var(--dark-background);
+  background: var(--bg-hover);
   color: var(--light-background);
 }
 
@@ -873,12 +1091,18 @@ pre[data-line] {
   }
 }
 
+@media only screen and (min-width: 1170px) {
+  .nav-noscript {
+    display: none;
+  }
+}
+
 /* mark {
   background-color: #8cffc8;
 } */
 
 mark {
-  background-color: rgba(0,0,0,.6);
+  background-color: var(--mark-bg-color);
   color: #fff;
   border-radius: 0.2rem;
   padding: 0.1rem;
@@ -886,8 +1110,8 @@ mark {
 
 [type="search"] {
   background: none;
-  color: rgba(0,0,0,.6);
-	border-bottom: 2px solid rgba(0,0,0,.6);
+  color: var(--text-color-sub-header);
+	border-bottom: 2px solid var(--text-color-sub-header);
 	border-top: none;
 	border-left: none;
 	border-right: none;
@@ -904,6 +1128,20 @@ mark {
   #algolia_logo {
     display: none;
   }
+}
+
+pre.language-terminal::before {
+  background: var(--terminal-lang-before-bg-color);
+  color: var(--terminal-lang-color);
+}
+
+pre.language-terminal {
+  background: var(--terminal-lang-bg-color);
+  box-shadow: 0px 8px 16px var(--lang-box-shadow-color);
+}
+
+code.language-terminal {
+  color: var(--text-color-sub-header);
 }
 
 /* .ais-SearchBox-submit {
@@ -1044,8 +1282,8 @@ fieldset[disabled] .pagination-ellipsis {
 .pagination-previous,
 .pagination-next,
 .pagination-link {
-  border-color: #dbdbdb;
-  color: #363636;
+  border-color: var(--border-color-light);
+  color: var(--text-color-title);
   min-width: 2.5em;
   text-decoration: none;
 }
@@ -1053,15 +1291,15 @@ fieldset[disabled] .pagination-ellipsis {
 .pagination-previous:hover,
 .pagination-next:hover,
 .pagination-link:hover {
-  border-color: #b5b5b5;
-  color: #363636;
+  border-color: var(--border-color);
+  color: var(--text-color-title);
   border-width: 1px;
 }
 
 .pagination-previous:focus,
 .pagination-next:focus,
 .pagination-link:focus {
-  border-color: rgba(0,0,0,.7);
+  border-color: var(--text-color-title);
 }
 
 .pagination-previous:active,
@@ -1075,10 +1313,10 @@ fieldset[disabled] .pagination-ellipsis {
 .pagination-link[disabled],
 .pagination-previous.disabled,
 .pagination-next.disabled {
-  background-color: #dbdbdb;
-  border-color: #dbdbdb;
+  background-color: var(--btn-bg-disabled);
+  border-color: var(--btn-bg-disabled);
   box-shadow: none;
-  color: #7a7a7a;
+  color: var(--btn-text-disabled);
   opacity: 0.5;
 }
 
@@ -1090,9 +1328,9 @@ fieldset[disabled] .pagination-ellipsis {
 }
 
 .pagination-link.is-current {
-  background-color: rgba(0,0,0,.7);
-  border-color: rgba(0,0,0,.7);
-  color: #fff;
+  background-color: var(--text-color-title);
+  border-color: var(--text-color-title);
+  color: var(--bg-color);
   font-weight: bold;
 }
 
@@ -1164,4 +1402,27 @@ li.index-item {
 
 li.index-item:nth-child(3n) {
   margin-right: 0;
+}
+
+/* Theme toggle */
+
+.theme-toggle, .theme-toggle:active, .theme-toggle:focus {
+  outline: none;
+}
+
+.theme-toggle {
+  /*background-color: #4CAF50; /* Green */
+  background: var(--switch-icon) no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+  padding: 21.2px;
+  transition: 0.2s;
+}
+
+.theme-toggle:hover {
+  background-size: 32.4px;
+  border-radius: 42.4px;
+  transition: 0.2s;
 }
