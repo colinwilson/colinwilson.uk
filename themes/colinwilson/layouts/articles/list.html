@@ -68,7 +68,9 @@
     const searchClient = algoliasearch('{{ getenv "ALGOLIA_APP_ID" }}', '{{ getenv "ALGOLIA_SEARCH_KEY" }}');
 
     const insightsMiddleware = instantsearch.middlewares.createInsightsMiddleware({
-      insightsClient: window.aa,
+      // Disable insightsClient in development
+      //insightsClient: window.aa
+      insightsClient: {{- if .Site.IsServer }} null {{- else }} window.aa {{ end }}
     });
 
     // Group results by distinct attribute (year) function

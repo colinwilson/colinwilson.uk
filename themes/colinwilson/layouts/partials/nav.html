@@ -1,18 +1,18 @@
 <nav class="nav-main w-80 mw9 border-box pt3 pb3 center no-print">
     <div class="dtc v-mid">
-        <button id="theme-toggle" class="theme-toggle" onclick="modeSwitcher()" />
+        <button id="theme-toggle" class="theme-toggle" onclick="modeSwitcher()"></button>
     </div>
     <div class="dtc v-mid w-75 tr">
-        {{ range .Site.Params.menu }}
-        {{ if .before }}
+        {{- range .Site.Params.menu }}
+        {{- if .before }}
         <a class="no-underline black-60 f5 dib mr2" href="{{ .link | absURL }}" title="{{ .label }}">{{ .label }}</a>
-        {{ end }}
-        {{ end }}
+        {{- end }}
+        {{- end }}
 
-        {{ range .Site.Params.menu }}
-        {{ if not .before }}
+        {{- range .Site.Params.menu }}
+        {{- if not .before }}
         <a class="no-underline black-60 f5 dib mr2" href="{{ .link | absURL }}" title="{{ .label }}">{{ .label }}</a>
-        {{ end }}
-        {{ end }}
+        {{- end }}
+        {{- end -}}
     </div>
 </nav>
