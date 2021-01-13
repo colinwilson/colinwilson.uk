@@ -34,3 +34,10 @@
         </mobilenav>
     </nav>
 </div>
+<script>
+    /* disable background scrolling */
+    document.querySelector(".cd-nav-trigger").addEventListener('click', function() {
+        const body = document.querySelector("body");
+        body.classList.toggle("overflow");
+    });
+</script>
