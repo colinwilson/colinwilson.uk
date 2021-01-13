@@ -5,8 +5,8 @@
         <mobilenav>
             <div class="h-75 mt2 mb5 flex justify-center">
                 <div class="flex flex-wrap w-100">
-                    {{ range .Site.Params.menu }}
-                    {{ if .before }}
+                    {{- range .Site.Params.menu }}
+                    {{- if .before }}
                     <div class="w-50 pa3">
                         <a class="no-underline" href="{{ .link | absURL }}">
                             <div class="center-me br3 shadow-hover dim pointer flex flex-column ttu fw5 f3 menu-btn">
@@ -15,10 +15,10 @@
                             </div>
                         </a>
                     </div>
-                    {{ end }}
-                    {{ end }}
-                    {{ range .Site.Params.menu }}
-                    {{ if not .before }}
+                    {{- end }}
+                    {{- end }}
+                    {{- range .Site.Params.menu }}
+                    {{- if not .before }}
                     <div class="w-50 pa3">
                         <a class="no-underline" href="{{ .link | absURL }}">
                             <div class="center-me br3 shadow-hover dim pointer flex flex-column ttu fw5 f3 menu-btn">
@@ -27,8 +27,8 @@
                             </div>
                         </a>
                     </div>
-                    {{ end }}
-                    {{ end }}
+                    {{- end }}
+                    {{- end -}}
                 </div>
             </div>
         </mobilenav>
