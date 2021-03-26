@@ -1052,7 +1052,7 @@ a.tag-devops:hover:after {
 pre.language-treeview {
   position: relative;
   background: none;
-  color: #595c62;
+  color: var(--text-color);
   box-shadow: none;
   padding-top: 1rem;
   margin: 1rem 0;
@@ -1060,7 +1060,7 @@ pre.language-treeview {
 }
 
 code.language-treeview {
-  color: #595c62;
+  color: var(--text-color);
 }
 
 /* PrismJs Toolbar */
