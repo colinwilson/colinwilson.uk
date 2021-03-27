@@ -1,0 +1,198 @@
+.token.treeview-part .entry-line {
+	position: relative;
+	text-indent: -99em;
+	display: inline-block;
+	vertical-align: top;
+	width: 1.2em;
+}
+.token.treeview-part .entry-line:before,
+.token.treeview-part .line-h:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+}
+.token.treeview-part .line-h:before,
+.token.treeview-part .line-v:before {
+	border-left: 1px solid #ccc;
+}
+.token.treeview-part .line-v-last:before {
+	height: 50%;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.token.treeview-part .line-h:after {
+	height: 50%;
+	border-bottom: 1px solid #ccc;
+}
+.token.treeview-part .entry-name {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+.token.treeview-part .entry-name.dotfile {
+	opacity: 0.5;
+}
+
+/* @GENERATED-FONT */
+@font-face {
+	font-family: "PrismTreeview";
+	/**
+	 * This font is generated from the .svg files in the `icons` folder. See the `treeviewIconFont` function in
+	 * `gulpfile.js/index.js` for more information.
+	 *
+	 * Use the following escape sequences to refer to a specific icon:
+	 *
+	 * - \ea01 file
+	 * - \ea02 folder
+	 * - \ea03 image
+	 * - \ea04 audio
+	 * - \ea05 video
+	 * - \ea06 text
+	 * - \ea07 code
+	 * - \ea08 archive
+	 * - \ea09 pdf
+	 * - \ea0a excel
+	 * - \ea0b powerpoint
+	 * - \ea0c word
+     * - \ea0d terraform
+	 * - \ea0e git
+	 * - \ea0f golang
+	 * - \ea10 html
+	 * - \ea11 css
+	 * - \ea12 json
+	 * - \ea13 exe
+	 * - \ea14 javascript
+	 */
+	src: url("data:application/font-woff;base64,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")
+		format("woff");
+}
+
+.token.treeview-part .entry-name:before {
+	content: "\ea01";
+	font-family: "PrismTreeview";
+	font-size: inherit;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	width: 2.5ex;
+	display: inline-block;
+}
+
+.token.treeview-part .entry-name.dir:before {
+	content: "\ea02";
+}
+.token.treeview-part .entry-name.ext-bmp:before,
+.token.treeview-part .entry-name.ext-eps:before,
+.token.treeview-part .entry-name.ext-gif:before,
+.token.treeview-part .entry-name.ext-jpe:before,
+.token.treeview-part .entry-name.ext-jpg:before,
+.token.treeview-part .entry-name.ext-jpeg:before,
+.token.treeview-part .entry-name.ext-png:before,
+.token.treeview-part .entry-name.ext-svg:before,
+.token.treeview-part .entry-name.ext-tiff:before {
+	content: "\ea03";
+}
+.token.treeview-part .entry-name.ext-cfg:before,
+.token.treeview-part .entry-name.ext-conf:before,
+.token.treeview-part .entry-name.ext-config:before,
+.token.treeview-part .entry-name.ext-csv:before,
+.token.treeview-part .entry-name.ext-ini:before,
+.token.treeview-part .entry-name.ext-log:before,
+.token.treeview-part .entry-name.ext-md:before,
+.token.treeview-part .entry-name.ext-nfo:before,
+.token.treeview-part .entry-name.ext-txt:before {
+	content: "\ea06";
+}
+.token.treeview-part .entry-name.ext-asp:before,
+.token.treeview-part .entry-name.ext-aspx:before,
+.token.treeview-part .entry-name.ext-c:before,
+.token.treeview-part .entry-name.ext-cc:before,
+.token.treeview-part .entry-name.ext-cpp:before,
+.token.treeview-part .entry-name.ext-cs:before,
+.token.treeview-part .entry-name.ext-h:before,
+.token.treeview-part .entry-name.ext-hh:before,
+.token.treeview-part .entry-name.ext-jav:before,
+.token.treeview-part .entry-name.ext-java:before,
+.token.treeview-part .entry-name.ext-php:before,
+.token.treeview-part .entry-name.ext-rb:before,
+.token.treeview-part .entry-name.ext-xml:before {
+	content: "\ea07";
+}
+.token.treeview-part .entry-name.ext-7z:before,
+.token.treeview-part .entry-name.ext-bz:before,
+.token.treeview-part .entry-name.ext-bz2:before,
+.token.treeview-part .entry-name.ext-gz:before,
+.token.treeview-part .entry-name.ext-rar:before,
+.token.treeview-part .entry-name.ext-tar:before,
+.token.treeview-part .entry-name.ext-tgz:before,
+.token.treeview-part .entry-name.ext-zip:before {
+	content: "\ea08";
+}
+.token.treeview-part .entry-name.ext-aac:before,
+.token.treeview-part .entry-name.ext-au:before,
+.token.treeview-part .entry-name.ext-cda:before,
+.token.treeview-part .entry-name.ext-flac:before,
+.token.treeview-part .entry-name.ext-mp3:before,
+.token.treeview-part .entry-name.ext-oga:before,
+.token.treeview-part .entry-name.ext-ogg:before,
+.token.treeview-part .entry-name.ext-wav:before,
+.token.treeview-part .entry-name.ext-wma:before {
+	content: "\ea04";
+}
+.token.treeview-part .entry-name.ext-avi:before,
+.token.treeview-part .entry-name.ext-flv:before,
+.token.treeview-part .entry-name.ext-mkv:before,
+.token.treeview-part .entry-name.ext-mov:before,
+.token.treeview-part .entry-name.ext-mp4:before,
+.token.treeview-part .entry-name.ext-mpeg:before,
+.token.treeview-part .entry-name.ext-mpg:before,
+.token.treeview-part .entry-name.ext-ogv:before,
+.token.treeview-part .entry-name.ext-webm:before {
+	content: "\ea05";
+}
+.token.treeview-part .entry-name.ext-pdf:before {
+	content: "\ea09";
+}
+.token.treeview-part .entry-name.ext-xls:before,
+.token.treeview-part .entry-name.ext-xlsx:before {
+	content: "\ea0a";
+}
+.token.treeview-part .entry-name.ext-doc:before,
+.token.treeview-part .entry-name.ext-docm:before,
+.token.treeview-part .entry-name.ext-docx:before {
+	content: "\ea0c";
+}
+.token.treeview-part .entry-name.ext-pps:before,
+.token.treeview-part .entry-name.ext-ppt:before,
+.token.treeview-part .entry-name.ext-pptx:before {
+	content: "\ea0b";
+}
+.token.treeview-part .entry-name.ext-tf:before,
+.token.treeview-part .entry-name.ext-tfvars:before {
+	content: "\ea0d";
+}
+.token.treeview-part .entry-name.ext-git:before,
+.token.treeview-part .entry-name.ext-gitmodules:before,
+.token.treeview-part .entry-name.ext-gitignore:before {
+	content: "\ea0e";
+}
+.token.treeview-part .entry-name.ext-js:before {
+	content: "\ea14";
+}
+.token.treeview-part .entry-name.ext-toml:before,
+.token.treeview-part .entry-name.ext-exe:before {
+	content: "\ea13";
+}
+
+.token.treeview-part .entry-name.ext-css:before {
+	content: "\ea11";
+}
+
+.token.treeview-part .entry-name.ext-htm:before,
+.token.treeview-part .entry-name.ext-html:before,
+.token.treeview-part .entry-name.ext-html5:before {
+	content: "\ea10";
+}

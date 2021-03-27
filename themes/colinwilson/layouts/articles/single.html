@@ -1,10 +1,10 @@
 {{ partial "header" . }}
 
 <!-- data-toolbar-order="" disables PrismJS copy-to-clipboard toolbar button by default-->
-<body data-toolbar-order="" class="rubik black-60">
-
+<body data-toolbar-order="" class="rubik">
   {{ partialCached "nav_mobile" . }}
   {{ partialCached "nav" . }}
+  {{ partialCached "nav_noscript" . }}
 
   <div class="flex flex-column custom-width mw9 pv4 pv0-ns center">
 
@@ -19,7 +19,7 @@
           </div>
           </author>-->
           <h1 class="mt0 mb3 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-70">{{ .Title }}</h1>
-          <div><p class="f6 mt0">By<span class="ttu fw5"> {{ $.Param "author" }}</span> on <span class="tl">{{ .PublishDate.Format "02 January, 2006" }}</span></p></div>
+          <div><p class="f6 mt0 black-60">By<span class="ttu fw5"> {{ $.Param "author" }}</span> on <span class="tl">{{ .PublishDate.Format "02 January, 2006" }}</span></p></div>
           <!--<div class="tl f6 flex items-center"><img style="margin-bottom: 1px;" height="22px" src="/img/wait.svg"/> &nbsp; {{ .ReadingTime }} min read</div>-->
       </div>
 
@@ -47,6 +47,9 @@
       {{ template "_internal/disqus.html" . }}
 
       {{ partial "comments" . }}
+      <span class="mb2 custom-width">
+        {{ partialCached "noscript_warning" "Comment section requires JavaScript." . . }}
+      </span>
 
       {{ if or .PrevInSection .NextInSection }}
       <div class="w-100 flex article-nav">

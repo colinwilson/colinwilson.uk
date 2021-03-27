@@ -10,6 +10,9 @@
         {{- end -}}
     </title>
     {{ partial "favicon" . -}}
+    {{ if eq hugo.Environment "staging" }}
+    <meta name="robots" content="noindex">
+    {{- end -}}
     {{ with .Description | default ($.Param "description") }}
     <meta name="description" content="{{ . }}">
     {{ end }}
@@ -26,13 +29,24 @@
     {{- partial "twitter-card" . }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <script>
+        // Check prefers-color-scheme or saved theme
+        let html = document.querySelector('html');
+        let theme = localStorage.getItem('theme');
+        if (theme === "dark") {
+            html.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else if (theme === "light") {
+            html.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+    </script>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css">
     <link rel="stylesheet" href="/css/nav_mobile.css">
     {{- if .Site.Params.prismjs }}
     <link rel="stylesheet" href="/css/new-moon.css">
     <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/plugins/command-line/prism-command-line.css">
-    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.22.0/plugins/treeview/prism-treeview.css">
-    <link rel="stylesheet" href="/css/prism-treeview-gs.css">
+    <link rel="stylesheet" href="/css/prism-treeview-custom.css">
     <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.css">
     <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.css">
     <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/plugins/toolbar/prism-toolbar.css">
@@ -42,6 +56,6 @@
     <link rel="stylesheet" href="/css/custom.css">
     {{- if not .Site.IsServer }}
     {{- template "_internal/google_analytics_async.html" . }}{{- if .Site.Params.MatomoID }}{{- partial "matomo" . }}{{- end }}
-    {{- end }}
     {{ partial "algolia-search-insights" . }}
+    {{- end }}
 </head>

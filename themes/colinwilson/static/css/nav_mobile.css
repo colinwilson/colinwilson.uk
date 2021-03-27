@@ -32,7 +32,7 @@ Main components
   max-width: 100%;
   right: 0;
   bottom: 0;
-  background: var(--background);
+  background: var(--bg-color);
   visibility: hidden;
     /* remove overflow:hidden if you want to create a drop-down menu - but then remember to fix/eliminate the list items animation */
   overflow: hidden;
@@ -81,7 +81,7 @@ Main components
     max-width: 100%;
     bottom: 0;
     top: auto;
-    background: var(--background);
+    background: var(--bg-color);
     visibility: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     -webkit-transform: scale(0);
@@ -129,8 +129,8 @@ Main components
 }
 
 .menu-btn {
-  color: var(--menu-text-color);
-  background-color: var(--menu-btn-background);
+  color: var(--switch-color);
+  background-color: var(--post-hover);
 }
 
 .cd-nav-trigger {
@@ -141,7 +141,7 @@ Main components
   width: 44px;
   height: 44px;
   background: none;
-  border: solid 16px rgba(0, 0, 0, 0.7);
+  border: solid 16px var(--text-color);
     /*border-radius: 0.25em;*/
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -157,7 +157,7 @@ Main components
 
 .cd-nav-trigger.menu-is-open {
   box-shadow: none;
-  border: solid 8px var(--menu-text-color);
+  border: solid 8px var(--switch-color);
 }
 
 @media only screen and (min-width: 1170px) {
@@ -287,8 +287,8 @@ Main components
   width: 1em;
   height: 1em;
   stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
+  stroke: var(--switch-color);
+  fill: var(--switch-color);
 }
 
   /* ==========================================
