@@ -1,3 +1,4 @@
+/* v1.23.0 */
 (function () {
 	if (typeof self === 'undefined' || !self.Prism || !self.document || !document.createElement) {
 		return;

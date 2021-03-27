@@ -1,7 +1,7 @@
 <div class="dt dt--fixed w-100 pv5 pv5-ns" >
     <div class="dn dtc-ns v-mid">
-    <a href="https://www.netlify.com">
-      <img alt="netlify logo" height="32px" width="32px" src="/img/netlify-icon-black.svg"/>
+    <a href="https://www.netlify.com" class="black-70">
+      <svg role="img" aria-label="Netlify" height="32" viewBox="0 0 33.48 34" fill="currentColor"><path d="M23.62 12a1.4 1.4 0 0 1 .42.33l3.32-1.33-3.05-3.21-.74 4.21h.05zm-6.8-2.78a1.84 1.84 0 0 1 .29.81l4.89 2.17a1.58 1.58 0 0 1 .5-.26l.79-5-2.98-3.19-3.43 5.4a.11.11 0 0 0-.06.09zm16.64 7.78l-5.23-5.26-3.55 1.53 8.75 3.76.03-.03zm-.87.86l-8.39-3.6h-.06a1.36 1.36 0 0 1-1 .57l-.9 5.59a1.43 1.43 0 0 1 .54 1l5.12 1.18 4.64-4.67a.09.09 0 0 0 0-.05.06.06 0 0 0 .05-.05zm-11.11-4.81l-4.59-2a1.67 1.67 0 0 1-1.41.77h-.27l-3.78 5.93a.06.06 0 0 0 0 .06l10.07-4.36v-.13a.93.93 0 0 1 0-.24l-.02-.03zm5.52 10.38l-4.46-.93a1.64 1.64 0 0 1-.64.49l-1.07 6.66v.06l6.17-6.18v-.1zm-6.22-.43a1.47 1.47 0 0 1-.85-1l-.05-.05-8.26-1.75-.12.19 7.52 11 .46-.46 1.28-8 .02.07zm-9-3.79h.05l8.17 1.79a1.45 1.45 0 0 1 1.16-.75l.88-5.5v-.05a1.77 1.77 0 0 1-.18-.15l-10.08 4.25v.06a1.75 1.75 0 0 1 .01.33zm-3.42 1.36l-.13-.18-3.59 1.5 1.72 1.73 2-3.08v.03zm2.34.56a1.81 1.81 0 0 1-.78.18 1.71 1.71 0 0 1-.63-.11h-.05l-2 3.23v.06l9.3 9.51h.05l1.66-1.68v-.05zm-1.33-3.73h.05a2.22 2.22 0 0 1 .44-.06 2.07 2.07 0 0 1 .49.07l3.82-6a.06.06 0 0 0 0-.06 1.68 1.68 0 0 1-.47-1.17 1.72 1.72 0 0 1 0-.39c-.41-.27-4.7-2.1-4.7-2.11l-3.67 3.67v.06zm.42-10.47s4.33 1.86 4.51 2a1.75 1.75 0 0 1 1.07-.38 2.16 2.16 0 0 1 .56.08l3.61-5.63-2.92-3h-.05l-6.78 6.85v.08zm-1.69 11.51h.05a2 2 0 0 1 .34-.48v-.05c0-.06-3.9-5.72-3.9-5.74l-4.59 4.49 8.1 1.78zm-.37 1l-7-1.47v.06l3.11 3.15 3.87-1.67.02-.08z"/></svg>
     </a>
     <!--<a class="ml-1" href="https://gohugo.io">
       <img height="41px" src="/img/hugo-logo-greyscale.svg"/>
@@ -24,7 +24,7 @@
       </a>
       {{ end }}
       {{ if .Site.Social.twitter }}
-      <a href="https://twitter.com/{{ .Site.Social.twitter }}" target="_blank" rel="noopener" class="link dim dib mr3 black-70">
+      <a href="https://twitter.com/{{ .Site.Social.twitter }}" target="_blank" rel="noopener" class="link dim dib mr3 black-60">
         <svg class="db w2 h2" data-icon="twitter" viewBox="0 0 32 32"
           fill="currentColor" >
           <title >twitter icon</title>
@@ -34,18 +34,18 @@
       </a>
       {{ end }}
       {{ if .Site.Social.gitlab }}
-      <a href="https://gitlab.com/{{ .Site.Social.gitlab }}" target="_blank" rel="noopener" class="link dim dib mr3 black-70">
-        <svg class="db w2 h2" data-icon="gitlab" viewBox="0 0 24 24" fill="currentColor" >
+      <a href="https://gitlab.com/{{ .Site.Social.gitlab }}" target="_blank" rel="noopener" class="link dim dib mr3 black-60">
+        <svg class="db w2 h2" data-icon="gitlab" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
           <title >gitlab icon</title>
-          <path d="M23.955 13.587l-1.342-4.135-2.664-8.189c-.135-.423-.73-.423-.867 0L16.418 9.45H7.582L4.919 1.263C4.783.84 4.185.84 4.05 1.26L1.386 9.449.044 13.587c-.121.375.014.789.331 1.023L12 23.054l11.625-8.443c.318-.235.453-.647.33-1.024"/>
+          <path d="M22.65,14.39,12,22.13,1.35,14.39a.84.84,0,0,1-.3-.94L2.27,9.67,4.71,2.16A.42.42,0,0,1,4.82,2,.43.43,0,0,1,5.4,2a.42.42,0,0,1,.11.18L7.95,9.67h8.1l2.44-7.51A.42.42,0,0,1,18.6,2a.43.43,0,0,1,.58,0,.42.42,0,0,1,.11.18l2.44,7.51L23,13.45A.84.84,0,0,1,22.65,14.39Z"/>
         </svg>
       </a>
       {{ end }}
       {{ if .Site.Social.github }}
-      <a href="https://github.com/{{ .Site.Social.github }}" target="_blank" rel="noopener" class="link dim dib mr3 black-70">
-        <svg class="db w2 h2" data-icon="github" viewBox="0 0 32 32" fill="currentColor">
+      <a href="https://github.com/{{ .Site.Social.github }}" target="_blank" rel="noopener" class="link dim dib mr3 black-60">
+        <svg class="db w2 h2" data-icon="github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
           <title>github icon</title>
-          <path d="M29.9 8.4c-1.5-2.5-3.4-4.4-5.9-5.9-2.5-1.4-5.1-2.1-8-2.1-2.9 0-5.6.7-8 2.1-2.5 1.5-4.4 3.4-5.9 5.9-1.4 2.5-2.1 5.1-2.1 8 0 3.5 1 6.6 3.1 9.4 2 2.8 4.7 4.7 7.9 5.8.4.1.7 0 .8-.1.2-.2.3-.4.3-.6v-3l-.5.1h-1.2l-1.4-.1c-.5-.1-1-.3-1.4-.6-.4-.3-.7-.8-.9-1.3l-.2-.5c-.1-.3-.4-.7-.7-1.1-.3-.4-.6-.7-.9-.8l-.1-.1-.3-.3-.2-.3c0-.1 0-.2.1-.2.1-.1.3-.1.6-.1l.4.1c.3.1.6.2 1 .5s.7.6 1 1.1c.3.6.7 1 1.2 1.3.4.3.9.4 1.3.4s.9 0 1.2-.1l.9-.3c.1-.9.5-1.6 1-2.1-.8-.1-1.5-.2-2.1-.4-.6-.2-1.3-.4-2-.8s-1.2-.8-1.7-1.4c-.4-.6-.8-1.3-1.1-2.2-.3-.9-.4-1.9-.4-3.1 0-1.7.5-3.1 1.6-4.3-.4-1.3-.3-2.7.3-4.3.4-.1 1 0 1.8.3s1.4.6 1.7.8c.4.2.7.4.9.6 1.3-.4 2.6-.5 4-.5s2.7.2 4 .5l.8-.5c.5-.3 1.2-.6 1.9-.9.7-.3 1.3-.4 1.7-.3.6 1.6.7 3 .2 4.2 1.1 1.2 1.6 2.6 1.6 4.3 0 1.2-.1 2.2-.4 3.1-.3.9-.7 1.6-1.1 2.2-.5.5-1 1-1.7 1.4-.7.4-1.3.6-2 .8-.6.2-1.3.3-2.1.4.7.6 1.1 1.6 1.1 3v4.4c0 .2.1.5.3.6.2.2.4.2.8.1 3.2-1.1 5.9-3 7.9-5.8s3.1-5.9 3.1-9.4c-.1-2.8-.8-5.5-2.2-7.9z"></path>
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
         </svg>
       </a>
       {{ end }}
@@ -68,15 +68,47 @@
         </svg>
       </a>
       {{ end }}
-      <a href="mailto:{{ .Site.Params.email }}" class="link dim dib mr3 black-70">
-        <svg class="db w2 h2" data-icon="email" viewBox="0 0 32 32" fill="currentColor">
+      <a href="mailto:{{ .Site.Params.email }}" class="link dim dib mr3 black-60">
+        <svg class="db w2 h2" data-icon="email" viewBox="0 0 184 184" fill="currentColor">
           <title>email icon</title>
-          <path d="M30 5h-28a2 2 0 0 0-2 2v1.14l16 6.77 16-6.77v-1.14a2 2 0 0 0-2-2zM16.39 16.92a1 1 0 0 1-.78 0l-15.61-6.61v14.69a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2v-14.69z"/>
+          <path d="M160.746 24.61h-137.492c-12.822 0-23.254 10.432-23.254 23.254v88.271c0 12.822 10.432 23.254 23.254 23.254h137.492c12.822 0 23.254-10.432 23.254-23.254v-88.271c0-12.822-10.432-23.254-23.254-23.254zm-3.633 15l-65.113 50.299-65.113-50.299h130.226zm3.633 104.78h-137.492c-4.551 0-8.254-3.703-8.254-8.254v-86.754l72.415 55.94c1.35 1.043 2.968 1.564 4.585 1.564s3.235-.521 4.585-1.564l72.415-55.94v86.753c0 4.552-3.703 8.255-8.254 8.255z"/>
         </svg>
       </a>
     </div>
   </div>
 
+  <script>
+  // Theme Test & Switcher
+    let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function prefersColorTest(systemInitiatedDark) {
+      if (systemInitiatedDark.matches) {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', '');
+      } else {
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', '');
+      }
+    }
+    systemInitiatedDark.addListener(prefersColorTest);
+
+    function modeSwitcher() {
+      let theme = localStorage.getItem('theme');
+      if (theme === "dark") {
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      } else if (theme === "light") {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      } else if (systemInitiatedDark.matches) {
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.slim.min.js"></script>
   <script src="/js/algoliasearch-lite.umd.js"></script>
@@ -88,7 +120,7 @@
   <script src="https://unpkg.com/prismjs@1.23.0/plugins/command-line/prism-command-line.min.js"></script>
   <script src="https://unpkg.com/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
   <script src="https://unpkg.com/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
-  <script src="https://unpkg.com/prismjs@1.22.0/plugins/treeview/prism-treeview.min.js"></script>
+  <script src="https://unpkg.com/prismjs@1.23.0/plugins/treeview/prism-treeview.min.js"></script>
   <script src="/js/prism-autoloader.js"></script>
   <script src="https://unpkg.com/prismjs@1.23.0/plugins/toolbar/prism-toolbar.min.js"></script>
   <script src="https://unpkg.com/clipboard@2.0.6/dist/clipboard.min.js"></script>
