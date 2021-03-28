@@ -8,6 +8,8 @@
   --light-text-header: rgba(0,0,0,0.8);
   --light-text-title: rgba(0,0,0,0.7);
   --light-text-color: rgba(0,0,0,0.7);
+  --light-link-color: rgba(0,0,0,0.7);
+  --light-link-decoration: underline;
   --light-text-sub-header: rgba(0,0,0,0.6);
   --light-bg-hover: #2d2d31;
   --light-post-hover: rgb(231, 231, 231);
@@ -38,6 +40,8 @@
   --dark-text-header: #dee2e6;
   --dark-text-title: #dee2e6;
   --dark-text-color: #b3b9c5;
+  --dark-link-color: #ffa071;
+  --dark-link-decoration: none;
   --dark-text-sub-header: #aaaaaa;
   --dark-bg-hover: #aaaaaa;
   --dark-post-hover: #535364;
@@ -71,6 +75,8 @@ html, html[data-theme="light"] {
     --text-color-header: var(--light-text-header);
     --text-color-title: var(--light-text-title);
     --text-color: var(--light-text-color);
+    --link-color: var(--light-link-color);
+    --link-decoration: var(--light-link-decoration);
     --text-color-sub-header: var(--light-text-sub-header);
     --bg-color: var(--light-bg);
     --btn-bg-disabled:var(--light-btn-bg-disabled);
@@ -104,6 +110,8 @@ html[data-theme="dark"] {
   --text-color-header: var(--dark-text-header);
   --text-color-title: var(--dark-text-title);
   --text-color: var(--dark-text-color);
+  --link-color: var(--dark-link-color);
+  --link-decoration: var(--dark-link-decoration);
   --text-color-sub-header: var(--dark-text-sub-header);
   --text-color-header: var(--dark-text-header);
   --switch-shadow-color: var(--dark-switch-shadow);
@@ -139,6 +147,8 @@ html[data-theme="dark"] {
     --text-color-header: var(--dark-text-header);
     --text-color-title: var(--dark-text-title);
     --text-color: var(--dark-text-color);
+    --link-color: var(--dark-link-color);
+    --link-decoration: var(--dark-link-decoration);
     --text-color-sub-header: var(--dark-text-sub-header);
     --text-color-header: var(--dark-text-header);
     --switch-shadow-color: var(--dark-switch-shadow);
@@ -172,6 +182,8 @@ html[data-theme="dark"] {
     --text-color-header: var(--light-text-header);
     --text-color-title: var(--light-text-title);
     --text-color: var(--light-text-color);
+    --link-color: var(--light-link-color);
+    --link-decoration: var(--light-link-decoration);
     --text-color-sub-header: var(--light-text-sub-header);
     --bg-color: var(--light-bg);
     --btn-bg-disabled:var(--light-btn-bg-disabled);
@@ -265,12 +277,12 @@ details {
 nav#TableOfContents li {
   display: inherit;
   line-height: 30px;
-  color: var(--text-color);
 }
 nav#TableOfContents li a {
   height: 22px;
   padding-left: 27px;
   margin: 10px 0;
+  color: var(--text-color);
   text-decoration: none;
   background: var(--bullet-icon) no-repeat left center;
 }
@@ -338,8 +350,9 @@ nav#TableOfContents li a:hover {
 .markdown a {
   outline: 2px solid transparent;
   transition: 0.3s;
-  color: inherit;
+  color: var(--link-color);
   font-weight: 500;
+  text-decoration: var(--link-decoration);
 }
 
 .markdown a:hover {
@@ -1046,6 +1059,11 @@ a.tag-devops:hover:after {
 
 .version:hover {
   color: var(--switch-hover-color);
+}
+
+/* Author Name */
+.author-name {
+  color: var(--text-color-title);
 }
 
 /* PrismJS Treeview */
