@@ -342,7 +342,7 @@ nav#TableOfContents li a:hover {
 .markdown p {
 /* Invoked by line break */
   font-size: 1.0rem;
-  line-height: 1.6;
+  line-height: 1.7;
   max-width: 42em;
   color: var(--text-color);
 }
