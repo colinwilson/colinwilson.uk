@@ -24,7 +24,7 @@
           {{ if isset .Params "tags" }}
             {{ $tagsLen := len .Params.tags }}
             {{ if gt $tagsLen 0 }}
-                <ul class="tags tracked w-80">
+                <ul class="tags tracked w-90 w-80-ns">
                     {{ range $k, $v := .Params.tags }}
                     <li><a class="article-category-link tag-{{ . | lower }}" href="{{ $.Site.BaseURL }}tags/{{ . | urlize | lower }}">{{ . }}</a></li>
                     {{ end }}

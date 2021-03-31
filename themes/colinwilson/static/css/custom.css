@@ -451,8 +451,7 @@ summary {
 .tags a:after {
   content: "";
   float: right;
-  ;
-     position: absolute;
+  position: absolute;
   top: 0;
   right: -20px;
   width: 0;
@@ -472,6 +471,32 @@ summary {
 
 .tags a:hover:after {
   border-color: transparent transparent transparent #555;
+}
+
+@media screen and (max-width:800px) {
+  .tags li {
+    margin-bottom: 0px;
+    height: unset;
+  }
+  .tags a {
+    background: var(--inline-code-bg-color) !important;
+    height: unset;
+    margin-left: 10px;
+    padding: 0 0 0 12px;
+    color: var(--text-color-title) !important;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: var(--inline-code-bg-color);
+  }
+  .tags a:before {
+    content: "#";
+    left: 1px;
+    border-style: none;
+  }
+  .tags a:after {
+    content: "";
+    border-style: none;
+  }
 }
 
 /* Kemp & Javascript */
@@ -679,30 +704,36 @@ a.tag-terraform:hover:after {
   border-color: transparent transparent transparent #2f1ec9;
 }
 
-/* Algolia */
+/* Algolia, Azure */
 
-a.tag-algolia {
+a.tag-algolia,
+a.tag-azure {
   background: #5468ff;
   color: white;
 }
 
-a.tag-algolia:after {
+a.tag-algolia:after,
+a.tag-azure:after {
   border-color: transparent transparent transparent #5468ff;
 }
 
-a.tag-algolia:before {
+a.tag-algolia:before,
+a.tag-azure:before {
   border-color: #5468ff #5468ff #5468ff transparent;
 }
 
-a.tag-algolia:hover {
+a.tag-algolia:hover,
+a.tag-azure:hover {
   background: #2f1ec9;
 }
 
-a.tag-algolia:hover:before {
+a.tag-algolia:hover:before,
+a.tag-azure:hover:before {
   border-color: #2f1ec9 #2f1ec9 #2f1ec9 transparent;
 }
 
-a.tag-algolia:hover:after {
+a.tag-algolia:hover:after,
+a.tag-azure:hover:after {
   border-color: transparent transparent transparent #2f1ec9;
 }
 
@@ -848,16 +879,16 @@ a.tag-traefik:hover:after {
 /* GitHub,Vercel,Vault (black tags) */
 
 a.tag-github,a.tag-vercel,a.tag-vault {
-  background: #24292e;
+  background: #808080;
   color: white;
 }
 
 a.tag-github:after,a.tag-vercel:after,a.tag-vault:after {
-  border-color: transparent transparent transparent #24292e;
+  border-color: transparent transparent transparent #808080;
 }
 
 a.tag-github:before,a.tag-vercel:before,a.tag-vault:before {
-  border-color: #24292e #24292e #24292e transparent;
+  border-color: #808080 #808080 #808080 transparent;
 }
 
 a.tag-github:hover,a.tag-vercel:hover,a.tag-vault:hover {
@@ -930,6 +961,33 @@ a.tag-devops:hover:before {
 a.tag-search:hover:after,
 a.tag-devops:hover:after {
   border-color: transparent transparent transparent #90a482;
+}
+
+/* SSL */
+
+a.tag-ssl {
+  background: #88c45e;
+  color: white;
+}
+
+a.tag-ssl:after {
+  border-color: transparent transparent transparent #88c45e;
+}
+
+a.tag-ssl:before {
+  border-color: #88c45e #88c45e #88c45e transparent;
+}
+
+a.tag-ssl:hover {
+  background: #689648;
+}
+
+a.tag-ssl:hover:before {
+  border-color: #689648 #689648 #689648 transparent;
+}
+
+a.tag-ssl:hover:after {
+  border-color: transparent transparent transparent #689648;
 }
 
 /* set embedded gists to wrap - https://github.com/blairvanderhoof/gist-embed/issues/42 */
