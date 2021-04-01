@@ -45,11 +45,11 @@ Main components
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transform: scale(0);
-  -webkit-transform-origin: 100% 100%;
-  -moz-transform-origin: 100% 100%;
-  -ms-transform-origin: 100% 100%;
-  -o-transform-origin: 100% 100%;
-  transform-origin: 50% 100%;
+  -webkit-transform-origin: 90% 98%;
+  -moz-transform-origin: 90% 98%;
+  -ms-transform-origin: 90% 98%;
+  -o-transform-origin: 90% 98%;
+  transform-origin: 90% 98%;
   -webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
   -moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
   transition: transform 0.3s, visibility 0s 0.3s;
@@ -136,14 +136,14 @@ Main components
 .cd-nav-trigger {
   position: fixed;
   bottom: 20px;
-  right: 50%;
+  right: 15%;
   margin-right: -22px;
   width: 44px;
   height: 44px;
   background: none;
   border: solid 16px var(--text-color);
     /*border-radius: 0.25em;*/
-  border-radius: 50%;
+  border-radius: 20%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     /* image replacement */
   overflow: hidden;
