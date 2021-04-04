@@ -502,33 +502,39 @@ summary {
 /* Kemp & Javascript */
 
 a.tag-javascript,
-a.tag-kemp {
+a.tag-kemp,
+a.tag-k3s {
   background: #ffd54f;
   color: black;
 }
 
 a.tag-javascript:after,
-a.tag-kemp:after {
+a.tag-kemp:after,
+a.tag-k3s:after {
   border-color: transparent transparent transparent #ffd54f;
 }
 
 a.tag-javascript:before,
-a.tag-kemp:before {
+a.tag-kemp:before,
+a.tag-k3s:before {
   border-color: #ffd54f #ffd54f #ffd54f transparent;
 }
 
 a.tag-javascript:hover,
-a.tag-kemp:hover {
+a.tag-kemp:hover,
+a.tag-k3s:hover {
   background: #ffb300;
 }
 
 a.tag-javascript:hover:before,
-a.tag-kemp:hover:before {
+a.tag-kemp:hover:before,
+a.tag-k3s:hover:before {
   border-color: #ffb300 #ffb300 #ffb300 transparent;
 }
 
 a.tag-javascript:hover:after,
-a.tag-kemp:hover:after {
+a.tag-kemp:hover:after,
+a.tag-k3s:hover:after {
   border-color: transparent transparent transparent #ffb300;
 }
 
