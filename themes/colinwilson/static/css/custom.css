@@ -40,7 +40,7 @@
   --dark-text-header: #dee2e6;
   --dark-text-title: #dee2e6;
   --dark-text-color: #b3b9c5;
-  --dark-link-color: #ffa071;
+  --dark-link-color: #b39bf7;
   --dark-link-decoration: none;
   --dark-text-sub-header: #aaaaaa;
   --dark-bg-hover: #aaaaaa;
@@ -499,42 +499,48 @@ summary {
   }
 }
 
-/* Kemp & Javascript */
+/* Kemp, Javascript, K3s, Security */
 
 a.tag-javascript,
 a.tag-kemp,
-a.tag-k3s {
+a.tag-k3s,
+a.tag-security {
   background: #ffd54f;
   color: black;
 }
 
 a.tag-javascript:after,
 a.tag-kemp:after,
-a.tag-k3s:after {
+a.tag-k3s:after,
+a.tag-security:after {
   border-color: transparent transparent transparent #ffd54f;
 }
 
 a.tag-javascript:before,
 a.tag-kemp:before,
-a.tag-k3s:before {
+a.tag-k3s:before,
+a.tag-security:before {
   border-color: #ffd54f #ffd54f #ffd54f transparent;
 }
 
 a.tag-javascript:hover,
 a.tag-kemp:hover,
-a.tag-k3s:hover {
+a.tag-k3s:hover,
+a.tag-security:hover {
   background: #ffb300;
 }
 
 a.tag-javascript:hover:before,
 a.tag-kemp:hover:before,
-a.tag-k3s:hover:before {
+a.tag-k3s:hover:before,
+a.tag-security:hover:before {
   border-color: #ffb300 #ffb300 #ffb300 transparent;
 }
 
 a.tag-javascript:hover:after,
 a.tag-kemp:hover:after,
-a.tag-k3s:hover:after {
+a.tag-k3s:hover:after,
+a.tag-security:hover:after {
   border-color: transparent transparent transparent #ffb300;
 }
 
@@ -563,6 +569,60 @@ a.tag-netlify:hover:before {
 
 a.tag-netlify:hover:after {
   border-color: transparent transparent transparent #277b84;
+}
+
+/* HTML5 */
+
+a.tag-html5 {
+  background: #F06529;
+  color: black;
+}
+
+a.tag-html5:after {
+  border-color: transparent transparent transparent #F06529;
+}
+
+a.tag-html5:before {
+  border-color: #F06529 #F06529 #F06529 transparent;
+}
+
+a.tag-html5:hover {
+  background: #e48d68;
+}
+
+a.tag-html5:hover:before {
+  border-color: #e48d68 #e48d68 #e48d68 transparent;
+}
+
+a.tag-html5:hover:after {
+  border-color: transparent transparent transparent #e48d68;
+}
+
+/* Exchange */
+
+a.tag-exchange {
+  background: #0078d4;
+  color: black;
+}
+
+a.tag-exchange:after {
+  border-color: transparent transparent transparent #0078d4;
+}
+
+a.tag-exchange:before {
+  border-color: #0078d4 #0078d4 #0078d4 transparent;
+}
+
+a.tag-exchange:hover {
+  background: #28a8ea;
+}
+
+a.tag-exchange:hover:before {
+  border-color: #28a8ea #28a8ea #28a8ea transparent;
+}
+
+a.tag-exchange:hover:after {
+  border-color: transparent transparent transparent #28a8ea;
 }
 
 /* AWS */
@@ -882,7 +942,7 @@ a.tag-traefik:hover:after {
   border-color: transparent transparent transparent #1f86a0;
 }
 
-/* GitHub,Vercel,Vault (black tags) */
+/* GitHub,Vercel,Vault (black/gray tags) */
 
 a.tag-github,a.tag-vercel,a.tag-vault {
   background: #808080;
