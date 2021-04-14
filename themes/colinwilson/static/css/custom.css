@@ -40,7 +40,7 @@
   --dark-text-header: #dee2e6;
   --dark-text-title: #dee2e6;
   --dark-text-color: #b3b9c5;
-  --dark-link-color: #b39bf7;
+  --dark-link-color: #eeeeee;
   --dark-link-decoration: none;
   --dark-text-sub-header: #aaaaaa;
   --dark-bg-hover: #aaaaaa;
@@ -571,11 +571,38 @@ a.tag-netlify:hover:after {
   border-color: transparent transparent transparent #277b84;
 }
 
+/* Wireguard */
+
+a.tag-wireguard {
+  background: #88171a;
+  color: white;
+}
+
+a.tag-wireguard:after {
+  border-color: transparent transparent transparent #88171a;
+}
+
+a.tag-wireguard:before {
+  border-color: #88171a #88171a #88171a transparent;
+}
+
+a.tag-wireguard:hover {
+  background: #c12f33;
+}
+
+a.tag-wireguard:hover:before {
+  border-color: #c12f33 #c12f33 #c12f33 transparent;
+}
+
+a.tag-wireguard:hover:after {
+  border-color: transparent transparent transparent #c12f33;
+}
+
 /* HTML5 */
 
 a.tag-html5 {
   background: #F06529;
-  color: black;
+  color: white;
 }
 
 a.tag-html5:after {
@@ -600,28 +627,40 @@ a.tag-html5:hover:after {
 
 /* Exchange */
 
-a.tag-exchange {
+a.tag-exchange,
+a.tag-owa,
+a.tag-microsoft {
   background: #0078d4;
-  color: black;
+  color: white;
 }
 
-a.tag-exchange:after {
+a.tag-exchange:after,
+a.tag-owa:after,
+a.tag-microsoft:after {
   border-color: transparent transparent transparent #0078d4;
 }
 
-a.tag-exchange:before {
+a.tag-exchange:before,
+a.tag-owa:before,
+a.tag-microsoft:before {
   border-color: #0078d4 #0078d4 #0078d4 transparent;
 }
 
-a.tag-exchange:hover {
+a.tag-exchange:hover,
+a.tag-owa:hover,
+a.tag-microsoft:hover {
   background: #28a8ea;
 }
 
-a.tag-exchange:hover:before {
+a.tag-exchange:hover:before,
+a.tag-owa:hover:before,
+a.tag-microsoft:hover:before {
   border-color: #28a8ea #28a8ea #28a8ea transparent;
 }
 
-a.tag-exchange:hover:after {
+a.tag-exchange:hover:after,
+a.tag-owa:hover:after,
+a.tag-microsoft:hover:after {
   border-color: transparent transparent transparent #28a8ea;
 }
 
@@ -864,7 +903,7 @@ a.tag-git:hover:after {
 
 a.tag-docker {
   background: #a6dcef;
-  color: white;
+  color: black;
 }
 
 a.tag-docker:after {
@@ -892,7 +931,7 @@ a.tag-docker:hover:after {
 
 a.tag-gcp {
   background: #a9e2a9;
-  color: white;
+  color: black;
 }
 
 a.tag-gcp:after {
@@ -1029,30 +1068,36 @@ a.tag-devops:hover:after {
   border-color: transparent transparent transparent #90a482;
 }
 
-/* SSL */
+/* SSL, DUO */
 
-a.tag-ssl {
+a.tag-ssl,
+a.tag-duo {
   background: #88c45e;
   color: white;
 }
 
-a.tag-ssl:after {
+a.tag-ssl:after,
+a.tag-duo:after {
   border-color: transparent transparent transparent #88c45e;
 }
 
-a.tag-ssl:before {
+a.tag-ssl:before,
+a.tag-duo::before {
   border-color: #88c45e #88c45e #88c45e transparent;
 }
 
-a.tag-ssl:hover {
+a.tag-ssl:hover,
+a.tag-duo:hover {
   background: #689648;
 }
 
-a.tag-ssl:hover:before {
+a.tag-ssl:hover:before,
+a.tag-duo:hover:before {
   border-color: #689648 #689648 #689648 transparent;
 }
 
-a.tag-ssl:hover:after {
+a.tag-ssl:hover:after,
+a.tag-duo:hover:after {
   border-color: transparent transparent transparent #689648;
 }
 
