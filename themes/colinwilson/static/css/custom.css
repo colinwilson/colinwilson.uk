@@ -748,36 +748,42 @@ a.tag-hetzner:hover:after {
 }
 
 
-/* Kubernetes, k8s */
+/* Kubernetes, k8s, DigitalOcean */
 
 a.tag-k8s,
-a.tag-kubernetes {
+a.tag-kubernetes,
+a.tag-digitalocean {
   background: #6c5bfb;
   color: white;
 }
 
 a.tag-k8s:after,
-a.tag-kubernetes:after {
+a.tag-kubernetes:after,
+a.tag-digitalocean:after {
   border-color: transparent transparent transparent #6c5bfb;
 }
 
 a.tag-k8s:before,
-a.tag-kubernetes:before {
+a.tag-kubernetes:before,
+a.tag-digitalocean:before {
   border-color: #6c5bfb #6c5bfb #6c5bfb transparent;
 }
 
 a.tag-k8s:hover,
-a.tag-kubernetes:hover {
+a.tag-kubernetes:hover,
+a.tag-digitalocean:hover {
   background: #5649c7;
 }
 
 a.tag-k8s:hover:before,
-a.tag-kubernetes:hover:before {
+a.tag-kubernetes:hover:before,
+a.tag-digitalocean:hover:before {
   border-color: #5649c7 #5649c7 #5649c7 transparent;
 }
 
 a.tag-k8s:hover:after,
-a.tag-kubernetes:hover:after {
+a.tag-kubernetes:hover:after,
+a.tag-digitalocean:hover:after {
   border-color: transparent transparent transparent #5649c7;
 }
 
