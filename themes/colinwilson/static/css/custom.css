@@ -1688,7 +1688,7 @@ li.index-item:nth-child(3n) {
   transition: 0.2s;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .theme-toggle:hover {
     background-size: 32.4px;
     border-radius: 42.4px;
