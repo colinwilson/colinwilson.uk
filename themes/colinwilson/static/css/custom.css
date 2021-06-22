@@ -1688,8 +1688,10 @@ li.index-item:nth-child(3n) {
   transition: 0.2s;
 }
 
-.theme-toggle:hover {
-  background-size: 32.4px;
-  border-radius: 42.4px;
-  transition: 0.2s;
+@media (hover: hover) {
+  .theme-toggle:hover {
+    background-size: 32.4px;
+    border-radius: 42.4px;
+    transition: 0.2s;
+  }
 }
