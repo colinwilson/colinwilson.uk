@@ -1353,6 +1353,17 @@ pre[data-line] {
   }
 }
 
+.nav-mobile {
+  display: table;
+}
+
+@media only screen and (min-width: 1170px) {
+  .nav-mobile {
+    display: none;
+  }
+}
+
+
 /* mark {
   background-color: #8cffc8;
 } */
