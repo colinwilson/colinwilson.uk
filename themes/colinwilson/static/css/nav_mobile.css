@@ -26,10 +26,9 @@ Main components
 
 #cd-nav mobilenav {
     /* mobile first */
-  position: absolute;
+  position: fixed;
   width: 90%;
   height: 60%;
-  max-width: 100%;
   right: 5%;
   bottom: 10px;
   border-radius: 8px;
@@ -37,7 +36,7 @@ Main components
   visibility: hidden;
     /* remove overflow:hidden if you want to create a drop-down menu - but then remember to fix/eliminate the list items animation */
   overflow: hidden;
-  z-index: 1;
+  z-index: 2;
     /* Force Hardware Acceleration in WebKit */
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -151,7 +150,7 @@ Main components
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  z-index: 2;
+  z-index: 3;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
