@@ -27,12 +27,13 @@ Main components
 #cd-nav mobilenav {
     /* mobile first */
   position: fixed;
-  width: 100%;
+  width: 90%;
   height: 60%;
   max-width: 100%;
-  right: 0;
-  bottom: 0;
-  background: var(--bg-color);
+  right: 5%;
+  bottom: 10px;
+  border-radius: 8px;
+  background: var(--bg-hover); /* var(--bg-color); */
   visibility: hidden;
     /* remove overflow:hidden if you want to create a drop-down menu - but then remember to fix/eliminate the list items animation */
   overflow: hidden;
@@ -49,7 +50,7 @@ Main components
   -moz-transform-origin: 90% 98%;
   -ms-transform-origin: 90% 98%;
   -o-transform-origin: 90% 98%;
-  transform-origin: 90% 98%;
+  transform-origin: 50% 98%;
   -webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
   -moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
   transition: transform 0.3s, visibility 0s 0.3s;
@@ -136,7 +137,7 @@ Main components
 .cd-nav-trigger {
   position: fixed;
   bottom: 20px;
-  right: 15%;
+  right: 50%;
   margin-right: -22px;
   width: 44px;
   height: 44px;
@@ -144,7 +145,7 @@ Main components
   opacity: 0.7;
   border: solid 16px var(--text-color);
     /*border-radius: 0.25em;*/
-  border-radius: 10%;
+  border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     /* image replacement */
   overflow: hidden;
