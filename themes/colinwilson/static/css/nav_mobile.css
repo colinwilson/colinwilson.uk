@@ -30,7 +30,7 @@ Main components
   width: 90%;
   height: 60%;
   right: 5%;
-  bottom: 10px;
+  top: 38.8%;
   border-radius: 8px;
   background: var(--bg-hover); /* var(--bg-color); */
   visibility: hidden;
