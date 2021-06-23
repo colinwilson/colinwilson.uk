@@ -28,9 +28,9 @@ Main components
     /* mobile first */
   position: fixed;
   width: 90%;
-  height: 60%;
+  min-height: 72px;
   right: 5%;
-  top: 38.8%;
+  bottom: 10px;
   border-radius: 8px;
   background: var(--bg-hover); /* var(--bg-color); */
   visibility: hidden;
@@ -131,6 +131,7 @@ Main components
 .menu-btn {
   color: var(--switch-color);
   background-color: var(--post-hover);
+  min-height: 140px;
 }
 
 .cd-nav-trigger {
