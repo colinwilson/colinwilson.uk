@@ -89,6 +89,8 @@ html, html[data-theme="light"] {
     --switch-shadow-color: var(--light-switch-shadow);
     --switch-icon: var(--light-switch-icon);
     --bullet-icon: var(--light-bullet-icon);
+    --mobile-nav-bg-color: var(--light-bg-hover);
+    --mobile-nav-icon-color: var(--light-bg);
     --hr: var(--light-hr);
     --switch-color: var(--light-switch-color);
     --switch-icon-hover: var(--dark-switch-color);
@@ -117,6 +119,8 @@ html[data-theme="dark"] {
   --switch-shadow-color: var(--dark-switch-shadow);
   --switch-icon: var(--dark-switch-icon);
   --bullet-icon: var(--dark-bullet-icon);
+  --mobile-nav-bg-color: var(--light-bg-hover);
+  --mobile-nav-icon-color: var(--light-bg);
   --hr: var(--dark-hr);
   --switch-icon-hover: var(--light-switch-color);
   --switch-color: var(--dark-switch-color);
