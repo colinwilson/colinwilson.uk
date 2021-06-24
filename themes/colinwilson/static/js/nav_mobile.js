@@ -16,10 +16,10 @@
 	var mobilenav = document.querySelector("#mobilenav");
 
 	var headroom = new Headroom(mobilenav, {
-		offset: 15,
+		offset: 80,
 		tolerance: {
-			down: 5,
-			up: 5
+			down: 20,
+			up: 10
 		},
 		classes: {
 			initial: "animated",
