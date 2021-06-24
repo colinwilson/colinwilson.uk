@@ -4,18 +4,16 @@ Main components
 
 -------------------------------- */
 
-/* Light Theme Mobile Menu */
-/* :root {
-  --background: #f2f0f4;
-  --menu-btn-background: #e7e7e7;
-  --menu-text-color: rgba(0,0,0,.7);
-} */
-
 /* Dark Theme Mobile Menu */
 :root {
   --background: #121212;
   --menu-btn-background: #1e1e1e;
   --menu-text-color: #e1e1e1;
+  --body-background-color: #82a8ee;
+  --body-color: #97adc6;
+  --navigation-background-color: #f0f6ff;
+  --navigation-border-radius: 0.25em;
+  --navigation-anchor-padding: 1.5em;
 }
 
 @media print {
@@ -24,287 +22,104 @@ Main components
   }
 }
 
-#cd-nav mobilenav {
-    /* mobile first */
-  position: fixed;
-  width: 90%;
-  min-height: 72px;
-  right: 5%;
-  bottom: 10px;
-  border-radius: 8px;
-  background: var(--bg-hover); /* var(--bg-color); */
-  visibility: hidden;
-    /* remove overflow:hidden if you want to create a drop-down menu - but then remember to fix/eliminate the list items animation */
-  overflow: hidden;
-  z-index: 2;
-    /* Force Hardware Acceleration in WebKit */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
-  transform: scale(0);
-  -webkit-transform-origin: 90% 98%;
-  -moz-transform-origin: 90% 98%;
-  -ms-transform-origin: 90% 98%;
-  -o-transform-origin: 90% 98%;
-  transform-origin: 50% 98%;
-  -webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
-  -moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
-  transition: transform 0.3s, visibility 0s 0.3s;
-}
-
-#cd-nav mobilenav {
-    /* Force Hardware Acceleration in WebKit */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-#cd-nav mobilenav.is-visible {
-  visibility: visible;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: -webkit-transform 0.3s, visibility 0s 0s;
-  -moz-transition: -moz-transform 0.3s, visibility 0s 0s;
-  transition: transform 0.3s, visibility 0s 0s;
-}
-
 @media only screen and (min-width: 1170px) {
-  #cd-nav.is-fixed mobilenav {
-      /* when the user scrolls down, the navigation moves to the bottom right in Fixed position - as on touch devices */
-    position: fixed;
-    width: 100%;
-    max-width: 100%;
-    bottom: 0;
-    top: auto;
-    background: var(--bg-color);
+  #mobilenav {
     visibility: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-  }
-
-  #cd-nav.is-fixed mobilenav {
-    display: block;
-  }
-
-  #cd-nav mobilenav.has-transitions {
-      /* this class is used to bring back transitions when the navigation moves at the bottom right */
-    -webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
-    -moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
-    transition: transform 0.3s, visibility 0s 0.3s;
-  }
-
-  #cd-nav mobilenav.is-visible {
-      /* this class is used to bring back the navigation animation - as on touch devices */
-    visibility: visible;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: -webkit-transform 0.3s, visibility 0s 0s;
-    -moz-transition: -moz-transform 0.3s, visibility 0s 0s;
-    transition: transform 0.3s, visibility 0s 0s;
-  }
-
-  #cd-nav mobilenav.is-hidden {
-      /* this class is used to animate the scale down the navigation when the user scrolls down with the navigation still open */
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition: -webkit-transform 0.3s;
-    -moz-transition: -moz-transform 0.3s;
-    transition: transform 0.3s;
   }
 }
 
-.menu-btn {
-  color: var(--switch-color);
-  background-color: var(--post-hover);
-  min-height: 140px;
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(100%);
 }
 
-.cd-nav-trigger {
+.nav--fixed {
   position: fixed;
-  bottom: 20px;
-  right: 50%;
-  margin-right: -22px;
-  width: 44px;
-  height: 44px;
-  background: none;
-  opacity: 0.7;
-  border: solid 16px var(--text-color);
-    /*border-radius: 0.25em;*/
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    /* image replacement */
+z-index: 10;
+right: 0;
+left: 0;
+bottom: 0;
+}
+/* helpers/accessibility.css */
+
+.invisible {
+  left: -999px;
   overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  z-index: 3;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+  position: absolute;
+  top: -999px;
 }
 
-.cd-nav-trigger.menu-is-open {
-  box-shadow: none;
-  border: solid 8px var(--switch-color);
-}
+/* modules/icon.css */
 
-@media only screen and (min-width: 1170px) {
-  .cd-nav-trigger {
-      /* the the menu trigger is hidden by default on desktop devices */
-    visibility: hidden;
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
-    -moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
-    transition: transform 0.3s, visibility 0s 0.3s;
-  }
-
-  .is-fixed .cd-nav-trigger {
-    visibility: visible;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation: cd-bounce-in 0.3s linear;
-    -moz-animation: cd-bounce-in 0.3s linear;
-    animation: cd-bounce-in 0.3s linear;
-  }
-}
-
-@-webkit-keyframes cd-slide-in {
-  0% {
-    -webkit-transform: translateX(100px);
-  }
-
-  100% {
-    -webkit-transform: translateY(0);
-  }
-}
-
-@-moz-keyframes cd-slide-in {
-  0% {
-    -moz-transform: translateX(100px);
-  }
-
-  100% {
-    -moz-transform: translateY(0);
-  }
-}
-
-@keyframes cd-slide-in {
-  0% {
-    -webkit-transform: translateX(100px);
-    -moz-transform: translateX(100px);
-    -ms-transform: translateX(100px);
-    -o-transform: translateX(100px);
-    transform: translateX(100px);
-  }
-
-  100% {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes cd-bounce-in {
-  0% {
-    -webkit-transform: scale(0);
-  }
-
-  60% {
-    -webkit-transform: scale(1.2);
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-  }
-}
-
-@-moz-keyframes cd-bounce-in {
-  0% {
-    -moz-transform: scale(0);
-  }
-
-  60% {
-    -moz-transform: scale(1.2);
-  }
-
-  100% {
-    -moz-transform: scale(1);
-  }
-}
-
-@keyframes cd-bounce-in {
-  0% {
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-  }
-
-  60% {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-  }
+.icons {
+  display: none;
 }
 
 .icon {
-  display: inline-block;
-  width: 1em;
   height: 1em;
-  stroke-width: 0;
-  stroke: var(--switch-color);
-  fill: var(--switch-color);
+  display: inline-block;
+  fill: var(--mobile-nav-icon-color);
+  width: 100%;
+  vertical-align: middle;
 }
 
-  /* ==========================================
-  Single-colored icons can be modified like so:
-  .icon-name {
-    font-size: 32px;
-    color: red;
-  }
-  ========================================== */
-
-.icon-cube {
-  width: 0.9033203125em;
+.icon--2x {
+  font-size: 2rem;
 }
 
-.icon-article {
-  width: 0.75em;
+/* modules/image.css */
+
+.navigation svg {
+  max-width: 100%;
 }
+
+.navigation {
+  background-color: var(--mobile-nav-bg-color);
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  display: block;
+  padding: 1.5em;
+  padding: var(--navigation-anchor-padding);
+  position: relative;
+  text-decoration: none;
+}
+
+.navigation a:focus::after,
+.navigation a:hover::after {
+  opacity: 1;
+}
+
+.navigation a::after {
+  height: 100%;
+  -webkit-box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.3);
+  content: '';
+  width: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.navigation--inline ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
