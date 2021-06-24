@@ -38,6 +38,7 @@ Main components
        -o-animation-fill-mode: both;
           animation-fill-mode: both;
   will-change: transform, opacity;
+  transition: transform 0.25s ease-in-out;
 }
 
 @-webkit-keyframes slideDown {
