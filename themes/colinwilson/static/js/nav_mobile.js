@@ -16,11 +16,16 @@
 	var mobilenav = document.querySelector("#mobilenav");
 
 	var headroom = new Headroom(mobilenav, {
+		offset: 15,
 		tolerance: {
 			down: 10,
 			up: 5
 		},
-		offset: 15
+		classes: {
+			initial: "animated",
+			pinned: "slideDown",
+			unpinned: "slideUp"
+		}
 	});
 	headroom.init();
 })();
