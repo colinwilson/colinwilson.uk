@@ -23,8 +23,8 @@
 		},
 		classes: {
 			initial: "animated",
-			pinned: "slideDown",
-			unpinned: "slideUp"
+			pinned: "slideUp",
+			unpinned: "slideDown"
 		}
 	});
 	headroom.init();
