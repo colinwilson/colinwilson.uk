@@ -8,6 +8,8 @@
   --light-text-header: rgba(0,0,0,0.8);
   --light-text-title: rgba(0,0,0,0.7);
   --light-text-color: rgba(0,0,0,0.7);
+  --light-link-color: rgba(0,0,0,0.7);
+  --light-link-decoration: underline;
   --light-text-sub-header: rgba(0,0,0,0.6);
   --light-bg-hover: #2d2d31;
   --light-post-hover: rgb(231, 231, 231);
@@ -38,6 +40,8 @@
   --dark-text-header: #dee2e6;
   --dark-text-title: #dee2e6;
   --dark-text-color: #b3b9c5;
+  --dark-link-color: #eeeeee;
+  --dark-link-decoration: none;
   --dark-text-sub-header: #aaaaaa;
   --dark-bg-hover: #aaaaaa;
   --dark-post-hover: #535364;
@@ -71,6 +75,8 @@ html, html[data-theme="light"] {
     --text-color-header: var(--light-text-header);
     --text-color-title: var(--light-text-title);
     --text-color: var(--light-text-color);
+    --link-color: var(--light-link-color);
+    --link-decoration: var(--light-link-decoration);
     --text-color-sub-header: var(--light-text-sub-header);
     --bg-color: var(--light-bg);
     --btn-bg-disabled:var(--light-btn-bg-disabled);
@@ -83,6 +89,8 @@ html, html[data-theme="light"] {
     --switch-shadow-color: var(--light-switch-shadow);
     --switch-icon: var(--light-switch-icon);
     --bullet-icon: var(--light-bullet-icon);
+    --mobile-nav-bg-color: var(--light-bg-hover);
+    --mobile-nav-icon-color: var(--light-bg);
     --hr: var(--light-hr);
     --switch-color: var(--light-switch-color);
     --switch-icon-hover: var(--dark-switch-color);
@@ -104,11 +112,15 @@ html[data-theme="dark"] {
   --text-color-header: var(--dark-text-header);
   --text-color-title: var(--dark-text-title);
   --text-color: var(--dark-text-color);
+  --link-color: var(--dark-link-color);
+  --link-decoration: var(--dark-link-decoration);
   --text-color-sub-header: var(--dark-text-sub-header);
   --text-color-header: var(--dark-text-header);
   --switch-shadow-color: var(--dark-switch-shadow);
   --switch-icon: var(--dark-switch-icon);
   --bullet-icon: var(--dark-bullet-icon);
+  --mobile-nav-bg-color: var(--light-bg-hover);
+  --mobile-nav-icon-color: var(--light-bg);
   --hr: var(--dark-hr);
   --switch-icon-hover: var(--light-switch-color);
   --switch-color: var(--dark-switch-color);
@@ -139,6 +151,8 @@ html[data-theme="dark"] {
     --text-color-header: var(--dark-text-header);
     --text-color-title: var(--dark-text-title);
     --text-color: var(--dark-text-color);
+    --link-color: var(--dark-link-color);
+    --link-decoration: var(--dark-link-decoration);
     --text-color-sub-header: var(--dark-text-sub-header);
     --text-color-header: var(--dark-text-header);
     --switch-shadow-color: var(--dark-switch-shadow);
@@ -172,6 +186,8 @@ html[data-theme="dark"] {
     --text-color-header: var(--light-text-header);
     --text-color-title: var(--light-text-title);
     --text-color: var(--light-text-color);
+    --link-color: var(--light-link-color);
+    --link-decoration: var(--light-link-decoration);
     --text-color-sub-header: var(--light-text-sub-header);
     --bg-color: var(--light-bg);
     --btn-bg-disabled:var(--light-btn-bg-disabled);
@@ -265,12 +281,12 @@ details {
 nav#TableOfContents li {
   display: inherit;
   line-height: 30px;
-  color: var(--text-color);
 }
 nav#TableOfContents li a {
   height: 22px;
   padding-left: 27px;
   margin: 10px 0;
+  color: var(--text-color);
   text-decoration: none;
   background: var(--bullet-icon) no-repeat left center;
 }
@@ -330,7 +346,7 @@ nav#TableOfContents li a:hover {
 .markdown p {
 /* Invoked by line break */
   font-size: 1.0rem;
-  line-height: 1.6;
+  line-height: 1.7;
   max-width: 42em;
   color: var(--text-color);
 }
@@ -338,8 +354,9 @@ nav#TableOfContents li a:hover {
 .markdown a {
   outline: 2px solid transparent;
   transition: 0.3s;
-  color: inherit;
+  color: var(--link-color);
   font-weight: 500;
+  text-decoration: var(--link-decoration);
 }
 
 .markdown a:hover {
@@ -438,8 +455,7 @@ summary {
 .tags a:after {
   content: "";
   float: right;
-  ;
-     position: absolute;
+  position: absolute;
   top: 0;
   right: -20px;
   width: 0;
@@ -461,36 +477,74 @@ summary {
   border-color: transparent transparent transparent #555;
 }
 
-/* Kemp & Javascript */
+@media screen and (max-width:800px) {
+  .tags li {
+    margin-bottom: 0px;
+    height: unset;
+  }
+  .tags a {
+    background: var(--inline-code-bg-color) !important;
+    height: unset;
+    margin-left: 10px;
+    padding: 0 0 0 12px;
+    color: var(--text-color-title) !important;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: var(--inline-code-bg-color);
+  }
+  .tags a:before {
+    content: "#";
+    left: 1px;
+    border-style: none;
+  }
+  .tags a:after {
+    content: "";
+    border-style: none;
+  }
+}
+
+/* Kemp, Javascript, K3s, Security */
 
 a.tag-javascript,
-a.tag-kemp {
+a.tag-kemp,
+a.tag-k3s,
+a.tag-security {
   background: #ffd54f;
   color: black;
 }
 
 a.tag-javascript:after,
-a.tag-kemp:after {
+a.tag-kemp:after,
+a.tag-k3s:after,
+a.tag-security:after {
   border-color: transparent transparent transparent #ffd54f;
 }
 
 a.tag-javascript:before,
-a.tag-kemp:before {
+a.tag-kemp:before,
+a.tag-k3s:before,
+a.tag-security:before {
   border-color: #ffd54f #ffd54f #ffd54f transparent;
 }
 
 a.tag-javascript:hover,
-a.tag-kemp:hover {
+a.tag-kemp:hover,
+a.tag-k3s:hover,
+a.tag-security:hover {
   background: #ffb300;
 }
 
 a.tag-javascript:hover:before,
-a.tag-kemp:hover:before {
+a.tag-kemp:hover:before,
+a.tag-k3s:hover:before,
+a.tag-security:hover:before {
   border-color: #ffb300 #ffb300 #ffb300 transparent;
 }
 
 a.tag-javascript:hover:after,
-a.tag-kemp:hover:after {
+a.tag-kemp:hover:after,
+a.tag-k3s:hover:after,
+a.tag-security:hover:after {
   border-color: transparent transparent transparent #ffb300;
 }
 
@@ -519,6 +573,99 @@ a.tag-netlify:hover:before {
 
 a.tag-netlify:hover:after {
   border-color: transparent transparent transparent #277b84;
+}
+
+/* Wireguard */
+
+a.tag-wireguard {
+  background: #88171a;
+  color: white;
+}
+
+a.tag-wireguard:after {
+  border-color: transparent transparent transparent #88171a;
+}
+
+a.tag-wireguard:before {
+  border-color: #88171a #88171a #88171a transparent;
+}
+
+a.tag-wireguard:hover {
+  background: #c12f33;
+}
+
+a.tag-wireguard:hover:before {
+  border-color: #c12f33 #c12f33 #c12f33 transparent;
+}
+
+a.tag-wireguard:hover:after {
+  border-color: transparent transparent transparent #c12f33;
+}
+
+/* HTML5 */
+
+a.tag-html5 {
+  background: #F06529;
+  color: white;
+}
+
+a.tag-html5:after {
+  border-color: transparent transparent transparent #F06529;
+}
+
+a.tag-html5:before {
+  border-color: #F06529 #F06529 #F06529 transparent;
+}
+
+a.tag-html5:hover {
+  background: #e48d68;
+}
+
+a.tag-html5:hover:before {
+  border-color: #e48d68 #e48d68 #e48d68 transparent;
+}
+
+a.tag-html5:hover:after {
+  border-color: transparent transparent transparent #e48d68;
+}
+
+/* Exchange */
+
+a.tag-exchange,
+a.tag-owa,
+a.tag-microsoft {
+  background: #0078d4;
+  color: white;
+}
+
+a.tag-exchange:after,
+a.tag-owa:after,
+a.tag-microsoft:after {
+  border-color: transparent transparent transparent #0078d4;
+}
+
+a.tag-exchange:before,
+a.tag-owa:before,
+a.tag-microsoft:before {
+  border-color: #0078d4 #0078d4 #0078d4 transparent;
+}
+
+a.tag-exchange:hover,
+a.tag-owa:hover,
+a.tag-microsoft:hover {
+  background: #28a8ea;
+}
+
+a.tag-exchange:hover:before,
+a.tag-owa:hover:before,
+a.tag-microsoft:hover:before {
+  border-color: #28a8ea #28a8ea #28a8ea transparent;
+}
+
+a.tag-exchange:hover:after,
+a.tag-owa:hover:after,
+a.tag-microsoft:hover:after {
+  border-color: transparent transparent transparent #28a8ea;
 }
 
 /* AWS */
@@ -605,36 +752,42 @@ a.tag-hetzner:hover:after {
 }
 
 
-/* Kubernetes, k8s */
+/* Kubernetes, k8s, DigitalOcean */
 
 a.tag-k8s,
-a.tag-kubernetes {
+a.tag-kubernetes,
+a.tag-digitalocean {
   background: #6c5bfb;
   color: white;
 }
 
 a.tag-k8s:after,
-a.tag-kubernetes:after {
+a.tag-kubernetes:after,
+a.tag-digitalocean:after {
   border-color: transparent transparent transparent #6c5bfb;
 }
 
 a.tag-k8s:before,
-a.tag-kubernetes:before {
+a.tag-kubernetes:before,
+a.tag-digitalocean:before {
   border-color: #6c5bfb #6c5bfb #6c5bfb transparent;
 }
 
 a.tag-k8s:hover,
-a.tag-kubernetes:hover {
+a.tag-kubernetes:hover,
+a.tag-digitalocean:hover {
   background: #5649c7;
 }
 
 a.tag-k8s:hover:before,
-a.tag-kubernetes:hover:before {
+a.tag-kubernetes:hover:before,
+a.tag-digitalocean:hover:before {
   border-color: #5649c7 #5649c7 #5649c7 transparent;
 }
 
 a.tag-k8s:hover:after,
-a.tag-kubernetes:hover:after {
+a.tag-kubernetes:hover:after,
+a.tag-digitalocean:hover:after {
   border-color: transparent transparent transparent #5649c7;
 }
 
@@ -666,30 +819,36 @@ a.tag-terraform:hover:after {
   border-color: transparent transparent transparent #2f1ec9;
 }
 
-/* Algolia */
+/* Algolia, Azure */
 
-a.tag-algolia {
+a.tag-algolia,
+a.tag-azure {
   background: #5468ff;
   color: white;
 }
 
-a.tag-algolia:after {
+a.tag-algolia:after,
+a.tag-azure:after {
   border-color: transparent transparent transparent #5468ff;
 }
 
-a.tag-algolia:before {
+a.tag-algolia:before,
+a.tag-azure:before {
   border-color: #5468ff #5468ff #5468ff transparent;
 }
 
-a.tag-algolia:hover {
+a.tag-algolia:hover,
+a.tag-azure:hover {
   background: #2f1ec9;
 }
 
-a.tag-algolia:hover:before {
+a.tag-algolia:hover:before,
+a.tag-azure:hover:before {
   border-color: #2f1ec9 #2f1ec9 #2f1ec9 transparent;
 }
 
-a.tag-algolia:hover:after {
+a.tag-algolia:hover:after,
+a.tag-azure:hover:after {
   border-color: transparent transparent transparent #2f1ec9;
 }
 
@@ -754,7 +913,7 @@ a.tag-git:hover:after {
 
 a.tag-docker {
   background: #a6dcef;
-  color: white;
+  color: black;
 }
 
 a.tag-docker:after {
@@ -782,7 +941,7 @@ a.tag-docker:hover:after {
 
 a.tag-gcp {
   background: #a9e2a9;
-  color: white;
+  color: black;
 }
 
 a.tag-gcp:after {
@@ -832,19 +991,19 @@ a.tag-traefik:hover:after {
   border-color: transparent transparent transparent #1f86a0;
 }
 
-/* GitHub,Vercel,Vault (black tags) */
+/* GitHub,Vercel,Vault (black/gray tags) */
 
 a.tag-github,a.tag-vercel,a.tag-vault {
-  background: #24292e;
+  background: #808080;
   color: white;
 }
 
 a.tag-github:after,a.tag-vercel:after,a.tag-vault:after {
-  border-color: transparent transparent transparent #24292e;
+  border-color: transparent transparent transparent #808080;
 }
 
 a.tag-github:before,a.tag-vercel:before,a.tag-vault:before {
-  border-color: #24292e #24292e #24292e transparent;
+  border-color: #808080 #808080 #808080 transparent;
 }
 
 a.tag-github:hover,a.tag-vercel:hover,a.tag-vault:hover {
@@ -917,6 +1076,39 @@ a.tag-devops:hover:before {
 a.tag-search:hover:after,
 a.tag-devops:hover:after {
   border-color: transparent transparent transparent #90a482;
+}
+
+/* SSL, DUO */
+
+a.tag-ssl,
+a.tag-duo {
+  background: #88c45e;
+  color: white;
+}
+
+a.tag-ssl:after,
+a.tag-duo:after {
+  border-color: transparent transparent transparent #88c45e;
+}
+
+a.tag-ssl:before,
+a.tag-duo::before {
+  border-color: #88c45e #88c45e #88c45e transparent;
+}
+
+a.tag-ssl:hover,
+a.tag-duo:hover {
+  background: #689648;
+}
+
+a.tag-ssl:hover:before,
+a.tag-duo:hover:before {
+  border-color: #689648 #689648 #689648 transparent;
+}
+
+a.tag-ssl:hover:after,
+a.tag-duo:hover:after {
+  border-color: transparent transparent transparent #689648;
 }
 
 /* set embedded gists to wrap - https://github.com/blairvanderhoof/gist-embed/issues/42 */
@@ -1048,6 +1240,11 @@ a.tag-devops:hover:after {
   color: var(--switch-hover-color);
 }
 
+/* Author Name */
+.author-name {
+  color: var(--text-color-title);
+}
+
 /* PrismJS Treeview */
 pre.language-treeview {
   position: relative;
@@ -1130,7 +1327,6 @@ pre[data-line] {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 .nav-main {
@@ -1159,6 +1355,17 @@ pre[data-line] {
     display: none;
   }
 }
+
+.nav-mobile {
+  display: table;
+}
+
+@media only screen and (min-width: 1170px) {
+  .nav-mobile {
+    display: none;
+  }
+}
+
 
 /* mark {
   background-color: #8cffc8;
@@ -1484,8 +1691,10 @@ li.index-item:nth-child(3n) {
   transition: 0.2s;
 }
 
-.theme-toggle:hover {
-  background-size: 32.4px;
-  border-radius: 42.4px;
-  transition: 0.2s;
+@media (hover: hover) and (pointer: fine) {
+  .theme-toggle:hover {
+    background-size: 32.4px;
+    border-radius: 42.4px;
+    transition: 0.2s;
+  }
 }

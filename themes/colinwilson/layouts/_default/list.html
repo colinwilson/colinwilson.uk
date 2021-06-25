@@ -1,10 +1,9 @@
 {{ partial "header" . }}
 
-  <body class="rubik">
+<body class="rubik">
     {{ partialCached "nav_mobile" . }}
     {{ partial "nav" . }}
 
-    {{ partialCached "nav_noscript" . }}
     <div class="flex flex-column w-80 mw9 pv4 pv0-ns center">
 
         {{ if .Site.Params.Logo }}
