@@ -81,7 +81,7 @@ params = ["categories", "tags"]
     before = false
     label  = "Articles"
     link   = "articles/"
-    icon   = "article"
+    icon   = "search"
 
 [[params.menu]]
     before = false
