@@ -1,43 +1,36 @@
 {{ partialCached "icons" . }}
-<div id="cd-nav">
-    <a href="#0" class="cd-nav-trigger no-print">Menu</a>
-    <nav id="cd-main-nav">
-        <mobilenav>
-            <div class="h-75 mt2 mb5 flex justify-center">
-                <div class="flex flex-wrap w-100">
-                    {{- range .Site.Params.menu }}
-                    {{- if .before }}
-                    <div class="w-50 pa3">
-                        <a class="no-underline" href="{{ .link | absURL }}">
-                            <div class="center-me br3 shadow-hover dim pointer flex flex-column ttu fw5 f3 menu-btn">
-                                <svg class="icon icon-{{ .icon }} mb2"><use xlink:href="#icon-{{ .icon }}"></use></svg>
-                                <span class="f4">{{ .label }}</span>
-                            </div>
-                        </a>
-                    </div>
-                    {{- end }}
-                    {{- end }}
-                    {{- range .Site.Params.menu }}
-                    {{- if not .before }}
-                    <div class="w-50 pa3">
-                        <a class="no-underline" href="{{ .link | absURL }}">
-                            <div class="center-me br3 shadow-hover dim pointer flex flex-column ttu fw5 f3 menu-btn">
-                                <svg class="icon icon-{{ .icon }} mb2"><use xlink:href="#icon-{{ .icon }}"></use></svg>
-                                <span class="f4">{{ .label }}</span>
-                            </div>
-                        </a>
-                    </div>
-                    {{- end }}
-                    {{- end -}}
-                </div>
-            </div>
-        </mobilenav>
-    </nav>
-</div>
-<script>
-    /* disable background scrolling */
-    document.querySelector(".cd-nav-trigger").addEventListener('click', function() {
-        const body = document.querySelector("body");
-        body.classList.toggle("overflow");
-    });
-</script>
+<nav class="nav-mobile w-100 no-print ph3 pt3">
+    <div class="dtc v-mid tr">
+        <button id="theme-toggle" class="theme-toggle" onclick="modeSwitcher()"></button>
+    </div>
+</nav>
+<mobilenav id="mobilenav" class="navigation navigation--inline fixed-bottom no-print">
+    <div>
+        <ul>
+            {{- range .Site.Params.menu }}
+            {{- if .before }}
+            <li>
+                <a href="{{ .link | absURL }}">
+                <svg class="icon icon--2x">
+                    <use xlink:href="#icon-{{ .icon }}" />
+                </svg>
+                <span class="invisible">{{ .label }}</span>
+                </a>
+            </li>
+            {{- end }}
+            {{- end }}
+            {{- range .Site.Params.menu }}
+            {{- if not .before }}
+            <li>
+                <a href="{{ .link | absURL }}">
+                <svg class="icon icon--2x">
+                    <use xlink:href="#icon-{{ .icon }}" />
+                </svg>
+                <span class="invisible">{{ .label }}</span>
+                </a>
+            </li>
+            {{- end }}
+            {{- end }}
+        </ul>
+    </div>
+</mobilenav>
