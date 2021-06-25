@@ -1,29 +1,36 @@
 {{ partialCached "icons" . }}
-<mobilenav id="mobilenav" class="navigation navigation--inline nav--fixed no-print">
-    <ul>
-        {{- range .Site.Params.menu }}
-        {{- if .before }}
-        <li>
-            <a href="{{ .link | absURL }}">
-            <svg class="icon icon--2x">
-                <use xlink:href="#icon-{{ .icon }}" />
-            </svg>
-            <span class="invisible">{{ .label }}</span>
-            </a>
-        </li>
-        {{- end }}
-        {{- end }}
-        {{- range .Site.Params.menu }}
-        {{- if not .before }}
-        <li>
-            <a href="{{ .link | absURL }}">
-            <svg class="icon icon--2x">
-                <use xlink:href="#icon-{{ .icon }}" />
-            </svg>
-            <span class="invisible">{{ .label }}</span>
-            </a>
-        </li>
-        {{- end }}
-        {{- end }}
-    </ul>
+<nav class="nav-mobile w-100 no-print ph3 pt3">
+    <div class="dtc v-mid tr">
+        <button id="theme-toggle" class="theme-toggle" onclick="modeSwitcher()"></button>
+    </div>
+</nav>
+<mobilenav id="mobilenav" class="navigation navigation--inline fixed-bottom no-print">
+    <div>
+        <ul>
+            {{- range .Site.Params.menu }}
+            {{- if .before }}
+            <li>
+                <a href="{{ .link | absURL }}">
+                <svg class="icon icon--2x">
+                    <use xlink:href="#icon-{{ .icon }}" />
+                </svg>
+                <span class="invisible">{{ .label }}</span>
+                </a>
+            </li>
+            {{- end }}
+            {{- end }}
+            {{- range .Site.Params.menu }}
+            {{- if not .before }}
+            <li>
+                <a href="{{ .link | absURL }}">
+                <svg class="icon icon--2x">
+                    <use xlink:href="#icon-{{ .icon }}" />
+                </svg>
+                <span class="invisible">{{ .label }}</span>
+                </a>
+            </li>
+            {{- end }}
+            {{- end }}
+        </ul>
+    </div>
 </mobilenav>
