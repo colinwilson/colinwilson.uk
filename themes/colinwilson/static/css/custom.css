@@ -604,28 +604,40 @@ a.tag-wireguard:hover:after {
 
 /* HTML5 */
 
-a.tag-html5 {
+a.tag-html5,
+a.tag-email,
+a.tag-dnsbl {
   background: #F06529;
   color: white;
 }
 
-a.tag-html5:after {
+a.tag-html5:after,
+a.tag-email:after,
+a.tag-dnsbl:after {
   border-color: transparent transparent transparent #F06529;
 }
 
-a.tag-html5:before {
+a.tag-html5:before,
+a.tag-email:before,
+a.tag-dnsbl:before {
   border-color: #F06529 #F06529 #F06529 transparent;
 }
 
-a.tag-html5:hover {
+a.tag-html5:hover,
+a.tag-email:hover,
+a.tag-dnsbl:hover {
   background: #e48d68;
 }
 
-a.tag-html5:hover:before {
+a.tag-html5:hover:before,
+a.tag-email:hover:before,
+a.tag-dnsbl:hover:before {
   border-color: #e48d68 #e48d68 #e48d68 transparent;
 }
 
-a.tag-html5:hover:after {
+a.tag-html5:hover:after,
+a.tag-email:hover:after,
+a.tag-dnsbl:hover:after {
   border-color: transparent transparent transparent #e48d68;
 }
 
@@ -937,30 +949,54 @@ a.tag-docker:hover:after {
 }
 
 
-/* GCP */
+/* GCP, SPF, DKIM, DMARC */
 
-a.tag-gcp {
+a.tag-gcp,
+a.tag-spf,
+a.tag-dkim,
+a.tag-dmarc,
+a.tag-dns {
   background: #a9e2a9;
   color: black;
 }
 
-a.tag-gcp:after {
+a.tag-gcp:after,
+a.tag-spf:after,
+a.tag-dkim:after,
+a.tag-dmarc:after,
+a.tag-dns:after {
   border-color: transparent transparent transparent #a9e2a9;
 }
 
-a.tag-gcp:before {
+a.tag-gcp:before,
+a.tag-spf:before,
+a.tag-dkim:before,
+a.tag-dmarc:before,
+a.tag-dns:before {
   border-color: #a9e2a9 #a9e2a9 #a9e2a9 transparent;
 }
 
-a.tag-gcp:hover {
+a.tag-gcp:hover,
+a.tag-spf:hover,
+a.tag-dkim:hover,
+a.tag-dmarc:hover,
+a.tag-dns:hover {
   background: #94c494;
 }
 
-a.tag-gcp:hover:before {
+a.tag-gcp:hover:before,
+a.tag-spf:hover:before,
+a.tag-dkim:hover:before,
+a.tag-dmarc:hover:before,
+a.tag-dns:hover:before {
   border-color: #94c494 #94c494 #94c494 transparent;
 }
 
-a.tag-gcp:hover:after {
+a.tag-gcp:hover:after,
+a.tag-spf:hover:after,
+a.tag-dkim:hover:after,
+a.tag-dmarc:hover:after,
+a.tag-dns:hover:after {
   border-color: transparent transparent transparent #94c494;
 }
 
