@@ -5,30 +5,32 @@
     </div>
 </nav>
 <mobilenav id="mobilenav" class="navigation navigation--inline fixed-bottom no-print">
-    <ul>
-        {{- range .Site.Params.menu }}
-        {{- if .before }}
-        <li>
-            <a href="{{ .link | absURL }}">
-            <svg class="icon icon--2x">
-                <use xlink:href="#icon-{{ .icon }}" />
-            </svg>
-            <span class="invisible">{{ .label }}</span>
-            </a>
-        </li>
-        {{- end }}
-        {{- end }}
-        {{- range .Site.Params.menu }}
-        {{- if not .before }}
-        <li>
-            <a href="{{ .link | absURL }}">
-            <svg class="icon icon--2x">
-                <use xlink:href="#icon-{{ .icon }}" />
-            </svg>
-            <span class="invisible">{{ .label }}</span>
-            </a>
-        </li>
-        {{- end }}
-        {{- end }}
-    </ul>
+    <div>
+        <ul>
+            {{- range .Site.Params.menu }}
+            {{- if .before }}
+            <li>
+                <a href="{{ .link | absURL }}">
+                <svg class="icon icon--2x">
+                    <use xlink:href="#icon-{{ .icon }}" />
+                </svg>
+                <span class="invisible">{{ .label }}</span>
+                </a>
+            </li>
+            {{- end }}
+            {{- end }}
+            {{- range .Site.Params.menu }}
+            {{- if not .before }}
+            <li>
+                <a href="{{ .link | absURL }}">
+                <svg class="icon icon--2x">
+                    <use xlink:href="#icon-{{ .icon }}" />
+                </svg>
+                <span class="invisible">{{ .label }}</span>
+                </a>
+            </li>
+            {{- end }}
+            {{- end }}
+        </ul>
+    </div>
 </mobilenav>
