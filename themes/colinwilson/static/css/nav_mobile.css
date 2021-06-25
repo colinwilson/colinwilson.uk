@@ -162,6 +162,7 @@ mobile navigation components
 
 .navigation {
   background-color: var(--mobile-nav-bg-color);
+  box-shadow: 0 0 10px 0 var(--dark-background);
 }
 
 .navigation ul {
