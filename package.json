@@ -3,6 +3,7 @@
         "algolia": "atomic-algolia"
     },
     "dependencies": {
-        "atomic-algolia": "^0.3.19"
+        "atomic-algolia": "^0.3.19",
+        "glob-parent": ">=5.1.2"
     }
 }
