@@ -1,20 +1,8 @@
 /* --------------------------------
 
-Main components
+mobile navigation components
 
 -------------------------------- */
-
-/* Dark Theme Mobile Menu */
-:root {
-  --background: #121212;
-  --menu-btn-background: #1e1e1e;
-  --menu-text-color: #e1e1e1;
-  --body-background-color: #82a8ee;
-  --body-color: #97adc6;
-  --navigation-background-color: #f0f6ff;
-  --navigation-border-radius: 0.25em;
-  --navigation-anchor-padding: 1.5em;
-}
 
 @media print {
   .no-print, .no-print * {
@@ -38,6 +26,7 @@ Main components
        -o-animation-fill-mode: both;
           animation-fill-mode: both;
   will-change: transform, opacity;
+  transition: transform .5s linear,-webkit-transform .5s linear,-moz-transform .5s linear,-o-transform .5s linear
 }
 
 @-webkit-keyframes slideDown {
@@ -131,12 +120,12 @@ Main components
   animation-name: slideUp;
 }
 
-.nav--fixed {
+.fixed-bottom {
   position: fixed;
-z-index: 10;
-right: 0;
-left: 0;
-bottom: 0;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 /* helpers/accessibility.css */
 
@@ -184,7 +173,6 @@ bottom: 0;
 .navigation a {
   display: block;
   padding: 1.5em;
-  padding: var(--navigation-anchor-padding);
   position: relative;
   text-decoration: none;
 }

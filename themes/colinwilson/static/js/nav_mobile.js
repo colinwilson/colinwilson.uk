@@ -18,8 +18,8 @@
 	var headroom = new Headroom(mobilenav, {
 		offset: 10,
 		tolerance: {
-			down: 10,
-			up: 10
+			down: 5,
+			up: 5
 		},
 		classes: {
 			initial: "animated",
