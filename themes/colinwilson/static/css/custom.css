@@ -1270,6 +1270,7 @@ a.tag-duo:hover:after {
   padding: 0 0 0 5px;
   margin-top: 10px;
   color: var(--bg-color);
+  z-index: 20;
 }
 
 .version:hover {
@@ -1754,4 +1755,6 @@ li.index-item:nth-child(3n) {
 
 .one-edge-shadow {
   box-shadow: 0 2px 6px -6px var(--dark-background);
+  /*background-color: var(--mobile-nav-bg-color);*/
+  transition: 0.5s ease-in-out;
 }
