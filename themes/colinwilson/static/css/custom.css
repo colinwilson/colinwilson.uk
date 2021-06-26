@@ -1270,6 +1270,7 @@ a.tag-duo:hover:after {
   padding: 0 0 0 5px;
   margin-top: 10px;
   color: var(--bg-color);
+  z-index: 20;
 }
 
 .version:hover {
@@ -1367,6 +1368,7 @@ pre[data-line] {
 
 .nav-main {
   display: table;
+  background: var(--bg-color);
 }
 
 .nav-main > div a {
@@ -1733,4 +1735,26 @@ li.index-item:nth-child(3n) {
     border-radius: 42.4px;
     transition: 0.2s;
   }
+}
+
+.fixed-bottom {
+  bottom: 0;
+}
+
+.fixed-top {
+  top: 0;
+}
+
+.fixed-top,
+.fixed-bottom {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+}
+
+.one-edge-shadow {
+  box-shadow: 0 2px 6px -6px var(--dark-background);
+  /*background-color: var(--mobile-nav-bg-color);*/
+  transition: 0.5s ease-in-out;
 }
