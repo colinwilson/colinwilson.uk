@@ -46,7 +46,7 @@ params = ["categories", "tags"]
     description            = "Colin Wilson | DevOps Engineer, Software Engineer and Open Source creator. This is where I share what I have learned."
     #email                  = "colin.wilson@protonmail.ch"
     avatar                 = "/img/logo_v2.7.svg" # path to image in static dir e.g img/avatar.png (do not use at the same time as gravatar)
-    #gravatar              = ""                # do not use at the same time as avatar
+    #gravatar               = ""                # do not use at the same time as avatar
     bitcoin                = "1HNuwCnxVAsQzT3QH2MWyZFszBPHDXJu8U"
 
     matomoID               = "14"
