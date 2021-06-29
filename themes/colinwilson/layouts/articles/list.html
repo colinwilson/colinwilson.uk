@@ -69,7 +69,10 @@
     const insightsMiddleware = instantsearch.middlewares.createInsightsMiddleware({
       // Disable insightsClient in development
       //insightsClient: window.aa
-      insightsClient: {{- if .Site.IsServer }} null {{- else }} window.aa {{ end }}
+      insightsClient: {{- if .Site.IsServer }} null {{- else }} window.aa {{ end }},
+      insightsInitParams: {
+        useCookie: true,
+      }
     });
 
     // Group results by distinct attribute (year) function
