@@ -98,3 +98,4 @@ params = ["categories", "tags"]
     gitlab          = "colinwilson"
     linkedin        = ""
     twitter         = ""
+    polywork        = "colinwilson"
