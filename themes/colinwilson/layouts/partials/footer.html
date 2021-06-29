@@ -68,6 +68,14 @@
         </svg>
       </a>
       {{ end }}
+      {{ if .Site.Social.polywork }}
+      <a href="https://www.polywork.com/{{ .Site.Social.polywork }}" target="_blank" rel="noopener" class="link dim dib mr3 black-60">
+        <svg class="db w2 h2" data-icon="polywork" viewBox="0 0 250 250" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" stroke="currentColor" stroke-width="2">
+          <title>polywork icon</title>
+          <path d="M0 199.219v-148.438c0-28.125 22.656-50.781 50.781-50.781h148.438c28.125 0 50.781 22.656 50.781 50.781v71.875c0 28.125-22.656 50.781-50.781 50.781h-28.907v25.782c0 28.125-22.656 50.781-50.781 50.781h-68.75c-28.125 0-50.781-22.656-50.781-50.781zm78.125-120.313h-64.844v-28.906c0-20.313 16.406-37.5 37.5-37.5h27.344v66.406zm121.094 82.031h-27.344v-67.187h64.844v29.687c0 20.313-16.407 37.5-37.5 37.5zm-79.688 76.563h-27.344v-61.719h64.844v24.219c0 20.312-16.406 37.5-37.5 37.5zm-27.344-76.563h64.844v-67.187h-64.844v67.187zm79.688-82.031h64.844v-28.125c0-21.094-17.188-37.5-37.5-37.5h-27.344v65.625zm-14.844 0h-64.844v-66.406h64.844v66.406zm-144.531 96.094v24.219c0 21.093 17.188 37.5 37.5 37.5h28.125v-61.719h-65.625zm65.625-14.063h-65.625v-67.187h65.625v67.187z"/>
+        </svg>
+      </a>
+      {{ end }}
       {{ if .Site.Params.email }}
       <a href="mailto:{{ .Site.Params.email }}" class="link dim dib mr3 black-60">
         <svg class="db w2 h2" data-icon="email" viewBox="0 0 184 184" fill="currentColor">
