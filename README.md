@@ -15,7 +15,7 @@ Powered by [Hugo](https://gohugo.io/) and hosted by [Netlify](https://www.netlif
 - [Updating the JS dependenies]()
 ## 🛠 Getting started
 
-Before you start working with this theme, you need to have [Hugo](https://gohugo.io/) & [npm](https://www.w3schools.com/whatis/whatis_npm.asp) installed. Then:
+Before you start working with this theme, you need to have [Hugo](https://gohugo.io/) & [npm](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) installed. Then:
 1. clone the repository using `git clone https://github.com/colinwilson/colinwilson.uk.git`
 2. from the root of your cloned repository, 
     - run `npm install` to install the necessary JS pakages
