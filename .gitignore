@@ -3,3 +3,4 @@ public/
 .env
 .vercel
 node_modules
+.hugo_build.lock
