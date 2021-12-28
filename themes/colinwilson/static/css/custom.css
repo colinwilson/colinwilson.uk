@@ -763,6 +763,33 @@ a.tag-hetzner:hover:after {
   border-color: transparent transparent transparent #bb3a4f;
 }
 
+/* Harbor */
+
+a.tag-harbor {
+  background: #00364D;
+  color: white;
+}
+
+a.tag-harbor:after {
+  border-color: transparent transparent transparent #00364D;
+}
+
+a.tag-harbor:before {
+  border-color: #00364D #00364D #00364D transparent;
+}
+
+a.tag-harbor:hover {
+  background: #006289;
+}
+
+a.tag-harbor:hover:before {
+  border-color: #006289 #006289 #006289 transparent;
+}
+
+a.tag-harbor:hover:after {
+  border-color: transparent transparent transparent #006289;
+}
+
 
 /* Kubernetes, k8s, DigitalOcean */
 
