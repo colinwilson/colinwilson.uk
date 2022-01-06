@@ -103,6 +103,8 @@
 .token.treeview-part .entry-name.ext-log:before,
 .token.treeview-part .entry-name.ext-md:before,
 .token.treeview-part .entry-name.ext-nfo:before,
+.token.treeview-part .entry-name.ext-yaml:before,
+.token.treeview-part .entry-name.ext-yml:before,
 .token.treeview-part .entry-name.ext-txt:before {
 	content: "\ea06";
 }
@@ -171,6 +173,7 @@
 	content: "\ea0b";
 }
 .token.treeview-part .entry-name.ext-tf:before,
+.token.treeview-part .entry-name.ext-tftpl:before,
 .token.treeview-part .entry-name.ext-tfvars:before {
 	content: "\ea0d";
 }
@@ -195,4 +198,8 @@
 .token.treeview-part .entry-name.ext-html:before,
 .token.treeview-part .entry-name.ext-html5:before {
 	content: "\ea10";
+}
+
+.token.treeview-part .entry-name.ext-json:before {
+	content: "\ea12";
 }

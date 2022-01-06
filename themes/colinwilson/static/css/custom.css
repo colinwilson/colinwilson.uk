@@ -833,28 +833,34 @@ a.tag-digitalocean:hover:after {
 
 /* Terraform */
 
-a.tag-terraform {
+a.tag-terraform,
+a.tag-cert-manager {
   background: #3b25f5;
   color: white;
 }
 
-a.tag-terraform:after {
+a.tag-terraform:after,
+a.tag-cert-manager:after {
   border-color: transparent transparent transparent #3b25f5;
 }
 
-a.tag-terraform:before {
+a.tag-terraform:before,
+a.tag-cert-manager:before {
   border-color: #3b25f5 #3b25f5 #3b25f5 transparent;
 }
 
-a.tag-terraform:hover {
+a.tag-terraform:hover,
+a.tag-cert-manager:hover {
   background: #2f1ec9;
 }
 
-a.tag-terraform:hover:before {
+a.tag-terraform:hover:before,
+a.tag-cert-manager:hover:before {
   border-color: #2f1ec9 #2f1ec9 #2f1ec9 transparent;
 }
 
-a.tag-terraform:hover:after {
+a.tag-terraform:hover:after,
+a.tag-cert-manager:hover:after {
   border-color: transparent transparent transparent #2f1ec9;
 }
 
@@ -1784,4 +1790,20 @@ li.index-item:nth-child(3n) {
   box-shadow: 0 2px 6px -6px var(--dark-background);
   /*background-color: var(--mobile-nav-bg-color);*/
   transition: 0.5s ease-in-out;
+}
+
+.footnotes hr {
+  display: none;
+}
+
+a.footnote-ref {
+  text-decoration: none;
+}
+
+a.footnote-ref::before {
+  content: '[';
+}
+
+a.footnote-ref::after {
+  content: ']';
 }
