@@ -1452,7 +1452,7 @@ mark {
 [type="search"] {
   background: none;
   color: var(--text-color-sub-header);
-	border-bottom: 2px solid var(--text-color-sub-header);
+	border-bottom: 2px dotted var(--text-color-sub-header);
 	border-top: none;
 	border-left: none;
 	border-right: none;
@@ -1734,6 +1734,13 @@ fieldset[disabled] .pagination-ellipsis {
   .pagination.is-right .pagination-list {
     justify-content: flex-end;
     order: 3;
+  }
+}
+
+@media print {
+  .tags a::before,
+  .tags a::after {
+    display: none;
   }
 }
 
