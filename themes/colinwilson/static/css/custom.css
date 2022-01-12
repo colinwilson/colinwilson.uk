@@ -220,7 +220,7 @@ html[data-theme="dark"] {
 html {
   height: 100%;
   scroll-behavior: smooth;
-
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -1734,6 +1734,13 @@ fieldset[disabled] .pagination-ellipsis {
   .pagination.is-right .pagination-list {
     justify-content: flex-end;
     order: 3;
+  }
+}
+
+@media print {
+  .tags a::before,
+  .tags a::after {
+    display: none;
   }
 }
 
