@@ -1060,6 +1060,33 @@ a.tag-traefik:hover:after {
   border-color: transparent transparent transparent #1f86a0;
 }
 
+/* ArgoCD */
+
+a.tag-argocd {
+  background: #ef7b4d;
+  color: white;
+}
+
+a.tag-argocd:after {
+  border-color: transparent transparent transparent #ef7b4d;
+}
+
+a.tag-argocd:before {
+  border-color: #ef7b4d #ef7b4d #ef7b4d transparent;
+}
+
+a.tag-argocd:hover {
+  background: #f69a77;
+}
+
+a.tag-argocd:hover:before {
+  border-color: #f69a77 #f69a77 #f69a77 transparent;
+}
+
+a.tag-argocd:hover:after {
+  border-color: transparent transparent transparent #f69a77;
+}
+
 /* GitHub,Vercel,Vault (black/gray tags) */
 
 a.tag-github,a.tag-vercel,a.tag-vault {
@@ -1117,33 +1144,39 @@ a.tag-hugo:hover:after {
 /* DevOps, Search */
 
 a.tag-search,
-a.tag-devops {
+a.tag-devops,
+a.tag-gitops {
   background: #aac09a;
   color: white;
 }
 
 a.tag-search:after,
-a.tag-devops:after {
+a.tag-devops:after,
+a.tag-gitops:after {
   border-color: transparent transparent transparent #aac09a;
 }
 
 a.tag-search:before,
-a.tag-devops:before {
+a.tag-devops:before,
+a.tag-gitops:before {
   border-color: #aac09a #aac09a #aac09a transparent;
 }
 
 a.tag-search:hover,
-a.tag-devops:hover {
+a.tag-devops:hover,
+a.tag-gitops:hover {
   background: #90a482;
 }
 
 a.tag-search:hover:before,
-a.tag-devops:hover:before {
+a.tag-devops:hover:before,
+a.tag-gitops:hover:before {
   border-color: #90a482 #90a482 #90a482 transparent;
 }
 
 a.tag-search:hover:after,
-a.tag-devops:hover:after {
+a.tag-devops:hover:after,
+a.tag-gitops:hover:after {
   border-color: transparent transparent transparent #90a482;
 }
 
