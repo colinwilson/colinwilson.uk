@@ -99,3 +99,16 @@ params = ["categories", "tags"]
     linkedin        = ""
     twitter         = ""
     polywork        = "colinwilson"
+
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+
+  [security.funcs]
+    getenv = ['^HUGO_','GITHUB_SHA','VERCEL_GIT_COMMIT_SHA','ALGOLIA_APP_ID','ALGOLIA_SEARCH_KEY','ALGOLIA_ADMIN_KEY','ALGOLIA_INDEX_NAME','ALGOLIA_INDEX_FILE']
+
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
