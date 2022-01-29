@@ -898,30 +898,36 @@ a.tag-azure:hover:after {
 }
 
 
-/* CI/CD */
+/* CI/CD, PGP */
 
-a.tag-ci-cd {
+a.tag-ci-cd,
+a.tag-pgp {
   background: #5493a2;
   color: white;
 }
 
-a.tag-ci-cd:after {
+a.tag-ci-cd:after,
+a.tag-pgp:after {
   border-color: transparent transparent transparent #5493a2;
 }
 
-a.tag-ci-cd:before {
+a.tag-ci-cd:before,
+a.tag-pgp:before {
   border-color: #5493a2 #5493a2 #5493a2 transparent;
 }
 
-a.tag-ci-cd:hover {
+a.tag-ci-cd:hover,
+a.tag-pgp:hover {
   background: #3e6a75;
 }
 
-a.tag-ci-cd:hover:before {
+a.tag-ci-cd:hover:before,
+a.tag-pgp:hover:before {
   border-color: #3e6a75 #3e6a75 #3e6a75 transparent;
 }
 
-a.tag-ci-cd:hover:after {
+a.tag-ci-cd:hover:after,
+a.tag-pgp:hover:after {
   border-color: transparent transparent transparent #3e6a75;
 }
 
@@ -1112,6 +1118,33 @@ a.tag-github:hover:before,a.tag-vercel:hover:before,a.tag-vault:hover:before {
 
 a.tag-github:hover:after,a.tag-vercel:hover:after,a.tag-vault:hover:after {
   border-color: transparent transparent transparent #535353;
+}
+
+/* Helm */
+
+a.tag-helm {
+  background: #0f1689;
+  color: white;
+}
+
+a.tag-helm:after {
+  border-color: transparent transparent transparent #0f1689;
+}
+
+a.tag-helm:before {
+  border-color: #0f1689 #0f1689 #0f1689 transparent;
+}
+
+a.tag-helm:hover {
+  background: #4046a2;
+}
+
+a.tag-helm:hover:before {
+  border-color: #4046a2 #4046a2 #4046a2 transparent;
+}
+
+a.tag-helm:hover:after {
+  border-color: transparent transparent transparent #4046a2;
 }
 
 /* Hugo */
