@@ -147,7 +147,7 @@
   {{- if .Site.Params.prismjs }}
     {{- $js_prism_core := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/components/prism-core.js" }}
     {{- $js_prism_command_line := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/command-line/prism-command-line.js" }}
-    {{- $js_prism_line_numbers := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/line-numbers/prism-line-numbers.min.js" }}
+    {{- $js_prism_line_numbers := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/line-numbers/prism-line-numbers.js" }}
     {{- $js_prism_line_highlight := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/line-highlight/prism-line-highlight.js" }}
     {{- $js_prism_treeview := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/treeview/prism-treeview.js" }}
     {{- $js_prism_autoloader := (resources.Get "/js/prism-autoloader.js") }}
