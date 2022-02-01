@@ -124,7 +124,7 @@
   {{- $js_headroom := resources.GetRemote "https://unpkg.com/headroom.js@0.12.0/dist/headroom.js" }}
   {{- if not .Site.IsServer }}
     {{- $js_init := (slice $js_jquery_slim $js_headroom)  | resources.Concat "/js/init_bundle.js" | minify | fingerprint }}
-  <script src="{{ $js_init.Permalink }}"></script>
+  <script src="{{ $js_init.Permalink }}" integrity="{{ $js_init.Data.Integrity }}" crossorigin="anonymous"></script>
     {{- else }}
     {{- $js_init := (slice $js_jquery_slim $js_headroom)  | resources.Concat "/js/init_bundle.js" }}
   <script src="{{ $js_init.Permalink }}"></script>
@@ -139,7 +139,7 @@
   {{- $js_gist_embed := resources.GetRemote "https://unpkg.com/gist-embed@1.0.4/dist/gist-embed.min.js" }}
   {{- if not .Site.IsServer }}
     {{- $js_plugins_bundle := (slice $js_dayjs $js_gist_embed)  | resources.Concat "/js/plugins_bundle.js" | minify | fingerprint }}
-  <script src="{{ $js_plugins_bundle.Permalink }}"></script>
+  <script src="{{ $js_plugins_bundle.Permalink }}" integrity="{{ $js_plugins_bundle.Data.Integrity }}" crossorigin="anonymous"></script>
     {{- else }}
     {{- $js_plugins_bundle := (slice $js_dayjs $js_gist_embed)  | resources.Concat "/js/plugins_bundle.js" }}
   <script src="{{ $js_plugins_bundle.Permalink }}"></script>
