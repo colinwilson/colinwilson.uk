@@ -41,21 +41,48 @@
             localStorage.setItem('theme', 'light');
         }
     </script>
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css">
-    <link rel="stylesheet" href="/css/nav_mobile.css">
+    {{- $tachyons := (resources.GetRemote "https://unpkg.com/tachyons@4.12.0/css/tachyons.css") }}
+    {{- $navmobile := (resources.Get "/css/nav_mobile.css") }}
+
+    {{- $new_moon := (resources.Get "/css/new-moon.css") }}
+    {{- $prism_command_line := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/command-line/prism-command-line.css" }}
+    {{- $prism_treeview_custom := (resources.Get "/css/prism-treeview-custom.css") }}
+    {{- $prism_line_numbers := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/line-numbers/prism-line-numbers.css" }}
+    {{- $prism_line_highlight := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/line-highlight/prism-line-highlight.css" }}
+    {{- $prism_toolbar := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/toolbar/prism-toolbar.css" }}
+
     {{- if .Site.Params.prismjs }}
-    <link rel="stylesheet" href="/css/new-moon.css">
-    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/plugins/command-line/prism-command-line.css">
-    <link rel="stylesheet" href="/css/prism-treeview-custom.css">
-    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.css">
-    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.css">
-    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/plugins/toolbar/prism-toolbar.css">
+        {{- if not .Site.IsServer }}
+            {{- $bundle := (slice $tachyons $navmobile $new_moon $prism_command_line $prism_treeview_custom $prism_line_numbers $prism_line_highlight $prism_toolbar) | resources.Concat "/css/bundle.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $bundle.Permalink }}" integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous">
+        {{- else }}
+            {{- $bundle := (slice $tachyons $navmobile $new_moon $prism_command_line $prism_treeview_custom $prism_line_numbers $prism_line_highlight $prism_toolbar) | resources.Concat "/css/bundle.css" }}
+    <link rel="stylesheet" href="{{ $bundle.Permalink }}">
+        {{- end }}
+    {{- else }}
+        {{- if not .Site.IsServer }}
+            {{- $bundle := (slice $tachyons $navmobile) | resources.Concat "/css/bundle.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $bundle.Permalink }}" integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous">
+        {{- else }}
+            {{- $bundle := (slice $tachyons $navmobile) | resources.Concat "/css/bundle.css" }}
+    <link rel="stylesheet" href="{{ $bundle.Permalink }}">
+        {{- end }}
     {{- end }}
-    {{ if (eq .Page.Title "Articles") -}}
-    <link rel="stylesheet" href="/css/instantsearch-7.4.5-reset-min.css">
+
+    {{- if (eq .Page.Title "Articles") }}
+    {{- $instantsearch := (resources.Get "/css/instantsearch-7.4.5-reset-min.css") }}
+    <link rel="stylesheet" href="{{ $instantsearch.Permalink }}">
     <link rel="preconnect" href="https://g57i212swt-dsn.algolia.net/" crossorigin/>
-    {{ end -}}
-    <link rel="stylesheet" href="/css/custom.css">
+    {{- end }}
+
+    {{- if not .Site.IsServer }}
+        {{- $custom := (resources.Get "/css/custom.css") | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $custom.Permalink }}" integrity="{{ $custom.Data.Integrity }}" crossorigin="anonymous">
+    {{- else }}
+        {{- $custom := (resources.Get "/css/custom.css") }}
+    <link rel="stylesheet" href="{{ $custom.Permalink }}">
+    {{- end }}
+
     {{- if not .Site.IsServer }}
     {{- template "_internal/google_analytics_async.html" . }}{{- if .Site.Params.MatomoID }}{{- partial "matomo" . }}{{- end }}
     {{ partial "algolia-search-insights" . }}
