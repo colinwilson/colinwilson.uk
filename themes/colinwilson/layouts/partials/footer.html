@@ -150,7 +150,7 @@
     {{- $js_prism_line_numbers := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/line-numbers/prism-line-numbers.js" }}
     {{- $js_prism_line_highlight := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/line-highlight/prism-line-highlight.js" }}
     {{- $js_prism_treeview := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/treeview/prism-treeview.js" }}
-    {{- $js_prism_autoloader := resources.Get "js/prism-autoloader.js" }}
+    {{- $js_prism_autoloader := resources.Get "js/prism-autoloader.js" | js.Build "prism_autoloader.js" }}
     {{- $js_prism_toolbar := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/toolbar/prism-toolbar.js" }}
     {{- $js_clipboard := resources.GetRemote "https://unpkg.com/clipboard@2.0.6/dist/clipboard.js" }}
     {{- $js_prism_cp := (resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.js") }}
@@ -158,7 +158,7 @@
       {{- $js_prism_bundle := (slice $js_prism_core $js_prism_command_line $js_prism_line_numbers $js_prism_line_highlight $js_prism_treeview $js_prism_autoloader $js_prism_toolbar $js_clipboard $js_prism_cp) | resources.Concat "/js/prism_bundle.js" | minify }}
   <script src="{{ $js_prism_bundle.Permalink }}"></script>
     {{- else }}
-      {{- $js_prism_bundle := (slice $js_prism_core $js_prism_command_line $js_prism_line_numbers $js_prism_line_highlight $js_prism_treeview $js_prism_autoloader $js_prism_toolbar $js_clipboard $js_prism_cp) | resources.Concat "/js/prism_bundle.js" }}
+      {{- $js_prism_bundle := (slice $js_prism_core $js_prism_command_line $js_prism_line_numbers $js_prism_line_highlight $js_prism_treeview $js_prism_autoloader $js_prism_toolbar $js_clipboard $js_prism_cp) | resources.Concat "/js/prism_bundle.js" | minify }}
   <script src="{{ $js_prism_bundle.Permalink }}"></script>
     {{- end }}
   {{- end }}
