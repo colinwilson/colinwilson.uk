@@ -150,7 +150,7 @@
     {{- $js_prism_line_numbers := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/line-numbers/prism-line-numbers.js" }}
     {{- $js_prism_line_highlight := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/line-highlight/prism-line-highlight.js" }}
     {{- $js_prism_treeview := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/treeview/prism-treeview.js" }}
-    {{- $js_prism_autoloader := (resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/autoloader/prism-autoloader.js") }}
+    {{- $js_prism_autoloader := resources.GetRemote "https://colinwilson-uk.s3.us-east-1.amazonaws.com/assets/js/prism-autoloader.js" }}
     {{- $js_prism_toolbar := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/toolbar/prism-toolbar.js" }}
     {{- $js_clipboard := resources.GetRemote "https://unpkg.com/clipboard@2.0.6/dist/clipboard.js" }}
     {{- $js_prism_cp := (resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.js") }}
