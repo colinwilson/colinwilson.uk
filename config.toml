@@ -15,8 +15,6 @@ section = [ "HTML", "RSS"]
 [mediaTypes."text/netlify"]
     suffixes = ""
     delimiter = ""
-[mediaTypes.'application/javascript']
-    suffixes = ['js']
 
 [outputFormats]
 [outputFormats.REDIRECTS]
