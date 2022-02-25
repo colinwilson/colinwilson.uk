@@ -6,13 +6,13 @@
     <div class="dtc v-mid w-75 tr">
         {{- range .Site.Params.menu }}
         {{- if .before }}
-        <a class="no-underline black-60 f5 dib mr2" href="{{ .link | absURL }}" title="{{ .label }}">{{ .label }}</a>
+        <a class="no-underline black-60 f5 dib mr2" href="{{ .link | absURL }}" title="{{ .title }}">{{ .label }}</a>
         {{- end }}
         {{- end }}
 
         {{- range .Site.Params.menu }}
         {{- if not .before }}
-        <a class="no-underline black-60 f5 dib mr2" href="{{ .link | absURL }}" title="{{ .label }}">{{ .label }}</a>
+        <a class="no-underline black-60 f5 dib mr2" href="{{ .link | absURL }}" title="{{ .title }}">{{ .label }}</a>
         {{- end }}
         {{- end -}}
     </div>
