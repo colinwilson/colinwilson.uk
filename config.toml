@@ -92,12 +92,12 @@ params = ["categories", "tags"]
     link   = "about/"
     icon   = "user"
 
-[[params.menu]]
-    before = false
-    label  = "🇺🇦"
-    title  = "Help Ukraine"
-    link   = "https://uacrisis.org/en/help-ukraine"
-    icon   = "uaflag"
+# [[params.menu]]
+#     before = false
+#     label  = "🇺🇦"
+#     title  = "Help Ukraine"
+#     link   = "https://uacrisis.org/en/help-ukraine"
+#     icon   = "uaflag"
 
 [social]
 # Add your social network accounts to the footer section
