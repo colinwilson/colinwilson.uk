@@ -48,7 +48,7 @@
     {{- $prism_command_line := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/command-line/prism-command-line.css" }}
     {{- $prism_treeview_custom := (resources.Get "/css/prism-treeview-custom.css") }}
     {{- $prism_line_numbers := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/line-numbers/prism-line-numbers.css" }}
-    {{- $prism_line_highlight := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/line-highlight/prism-line-highlight.css" }}
+    {{- $prism_line_highlight := (resources.Get "/css/prism-line-highlight-custom.css") }}
     {{- $prism_toolbar := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/toolbar/prism-toolbar.css" }}
 
     {{- if .Site.Params.prismjs }}
