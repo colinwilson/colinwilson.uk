@@ -136,14 +136,26 @@
   <script src="{{ $js_algolia_bundle.Permalink }}"></script>
   {{- end }}
   {{- $js_dayjs := resources.GetRemote "https://unpkg.com/dayjs@1.9.8/dayjs.min.js" }}
+  {{- $js_medium_zoom := resources.GetRemote "https://unpkg.com/medium-zoom@1.0.6/dist/medium-zoom.min.js" }}
   {{- $js_gist_embed := resources.GetRemote "https://unpkg.com/gist-embed@1.0.4/dist/gist-embed.min.js" }}
   {{- if not .Site.IsServer }}
-    {{- $js_plugins_bundle := (slice $js_dayjs $js_gist_embed)  | resources.Concat "/js/plugins_bundle.js" | minify | fingerprint }}
+    {{- $js_plugins_bundle := (slice $js_dayjs $js_medium_zoom $js_gist_embed)  | resources.Concat "/js/plugins_bundle.js" | minify | fingerprint }}
   <script src="{{ $js_plugins_bundle.Permalink }}" integrity="{{ $js_plugins_bundle.Data.Integrity }}" crossorigin="anonymous"></script>
     {{- else }}
-    {{- $js_plugins_bundle := (slice $js_dayjs $js_gist_embed)  | resources.Concat "/js/plugins_bundle.js" }}
+    {{- $js_plugins_bundle := (slice $js_dayjs $js_medium_zoom $js_gist_embed)  | resources.Concat "/js/plugins_bundle.js" }}
   <script src="{{ $js_plugins_bundle.Permalink }}"></script>
   {{- end }}
+  <script>
+    const images = Array.from(document.querySelectorAll(".post-content img"));
+    images.forEach(img => {
+      mediumZoom(img, {
+        margin: 0, /* The space outside the zoomed image */
+        scrollOffset: 40, /* The number of pixels to scroll to close the zoom */
+        container: null, /* The viewport to render the zoom in */
+        template: null /* The template element to display on zoom */
+      });
+    });
+  </script>
   {{- if .Site.Params.prismjs }}
     {{- $js_prism_core := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/components/prism-core.js" }}
     {{- $js_prism_command_line := resources.GetRemote "https://unpkg.com/prismjs@1.26.0/plugins/command-line/prism-command-line.js" }}

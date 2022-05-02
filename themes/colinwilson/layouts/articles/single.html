@@ -39,7 +39,9 @@
         </span>
         {{ partial "featured_image" . }}
         {{ partial "toc" . }}
+        <div class="post-content">
         {{ .Content }}
+        </div>
       </div>
 
       {{ template "_internal/disqus.html" . }}
