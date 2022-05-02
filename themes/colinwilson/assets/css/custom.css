@@ -1416,6 +1416,7 @@ div.code-toolbar > .toolbar {
   right: 0em;
   transition: opacity 0.3s ease-in-out;
   opacity: 1;
+  z-index: 8;
 }
 
 div.code-toolbar > .toolbar > .toolbar-item > a,
@@ -1881,4 +1882,10 @@ a.footnote-ref::before {
 
 a.footnote-ref::after {
   content: ']';
+}
+
+/* Medium-Zoom */
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 9999;
 }
