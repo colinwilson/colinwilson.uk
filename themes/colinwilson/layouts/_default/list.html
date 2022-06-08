@@ -13,7 +13,7 @@
         <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
 
     <ul class="tags">
-        <li><a class="article-category-link tag-{{ .Title | lower }}">{{ .Title }}</a></li>
+        <li><a class="article-category-link">{{ .Title }}</a></li>
     </ul>
     {{ range .Pages.ByPublishDate.Reverse }}
       <div class="mb4 w-70-l">
