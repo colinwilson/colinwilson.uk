@@ -5,6 +5,7 @@
     "dependencies": {
         "atomic-algolia": "^0.3.19",
         "glob-parent": ">=5.1.2",
-        "set-value": ">=4.0.1"
+        "set-value": ">=4.0.1",
+        "minimist": ">=1.2.6"
     }
 }
