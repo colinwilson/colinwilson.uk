@@ -37,7 +37,7 @@
       <div class="flex-auto flex flex-column justify-center pv4 pv3-ns">
         {{ range .Pages.ByPublishDate.Reverse }}
         <div class="mb4 w-70-l">
-          <a class="dib no-underline w-100 background-hover" href="{{ .Permalink }}">
+          <a class="dib no-underline w-100 outline-0 background-hover" href="{{ .Permalink }}">
             <h2 class="f7 fw3 mt1 mb0 ttu tracked black-60">{{ .PublishDate.Format "02 January" }}</h2>
             <h1 class="mt0 mb1 f4 fw1 f4-ns normal lh-copy black-70 lh-title-ns">{{ .Title }}</h1>
           </a>

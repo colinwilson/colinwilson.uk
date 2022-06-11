@@ -352,7 +352,7 @@ nav#TableOfContents li a:hover {
 }
 
 .markdown a {
-  outline: 2px solid transparent;
+  outline: none;
   transition: 0.3s;
   color: var(--link-color);
   font-weight: 500;
@@ -435,6 +435,7 @@ summary {
   border: 2px solid;
   border-color: var(--text-color-title);
   border-radius: 5px;
+  outline: none;
 }
 
 .tags a:hover {
@@ -701,6 +702,7 @@ pre[data-line] {
 .nav-main > div a {
   padding: 0.75rem 1.25rem;
   border-radius: 0.35rem;
+  outline: none;
 }
 
 .nav-main > div a:hover,
