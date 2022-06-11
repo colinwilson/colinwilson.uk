@@ -11,7 +11,7 @@
       <p class="f7 black-70 dib pr3 mb3">
         Copyright © {{ .Site.Params.author }} {{ now.Format "2006" }}
         <!-- GitHub (Actions) Environment Variables - https://docs.github.com/en/free-pro-team@latest/actions/reference/environment-variables -->
-        (<strong><a class="black-70 no-underline" href='https://github.com/colinwilson/colinwilson.uk/tree/{{ getenv "GITHUB_SHA" | truncate 7 "" }}'>{{ getenv "GITHUB_SHA" | truncate 7 "" }}</a></strong>)
+        (<strong><a class="black-70 outline-0 no-underline" href='https://github.com/colinwilson/colinwilson.uk/tree/{{ getenv "GITHUB_SHA" | truncate 7 "" }}'>{{ getenv "GITHUB_SHA" | truncate 7 "" }}</a></strong>)
         <!-- Vercel Environment Variables - https://vercel.com/docs/environment-variables -->
         <!--(<strong><a class="black-70 no-underline" href='https://github.com/colinwilson/colinwilson.uk/tree/{{ getenv "VERCEL_GIT_COMMIT_SHA" | truncate 7 "" }}'>{{ getenv "VERCEL_GIT_COMMIT_SHA" | truncate 7 "" }}</a></strong>)-->
       </p>
