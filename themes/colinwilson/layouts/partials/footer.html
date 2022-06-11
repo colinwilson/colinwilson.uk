@@ -11,7 +11,7 @@
       <p class="f7 black-70 dib pr3 mb3">
         Copyright © {{ .Site.Params.author }} {{ now.Format "2006" }}
         <!-- Netlify Specific Environment Variables - https://docs.netlify.com/configure-builds/environment-variables/#git-metadata -->
-        (<strong><a class="black-70 no-underline" href='https://github.com/colinwilson/colinwilson.uk/tree/{{ getenv "COMMIT_REF" | truncate 7 "" }}'>{{ getenv "COMMIT_REF" | truncate 7 "" }}</a></strong>)
+        (<strong><a class="black-70 outline-0 no-underline" href='https://github.com/colinwilson/colinwilson.uk/tree/{{ getenv "COMMIT_REF" | truncate 7 "" }}'>{{ getenv "COMMIT_REF" | truncate 7 "" }}</a></strong>)
       </p>
     </div>
     <div class="db dtc-ns black-70 tc tr-ns v-mid">
