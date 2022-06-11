@@ -74,30 +74,20 @@ params = ["categories", "tags"]
 [[params.menu]]
     before = true
     label  = "Home"
-    title  = "Home"
     link   = "/"
     icon   = "home"
 
 [[params.menu]]
     before = false
     label  = "Articles"
-    title  = "Articles"
     link   = "articles/"
     icon   = "search"
 
 [[params.menu]]
     before = false
     label  = "About Me"
-    title  = "About Me"
     link   = "about/"
     icon   = "user"
-
-# [[params.menu]]
-#     before = false
-#     label  = "🇺🇦"
-#     title  = "Help Ukraine"
-#     link   = "https://uacrisis.org/en/help-ukraine"
-#     icon   = "uaflag"
 
 [social]
 # Add your social network accounts to the footer section
@@ -108,6 +98,7 @@ params = ["categories", "tags"]
     gitlab          = "colinwilson"
     linkedin        = ""
     twitter         = ""
+    polywork        = "colinwilson"
 
 [security]
   enableInlineShortcodes = false
