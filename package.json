@@ -4,7 +4,7 @@
     },
     "dependencies": {
         "atomic-algolia": "^0.3.19",
-        "glob-parent": ">=5.1.2",
+        "glob-parent": ">=6.0.1",
         "set-value": ">=4.0.1"
     }
 }
