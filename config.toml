@@ -56,7 +56,8 @@ params = ["categories", "tags"]
     og_image               = "android-chrome-384x384.png"
     prismjs                = true
 
-    sponsorship_url        = "https://github.com/sponsors/colinwilson"
+    #sponsorship_url        = "https://github.com/sponsors/colinwilson"
+    kofi_url               = "https://ko-fi.com/colinwilson"
 
 [markup]
   defaultMarkdownHandler = "goldmark"
