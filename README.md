@@ -4,7 +4,7 @@
 
 Source for my site at <https://colinwilson.uk>
 
-![colinwilson.uk screenshot](https://res.cloudinary.com/qunux/image/upload/v1607063266/colinwilson.uk-screenshot-04-12-2020_txwe2z.png)
+![colinwilson.uk screenshot](https://res.cloudinary.com/qunux/image/upload/v1659461491/colinwilson.uk_screenshot_020822_qjadvs.webp)
 
 Powered by [Hugo](https://gohugo.io/) and hosted by [Netlify](https://www.netlify.com/).
 
