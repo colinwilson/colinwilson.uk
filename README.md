@@ -2,7 +2,7 @@
 
 Source for my site at <https://colinwilson.uk>
 
-![colinwilson.uk screenshot](https://res.cloudinary.com/qunux/image/upload/v1607370694/colinwilson.uk-screenshot-vercel-07-12-2020_ml10wh.png)
+![colinwilson.uk screenshot](https://res.cloudinary.com/qunux/image/upload/v1659461689/dev.colinwilson.uk_screenshot_020822_kzm3kn.webp)
 
 Powered by [Hugo](https://gohugo.io/) and hosted on [Vercel](https://vercel.com/).
 
