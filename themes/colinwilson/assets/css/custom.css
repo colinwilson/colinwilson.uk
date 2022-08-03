@@ -15,7 +15,7 @@
   --light-post-hover: rgb(231, 231, 231);
   --light-bg: #f2f0f4;
   --light-btn-bg-disabled: #dbdbdb;
-  --light-btn-text-disabled: #7a7a7a;
+  --light-btn-text-disabled: #4e4e4e;
   --light-border-color: rgba(0,0,0,0.2);
   --light-light-border-color: #dbdbdb;
   --light-theme: #d34a97;
@@ -824,7 +824,7 @@ ul.pagination-list {
   box-shadow: none;
   display: inline-flex;
   font-size: 1rem;
-  height: 2.5em;
+  height: auto;
   justify-content: flex-start;
   line-height: 1.5;
   padding-bottom: calc(0.5em - 1px);
