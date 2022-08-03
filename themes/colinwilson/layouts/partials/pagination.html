@@ -8,11 +8,19 @@
 
 <nav class="pagination" aria-label="pagination">
 
-  <a {{ if $HugoPaginator.HasPrev }} href="{{ $HugoPaginator.Prev.URL }}" {{ else }} rel="nofollow" {{ end }}
+  {{ if $HugoPaginator.HasPrev }}
+    <a href="{{ $HugoPaginator.Prev.URL }}"
+  {{ else }}
+    <span rel="nofollow"
+  {{ end }}
       class="pagination-previous {{ if not $HugoPaginator.HasPrev }}disabled{{ end }}"
 			aria-label="Previous page" {{ if not $HugoPaginator.HasPrev }}aria-hidden="true"{{ end }}>
       Previous
-  </a>
+  {{ if $HugoPaginator.HasPrev }}
+    </a>
+  {{ else }}
+    </span>
+  {{ end }}
 
 	<a {{ if not (le (int $MyPaginator) $HugoPaginator.PageNumber) }}{{ if $HugoPaginator.HasNext }} href="{{ $HugoPaginator.Next.URL }}" {{ end }} {{ else }} rel="nofollow" {{ end }}
     class="pagination-next {{ if le (int $MyPaginator) $HugoPaginator.PageNumber }}disabled{{ end }}"
