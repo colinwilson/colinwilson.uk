@@ -14,7 +14,7 @@
     <span rel="nofollow"
   {{ end }}
       class="pagination-previous {{ if not $HugoPaginator.HasPrev }}disabled{{ end }}"
-			aria-label="Previous page" {{ if not $HugoPaginator.HasPrev }}aria-hidden="true"{{ end }}>
+			aria-label="Previous page" {{ if not $HugoPaginator.HasPrev }}aria-disabled="true" aria-hidden="true"{{ end }}>
       Previous
   {{ if $HugoPaginator.HasPrev }}
     </a>
