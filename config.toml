@@ -11,6 +11,8 @@ googleAnalytics     = "UA-98935524-1"
 home = [ "HTML", "RSS", "REDIRECTS", "Algolia" ]
 section = [ "HTML", "RSS"]
 
+preserveTaxonomyNames = true
+
 [mediaTypes]
 [mediaTypes."text/netlify"]
     suffixes = ""
