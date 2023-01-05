@@ -96,4 +96,7 @@
     {{- template "_internal/google_analytics_async.html" . }}{{- if .Site.Params.MatomoID }}{{- partial "matomo" . }}{{- end }}
     {{ partial "algolia-search-insights" . }}
     {{- end }}
+    {{- if not .Site.IsServer }}
+        {{- partialCached "plausible.html" . }}
+    {{- end -}}
 </head>
