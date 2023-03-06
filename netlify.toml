@@ -4,12 +4,12 @@
 ## This rule rewrites to an external Plausible instance
 [[redirects]]
   from = "/s/js/script.js"
-  to = "https://plausible.aigis.io/js/script.js"
+  to = "https://plausible.aigis.uk/js/script.js"
   status = 200
   force = false
 
 [[redirects]]
   from = "/s/api/event"
-  to = "https://plausible.aigis.io/api/event"
+  to = "https://plausible.aigis.uk/api/event"
   status = 200
   force = false
